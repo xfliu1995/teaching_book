@@ -68,10 +68,10 @@ Docker 因为其灵活性和资源占用少等优势开始取代过去传统的�
 
 | 操作系统 | 系统版本 | 软件程序（software） | 镜像（image） | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
-| Windows | Windows 10 pro及以上 \(64位\) | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) | [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/smart-link/5a60e77b-968e-47da-a9ef-cce5eb53e78b/) | 安装Docker程序并下载image文件到桌面（`~/Desktop`） |
+| Windows | Windows 10 pro及以上 \(64位\) | [Docker](https://cloud.tsinghua.edu.cn/smart-link/ca3fb351-6015-443e-9105-83a840529a1a/) | [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/smart-link/5a60e77b-968e-47da-a9ef-cce5eb53e78b/) | 安装Docker程序并下载image文件到桌面（`~/Desktop`） |
 | Windows | Windows 其它版本 \(64位\) | 虚拟机[VirtualBox](https://cloud.tsinghua.edu.cn/smart-link/2630fc66-e25c-44d8-befe-88beb38ac47d/) | [bioinfo\_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/smart-link/5e5b9715-f61f-4ae7-8add-b3f7d96b0b77/) | 安装VirtualBox程序并下载虚拟机image文件到桌面（`~/Desktop`） |
-| Mac | 2010 or newer model | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) | [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/smart-link/5a60e77b-968e-47da-a9ef-cce5eb53e78b/) | 安装Docker程序并下载image文件到桌面（`~/Desktop`） |
-| Linux | kernel 3.10 or higher. | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) | [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/smart-link/5a60e77b-968e-47da-a9ef-cce5eb53e78b/) | 安装Docker程序并下载image文件到桌面（`~/Desktop`） |
+| Mac | 2010 or newer model | [Docker](https://cloud.tsinghua.edu.cn/smart-link/ca3fb351-6015-443e-9105-83a840529a1a/) | [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/smart-link/5a60e77b-968e-47da-a9ef-cce5eb53e78b/) | 安装Docker程序并下载image文件到桌面（`~/Desktop`） |
+| Linux | kernel 3.10 or higher. | [Docker](https://cloud.tsinghua.edu.cn/smart-link/ca3fb351-6015-443e-9105-83a840529a1a/) | [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/smart-link/5a60e77b-968e-47da-a9ef-cce5eb53e78b/) | 安装Docker程序并下载image文件到桌面（`~/Desktop`） |
 
 ### 5b\) 各操作系统下的安装docker程序和加载docker镜像指南
 
@@ -83,7 +83,7 @@ Docker 因为其灵活性和资源占用少等优势开始取代过去传统的�
 
 #### 5b.2\) Windows 10 非Pro
 
-使用 64 位其他版本的 Windows （以及用表中的方法安装 Docker 失败）的用户，请使用我们提供的虚拟机: [bioinfo\_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。
+使用 64 位其他版本的 Windows （以及用表中的方法安装 Docker 失败）的用户，请使用我们提供的虚拟机: [bioinfo\_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/smart-link/5e5b9715-f61f-4ae7-8add-b3f7d96b0b77/) （用户名和密码均为 `test`）。
 
 使用方法参见 [Appendix III. Docker 1a\)](appendix/appendix3.docker.md#win-vb-use-docker) , 安装和配置虚拟机完成后从本章的 [5d\) 载入镜像](getting-started.md#load-image)开始进行操作。
 
