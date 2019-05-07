@@ -59,29 +59,29 @@
    ​[http://ibl.mdanderson.org/tanric/\_design/basic/index.html](http://ibl.mdanderson.org/tanric/_design/basic/index.html)​
 
 ### 2c\) Exosomal database
-1.ExoCarta数据库  
+1.ExoCarta  
 
-[http://www.exocarta.org/](http://www.exocarta.org/)
+ A web-based compendium of exosomal cargo.[http://www.exocarta.org/](http://www.exocarta.org/)
 
 2.exoRBase 
 
-[http://www.exorbase.org/](http://www.exorbase.org/)
+A repository of circular RNA (circRNA), long non-coding RNA (lncRNA) and messenger RNA (mRNA) derived from RNA-seq data analyses of human blood exosomes. Experimental validations from published literature are also included.[http://www.exorbase.org/](http://www.exorbase.org/)
 
 3.EVmiRNA 
 
-[http://bioinfo.life.hust.edu.cn/EVmiRNA](http://bioinfo.life.hust.edu.cn/EVmiRNA)
+ A database of miRNA profiling in extracellular vesicles. [http://bioinfo.life.hust.edu.cn/EVmiRNA](http://bioinfo.life.hust.edu.cn/EVmiRNA)
 
 4.EV-TRACK 
 
-[http://www.evtrack.org/](http://www.evtrack.org/)
+ Transparent reporting and centralizing knowledge in extracellular vesicle research.[http://www.evtrack.org/](http://www.evtrack.org/)
 
 5.EVpedia 
 
-[http://evpedia.info](http://evpedia.info)
+An integrated database of high-throughput data for systemic analyses of extracellular vesicles. A community web portal for extracellular vesicles research. [http://evpedia.info](http://evpedia.info)
 
 6.Vesiclepedia 
 
-[http://www.microvesicles.org/](http://www.microvesicles.org/)
+A compendium for extracellular vesicles with continuous community annotation. PLoS Biology. 12, e1001450. [http://www.microvesicles.org/](http://www.microvesicles.org/)
 
 7.EMBL-EBI外泌体数据库 
 
