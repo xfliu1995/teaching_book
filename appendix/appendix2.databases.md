@@ -83,13 +83,14 @@ An integrated database of high-throughput data for systemic analyses of extracel
 
 A compendium for extracellular vesicles with continuous community annotation. PLoS Biology. 12, e1001450. [http://www.microvesicles.org/](http://www.microvesicles.org/)
 
-7.EMBL-EBI外泌体数据库 
+7.EMBL-EBI
 
-[http://www.ebi.ac.uk/GOA/exosome](http://www.ebi.ac.uk/GOA/exosome)
+The EMBL-EBI exosomes database is a comprehensive annotated database of GO function analysis of human exosomal proteins. The database works closely with laboratory researchers (Dr S Mathivanan - La Trobe Institute, Dr A Kalea - UCL) and the exosomal database Exocarta (http://www.exocarta.org/) and Vesiclepedia to identify annotations for focus Annotation of the target protein as well as the experimental methodology of the exosomes.[http://www.ebi.ac.uk/GOA/exosome](http://www.ebi.ac.uk/GOA/exosome)
 
 8.Urinary Exosome Protein Database 
 
-[https://hpcwebapps.cit.nih.gov/ESBL/Database/Exosome/](https://hpcwebapps.cit.nih.gov/ESBL/Database/Exosome/)
+
+This database of urinary exosome proteins is based on published protein mass spectrometry data from the NHLBI Epithelial Systems Biology Laboratory (ESBL). All data are from urinary exosomes isolated from healthy human volunteers.[https://hpcwebapps.cit.nih.gov/ESBL/Database/Exosome/](https://hpcwebapps.cit.nih.gov/ESBL/Database/Exosome/)
 
 ## 3\) Servers
 
