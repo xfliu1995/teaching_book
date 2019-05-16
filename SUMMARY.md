@@ -5,43 +5,48 @@
 
 ## Part I. Basic Skills
 
-* [1.Linux](part-i.-basic-skills/1.linux/README.md)
-  * [1.1 Basic Command](part-i.-basic-skills/1.linux/1.linux-command.md)
-  * [1.2 Practice Guide](part-i.-basic-skills/1.linux/1.linux-task.md)
-* [2.Blast](part-i.-basic-skills/2.seqblast.md)
-* [3.Conservation Analysis](part-i.-basic-skills/3.conservation.md)
-* [4.Function Analysis](part-i.-basic-skills/4.function-analysis/README.md)
-  * [4.1 GO](part-i.-basic-skills/4.function-analysis/4.1.go.md)
-  * [4.2 KEGG](part-i.-basic-skills/4.function-analysis/4.2.kegg.md)
-  * [4.3 GSEA](part-i.-basic-skills/4.function-analysis/4.3.gsea.md)
+* [1.Setup](part-i.basic-skills/1.setup/README.md)
+  * [1.1 Docker](part-i.basic-skills/1.setup/1.1.docker.md)
+* [2.Linux](part-i.basic-skills/2.linux/README.md)
+  * [2.1 Basic Command](part-i.basic-skills/2.linux/2.1.linux-basic-command.md)
+  * [2.2 Practice Guide](part-i.basic-skills/2.linux/2.2.linux-practice-guide.md)
+* [3.R](part-i.basic-skills/3.r/README.md)
+  * [3.1 R Basics](part-i.basic-skills/3.r/3.1.r-basics.md)
+  * [3.2 Plot with R](part-i.basic-skills/3.r/3.2.plots-with-r.md)
+* [4.Python](part-i.basic-skills/4.python.md)
 
-## Part II. NGS Pipelines
+## PART II. BASIC ANALYSES
 
-* [5.Mapping](part-ii.-ngs-pipelines/5.mapping.md)
-* [6.RNA-seq](part-ii.-ngs-pipelines/6.rna-seq/README.md)
-  * [6.1 Differential Expression](part-ii.-ngs-pipelines/6.rna-seq/6.1.differential-expression.md)
-  * [6.2 Alternative Splicing](part-ii.-ngs-pipelines/6.rna-seq/6.2.alternative-splicing.md)
-* [7.ChIP-seq](part-ii.-ngs-pipelines/7.chip-seq.md)
+* [1.Blast](part-ii.basic-analyses/1.seqblast.md)
+* [2.Conservation Analysis](part-ii.basic-analyses/2.conservation-analysis.md)
+* [3.Function Analysis](part-ii.basic-analyses/3.function-analysis/README.md)
+  * [3.1 GO](part-ii.basic-analyses/3.function-analysis/3.1.go.md)
+  * [3.2 KEGG](part-ii.basic-analyses/3.function-analysis/3.2.kegg.md)
+  * [3.3 GSEA](part-ii.basic-analyses/3.function-analysis/3.3.gsea.md)
 
-## Part III. Machine Learning Basics
+## Part III. ADVANCED - NGS DATA ANALYSES
 
-* [8.Machine Learning Basics](part-iii.-machine-learning-basics/1.simple-machine-learning-basics.md)
-* [9. Machine Learning with R](part-iii.-machine-learning-basics/8.1-machine-learning-with-r.md)
-* [10. Machine Learning with Python](part-iii.-machine-learning-basics/8.2-machine-learning-with-python.md)
+* [1.Mapping](part-iii.adv.-ngs-analyses/1.mapping.md)
+* [2.RNA-seq](part-iii.adv.-ngs-analyses/2.rna-seq/README.md)
+  * [2.1 Differential Expression](part-iii.adv.-ngs-analyses/2.rna-seq/2.1.differential-expression.md)
+  * [2.2 Alternative Splicing](part-iii.adv.-ngs-analyses/2.rna-seq/2.2.alternative-splicing.md)
+* [3.ChIP-seq](part-iii.adv.-ngs-analyses/3.chip-seq.md)
 
-## Part IV. Quiz
+## Part IV. ADVANCED - MACHINE LEARNING
 
-* [11. exRNA Biomarker](part-iv.-quiz/quiz_exrna_tutorial/README.md)
-  * [11.1 Data Introduction](part-iv.-quiz/quiz_exrna_tutorial/11.1-data-introduction.md)
-  * [11.2 Requirement](part-iv.-quiz/quiz_exrna_tutorial/11.2-requirement.md)
-  * [11.3 Helps](part-iv.-quiz/quiz_exrna_tutorial/11.3-helps.md)
+* [1.Machine Learning Basics](part-iv.adv.-machine-learning/1.machine-learning-basics.md)
+* [2. Machine Learning with R](part-iv.adv.-machine-learning/2.machine-learning-with-r.md)
+* [3. Machine Learning with Python](part-iv.adv.-machine-learning/3.machine-learning-with-python.md)
+
+## Part V. Quiz
+
+* [1. exRNA Biomarker](part-v.quiz/1.quiz_exrna/README.md)
+  * [1.1 Data Introduction](part-v.quiz/1.quiz_exrna/1.1-data-introduction.md)
+  * [1.2 Requirement](part-v.quiz/1.quiz_exrna/1.2-requirement.md)
+  * [1.3 Helps](part-v.quiz/1.quiz_exrna/1.3-helps.md)
 
 ## Appendix
 
 * [Appendix I. Keep Learning](appendix/appendix1.more.md)
 * [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
-* [Appendix III. Docker](appendix/appendix3.docker.md)
-* [Appendix IV. Python Basics](appendix/appendix4.python-tutorial.md)
-* [Appendix V. R Basics](appendix/appendix5.r-basics.md)
-* [Appendix VI. Plot with R](appendix/appendix.plots.md)
 
