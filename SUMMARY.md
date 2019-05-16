@@ -3,17 +3,17 @@
 * [Bioinformatics Tutorial - Basic](README.md)
 * [Getting Started](getting-started.md)
 
-## Part I. Basic Tools
+## Part I. Basic Skills
 
-* [1.Linux](part-i.-basic-tools/1.linux/README.md)
-  * [1.1 Basic Command](part-i.-basic-tools/1.linux/1.linux-command.md)
-  * [1.2 Practice Guide](part-i.-basic-tools/1.linux/1.linux-task.md)
-* [2.Blast](part-i.-basic-tools/2.seqblast.md)
-* [3.Conservation Analysis](part-i.-basic-tools/3.conservation.md)
-* [4.Function Analysis](part-i.-basic-tools/4.function-analysis/README.md)
-  * [4.1 GO](part-i.-basic-tools/4.function-analysis/4.1.go.md)
-  * [4.2 KEGG](part-i.-basic-tools/4.function-analysis/4.2.kegg.md)
-  * [4.3 GSEA](part-i.-basic-tools/4.function-analysis/4.3.gsea.md)
+* [1.Linux](part-i.-basic-skills/1.linux/README.md)
+  * [1.1 Basic Command](part-i.-basic-skills/1.linux/1.linux-command.md)
+  * [1.2 Practice Guide](part-i.-basic-skills/1.linux/1.linux-task.md)
+* [2.Blast](part-i.-basic-skills/2.seqblast.md)
+* [3.Conservation Analysis](part-i.-basic-skills/3.conservation.md)
+* [4.Function Analysis](part-i.-basic-skills/4.function-analysis/README.md)
+  * [4.1 GO](part-i.-basic-skills/4.function-analysis/4.1.go.md)
+  * [4.2 KEGG](part-i.-basic-skills/4.function-analysis/4.2.kegg.md)
+  * [4.3 GSEA](part-i.-basic-skills/4.function-analysis/4.3.gsea.md)
 
 ## Part II. NGS Pipelines
 
