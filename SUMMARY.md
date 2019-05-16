@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Preface](README.md)
+* [Bioinformatics Tutorial - Basic](README.md)
 * [Getting Started](getting-started.md)
 
 ## Part I. Basic Tools

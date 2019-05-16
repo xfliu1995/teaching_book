@@ -1,4 +1,8 @@
-# Preface
+---
+description: Copyright © 2019 Lu Lab
+---
+
+# Bioinformatics Tutorial - Basic
 
 **生物信息学实践教程 - 基础篇**
 

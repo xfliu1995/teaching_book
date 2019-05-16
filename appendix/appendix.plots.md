@@ -2,21 +2,21 @@
 
 本章我们介绍如何使用 R 进行数据可视化，我们将提供两种方案：一是在自己电脑使用 Rstudio 来画图（基于 `.Rmd` 文件\)，优点是使用方便，交互性强；一是在 Docker 容器中用命令行的方式来画图，优点是无需额外的安装和配置。
 
-## 0a) 方案一: 在自己电脑上用 Rstudio 画图 {#plot-in-Rstudio}
+## 0a\) 方案一: 在自己电脑上用 Rstudio 画图 <a id="plot-in-Rstudio"></a>
 
 本方案需要在自己电脑上安装软件和配置。
 
-1\. 安装 R: <https://www.r-project.org/>
+1. 安装 R: [https://www.r-project.org/](https://www.r-project.org/)
 
-2\. 安装 RStudio：<https://www.rstudio.com/>
+2. 安装 RStudio：[https://www.rstudio.com/](https://www.rstudio.com/)
 
-3\. 下载并解压 [`lulab-plot-master.zip`](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/files/?p=/lulab-plot-master.zip), 双击其中的 `lulab-plot.Rproj`。
+3. 下载并解压 [`lulab-plot-master.zip`](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/files/?p=/lulab-plot-master.zip), 双击其中的 `lulab-plot.Rproj`。
 
-4\. 安装需要的package:
+4. 安装需要的package:
 
 ![](../.gitbook/assets/install-lulab-plot.gif)
 
-5\. 打开 `.Rmd` 文件
+5. 打开 `.Rmd` 文件
 
 用Rstudio打开`all.Rmd`文件, 即可阅读教程，并执行相关代码。
 
@@ -26,11 +26,11 @@
 
 ![](../.gitbook/assets/index-1-2-rmd.gif)
 
-## 0b) 方案二: 在 Docker 中使用 R 来画图
+## 0b\) 方案二: 在 Docker 中使用 R 来画图
 
 如果你在使用方案一时遇到了问题，也可以用我们提供的 Docker（里面已经预装好了 R 语言和需要的 packages）。
 
-### 0b.1) 在容器中使用R {#R-in-container}
+### 0b.1\) 在容器中使用R <a id="R-in-container"></a>
 
 ![](../.gitbook/assets/r-in-container.gif)
 
@@ -66,7 +66,7 @@ mean(1:10)
 q()
 ```
 
-### 0b.2) load data, install & library packages
+### 0b.2\) load data, install & library packages
 
 #### Prepare output directory
 
@@ -122,10 +122,10 @@ library(plyr)
 library(plotrix)
 ```
 
-### 0b.3) Save & view the plot
+### 0b.3\) Save & view the plot
 
 If you want to save the plot, please use either `pdf()` + `dev.off()` or `ggsave()`.  
-The second one is specific for the **ggplot2** package (i.e., if the code for plot starts with `ggplot`, then you can use the second one).
+The second one is specific for the **ggplot2** package \(i.e., if the code for plot starts with `ggplot`, then you can use the second one\).
 
 Let's see an example:
 
@@ -171,7 +171,7 @@ cp output/1.1.Basic_boxplot.pdf /home/test/share/
 
 Here we only show one plot, in real use, you should replace the code for plot and change output file name to do more plots.
 
-### 0b.4) 以上 3 步的动画
+### 0b.4\) 以上 3 步的动画
 
 为了更清楚地展示方案二，我们制作了一个完整的动画：
 
@@ -183,9 +183,9 @@ Here we only show one plot, in real use, you should replace the code for plot an
 
 For the following sections, you can find all code in `/home/test/plot/Rscripts/` or [here](https://github.com/lulab/shared_scripts/tree/master/plots) \(a file per chapter\), and demo output in `/home/test/plot/success/output/`.
 
-## 1\) Box plots <a id="box-plot"></a>
+## 1\) Box plots  <a id="box-plot"></a>
 
-1\. Basic box plot
+1. Basic box plot
 
 ```r
 df$cyl <- as.factor(df$cyl)
@@ -211,7 +211,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ![](../.gitbook/assets/1.1.basic_boxplot.png)
 
-2\. Change continuous color by groups
+2. Change continuous color by groups
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) + 
@@ -223,7 +223,7 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) +
 
 ![](../.gitbook/assets/1.2.customized_boxplot.png)
 
-3\. Box plot for GO results
+3. Box plot for GO results
 
 ```r
 df7$Term <- sapply(strsplit(as.vector(df7$Term),'~'),'[',2)
@@ -286,9 +286,9 @@ ggplot(df7) + geom_bar(stat="identity", width=0.6, aes(Term,Fold.Enrichment, fil
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 2\) Violin plots <a id="violin-plot"></a>
+## 2\) Violin plots  <a id="violin-plot"></a>
 
-1\. Basic violin plot
+1. Basic violin plot
 
 ```r
 df$cyl <- as.factor(df$cyl)
@@ -313,9 +313,9 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ![](../.gitbook/assets/2.1.basic_violinplot.png)
 
-2\. Add summary statistics on a violin plot
+2. Add summary statistics on a violin plot
 
-(1) Add median and quartile
+\(1\) Add median and quartile
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg)) + 
@@ -326,7 +326,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ![](../.gitbook/assets/2.2.1.add_median_and_quartile1_violinplot.png)
 
-  or
+or
 
 ```r
  ggplot(df, aes(x=cyl, y=mpg)) + 
@@ -337,7 +337,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ![](../.gitbook/assets/2.2.1.add_median_and_quartile2_violinplot.png)
 
-(2) Add mean and standard deviation
+\(2\) Add mean and standard deviation
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg)) + 
@@ -359,7 +359,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ![](../.gitbook/assets/2.2.2.add_mean_and_sd_violinplot2.png)
 
-3\. Change violin plot fill colors
+3. Change violin plot fill colors
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) + 
@@ -374,9 +374,9 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 3\) Histogram plots <a id="histogram-plot"></a>
+## 3\) Histogram plots  <a id="histogram-plot"></a>
 
-1\. Basic histogram plot
+1. Basic histogram plot
 
 ```r
 head(df2)
@@ -398,7 +398,7 @@ ggplot(df2, aes(x=weight)) + geom_histogram(binwidth=1)
 
 ![](../.gitbook/assets/3.1.basic_histogramplot.png)
 
-2\. Add mean line on a histogram plot
+2. Add mean line on a histogram plot
 
 ```r
 ggplot(df2, aes(x=weight)) + 
@@ -408,7 +408,7 @@ ggplot(df2, aes(x=weight)) +
 
 ![](../.gitbook/assets/3.2.add_meanline_histogramplot.png)
 
-3\. Change histogram plot fill colors
+3. Change histogram plot fill colors
 
 ```r
 ##Use the plyr package to calculate the average weight of each group :
@@ -436,9 +436,9 @@ ggplot(df2, aes(x=weight, color=sex)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 4\) Density plots <a id="density-plot"></a>
+## 4\) Density plots  <a id="density-plot"></a>
 
-1\. Basic density
+1. Basic density
 
 ```r
 head(df2)
@@ -461,7 +461,7 @@ ggplot(df2, aes(x=weight)) +
 
 ![](../.gitbook/assets/4.1.basic_densityplot.png)
 
-2\. Add mean line on a density plot
+2. Add mean line on a density plot
 
 ```r
 ggplot(df2, aes(x=weight)) +
@@ -471,7 +471,7 @@ ggplot(df2, aes(x=weight)) +
 
 ![](../.gitbook/assets/4.2.add_meanline_densityplot.png)
 
-3\. Change density plot fill colors
+3. Change density plot fill colors
 
 ```r
 ##Use the plyr package plyr to calculate the average weight of each group :
@@ -487,7 +487,7 @@ head(mu)
 
 draw the plot
 
-(1) Change fill colors
+\(1\) Change fill colors
 
 ```r
 ggplot(df2, aes(x=weight, fill=sex)) +
@@ -501,7 +501,7 @@ ggplot(df2, aes(x=weight, fill=sex)) +
 
 ![](../.gitbook/assets/4.3.1.customized_histogramplot1.png)
 
-(2) Change line colors
+\(2\) Change line colors
 
 ```r
 ggplot(df2, aes(x=weight, color=sex)) +
@@ -514,7 +514,7 @@ ggplot(df2, aes(x=weight, color=sex)) +
 
 ![](../.gitbook/assets/4.3.2.customized_histogramplot2.png)
 
-(3) Combine histogram and density plots
+\(3\) Combine histogram and density plots
 
 ```r
 ggplot(df2, aes(x=weight, color=sex, fill=sex)) + 
@@ -530,9 +530,9 @@ ggplot(df2, aes(x=weight, color=sex, fill=sex)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 5\) Dot plots <a id="dot-plot"></a>
+## 5\) Dot plots  <a id="dot-plot"></a>
 
-1\. Basic dot plots
+1. Basic dot plots
 
 ```r
 df$cyl <- as.factor(df$cyl)
@@ -556,7 +556,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ![](../.gitbook/assets/5.1.basic_dotplot.png)
 
-2\. Add mean and standard deviation
+2. Add mean and standard deviation
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg)) + 
@@ -576,7 +576,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ![](../.gitbook/assets/5.2.add_mean_and_sd2_dotplot.png)
 
-3\. Change dot colors
+3. Change dot colors
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg, fill=cyl, shape=cyl)) + 
@@ -590,7 +590,7 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl, shape=cyl)) +
 
 ![](../.gitbook/assets/5.3.customized_dotplot.png)
 
-4\. Change dot colors, shapes and align types
+4. Change dot colors, shapes and align types
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg, color=cyl, shape=cyl)) + 
@@ -604,9 +604,9 @@ ggplot(df, aes(x=cyl, y=mpg, color=cyl, shape=cyl)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 6\) Scatter plots <a id="scatter-plot"></a>
+## 6\) Scatter plots  <a id="scatter-plot"></a>
 
-1\. Basic scatter plots
+1. Basic scatter plots
 
 ```r
 df$cyl <- as.factor(df$cyl)
@@ -630,7 +630,7 @@ ggplot(df, aes(x=wt, y=mpg)) +
 
 ![](../.gitbook/assets/6.1.basic_scatterplot.png)
 
-2\. Add regression lines and change the point colors, shapes and sizes
+2. Add regression lines and change the point colors, shapes and sizes
 
 ```r
 ggplot(df, aes(x=wt, y=mpg, color=cyl, shape=cyl)) +
@@ -643,7 +643,7 @@ ggplot(df, aes(x=wt, y=mpg, color=cyl, shape=cyl)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization)
 
-## 7\) Volcano plots <a id="volcano-plot"></a>
+## 7\) Volcano plots  <a id="volcano-plot"></a>
 
 ```r
 head(df3)
@@ -682,7 +682,7 @@ ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=thr
 
 ![](../.gitbook/assets/7.customized_volcanoplot.png)
 
-## 8\) Manhattan plots <a id="manhattan-plot"></a>
+## 8\) Manhattan plots  <a id="manhattan-plot"></a>
 
 ```r
 head(df4)
@@ -707,9 +707,9 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ![](../.gitbook/assets/8.customized_manhattannplot.png)
 
-## 9\) Heatmaps <a id="heatmap-plot"></a>
+## 9\) Heatmaps  <a id="heatmap-plot"></a>
 
-1\. Draw the heatmap with the gplots package, `heatmap.2()` function
+1. Draw the heatmap with the gplots package, `heatmap.2()` function
 
 ```r
 head(dm)
@@ -749,7 +749,7 @@ heatmap.2(dm,
 
 ![](../.gitbook/assets/9.1.customized_heatmap.png)
 
-2\. Draw the heatmap with the pheatmap package, pheatmap function
+2. Draw the heatmap with the pheatmap package, pheatmap function
 
 ```r
 ##add column and row annotations
@@ -770,7 +770,7 @@ pheatmap(dm,
 
 ![](../.gitbook/assets/9.2.customized_heatmap.png)
 
-3\. Draw the heatmap with the ggplot2 package
+3. Draw the heatmap with the ggplot2 package
 
 ```r
 ##9.3.1.cluster by row and col
@@ -803,9 +803,9 @@ ggplot(dm.reordered, aes(Var2, Var1)) +
 
 ![](../.gitbook/assets/9.3.customized_heatmap.png)
 
-## 10\) Ballon plots <a id="ballon-plot"></a>
+## 10\) Ballon plots  <a id="ballon-plot"></a>
 
-1\. basic ballon plots
+1. basic ballon plots
 
 ```r
 head(df6)
@@ -840,7 +840,7 @@ ggplot(df6, aes(x=Fold.enrichment, y=Biological.process)) +
 
 ![](../.gitbook/assets/10.1.basic_ballonplot.png)
 
-2\. change the dot colors
+2. change the dot colors
 
 ```r
 ggplot(df6, aes(x=col, y=Biological.process,color=X.log10.Pvalue.)) +
@@ -862,7 +862,7 @@ ggplot(df6, aes(x=col, y=Biological.process,color=X.log10.Pvalue.)) +
 
 ![](../.gitbook/assets/10.2.customized_ballonplot.png)
 
-## 11\) Vennpie plots <a id="vennpie-plot"></a>
+## 11\) Vennpie plots  <a id="vennpie-plot"></a>
 
 The vennpie plot is the combination of a venn diagram and a pie chart.
 
@@ -941,7 +941,7 @@ legend(0, 6*iniR, gsub("_"," ",names(colors)[-1]),
 
 Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html](http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html)
 
-## 12\) Learn more <a id="plot-more"></a>
+## 12\) Learn more  <a id="plot-more"></a>
 
 1. Guide to Great Beautiful Graphics in R
 
@@ -957,3 +957,4 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
    [Rcolor.pdf](https://dongzhuoer.gitlab.io/lulab-teaching_book/libs/Rcolor.pdf)
 
 4. [Plots Gitbook](https://xixiaochen.gitbooks.io/plots/content/) of Xiaochen Xi
+

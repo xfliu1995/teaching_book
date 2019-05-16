@@ -50,11 +50,11 @@
 
 * 本教程全部作业均要求提供源代码和输出内容。提交作业格式可以是.doc/.txt/.md/.sh等，标有 "optional" 的题目选做，做对可获得额外加分。
 
-## 5\) Docker {#use-docker}
+## 5\) Docker <a id="use-docker"></a>
 
 Docker 因为其灵活性和资源占用少等优势开始取代过去传统的虚拟机（如VMWARE, Virtual Box等）。Docker在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker技术比传统虚拟机技术更为轻便、快捷（[为什么使用Docker](https://yeasy.gitbooks.io/docker_practice/introduction/why.html)）。
 
-### 5a) Docker下载
+### 5a\) Docker下载
 
 #### 5a.1\) Docker程序\(software）下载
 
@@ -107,7 +107,7 @@ Docker 因为其灵活性和资源占用少等优势开始取代过去传统的�
 
 [bilibili](https://www.bilibili.com/video/av30426956/)
 
-### 5d\) 载入镜像 <a id="load-image"></a>
+### 5d\) 载入镜像  <a id="load-image"></a>
 
 ```bash
 docker load -i ~/Desktop/bioinfo_tsinghua.docker.tar.gz # only if Mac or Windows 10 Pro
@@ -115,7 +115,7 @@ docker load -i ~/Desktop/bioinfo_tsinghua.docker.tar.gz # only if Mac or Windows
 docker load -i ~/Desktop/bioinfo_tsinghua.tar.gz # Otherwise
 ```
 
-### 5e\) 创建并运行容器 <a id="create-container"></a>
+### 5e\) 创建并运行容器  <a id="create-container"></a>
 
 ```bash
 mkdir ~/Desktop/bioinfo_tsinghua_share
@@ -139,7 +139,7 @@ docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bio
 exit
 ```
 
-### 5g\) 重复使用容器 <a id="use-container"></a>
+### 5g\) 重复使用容器  <a id="use-container"></a>
 
 到此为止，我们已经成功地安装了Docker，成功地载入一个镜像并且创建了容器（container）。以后我们再使用Docker并进入该容器练习，只需要反复执行3个步骤:
 
@@ -167,7 +167,7 @@ docker exec -it bioinfo_tsinghua bash
 exit
 ```
 
-### 5h\) 彻底删除容器 <a id="recover-container"></a>
+### 5h\) 彻底删除容器  <a id="recover-container"></a>
 
 如果你不小心执行了错误操作，以至于无法正常执行本教程中的某一章节，可以删除该容器，然后新建一个干净的容器。
 

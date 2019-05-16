@@ -59,38 +59,38 @@
    ​[http://ibl.mdanderson.org/tanric/\_design/basic/index.html](http://ibl.mdanderson.org/tanric/_design/basic/index.html)​
 
 ### 2c\) Exosomal database
-1.ExoCarta  
 
- A web-based compendium of exosomal cargo.[http://www.exocarta.org/](http://www.exocarta.org/)
+1.ExoCarta
 
-2.exoRBase 
+A web-based compendium of exosomal cargo.[http://www.exocarta.org/](http://www.exocarta.org/)
 
-A repository of circular RNA (circRNA), long non-coding RNA (lncRNA) and messenger RNA (mRNA) derived from RNA-seq data analyses of human blood exosomes. Experimental validations from published literature are also included.[http://www.exorbase.org/](http://www.exorbase.org/)
+2.exoRBase
 
-3.EVmiRNA 
+A repository of circular RNA \(circRNA\), long non-coding RNA \(lncRNA\) and messenger RNA \(mRNA\) derived from RNA-seq data analyses of human blood exosomes. Experimental validations from published literature are also included.[http://www.exorbase.org/](http://www.exorbase.org/)
 
- A database of miRNA profiling in extracellular vesicles. [http://bioinfo.life.hust.edu.cn/EVmiRNA](http://bioinfo.life.hust.edu.cn/EVmiRNA)
+3.EVmiRNA
 
-4.EV-TRACK 
+A database of miRNA profiling in extracellular vesicles. [http://bioinfo.life.hust.edu.cn/EVmiRNA](http://bioinfo.life.hust.edu.cn/EVmiRNA)
 
- Transparent reporting and centralizing knowledge in extracellular vesicle research.[http://www.evtrack.org/](http://www.evtrack.org/)
+4.EV-TRACK
 
-5.EVpedia 
+Transparent reporting and centralizing knowledge in extracellular vesicle research.[http://www.evtrack.org/](http://www.evtrack.org/)
+
+5.EVpedia
 
 An integrated database of high-throughput data for systemic analyses of extracellular vesicles. A community web portal for extracellular vesicles research. [http://evpedia.info](http://evpedia.info)
 
-6.Vesiclepedia 
+6.Vesiclepedia
 
 A compendium for extracellular vesicles with continuous community annotation. PLoS Biology. 12, e1001450. [http://www.microvesicles.org/](http://www.microvesicles.org/)
 
 7.EMBL-EBI
 
-The EMBL-EBI exosomes database is a comprehensive annotated database of GO function analysis of human exosomal proteins. The database works closely with laboratory researchers (Dr S Mathivanan - La Trobe Institute, Dr A Kalea - UCL) and the exosomal database Exocarta (http://www.exocarta.org/) and Vesiclepedia to identify annotations for focus Annotation of the target protein as well as the experimental methodology of the exosomes.[http://www.ebi.ac.uk/GOA/exosome](http://www.ebi.ac.uk/GOA/exosome)
+The EMBL-EBI exosomes database is a comprehensive annotated database of GO function analysis of human exosomal proteins. The database works closely with laboratory researchers \(Dr S Mathivanan - La Trobe Institute, Dr A Kalea - UCL\) and the exosomal database Exocarta \([http://www.exocarta.org/](http://www.exocarta.org/)\) and Vesiclepedia to identify annotations for focus Annotation of the target protein as well as the experimental methodology of the exosomes.[http://www.ebi.ac.uk/GOA/exosome](http://www.ebi.ac.uk/GOA/exosome)
 
-8.Urinary Exosome Protein Database 
+8.Urinary Exosome Protein Database
 
-
-This database of urinary exosome proteins is based on published protein mass spectrometry data from the NHLBI Epithelial Systems Biology Laboratory (ESBL). All data are from urinary exosomes isolated from healthy human volunteers.[https://hpcwebapps.cit.nih.gov/ESBL/Database/Exosome/](https://hpcwebapps.cit.nih.gov/ESBL/Database/Exosome/)
+This database of urinary exosome proteins is based on published protein mass spectrometry data from the NHLBI Epithelial Systems Biology Laboratory \(ESBL\). All data are from urinary exosomes isolated from healthy human volunteers.[https://hpcwebapps.cit.nih.gov/ESBL/Database/Exosome/](https://hpcwebapps.cit.nih.gov/ESBL/Database/Exosome/)
 
 ## 3\) Servers
 

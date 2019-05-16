@@ -10,7 +10,7 @@ How to make professional and beautiful plots
 
 ## 1. Install and Use R
 
-### 1a) Install R
+### 1a\) Install R
 
 See the official site of R: [https://www.r-project.org/](https://www.r-project.org/) （Docker中已经安装好）
 
@@ -29,23 +29,22 @@ Here is an example of installation in Linux:
   apt -y install r-base
   ```
 
-### 1b) Install RStudio
+### 1b\) Install RStudio
 
 If you like a nice interface to use R instead of Linux command line, you can try **RStudio:** [https://www.rstudio.com/](https://www.rstudio.com/)
 
 We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md)
 
-### 1c) Use R
+### 1c\) Use R
 
 * how to enter?
-  * On Mac or Linux, you can open a Terminal and type 
+  * On Mac or Linux, you can open a Terminal and type
 
     ```text
     R
     ```
 
-  * On Windows or Mac, you can find a program with this   logo: ![](../.gitbook/assets/r-logo.png)
-
+  * On Windows or Mac, you can find a program with this logo: ![](../.gitbook/assets/r-logo.png)
 * How to quit?
 
   `q()`
@@ -53,11 +52,10 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 * How to get help?
 
   For example, we use use `?t.test` to we get help for `t.test()` function
-  
 
 ## 2. Basic Data Types
 
-### 2a) basic type
+### 2a\) basic type
 
 ```r
 > x = 10.5 # assign a decimal value
@@ -92,7 +90,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 [1] "character"
 ```
 
-### 2b) vector
+### 2b\) vector
 
 ```r
 > c(2, 3, 5)
@@ -108,7 +106,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 [1] "cc"
 ```
 
-### 2c) matrix
+### 2c\) matrix
 
 ```r
 > B = matrix(
@@ -123,7 +121,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 [3,]    3    7
 ```
 
-### 2d) list
+### 2d\) list
 
 ```r
 > n = c(2, 3, 5)
@@ -145,7 +143,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 [1] 3
 ```
 
-### 2e) data frame
+### 2e\) data frame
 
 ```r
 > n = c(2, 3, 5)
@@ -161,7 +159,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 
 ## 3. Examples
 
-### 3a) A simple example of t test
+### 3a\) A simple example of t test
 
 * start R and type:
 
@@ -178,18 +176,18 @@ t.test(a,b,alternative=c("less"))
 t.test(a[[1]],b[[1]],altrenative=c("less"),paired=TRUE) # paired t test
 ```
 
-* You can also write these into a file, script.R, then run  
+* You can also write these into a file, script.R, then run
 
   `R CMD BATCH script.R`
 
-### 3b) More R Examples
+### 3b\) More R Examples
 
 * [Appendix. Plot with R](appendix.plots.md)
 * [John's Github](https://github.com/urluzhi/scripts/tree/master/Rscript) 
 
 ## 4. More Readings and Practices
 
-### 4a) Basic
+### 4a\) Basic
 
 * &lt;&lt; Bioinformatics Data Skills &gt;&gt;
   * A Rapid Introduction to the R Language
@@ -199,7 +197,7 @@ t.test(a[[1]],b[[1]],altrenative=c("less"),paired=TRUE) # paired t test
   * Data Input  
   * Statistics
 
-### 4b) Advanced
+### 4b\) Advanced
 
 * [Advanced R Tutorial](https://lulab.gitbook.io/training/part-i-basic-skills/4.r)
 * &lt;&lt; Bioinformatics Data Skills &gt;&gt;
