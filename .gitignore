@@ -1,9 +1,2 @@
-.Rproj.user
-teaching_book.Rproj
+.DS_store
 
-.Rhistory
-
-#knitr
-figure-html/
-*_cache/
-*.html
