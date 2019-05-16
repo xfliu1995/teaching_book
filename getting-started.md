@@ -13,7 +13,7 @@
 * **Basic Tutorial** \(this one\)
 * [**Advanced Tutorial**](https://lulab.gitbook.io/training)
 
-> see more learning materials in [Appendix I. Keep Learning](appendix/appendix1.more.md)
+> see more learning materials in [Appendix I. Keep Learning](appendix/appendix1.keep-learning.md)
 
 ## 3\) GitHub - Document your work
 
