@@ -31,7 +31,24 @@
   * [2.1 Differential Expression](part-iii.-ngs-data-analyses/2.rna-seq/2.1.differential-expression.md)
   * [2.2 Alternative Splicing](part-iii.-ngs-data-analyses/2.rna-seq/2.2.alternative-splicing.md)
 * [3.ChIP-seq](part-iii.-ngs-data-analyses/3.chip-seq.md)
-* [4.More Analyses](part-iii.-ngs-data-analyses/4.more-analyses.md)
+* [More Analyses](part-iii.-ngs-data-analyses/4.more-analyses.md)
+* 4.Network
+  * [4.1.Co-expression Network](https://yuminthu.github.io/training_class/docs/co_expression.html)
+  * [4.2.miRNA Targets](https://yuminthu.github.io/training_class/docs/miRNA.html)
+  * [4.3.RBP-RNA Interactions](https://yuminthu.github.io/training_class/docs/RBP_interaction.html)
+* 5.Motif
+  * [5.1.Sequence Motif](https://yuminthu.github.io/training_class/docs/sequence_motif.html)
+  * [5.2.Structure Motif](https://yuminthu.github.io/training_class/docs/structure_motif.html)
+* 6.RNA Regulation Analyses
+  * [6.1.RNA Editing](https://yuminthu.github.io/training_class/docs/RNA_editing.html)
+  * [6.2.APA \(Alternative Polyadenylation\)](https://yuminthu.github.io/training_class/docs/APA.html)
+  * [6.3.Ribo-seq](https://yuminthu.github.io/training_class/docs/ribo_seq.html)
+  * [6.4.Structure-seq](https://yuminthu.github.io/training_class/docs/structure_seq.html)
+  * 6.5.Modification \(m6A-seq\)
+* 7.Clinical Analyses
+  * [7.1.ROC Curve](https://yuminthu.github.io/training_class/docs/ROC_curve.html)
+  * [7.2.PCA/tSNE](https://github.com/soyabean29/PCA-tSNE-UMAP-pipeline)
+  * [7.3.Survival Analysis](https://yuminthu.github.io/training_class/docs/survival_analysis.html)
 
 ## Part IV. MACHINE LEARNING
 
