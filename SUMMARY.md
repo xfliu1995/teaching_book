@@ -26,17 +26,18 @@
 
 ## Part III. NGS DATA ANALYSES
 
-* [1.Mapping](part-iii.ngs-data-analyses/1.mapping.md)
-* [2.RNA-seq](part-iii.ngs-data-analyses/2.rna-seq/README.md)
-  * [2.1 Differential Expression](part-iii.ngs-data-analyses/2.rna-seq/2.1.differential-expression.md)
-  * [2.2 Alternative Splicing](part-iii.ngs-data-analyses/2.rna-seq/2.2.alternative-splicing.md)
-* [3.ChIP-seq](part-iii.ngs-data-analyses/3.chip-seq.md)
+* [1.Mapping](part-iii.-ngs-data-analyses/1.mapping.md)
+* [2.RNA-seq](part-iii.-ngs-data-analyses/2.rna-seq/README.md)
+  * [2.1 Differential Expression](part-iii.-ngs-data-analyses/2.rna-seq/2.1.differential-expression.md)
+  * [2.2 Alternative Splicing](part-iii.-ngs-data-analyses/2.rna-seq/2.2.alternative-splicing.md)
+* [3.ChIP-seq](part-iii.-ngs-data-analyses/3.chip-seq.md)
+* [4.More Analyses](part-iii.-ngs-data-analyses/4.more-analyses.md)
 
 ## Part IV. MACHINE LEARNING
 
-* [1.Machine Learning Basics](part-iv.machine-learning/1.machine-learning-basics.md)
-* [2. Machine Learning with R](part-iv.machine-learning/2.machine-learning-with-r.md)
-* [3. Machine Learning with Python](part-iv.machine-learning/3.machine-learning-with-python.md)
+* [1.Machine Learning Basics](part-iv.-machine-learning/1.machine-learning-basics.md)
+* [2. Machine Learning with R](part-iv.-machine-learning/2.machine-learning-with-r.md)
+* [3. Machine Learning with Python](part-iv.-machine-learning/3.machine-learning-with-python.md)
 
 ## Part V. Quiz
 
