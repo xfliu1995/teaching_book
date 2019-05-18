@@ -90,8 +90,9 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
 * Bioinformatics: [生物信息导论和方法](https://www.coursera.org/course/pkubioinfo) \(北大, MOOC\)
 * [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) \(UC SanDiego\)
 
-## 2\) Advanced Tutorial <a id="advanced"></a>
+## 2\) Advanced Training <a id="advanced"></a>
 
+* [Learning Materials](https://cloud.tsinghua.edu.cn/d/e63019c19d59449992fc/)
 * [Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io/training)
 
 ## 3\) Shared Scripts <a id="share-script"></a>

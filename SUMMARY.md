@@ -7,6 +7,7 @@
 
 * [1.Setup](part-i.-basic-skills/1.setup/README.md)
   * [1.1 Docker](part-i.-basic-skills/1.setup/1.1.docker.md)
+  * [1.2 Cluster](part-i.-basic-skills/1.setup/1.2-cluster.md)
 * [2.Linux](part-i.-basic-skills/2.linux/README.md)
   * [2.1 Basic Command](part-i.-basic-skills/2.linux/2.1.linux-basic-command.md)
   * [2.2 Practice Guide](part-i.-basic-skills/2.linux/2.2.linux-practice-guide.md)
