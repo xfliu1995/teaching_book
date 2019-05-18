@@ -32,7 +32,6 @@
 实例有：
 
 * github \(例如：[README.md](https://github.com/lulab/Ribowave/blob/master/README.md) 及其 [wiki](https://github.com/lulab/Ribowave/wiki) \)
-* 清华云（例如： [README.md](https://cloud.tsinghua.edu.cn/f/0018b4eb647a487d8b27/) \)
 * github page （例如：[https://lulab.github.io](https://lulab.github.io) 的 [source code](https://github.com/lulab/lulab.github.io/blob/master/README.md)）
 * gitbook \(例如：本文档） 
 
