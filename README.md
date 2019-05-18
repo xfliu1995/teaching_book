@@ -4,7 +4,7 @@ description: Copyright © 2019 Lu Lab
 
 # Bioinformatics Tutorial - Basic
 
-**生物信息学实践教程 - 基础篇 \(第2版\)**
+**生物信息学实践教程 - 基础篇 \(2019版\)**
 
 ![](.gitbook/assets/intro.png)
 
@@ -16,17 +16,15 @@ description: Copyright © 2019 Lu Lab
 We teach professional skills in bioinformatics. These skills are not just running software. They will give you freedom of exploring various real data.
 {% endhint %}
 
-鲁志 2018年8月于清华园
+2019年8月于清华园
 
 > 本书在清华大学《生物信息学导论》课和《生物信息学实践》课上机指南的基础上编写。
 
 ## Contributors
 
-Gang Xu, Zhuoer Dong, Xupeng Chen, Xi Hu, Jingyi Cao, Xiaocheng Xi, Siqi Wang, Yumin Zhu, Jingjian Lin and Zhi J. Lu\*
+Yumin Zhu, Gang Xu, Zhuoer Dong, Xupeng Chen, Xi Hu, Jingyi Cao, Xiaocheng Xi, Siqi Wang, Yumin Zhu, Jingjian Lin and Zhi J. Lu\*
 
 \*Corresponding to Zhi J. Lu
-
-> [Details of Contribution](https://www.evernote.com/l/ABIC60Cm2MlIEZHb7GhEzfqmLZ4asG5XS4s)
 
 ## Join Us
 
