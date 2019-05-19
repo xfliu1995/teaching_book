@@ -48,7 +48,7 @@
   * [6.5.Modification \(m6A-seq\)](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/6.5.modification-m6a-seq.md)
 * [7.Clinical Analyses](part-iii.-ngs-data-analyses/7.clinical-analyses/README.md)
   * [7.1.ROC Curve](https://yuminthu.github.io/training_class/docs/ROC_curve.html)
-  * [7.2.PCA/tSNE](https://github.com/soyabean29/PCA-tSNE-UMAP-pipeline)
+  * [7.2.PCA/tSNE](part-iii.-ngs-data-analyses/7.clinical-analyses/PCA_tSNE.md)
   * [7.3.Survival Analysis](https://yuminthu.github.io/training_class/docs/survival_analysis.html)
 
 ## Part IV. MACHINE LEARNING
