@@ -1,9 +1,9 @@
 ## 可变多聚腺苷酸化（Alternative polyadenylation）
 ### workflow
-![](../assets/APA.F1.jpg)
+![](../.gitbook/assets/APA.F1.jpg)
 ### Background
-Alternative polyadenylation (APA) leading to the production of two mRNA isoforms with different 3ʹ untranslated regions (3ʹ UTRs)The dynamic usage of the 3’untranslated region (3’UTR) resulting from alternative polyadenylation (APA) is emerging as a pervasive mechanism for regulating mRNA diversity, stability and translation. 
-![](../assets/APA.F2.jpg)
+Alternative polyadenylation (APA) leading to the production of two mRNA isoforms with different 3ʹ untranslated regions (3ʹ UTRs)The dynamic usage of the 3’untranslated region (3’UTR) resulting from alternative polyadenylation (APA) is emerging as a pervasive mechanism for regulating mRNA diversity, stability and translation.
+![](../.gitbook/assets/APA.F2.jpg)
 ### Data Processing
 #### DaPars
 ##### step1. Generate region annotation: python DaPars_Extract_Anno.py -b gene.bed -s symbol_map.txt -o extracted_3UTR.bed
@@ -78,8 +78,7 @@ PDUI_cutoff=0.5
 Fold_change_cutoff=0.59
 ```
 ###### output
-![](../assets/APA.F3.jpg)
+![](../.gitbook/assets/APA.F3.jpg)
 
 ##### step3. Filter diff-APA events
 FDR_cutoff, PDUI_cutoff, Fold_change_cutoff → Pass filer (Y nor N)
-
