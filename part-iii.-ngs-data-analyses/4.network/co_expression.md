@@ -1,10 +1,10 @@
-# Co-expression
+# 4.1.Co-expression Network
 
 ## Co-expression
 
 ## 1.Pipeline
 
-![](../assets/co-expression-pipeline.png)
+![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/co-expression-pipeline.png)
 
 首先计算基因之间的相关系数，构建基因网络\(correlation network of genes\)，然后将具有相似表达模式的基因划分成模块\(module\)。随后计算各个模块与样本表型数据之间的相关性，对特定的感兴趣的模块分析核心基因\(hub gene，通常是转录因子等关键的调控因子\)，并将特定模块的基因提取出来，进行GO/KEGG等分析。
 
@@ -36,7 +36,7 @@ datExpr[1:4,1:4]
 dim(datExpr)
 ```
 
-```
+```text
 #           ENSG00000210082 ENSG00000198712 ENSG00000198804 ENSG00000210845
 #GSM1172844        78053.20       103151.73       112917.53        92808.32
 #GSM1172845        96200.86       157203.85       163847.92        93501.17
@@ -54,7 +54,7 @@ datTraits[1:4,]
 dim(datTraits)
 ```
 
-```
+```text
 #                  gsm cellline       subtype
 #GSM1172844 GSM1172844    184A1 Non-malignant
 #GSM1172845 GSM1172845    184B5 Non-malignant
@@ -79,26 +79,22 @@ dim(datTraits)
 ## 3.Running steps
 
 ### WGCNA分析
-#### 基本概念
-WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同表达的基因模块(module)，并探索基因网络与关注的表型之间的关联关系，以及网络中的核心基因。
 
-适用于复杂的数据模式，推荐5组(或者15个样品)以上的数据。一般可应用的研究方向有：不同器官或组织类型发育调控、同一组织不同发育调控、非生物胁迫不同时间点应答、病原菌侵染后不同时间点应答。
+#### 基本概念
+
+WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同表达的基因模块\(module\)，并探索基因网络与关注的表型之间的关联关系，以及网络中的核心基因。
+
+适用于复杂的数据模式，推荐5组\(或者15个样品\)以上的数据。一般可应用的研究方向有：不同器官或组织类型发育调控、同一组织不同发育调控、非生物胁迫不同时间点应答、病原菌侵染后不同时间点应答。
 
 #### 基本原理
 
 从方法上来讲，WGCNA分为**表达量聚类分析和表型关联**两部分，主要包括基因之间相关系数计算、基因模块的确定、共表达网络、模块与性状关联四个步骤。
 
-第一步计算任意两个基因之间的相关系数（Person Coefficient）。为了衡量两个基因是否具有相似表达模式，一般需要设置阈值来筛选，高于阈值的则认为是相似的。但是这样如果将阈值设为0.8，那么很难说明0.8和0.79两个是有显著差别的。因此，**WGCNA分析时采用相关系数加权值，即对基因相关系数取N次幂**，使得网络中的基因之间的连接服从**无尺度网络分布(scale-freenetworks)** ，这种算法更具生物学意义。
+第一步计算任意两个基因之间的相关系数（Person Coefficient）。为了衡量两个基因是否具有相似表达模式，一般需要设置阈值来筛选，高于阈值的则认为是相似的。但是这样如果将阈值设为0.8，那么很难说明0.8和0.79两个是有显著差别的。因此，**WGCNA分析时采用相关系数加权值，即对基因相关系数取N次幂**，使得网络中的基因之间的连接服从**无尺度网络分布\(scale-freenetworks\)** ，这种算法更具生物学意义。
 
 **无尺度网络分布**：大部分节点只和很少节点连接，而有极少的节点与非常多的节点连接，生物体选择scale-free network可以保证少数关键基因执行着主要功能，只要保证hub的完整性，整个生命体系的基本活动在一定刺激影响下将不会受到太大影响。
 
-第三步得到模块之后可以做很多下游分析：
-（1）模块的功能富集
-（2）模块与性状之间的相关性
-（3）模块与样本间的相关系数
-（4）找到模块的核心基因
-（5）利用关系预测基因功能
-
+第三步得到模块之后可以做很多下游分析： （1）模块的功能富集 （2）模块与性状之间的相关性 （3）模块与样本间的相关系数 （4）找到模块的核心基因 （5）利用关系预测基因功能
 
 ### 3.0 Install packages
 
@@ -126,7 +122,7 @@ powers = c(c(1:10), seq(from=12, to=20, by=2))
 sft=pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
 ```
 
-```
+```text
 #pickSoftThreshold: will use block size 5000.
 # pickSoftThreshold: calculating connectivity for given powers...
 #   ..working on genes 1 through 5000 of 5000
@@ -169,7 +165,7 @@ text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
 dev.off()
 ```
 
-![](../assets/soft_thresholding.png)
+![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/soft_thresholding.png)
 
 软阈值（即权重参数，可以理解为相关系数的β次幂）取值默认为1到30，上述图形的横轴均代表软阈值，左图的纵轴数值越大，说明该网络越逼近无尺度网络，右图的纵轴表示对应的基因模块中所有基因邻接性的均值。
 
@@ -182,7 +178,6 @@ sft$powerEstimate
 ### 3.3 One-step network construction and module detection
 
 把输入的表达矩阵的**几千个基因归类成了几十个模块。**大体思路：计算基因间的邻接性，根据邻接性计算基因间的相似性，然后推出基因间的相异性系数，并据此得到基因间的系统聚类树。
-
 
 ```r
 net = blockwiseModules(datExpr,
@@ -237,7 +232,7 @@ plotDendroAndColors(net$dendrograms[[1]], mergedColors[net$blockGenes[[1]]],
 dev.off()
 ```
 
-![](../assets/module_visualization.png)
+![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/module_visualization.png)
 
 ### 3.5 Quantify module similarity by eigengene correlation
 
@@ -258,7 +253,7 @@ plotEigengeneNetworks(MET,"", marDendro=c(0,4,1,2),
 dev.off()
 ```
 
-![](../assets/eigengenes_trait_relationship.png)
+![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/eigengenes_trait_relationship.png)
 
 The top part of this plot represents the eigengene dendrogram and the lower part of this plot represents the eigengene adjacency heatmap.
 
@@ -302,11 +297,9 @@ dev.off()
 
 通过模块与各种表型的相关系数，可以很清楚的挑选自己感兴趣的模块进行下游分析了。这个图就是把moduleTraitCor这个矩阵给用热图可视化一下。
 
-
-![](../assets/module_trait_relationship.png)
+![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/module_trait_relationship.png)
 
 从上图已经可以看到跟乳腺癌分类相关的基因模块了，包括"Basal" "Claudin-low" "Luminal" "Non-malignant" "unknown" 这5类所对应的不同模块的基因列表。可以看到每一种乳腺癌都有跟它强烈相关的模块，可以作为它的表达signature，模块里面的基因可以拿去做下游分析。我们看到Luminal表型跟棕色的模块相关性高达0.86，而且极其显著的相关，所以值得我们挖掘，这个模块里面的基因是什么，为什么如此的相关呢？
-
 
 ### 3.7 Select specific module
 
@@ -386,7 +379,7 @@ cyt = exportNetworkToCytoscape(filter,
     nodeAttr = moduleColors[inModule][1:nTop])
 ```
 
-#### ![](../assets/cytoscapeinput-edges-filter-brown2.png)
+#### ![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/cytoscapeinput-edges-filter-brown2.png)
 
 This plot is visualized by Cytoscape.
 
@@ -437,10 +430,12 @@ head geneID_brown.txt
 We could use the gene ID list for GO/KEGG analysis.
 
 ## 4 Appendix：functional annotation of lncRNA
-### 4.1 GO/KEGG analysis of the module which interested lncRNAs are involved in.
-在WGCNA得到模块之后，通过fisher exact test分析感兴趣的lncRNA(例如：上调或者下调)是否在这些模块中显著富集，挑选出显著富集的模块中的protein coding genes做功能分析。
 
-![](../assets/co-expression.lncRNA.png)
+### 4.1 GO/KEGG analysis of the module which interested lncRNAs are involved in.
+
+在WGCNA得到模块之后，通过fisher exact test分析感兴趣的lncRNA\(例如：上调或者下调\)是否在这些模块中显著富集，挑选出显著富集的模块中的protein coding genes做功能分析。
+
+![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/co-expression.lncRNA.png)
 
 ### 4.2 Construct the lncRNA-mRNA co-expression network, functional analysis of mRNAs which are co-expressed with these interested lncRNAs.
 
@@ -713,3 +708,4 @@ We could extract the mRNA gene set for GO/KEGG analysis.
 [https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html)
 
 [example](https://github.com/YuminTHU/training_class/tree/master/data/co_expression)
+

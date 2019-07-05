@@ -1,21 +1,13 @@
 # Getting Started
 
-## 1\) 预修课程准备
+## 0\) 预修课程准备
 
 1. 基本生物课程： 如《遗传学》和/或《分子生物学》
 2. 基本统计课程： 如《概率论》和/或《生物统计》
 3. 基本数学课程： 如《微积分》和《线性代数》
 4. 基本计算机课程：如《C语言》或《python》
 
-## 2\) Learning Materials
-
-* Tutorial
-* **Basic Tutorial** \(this one\)
-* [**Advanced Tutorial**](https://lulab.gitbook.io/training)
-
-> see more learning materials in [Appendix I. Keep Learning](appendix/appendix1.keep-learning.md)
-
-## 3\) GitHub - Document your work
+## 1\) GitHub & MarkDown - Document your work
 
 [GitHub](https://github.com) 是一个源代码托管平台。
 
@@ -35,9 +27,9 @@
 * github page （例如：[https://lulab.github.io](https://lulab.github.io) 的 [source code](https://github.com/lulab/lulab.github.io/blob/master/README.md)）
 * gitbook \(例如：本文档） 
 
-> 我们鼓励利用github，github自带的wiki，gitbook，清华云等云服务；对习惯离线编辑同学有如下软件推荐： Mac: [Bear](https://bear.app/), [MWeb](https://zh.mweb.im/); Windows: [typora](https://typora.io/), [Madoko](https://www.madoko.net/)
+> 我们鼓励利用github，github自带的wiki，gitbook，清华云等云服务；对习惯离线编辑同学有如下软件推荐： Mac: [typora](https://typora.io/), [Bear](https://bear.app/), [MWeb](https://zh.mweb.im/); Windows: [typora](https://typora.io/), [Madoko](https://www.madoko.net/)
 
-## 4\) 本教程使用说明
+## 2\) 本教程使用说明
 
 * 除非特殊说明，本章中的命令均是在自己电脑的 **Terminal** （终端）程序中进行。
 
@@ -49,10 +41,22 @@
 
 * 本教程全部作业均要求提供源代码和输出内容。提交作业格式可以是.doc/.txt/.md/.sh等，标有 "optional" 的题目选做，做对可获得额外加分。
 
-## 5\) Homework
+## 3\) Homework
 
 1. 注册一个GitHub账户，创建一个仓库，写好`README.md`。尝试使用Git管理自己的代码并同步至GitHub。
 2. 尝试使用Markdown语言，熟悉其语法。
+
+
+
+## 4\) Learning Materials
+
+* Tutorial
+* **Basic Tutorial** \(this one\)
+* [**Advanced Tutorial**](https://lulab.gitbook.io/training)
+
+> see more learning materials in [Appendix I. Keep Learning](appendix/appendix1.keep-learning.md)
+
+
 
 ## 休息一会
 

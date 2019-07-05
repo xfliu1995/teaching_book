@@ -35,20 +35,20 @@
 * [More Analyses](part-iii.-ngs-data-analyses/4.more-analyses.md)
 * [4.Network](part-iii.-ngs-data-analyses/4.network/README.md)
   * [4.1.Co-expression Network](part-iii.-ngs-data-analyses/4.network/co_expression.md)
-  * [4.2.miRNA Targets](part-iii.-ngs-data-analyses/4.network/miRNA.md)
-  * [4.3.RBP-RNA Interactions](part-iii.-ngs-data-analyses/4.network/RBP_interaction.md)
+  * [4.2.miRNA Targets](part-iii.-ngs-data-analyses/4.network/4.2.mirna-targets.md)
+  * [4.3.RBP-RNA Interactions](part-iii.-ngs-data-analyses/4.network/rbp_interaction.md)
 * [5.Motif](part-iii.-ngs-data-analyses/5.motif/README.md)
   * [5.1.Sequence Motif](part-iii.-ngs-data-analyses/5.motif/sequence_motif.md)
   * [5.2.Structure Motif](part-iii.-ngs-data-analyses/5.motif/structure_motif.md)
 * [6.RNA Regulation Analyses](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/README.md)
-  * [6.1.RNA Editing](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/RNA_editing.md)
-  * [6.2.APA \(Alternative Polyadenylation\)](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/APA.md)
+  * [6.1.RNA Editing](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/rna_editing.md)
+  * [6.2.APA \(Alternative Polyadenylation\)](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/apa.md)
   * [6.3.Ribo-seq](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/ribo_seq.md)
   * [6.4.Structure-seq](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/structure_seq.md)
   * [6.5.Modification \(m6A-seq\)](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/6.5.modification-m6a-seq.md)
 * [7.Clinical Analyses](part-iii.-ngs-data-analyses/7.clinical-analyses/README.md)
-  * [7.1.ROC Curve](part-iii.-ngs-data-analyses/7.clinical-analyses/ROC_curve.md)
-  * [7.2.PCA/tSNE](part-iii.-ngs-data-analyses/7.clinical-analyses/PCA_tSNE.md)
+  * [7.1.ROC Curve](part-iii.-ngs-data-analyses/7.clinical-analyses/roc_curve.md)
+  * [7.2.PCA/tSNE](part-iii.-ngs-data-analyses/7.clinical-analyses/pca_tsne.md)
   * [7.3.Survival Analysis](part-iii.-ngs-data-analyses/7.clinical-analyses/survival_analysis.md)
 
 ## Part IV. MACHINE LEARNING
@@ -68,3 +68,4 @@
 
 * [Appendix I. Keep Learning](appendix/appendix1.keep-learning.md)
 * [Appendix II. Databases & Servers](appendix/appendix2.databases-servers.md)
+

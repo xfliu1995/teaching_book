@@ -1,9 +1,8 @@
-
+# 7.2.PCA/tSNE
 
 ```python
 cd ~/projects/exSEEK_training/
 ```
-
 
 ```python
 import gc, argparse, sys, os, errno
@@ -33,11 +32,11 @@ import IPython
 from IPython.display import IFrame
 ```
 
-# prerequisite
+## prerequisite
 
-## load plotting functions
-embed pdf; std_plot; display dataframe
+### load plotting functions
 
+embed pdf; std\_plot; display dataframe
 
 ```python
 #setup figure template
@@ -51,18 +50,17 @@ reload(figure_template)
 from figure_template import display_dataframe, embed_pdf_figure, embed_pdf_pages,std_plot,legendhandle
 ```
 
+## PCA&t-SNE visualization
 
+### PCA \(principle component analysis\)
 
-# PCA&t-SNE visualization
+* 通过线性组合得到贡献最大的、可解释的变量\(principle components\)
+* 数据的降维和可视化
 
-## PCA (principle component analysis)
-- 通过线性组合得到贡献最大的、可解释的变量(principle components)
-- 数据的降维和可视化
-
-[PCA](https://zhuanlan.zhihu.com/p/37777074)<br>
-[SVD](https://mp.weixin.qq.com/s/Dv51K8JETakIKe5dPBAPVg)<br>
-[Hinton理解的PCA](https://www.jianshu.com/p/76c64cd0b5ad)<br>
-[PCA和SVD的区别与联系](https://blog.csdn.net/wangjian1204/article/details/50642732)
+[PCA](https://zhuanlan.zhihu.com/p/37777074)  
+ [SVD](https://mp.weixin.qq.com/s/Dv51K8JETakIKe5dPBAPVg)  
+ [Hinton理解的PCA](https://www.jianshu.com/p/76c64cd0b5ad)  
+ [PCA和SVD的区别与联系](https://blog.csdn.net/wangjian1204/article/details/50642732)
 
 PCA的主要思想是将n维特征映射到k维上，这k维是新的彼此正交的特征，也被称为主成分。PCA的工作就是从原始的空间中顺序地找一组相互正交的坐标轴，新的坐标轴的选择与数据本身密切相关。其中，第一个新坐标轴选择是原始数据中方差最大的方向，第二个新坐标轴选取是与第一个坐标轴正交的平面中使得方差最大的，第三个轴是与第1,2个轴正交的平面中方差最大的。依次类推，可以得到n个这样的坐标轴。通过这种方式获得的新的坐标轴。
 
@@ -70,7 +68,8 @@ PCA的主要思想是将n维特征映射到k维上，这k维是新的彼此正�
 
 **如何得到这些包含最大差异性的主成分方向？**
 
-通过计算数据矩阵的协方差矩阵，然后得到协方差矩阵的特征值特征向量，选择特征值最大(即方差最大)的k个特征所对应的特征向量组成的矩阵。这样就可以将数据矩阵转换到新的空间当中，实现数据特征的降维。<br>由于得到协方差矩阵的特征值特征向量有两种方法：特征值分解协方差矩阵、奇异值分解协方差矩阵，所以PCA算法有两种实现方法：基于特征值分解协方差矩阵实现PCA算法、基于SVD分解协方差矩阵实现PCA算法。
+通过计算数据矩阵的协方差矩阵，然后得到协方差矩阵的特征值特征向量，选择特征值最大\(即方差最大\)的k个特征所对应的特征向量组成的矩阵。这样就可以将数据矩阵转换到新的空间当中，实现数据特征的降维。  
+由于得到协方差矩阵的特征值特征向量有两种方法：特征值分解协方差矩阵、奇异值分解协方差矩阵，所以PCA算法有两种实现方法：基于特征值分解协方差矩阵实现PCA算法、基于SVD分解协方差矩阵实现PCA算法。
 
 **为什么要用协方差矩阵？为什么要对协方差矩阵做特征值分解？**
 
@@ -79,7 +78,6 @@ $$
 \text{方差： }S ^ { 2 } = \frac { 1 } { n - 1 } \sum _ { i = 1 } ^ { n } \left( x _ { i } - \overline { x } \right) ^ { 2 }\\
 \text{协方差： }\begin{aligned} \operatorname { Cov } ( X , Y ) & = E [ ( X - E ( X ) ) ( Y - E ( Y ) ) ] \\ & = \frac { 1 } { n - 1 } \sum _ { i = 1 } ^ { n } \left( x _ { i } - \overline { x } \right) \left( y _ { i } - \overline { y } \right) \end{aligned}
 $$
-
 
 ```python
 fig, ax=plt.subplots(1,2,figsize=(10,5))
@@ -91,17 +89,15 @@ ax[0].imshow(corr_mat,cmap=cm.binary_r)
 ax[1].imshow(np.cov(corr_mat),cmap=cm.binary_r)
 ```
 
-
 ```python
 np.cov(corr_mat)
 ```
 
-**协方差矩阵表征了变量自身的“能量”/“信息”和彼此的关联性**
-假设样本中某个主要的维度A能代表原始数据，是“我们真正想看到的东西”，它本身含有的“能量”(即该维度的方差)，本来应该是很大的，但由于它与其他维度有千丝万缕的相关性，受到这些个相关维度的干扰，它的能量被削弱了，我们就希望通过PCA处理后，使维度A与其他维度的相关性尽可能减弱，进而恢复维度A应有的能量，让我们“看的更清楚”。
+**协方差矩阵表征了变量自身的“能量”/“信息”和彼此的关联性** 假设样本中某个主要的维度A能代表原始数据，是“我们真正想看到的东西”，它本身含有的“能量”\(即该维度的方差\)，本来应该是很大的，但由于它与其他维度有千丝万缕的相关性，受到这些个相关维度的干扰，它的能量被削弱了，我们就希望通过PCA处理后，使维度A与其他维度的相关性尽可能减弱，进而恢复维度A应有的能量，让我们“看的更清楚”。
 
 最直观的思路就是将协方差矩阵只保留对角线上的元素，将其他元素变成零，在矩阵变换中这种操作被称为矩阵的对角化，方法包括特征值分解和奇异值分解。
 
-### PCA算法推导
+#### PCA算法推导
 
 $$
 X = \left( \begin{array} { c c c c c } { - 1 } & { - 1 } & { 0 } & { 2 } & { 0 } \\ { - 2 } & { 0 } & { 0 } & { 1 } & { 1 } \end{array} \right)
@@ -109,89 +105,95 @@ $$
 
 以X为例，我们用PCA方法将这两行数据降到一行。
 
-- 去平均值(即去中心化)，即每一位特征减去各自的平均值
-- 算协方差矩阵 $\frac{1}{n} XX^T $
-- 用特征值分解方法求协方差矩阵$\frac{1}{n}XX^T$ 的特征值与特征向量
-- 对特征值从大到小排序，选择其中最大的k个。然后将其对应的k个特征向量分别作为行向量组成特征向量矩阵P
-- 将数据转换到k个特征向量构建的新空间中，即Y=PX
+* 去平均值\(即去中心化\)，即每一位特征减去各自的平均值
+* 算协方差矩阵 $\frac{1}{n} XX^T $
+* 用特征值分解方法求协方差矩阵$\frac{1}{n}XX^T$ 的特征值与特征向量
+* 对特征值从大到小排序，选择其中最大的k个。然后将其对应的k个特征向量分别作为行向量组成特征向量矩阵P
+* 将数据转换到k个特征向量构建的新空间中，即Y=PX
 
 $$
 C = \frac { 1 } { 5 } \left( \begin{array} { c c c c c } { - 1 } & { - 1 } & { 0 } & { 2 } & { 0 } \\ { - 2 } & { 0 } & { 0 } & { 1 } & { 1 } \end{array} \right) \left( \begin{array} { c c } { - 1 } & { - 2 } \\ { - 1 } & { 0 } \\ { 0 } & { 0 } \\ { 2 } & { 1 } \\ { 0 } & { 1 } \end{array} \right) = \left( \begin{array} { c c } { \frac { 6 } { 5 } } & { \frac { 4 } { 5 } } \\ { \frac { 4 } { 5 } } & { \frac { 6 } { 5 } } \end{array} \right)
 $$
 
 求解后的特征值为：
+
 $$
 \lambda _ { 1 } = 2 , \quad \lambda _ { 2 } = \frac { 2 } { 5 }
 $$
+
 对应的特征向量为：
+
 $$
 c _ { 1 } \left( \begin{array} { l } { 1 } \\ { 1 } \end{array} \right) , c _ { 2 } \left( \begin{array} { c } { - 1 } \\ { 1 } \end{array} \right)
 $$
+
 其中对应的特征向量分别是一个通解， c_{1} 和 c_{2} 可以取任意实数。那么标准化后的特征向量为:
+
 $$
 \left( \begin{array} { c } { \frac { 1 } { \sqrt { 2 } } } \\ { \frac { 1 } { \sqrt { 2 } } } \end{array} \right) , \left( \begin{array} { c } { - \frac { 1 } { \sqrt { 2 } } } \\ { \frac { 1 } { \sqrt { 2 } } } \end{array} \right)
 $$
+
 矩阵P为：
+
 $$
 P = \left( \begin{array} { c c } { \frac { 1 } { \sqrt { 2 } } } & { \frac { 1 } { \sqrt { 2 } } } \\ { - \frac { 1 } { \sqrt { 2 } } } & { \frac { 1 } { \sqrt { 2 } } } \end{array} \right)
 $$
+
 最后我们用P的第一行乘以数据矩阵X，就得到了降维后的表示:
+
 $$
 Y = \left( \begin{array} { c c } { \frac { 1 } { \sqrt { 2 } } } & { \frac { 1 } { \sqrt { 2 } } } \end{array} \right) \left( \begin{array} { c c c c c } { - 1 } & { - 1 } & { 0 } & { 2 } & { 0 } \\ { - 2 } & { 0 } & { 0 } & { 1 } & { 1 } \end{array} \right) = \left( \begin{array} { c c c c } { - \frac { 3 } { \sqrt { 2 } } } & { - \frac { 1 } { \sqrt { 2 } } } & { 0 } & { \frac { 3 } { \sqrt { 2 } } } & { - \frac { 1 } { \sqrt { 2 } } } \end{array} \right)
 $$
-
 
 ```python
 url = 'https://pic2.zhimg.com/80/v2-f5b0a7ae6d0b400e65220a02a0f0c1c1_hd.jpg'
 IPython.display.Image(url, width = 500)
 ```
 
-### 奇异值分解和应用
+#### 奇异值分解和应用
 
 SVD英文是 Singular Value Decomposition，一般简称为 SVD。下面先给出它大概的意思：
 
-对于任意一个$m \times n $的矩阵$M$，不妨假设$m > n$，它可以被分解为$M = UDV^{T}$
+对于任意一个$m \times n $的矩阵$M$，不妨假设$m &gt; n$，它可以被分解为$M = UDV^{T}$
 
 其中
 
-- $U$ 是一个$m \times n$的矩阵，满足$U^{T}U = I_{n}$，$I_{n}$ 是$n \times n$的单位阵
-- $V$ 是一个$n \times n$的矩阵，满足$V^{T}V = I_{n}$
-- $D$ 是一个$n \times n$的对角矩阵，所有的元素都非负
+* $U$ 是一个$m \times n$的矩阵，满足$U^{T}U = I_{n}$，$I_{n}$ 是$n \times n$的单位阵
+* $V$ 是一个$n \times n$的矩阵，满足$V^{T}V = I\_{n}$
+* $D$ 是一个$n \times n$的对角矩阵，所有的元素都非负
 
 上面这短短的三条可以引发出 SVD 许多重要的性质。
 
 前面的表达式$M = UDV^{T}$可以用一种更容易理解的方式表达出来。如果我们把矩阵$U$用它的列向量表示出来，可以写成
 
-$U = (u_1, u_2,\ldots, u_n)$
+$U = \(u\_1, u\_2,\ldots, u\_n\)$
 
-其中每一个$u_i$被称为$M$的左奇异向量。类似地，对于$V$，有</p>
+其中每一个$u\_i$被称为$M$的左奇异向量。类似地，对于$V$，有&lt;/p&gt;
 
-$V = (v_1,v_2,\ldots,v_n)$
+$V = \(v\_1,v\_2,\ldots,v\_n\)$
 
-它们被称为右奇异向量。再然后，假设矩阵$D$的对角线元素为$d_i$（它们被称为$M$的奇异值）并按降序排列，那么$M$就可以表达为
+它们被称为右奇异向量。再然后，假设矩阵$D$的对角线元素为$d\_i$（它们被称为$M$的奇异值）并按降序排列，那么$M$就可以表达为
 
-$M = d_1u_1v_1^T + d_2u_2v_2^T + \cdots + d_nu_nv_n^T = \sum_{i=1}^n d_iu_iv_i^T = \sum_{i=1}^n A_i$
+$M = d_1u\_1v\_1^T + d\_2u\_2v\_2^T + \cdots + d\_nu\_nv\_n^T = \sum_{i=1}^n d_iu\_iv\_i^T = \sum_{i=1}^n A\_i$
 
-其中$A_i = d_iu_iv_i^T$是一个$m \times n$的矩阵。换句话说，我们把原来的矩阵$M$表达成了$n$个矩阵的和。
+其中$A\_i = d\_iu\_iv\_i^T$是一个$m \times n$的矩阵。换句话说，我们把原来的矩阵$M$表达成了$n$个矩阵的和。
 
-这个式子有什么用呢？注意到，我们假定$d_i$是按降序排列的，它在某种程度上反映了对应项$A_i$在$M$中的“贡献”。$d_i$越大，说明对应的 $A_i$在$M$的分解中占据的比重也越大。所以一个很自然的想法是，我们是不是可以提取出$A_i$中那些对$M$贡献最大的项，把它们的和作为对 $M$的近似？也就是说，如果令
+这个式子有什么用呢？注意到，我们假定$d\_i$是按降序排列的，它在某种程度上反映了对应项$A\_i$在$M$中的“贡献”。$d\_i$越大，说明对应的 $A\_i$在$M$的分解中占据的比重也越大。所以一个很自然的想法是，我们是不是可以提取出$A\_i$中那些对$M$贡献最大的项，把它们的和作为对 $M$的近似？也就是说，如果令
 
-$ M_k = \sum_{i=1}^k A_i$
+$ M_k = \sum_{i=1}^k A\_i$
 
-那么我们是否可以用$M_k$来对$M_n \equiv M$进行近似？
+那么我们是否可以用$M\_k$来对$M\_n \equiv M$进行近似？
 
 答案是肯定的，主成分分析就是这样做的。在主成分分析中，我们把数据整体的变异分解成若干个主成分之和，然后保留方差最大的若干个主成分，而舍弃那些方差较小的。事实上，主成分分析就是对数据的协方差矩阵进行了类似的分解（特征值分解），但这种分解只适用于对称的矩阵，而 SVD 则是对任意大小和形状的矩阵都成立。
 
-主成分分析降维就是用几组低维的主成分来记录原始数据的大部分信息，这也可以认为是一种信息的（有损）压缩。在 SVD 中也可以做类似的事情，也就是用更少项的求和$M_k$来近似完整的$n$项求和。为什么要这么做呢？我们用一个图像压缩的例子来说明。
+主成分分析降维就是用几组低维的主成分来记录原始数据的大部分信息，这也可以认为是一种信息的（有损）压缩。在 SVD 中也可以做类似的事情，也就是用更少项的求和$M\_k$来近似完整的$n$项求和。为什么要这么做呢？我们用一个图像压缩的例子来说明。
 
-我们知道，电脑上的图像（特指位图）都是由像素点组成的，所以存储一张 1000×622 大小的图片，实际上就是存储一个 1000×622 的矩阵，共 622000 个元素。这个矩阵用 SVD 可以分解为 622 个矩阵之和，如果我们选取其中的前 100 个之和作为对图像数据的近似，那么只需要存储 100 个奇异值$d_i$，100 个$u_i$向量和 100 个$v_i$向量，共计 100×(1+1000+622)=162300个 元素，大约只有原始的 26% 大小
-
+我们知道，电脑上的图像（特指位图）都是由像素点组成的，所以存储一张 1000×622 大小的图片，实际上就是存储一个 1000×622 的矩阵，共 622000 个元素。这个矩阵用 SVD 可以分解为 622 个矩阵之和，如果我们选取其中的前 100 个之和作为对图像数据的近似，那么只需要存储 100 个奇异值$d\_i$，100 个$u\_i$向量和 100 个$v\_i$向量，共计 100×\(1+1000+622\)=162300个 元素，大约只有原始的 26% 大小
 
 ```python
 lena = imread('data/lena512color.tiff') 
 imshow(lena)
 ```
-
 
 ```python
 def rebuild_img(u, sigma, v, p): #p表示奇异值的百分比
@@ -199,7 +201,7 @@ def rebuild_img(u, sigma, v, p): #p表示奇异值的百分比
     m = len(u)
     n = len(v)
     a = np.zeros((m, n))
-    
+
     count = (int)(sum(sigma))
     curSum = 0
     k = 0
@@ -215,7 +217,6 @@ def rebuild_img(u, sigma, v, p): #p表示奇异值的百分比
     #按照最近距离取整数，并设置参数类型为uint8
     return np.rint(a).astype("uint8")
 ```
-
 
 ```python
 reconstructed_img = {}
@@ -234,7 +235,6 @@ for i in tqdm(range(1,11)):
     reconstructed_img[i] = np.stack((R, G, B), 2)
 ```
 
-
 ```python
 fig,ax=plt.subplots(2,5,figsize=(20,8))
 for i in range(2):
@@ -242,21 +242,18 @@ for i in range(2):
         ax[i,j].imshow(reconstructed_img[i*5+j+1])
 ```
 
-### PCA 应用实例
-
+#### PCA 应用实例
 
 ```python
 rate_data = pd.read_csv('data/select_table_chn.csv',index_col=0)
 rate_data.head()
 ```
 
-
 ```python
 input_mx = np.array(rate_data)
 ```
 
-#### screen plot
-
+**screen plot**
 
 ```python
 svd_solver = ['auto','full','arpack','randomized']
@@ -277,26 +274,24 @@ fig.tight_layout()
 #embed_pdf_figure()
 ```
 
-
 ```python
 pca
 ```
 
-#### Loading matrix
-
+**Loading matrix**
 
 ```python
 def zeroMean(dataMat):      
     meanVal=np.mean(dataMat,axis=0)     #按列求均值，即求各个特征的均值
     newData=dataMat-meanVal
     return newData,meanVal
- 
+
 def pca_own(dataMat,n=None):
     if n==None:
         n = dataMat.shape[1]
     newData,meanVal=zeroMean(dataMat)
     covMat=np.cov(newData,rowvar=0)    #求协方差矩阵,return ndarray；若rowvar非0，一列代表一个样本，为0，一行代表一个样本
-    
+
     eigVals,eigVects=np.linalg.eig(np.mat(covMat))#求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量
     eigValIndice=np.argsort(eigVals)            #对特征值从小到大排序
     n_eigValIndice=eigValIndice[-1:-(n+1):-1]   #最大的n个特征值的下标
@@ -306,21 +301,16 @@ def pca_own(dataMat,n=None):
     return lowDDataMat,reconMat,n_eigVect
 
 lowDDataMat,pca_mx,loadings = pca_own(input_mx)
-
 ```
-
 
 ```python
 lowDDataMat.shape,pca_mx.shape
 ```
 
-
 ```python
 fig,ax=plt.subplots(figsize=(10,60))
 sns.heatmap(lowDDataMat,ax=ax,vmin=-1, vmax=1, annot=True, fmt='.2f', cmap='vlag')
-
 ```
-
 
 ```python
 reconstructed_img = {}
@@ -337,14 +327,12 @@ for i in tqdm(range(1,11)):
     reconstructed_img[i][reconstructed_img[i]>=255] = 255
 ```
 
-
 ```python
 fig,ax=plt.subplots(2,5,figsize=(20,8))
 for i in range(2):
     for j in range(5):
         ax[i,j].imshow(reconstructed_img[i*5+j+1])
 ```
-
 
 ```python
 revise_columns = np.array([i.split('-')[2]+'-month' for i in rate_data.columns])
@@ -358,11 +346,9 @@ ax.set_xticklabels(revise_columns,fontsize=10,rotation=90)
 ax.set_yticklabels(np.array(['PC'+ str(i) for i in range(1,loadings.shape[0]+1)]))
 fig.tight_layout()
 #embed_pdf_figure()
-
 ```
 
-#### PCA visualization
-
+**PCA visualization**
 
 ```python
 filled_markers = ('o', 'v', '^', '<', '>', '8', 's', 'p', '*', 'h', 'H', 'D', 'd', 'P', 'X')
@@ -380,7 +366,7 @@ def PCA_plot_sns(ax,data,sampleclass,method = 'Origin'):
     elif method == 'tSNE':
         transform = TSNE()
         X_pca = transform.fit_transform(X)
-   
+
     plot_table = pd.DataFrame(X_pca[:,:2])
     plot_table.index = data.columns
     plot_table = pd.concat((plot_table,sampleclass.loc[plot_table.index]),axis=1)
@@ -389,7 +375,7 @@ def PCA_plot_sns(ax,data,sampleclass,method = 'Origin'):
 
     sns.scatterplot(ax=ax,data=plot_table,x="dimension_1", y="dimension_2",markers=filled_markers,
                     palette=legendhandle(np.unique(plot_table['class'])), hue="class",style="class",s=30,linewidth=0.01)
-    
+
     std_plot(ax,'Dimension 1','Dimension 2',
              title=method, legendtitle='class',legendsort=False
              ,xbins=6,ybins=6
@@ -398,9 +384,7 @@ def PCA_plot_sns(ax,data,sampleclass,method = 'Origin'):
      bbox_to_anchor=(1.2,0.9),framealpha=0,labelspacing=0.24)
     ax.legend_.get_frame()._linewidth=0
     fig.tight_layout()
-    
 ```
-
 
 ```python
 input_table = rate_data
@@ -412,7 +396,6 @@ month_class = pd.DataFrame(np.concatenate((np.array(input_table.index).reshape(-
 month_class = month_class.set_index('sample').astype('str')
 ```
 
-
 ```python
 fig, ax = plt.subplots(1,2,figsize=(7,3))
 PCA_plot_sns(ax[0], input_table.T,year_class,'Origin')
@@ -420,17 +403,16 @@ PCA_plot_sns(ax[1], input_table.T,year_class,'PCA')
 #embed_pdf_figure()
 ```
 
-## t-SNE
-https://www.jiqizhixin.com/articles/2017-11-13-7<br>
-http://www.datakit.cn/blog/2017/02/05/t_sne_full.html<br>
-http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/<br>
-[t-SNE使用中的问题](http://bindog.github.io/blog/2018/07/31/t-sne-tips/)
+### t-SNE
 
+[https://www.jiqizhixin.com/articles/2017-11-13-7](https://www.jiqizhixin.com/articles/2017-11-13-7)  
+ [http://www.datakit.cn/blog/2017/02/05/t\_sne\_full.html](http://www.datakit.cn/blog/2017/02/05/t_sne_full.html)  
+ [http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/](http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/)  
+ [t-SNE使用中的问题](http://bindog.github.io/blog/2018/07/31/t-sne-tips/)
 
 ```python
 IFrame('http://bindog.github.io/blog/2018/07/31/t-sne-tips/', width=800, height=450)
 ```
-
 
 ```python
 fig, ax = plt.subplots(1,3,figsize=(9,3))
@@ -441,10 +423,9 @@ fig.tight_layout()
 #embed_pdf_figure()
 ```
 
-# PCA analysis in Matrix Processing
+## PCA analysis in Matrix Processing
 
-## environment
-
+### environment
 
 ```python
 import pandas as pd
@@ -486,11 +467,9 @@ from io import StringIO, BytesIO
 from contextlib import contextmanager
 ```
 
-
 ```python
 cd ~chenxupeng/projects/exSEEK_training/
 ```
-
 
 ```python
 # setup figure template
@@ -503,7 +482,6 @@ import figure_template
 reload(figure_template)
 from figure_template import display_dataframe, embed_pdf_figure, embed_pdf_pages,std_plot
 ```
-
 
 ```python
 fontsize = 6.5
@@ -548,7 +526,7 @@ def std_plot(ax,xlabel=None,ylabel=None,title=None,
         if width/fontscale > 8:
             warnings.warn("Please reset fig's width. When scaling the height to 2 in, the scaled width '%.2f' is large than 8"%(width/fontscale),UserWarning)
         return fontscale
-    
+
     class fontprop:
         def init(self,fonttitle=None,fontlabel=None,fontticklabel=None,fontlegend=None,fontcbarlabel=None,fontcbarticklabel=None):
             self.fonttitle = fonttitle
@@ -575,7 +553,7 @@ def std_plot(ax,xlabel=None,ylabel=None,title=None,
     font = fontprop()
     font.init(fonttitle,fontlabel,fontticklabel,fontlegend,fontcbarlabel,fontcbarticklabel)
     font.update(fontscale)
-    
+
     pyplot.draw()
     #plt.figure(linewidth=30.5)
     if xlim is not None:  
@@ -618,7 +596,7 @@ def std_plot(ax,xlabel=None,ylabel=None,title=None,
     ax.spines['bottom'].set_color('k')
     ax.spines['left'].set_color('k')
     ax.spines['right'].set_color('k')
-    
+
     ax.tick_params(direction='out', pad=2*fontscale,width=0.5*fontscale)
     #ax.spines['bottom']._edgecolor="#000000"
     #ax.spines['left']._edgecolor="#000000"
@@ -688,12 +666,7 @@ def std_plot(ax,xlabel=None,ylabel=None,title=None,
         cbar.ax.set_yticklabels(cbar.ax.get_yticklabels(),font.fontcbarticklabel)
     font.reset(fontscale)
     return ax
-
-
-
-
 ```
-
 
 ```python
 savepath = '/home/chenxupeng/projects/exSEEK_training/'+'output/'+'fig3'+'/'
@@ -702,13 +675,11 @@ if not os.path.exists(savepath):
     os.mkdir(savepath)
 ```
 
-## color
-
+### color
 
 ```python
 sns.palplot(Pastel2[8])
 ```
-
 
 ```python
 tableau10m = np.array([(114,158,206),(255,158,74),(103,191,92),(237,102,93),(173,139,201),
@@ -716,17 +687,14 @@ tableau10m = np.array([(114,158,206),(255,158,74),(103,191,92),(237,102,93),(173
 sns.palplot(tableau10m)
 ```
 
-
 ```python
 sns.palplot(Set3[12])
 ```
-
 
 ```python
 tableau10l5 = np.array([(196,156,148),(247,182,210),(199,199,199),(219,219,141),(158,218,229)])/255
 sns.palplot(tableau10l5)
 ```
-
 
 ```python
 tableau20 = np.array([(31, 119, 180), (174, 199, 232), (255, 127, 14), (255, 187, 120),  
@@ -736,7 +704,6 @@ tableau20 = np.array([(31, 119, 180), (174, 199, 232), (255, 127, 14), (255, 187
              (188, 189, 34), (219, 219, 141), (23, 190, 207), (158, 218, 229)])/255.
 sns.palplot(tableau20)
 ```
-
 
 ```python
 def legendhandle(lists,porm=True,order=0):
@@ -772,37 +739,31 @@ def legendhandle(lists,porm=True,order=0):
             markers = markerlist1
         if order == 2:
             markers = markerlist3
-            
+
         lists.sort()
         dic={}
         for i in range(len(lists)):
             dic[lists[i]]=markers[i]
-        return dic       
-
+        return dic
 ```
-
 
 ```python
 tips = sns.load_dataset("tips")
 legendhandle(np.unique(tips['smoker']),True,1)
 ```
 
-
 ```python
 ax = sns.boxplot(x="day", y="total_bill", hue="smoker",data=tips, palette=legendhandle(np.unique(tips['smoker']),True,1))
 ```
-
 
 ```python
 legendhandle(np.unique(tips['smoker']),True,0)
 ```
 
-
 ```python
 tips = sns.load_dataset("tips")
 ax = sns.boxplot(x="day", y="total_bill", hue="smoker",data=tips, palette=legendhandle(np.unique(tips['smoker']),True,0))
 ```
-
 
 ```python
 A = ['Norm_RLE', 'Norm_RLE', 'Norm_RLE', 'Norm_RLE', 'Norm_CPM',
@@ -811,22 +772,15 @@ A = ['Norm_RLE', 'Norm_RLE', 'Norm_RLE', 'Norm_RLE', 'Norm_CPM',
        'Norm_TMM']
 ```
 
-
 ```python
 A
 ```
-
 
 ```python
 legendhandle(np.unique(A),False,2)
 ```
 
-
-
-
-
-## uca_knn
-
+### uca\_knn
 
 ```python
 def convert_label_to_int(sample_class):
@@ -884,7 +838,6 @@ def get_uca_score(data,sampleclass,method_PCA = True,prediction_algorithm='knn')
     return uca_score
 ```
 
-
 ```python
 def knn_score(X, y, K=10):
     N = X.shape[0]
@@ -918,7 +871,6 @@ def get_knn_score(data,sampleclass,method_PCA = True,prediction_algorithm='knn')
     return knn_score_
 ```
 
-
 ```python
 methodlist = []
 for i in normlist:
@@ -926,7 +878,6 @@ for i in normlist:
         methodlist.append(i+'.'+j)
 methodlist
 ```
-
 
 ```python
 batch_info = pd.read_table('/home/xieyufeng/fig3/data/cfRNA/batch_info.txt',index_col=0)
@@ -942,7 +893,6 @@ knn_summary = pd.DataFrame(data={'preprocess_method':methodlist,'knn_score':list
 knn_summary = knn_summary.set_index('preprocess_method')
 ```
 
-
 ```python
 class_info = pd.read_table('/home/xieyufeng/fig3/data/cfRNA/sample_classes.txt',index_col=0)
 sampleclass = class_info
@@ -955,17 +905,14 @@ uca_summary = pd.DataFrame(data={'preprocess_method':methodlist,'uca_score':list
 uca_summary = uca_summary.set_index('preprocess_method')
 ```
 
-
 ```python
 get_uca_score(table,sampleclass)
 ```
-
 
 ```python
 from scipy.stats import pearsonr
 pearsonr(uca_summary,knn_summary)
 ```
-
 
 ```python
 merge = pd.concat([knn_summary,uca_summary],axis=1)
@@ -982,11 +929,9 @@ for i in np.arange(len(impute_list)):
 merge.knn_score =1-merge.knn_score
 ```
 
-
 ```python
 merge = merge.drop(merge.iloc[np.where(np.array([i.split('.')[-1] for i in merge.index]) == 'Batch_RUVn_1')[0]].index)
 ```
-
 
 ```python
 fig,ax=plt.subplots(figsize=(6,4))
@@ -1017,8 +962,7 @@ fig.tight_layout()
 #embed_pdf_figure()
 ```
 
-### understand UCA
-
+#### understand UCA
 
 ```python
 def convert_label_to_int(sample_class):
@@ -1075,22 +1019,17 @@ def get_uca_score(data,sampleclass,method_PCA = True,prediction_algorithm='knn')
     X_, y_ = X_pca, sampleclass.loc[data.columns.values].values.ravel() 
     #knn_score_ = knn_score(X_, y_)
     uca_score,ind = uca_scores(X_, y_, prediction_algorithm)
-
-
 ```
-
 
 ```python
 get_uca_score(table,sampleclass)
 ```
-
 
 ```python
 labels = sampleclass.loc[table.columns.values].values.ravel() 
 print(convert_label_to_int(labels))
 print(np.unique(convert_label_to_int(labels),return_counts=True))
 ```
-
 
 ```python
 def uca_scores(X,y, prediction_algorithm='knn'):
@@ -1129,37 +1068,34 @@ def get_uca_score(data,sampleclass,method_PCA = True,prediction_algorithm='knn')
 get_uca_score(table,sampleclass)
 ```
 
-### understand mkNN
+#### understand mkNN
 
-#### first alignment score
+**first alignment score**
 
 $$
 \text{Alignment\ Score} = \frac{1}{k-\frac{k}{N}}(k-\overline{x})
 $$
 
-其中$k$是最近邻算法（k nearest-neighbors, kNN）的前$k$个最近邻，$\overline{x}$是样本周围的样本同属一个批次的数量的平均，$N$表示样本数。
-当两个批次样本完全分开时，$k=\overline{x}$，$\text{Alignment Score}=0$；当两个批次样本完全混杂时，比例因子$\frac{1}{k-\frac{k}{N}}$作用下，$\text{Alignment\ Score}$接近1。
-exSEEK提出了适用于多种批次的mkNN指标，该指标由由史斌斌首次提出。
+其中$k$是最近邻算法（k nearest-neighbors, kNN）的前$k$个最近邻，$\overline{x}$是样本周围的样本同属一个批次的数量的平均，$N$表示样本数。 当两个批次样本完全分开时，$k=\overline{x}$，$\text{Alignment Score}=0$；当两个批次样本完全混杂时，比例因子$\frac{1}{k-\frac{k}{N}}$作用下，$\text{Alignment Score}$接近1。 exSEEK提出了适用于多种批次的mkNN指标，该指标由由史斌斌首次提出。
 
-#### mkNN
+**mkNN**
 
 $$
 \text{Alignment\ Score} = 1-\frac{\overline{x}-\frac{k}{N}}{k-\frac{k}{N}}
 $$
 
 $$
-    \text{mkNN}=1-\frac{1}{B} \sum_{b=1}^{B} \frac{\overline{x}_{b}-k N_{b} /(N-1)}{\min \left(k, N_{b}\right)-k N_{b} /(N-1)}
+\text{mkNN}=1-\frac{1}{B} \sum_{b=1}^{B} \frac{\overline{x}_{b}-k N_{b} /(N-1)}{\min \left(k, N_{b}\right)-k N_{b} /(N-1)}
 $$
-其中，$b$表示批次，$B$为批次数量，$N_b$是批次$b$下样本的数量。批次效应越明显，该指标越接近0。
 
+其中，$b$表示批次，$B$为批次数量，$N\_b$是批次$b$下样本的数量。批次效应越明显，该指标越接近0。
 
 ```python
 IFrame('https://drive.google.com/file/d/1yWvw3fwWeSSrBgmhz_uaC4oQ0wltkIge/preview',
       width=800,height=600)
 ```
 
-## PCA
-
+### PCA
 
 ```python
 def PCA_plot_with_uca_score_sns(ax,data,sampleclass,batchinfo, method = 'PCA'):
@@ -1171,7 +1107,7 @@ def PCA_plot_with_uca_score_sns(ax,data,sampleclass,batchinfo, method = 'PCA'):
         transform = TSNE()
     elif method == 'UMAP':
         transform = umap.UMAP(n_neighbors=5,min_dist=0.3,metric='correlation')
-    
+
     X_pca = transform.fit_transform(X)
     plot_table = pd.DataFrame(X_pca[:,:2])
     plot_table.index = data.columns
@@ -1181,7 +1117,7 @@ def PCA_plot_with_uca_score_sns(ax,data,sampleclass,batchinfo, method = 'PCA'):
     classnum = np.unique(plot_table.iloc[:,2]).shape[0]
     sns.scatterplot(ax=ax,data=plot_table,x="Dimension 1", y="Dimension 2",
                     palette=legendhandle(np.unique(plot_table.batch)) , hue="batch",style='class',s=50,linewidth=0.01)
-    
+
     #plt.figure(linewidth=30.5)
 
         #legend.get_title().set_fontweight('normal')
@@ -1198,7 +1134,6 @@ def PCA_plot_with_uca_score_sns(ax,data,sampleclass,batchinfo, method = 'PCA'):
 def log_transform(data, small = 0.01):
     return np.log2(data + small)
 ```
-
 
 ```python
 fontsize = 6.5
@@ -1243,7 +1178,7 @@ def std_plot(ax,xlabel=None,ylabel=None,title=None,
         if width/fontscale > 8:
             warnings.warn("Please reset fig's width. When scaling the height to 2 in, the scaled width '%.2f' is large than 8"%(width/fontscale),UserWarning)
         return fontscale
-    
+
     class fontprop:
         def init(self,fonttitle=None,fontlabel=None,fontticklabel=None,fontlegend=None,fontcbarlabel=None,fontcbarticklabel=None):
             self.fonttitle = fonttitle
@@ -1270,7 +1205,7 @@ def std_plot(ax,xlabel=None,ylabel=None,title=None,
     font = fontprop()
     font.init(fonttitle,fontlabel,fontticklabel,fontlegend,fontcbarlabel,fontcbarticklabel)
     font.update(fontscale)
-    
+
     pyplot.draw()
     #plt.figure(linewidth=30.5)
     if xlim is not None:  
@@ -1313,7 +1248,7 @@ def std_plot(ax,xlabel=None,ylabel=None,title=None,
     ax.spines['bottom'].set_color('k')
     ax.spines['left'].set_color('k')
     ax.spines['right'].set_color('k')
-    
+
     ax.tick_params(direction='out', pad=2*fontscale,width=0.5*fontscale)
     #ax.spines['bottom']._edgecolor="#000000"
     #ax.spines['left']._edgecolor="#000000"
@@ -1383,55 +1318,42 @@ def std_plot(ax,xlabel=None,ylabel=None,title=None,
         cbar.ax.set_yticklabels(cbar.ax.get_yticklabels(),font.fontcbarticklabel)
     font.reset(fontscale)
     return ax
-
-
-
-
 ```
-
 
 ```python
 sample_class = pd.read_table('/home/xieyufeng/fig3/data/cfRNA/sample_classes.txt', index_col=0)
 batch_info = pd.read_table('/home/xieyufeng/fig3/data/cfRNA/batch_info.txt', index_col=0)
 batch_info[batch_info.dataset=='lulab_hcc']='GSE123972'
-
 ```
-
 
 ```python
 sample_class[sample_class.label=='Normal']='HD'
 sample_class[sample_class.label!='HD']='HCC'
 ```
 
-
 ```python
 batch_info = pd.read_table('/home/zhaotianxiao/fig3/batch_info.txt', index_col=0)
 batch_info[batch_info.dataset=='lulab_hcc']='GSE123972'
 ```
-
 
 ```python
 kbet_table = pd.read_table('/home/xieyufeng/fig3/output/cfRNA/select_preprocess_method/kbet_score/mirna_and_domains/summary.txt', index_col = 0)
 uca_table = pd.read_table('/home/xieyufeng/fig3/output/cfRNA/select_preprocess_method/uca_score/mirna_and_domains/summary.txt', index_col = 0)
 ```
 
-
 ```python
 kbet_table = pd.read_table('/home/shibinbin/projects/exSeek-dev/output/cfRNA/select_preprocess_method/kbet_score/mirna_and_domains/summary.txt', index_col = 0)
 uca_table = pd.read_table('/home/shibinbin/projects/exSeek-dev/output/cfRNA/select_preprocess_method/uca_score/mirna_and_domains/summary.txt', index_col = 0)
 ```
-
 
 ```python
 knn_summary = pd.read_csv('/home/shibinbin/projects/exSeek-dev/output/cfRNA/select_preprocess_method/knn_score/mirna_and_domains/summary.txt',sep='\t')
 knn_summary = knn_summary.set_index('preprocess_method')
 ```
 
-
 ```python
 fontsize
 ```
-
 
 ```python
 method = 'filter.null.Norm_RLE.Batch_limma_1'
@@ -1448,7 +1370,7 @@ for loc in range(len(l)):
         l[loc] = 'GSE94582_2'
     elif l[loc] == 'GSE94582_TruSeq':
         l[loc] = 'GSE94582_3'
-        
+
 std_plot(ax,'Dimension 1','Dimension 2',
              title='RLE with Limma',
              xbins=4,ybins=5,h=h,l=l,bbox_to_anchor=(0.9,0.8),markerscale=1.5)
@@ -1462,11 +1384,9 @@ fig.tight_layout()
 print('UCA = {:.3f}'.format(uca_summary.loc[method].values[0]) +', ' + 'mkNN = {:.3f}'.format(1-knn_summary.loc[method].values[0]))
 ```
 
-
 ```python
 knn_summary
 ```
-
 
 ```python
 method = 'filter.null.Norm_RLE.Batch_null'
@@ -1485,8 +1405,7 @@ method = 'filter.null.Norm_RLE.Batch_null'
 #print('UCA = {:.3f}'.format(uca_summary.loc[method].values[0]) +', ' + 'mkNN = {:.3f}'.format(1-knn_summary.loc[method].values[0]))
 ```
 
-### variance explained
-
+#### variance explained
 
 ```python
 def var_ex(mat,anno_info):
@@ -1532,16 +1451,13 @@ def var_ex(mat,anno_info):
     return rsquared_mat,rsquared_cutoff,p
 ```
 
-
 ```python
 batchinfo_path ="/home/xieyufeng/fig3/data/cfRNA/batch_info.txt"
 batchinfo_path ="/home/xieyufeng/fig3/data/cfRNA/batch_info.txt"
 classinfo_path = "/home/xieyufeng/fig3/data/cfRNA/sample_classes.txt"
 mat1_path="/home/xieyufeng/fig3/output/cfRNA/matrix_processing/filter.null.Norm_RLE.Batch_null.mirna_and_domains.txt"
 mat2_path="/home/xieyufeng/fig3/output/cfRNA/matrix_processing/filter.null.Norm_RLE.Batch_limma_1.mirna_and_domains.txt"
-
 ```
-
 
 ```python
 mat1 = pd.read_csv(mat1_path,sep='\t')
@@ -1557,7 +1473,6 @@ rsquared_mat1,rsquared_cutoff1,p1 = var_ex(mat1,anno_info)
 anno_info = anno_info.loc[mat2.columns]
 rsquared_mat2,rsquared_cutoff2,p2 = var_ex(mat2,anno_info)
 ```
-
 
 ```python
 import matplotlib.gridspec as gridspec
@@ -1595,7 +1510,7 @@ def r2mat21class(rsquared_mat1=None,rsquared_mat2=None,rsquared_cutoff=rsquared_
                 std_plot(axes,'Variance explained%','',legendtitle='state',legendsort=False,title='Cancer/Normal',xlim=[-2,2],bbox_to_anchor=(1,-0.3),ncol=2)
         axes.legend_.get_frame()._linewidth=0
         #axes[i].legend(title='s',prop=fontlegend)
-        
+
         p_mat = pd.DataFrame([p1[var],p2[var]]).T
         p_mat.columns=['before','after']
         #display(p_mat)
@@ -1615,18 +1530,14 @@ def r2mat21class(rsquared_mat1=None,rsquared_mat2=None,rsquared_cutoff=rsquared_
     std_plot(lax,h=h,l=l,bbox_to_anchor=(1,1),markerscale=2,labelspacing=0.3,ncol=2)
     fig.tight_layout() 
     #fig.savefig(savepath+'variance_explained.eps')
-       
+
     #embed_pdf_figure()
 r2mat21class(np.log10(rsquared_mat1*100),np.log10(rsquared_mat2*100),np.log10(rsquared_cutoff1*100),p1,p2)
-
 ```
-
 
 ```python
 p_mat = pd.DataFrame([p1.label,p2.label]).T
 p_mat.columns=['before','after']
 np.sum(p_mat<0.01)
-
 ```
-
 

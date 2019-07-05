@@ -1,9 +1,11 @@
-# Survival analysis
+# 7.3.Survival Analysis
 
 ## Survival analysis
 
 ### 背景介绍
+
 1958年，Edward L. Kaplan 和Paul Meier也首次在临床研究中提出了生存曲线的概念，又被称作Kaplan-Meier曲线，主要用来对各组患者的生存状况进行描述。绘制生存曲线最主要的目的是进行生存分析，即通过将终点事件和出现这一终点所经历的时间结合起来进行统计分析，从而对两组患者的预后进行比较。
+
 ### 1.Pipeline
 
 **Survival analysis** is a branch of statistics for analyzing the expected duration of time until one or more events happen, such as death in biological organisms and failure in mechanical systems. \([https://en.wikipedia.org/wiki/Survival\_analysis](https://en.wikipedia.org/wiki/Survival_analysis)\)
@@ -72,7 +74,7 @@ dim(clinical_info)
 #[1] 313   6
 ```
 
-TCGA barcode information: https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf
+TCGA barcode information: [https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf](https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf)
 
 **2.3 Data preprocessing**
 
@@ -223,7 +225,7 @@ fit = survfit(Surv(new_death, death_event) ~ CCDC58, data = survplotdata)
 #survplotdata2 = cbind(as.numeric(as.character(clinical_info$new_death)), clinical_info$death_event, rna_event[ind_gene1,], rna_event[ind_gene2,])
 #colnames(survplotdata2) = c('new_death', 'death_event', 'CCDC58', 'TP53')
 #survplotdata2 = as.data.frame(survplotdata2)
-#fit2 = survfit(Surv(new_death, death_event) ~ CCDC58+TP53, data = survplotdata2) 
+#fit2 = survfit(Surv(new_death, death_event) ~ CCDC58+TP53, data = survplotdata2)
 ```
 
 **3.4 Draw survival curves**
@@ -245,7 +247,7 @@ ggsurvplot(fit,
 dev.off()
 ```
 
-![](../assets/CCDC58_LIHC_new.png)
+![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/CCDC58_LIHC_new.png)
 
 \*: each '+' represent a censored sample.
 
@@ -384,3 +386,4 @@ clinical_info = all_clin[ind_clin,]
 [https://www.biostars.org/p/153013/](https://www.biostars.org/p/153013/)
 
 [http://www.sthda.com/english/wiki/survminer-0-3-0](http://www.sthda.com/english/wiki/survminer-0-3-0)
+
