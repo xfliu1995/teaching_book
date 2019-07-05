@@ -27,7 +27,9 @@
 
 ## 3\)  crontab and rsync
 
-> [Tips on 备份数据、保存中间数据 \| 数据安全](https://www.evernote.com/l/ABLaXPPQIg1FM5Kgl1AoLqLj67CR1Cv44ws)
+**It's necessary to backup data regularly.** You may start to learn [how to back up files using crontab and rsync](https://lulab.gitbook.io/training/part-i.-programming-skills/3.bash-and-github#example-ii).
 
-**It's necessary to backup data regularly.**
+> [More tips on 备份数据、保存中间数据 \| 数据安全](https://www.evernote.com/l/ABLaXPPQIg1FM5Kgl1AoLqLj67CR1Cv44ws)
+
+\*\*\*\*
 

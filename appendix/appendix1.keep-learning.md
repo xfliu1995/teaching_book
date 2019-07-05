@@ -13,8 +13,11 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
 **理论**
 
 * 《[生物信息学](http://ibi.zju.edu.cn/bioinplant/courses/jianyaomulu.htm)》主   编：樊龙江
-* 《生物信息学》（第2版）李霞，雷健波，李亦学 等 编
-* 《Bioinformatics and Functional Genomics》 by Jonathan Pevsner
+
+> **More:**
+>
+> * 《生物信息学》（第2版）李霞，雷健波，李亦学 等 编
+> * 《Bioinformatics and Functional Genomics》 by Jonathan Pevsner
 
 **编程实践**
 
@@ -81,9 +84,12 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
   * 《R语言实战》 \(《R in action》\)
 * Python \(or Perl\)
   * 《笨办法学 Python》（《Learn Python The Hard Way》）
-  * 《Python编程入门》
-  * [http://www.pythonlearn.com/](http://www.pythonlearn.com/)
-  * 《Beginning Perl for Bioinformatics》
+
+> **More:** 
+>
+> * 《Python编程入门》
+> * [http://www.pythonlearn.com/](http://www.pythonlearn.com/)
+> * 《Beginning Perl for Bioinformatics》
 
 ### 1b\) Recommended on-line Courses
 
@@ -92,8 +98,12 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
 
 ## 2\) Advanced Training <a id="advanced"></a>
 
-* [Learning Materials](https://cloud.tsinghua.edu.cn/d/e63019c19d59449992fc/)
-* [Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io/training)
+* **《Bioinformatics Data Skills》**
+
+> **More:**
+>
+> * [Learning Materials](https://cloud.tsinghua.edu.cn/d/e63019c19d59449992fc/)
+> * [Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io/training)
 
 ## 3\) Shared Scripts <a id="share-script"></a>
 

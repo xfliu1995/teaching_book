@@ -46,12 +46,7 @@
 1. 注册一个GitHub账户，创建一个仓库，写好`README.md`。尝试使用Git管理自己的代码并同步至GitHub。
 2. 尝试使用Markdown语言，熟悉其语法。
 
-
-
 ## 4\) Learning Materials
-
-* **Basic Tutorial** \(this one\)
-* [**Advanced Tutorial**](https://lulab.gitbook.io/training)
 
 > see more learning materials in [Appendix I. Keep Learning](appendix/appendix1.keep-learning.md)
 
