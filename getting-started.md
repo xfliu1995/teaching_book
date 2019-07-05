@@ -50,7 +50,6 @@
 
 ## 4\) Learning Materials
 
-* Tutorial
 * **Basic Tutorial** \(this one\)
 * [**Advanced Tutorial**](https://lulab.gitbook.io/training)
 
