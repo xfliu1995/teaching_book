@@ -163,5 +163,8 @@ git push origin master
 
 **Use [GitHub Desktop App](https://desktop.github.com/)**
 
-## Software: Nutstore
+## Cloud storage
 
+* [Nextcloud](http://lulab.life.tsinghua.edu.cn/nextcloud/)
+* [Tsinghua cloud](https://cloud.tsinghua.edu.cn/)
+* [Nutstore cloud](https://www.jianguoyun.com/)
