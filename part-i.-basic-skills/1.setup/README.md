@@ -25,9 +25,12 @@
 
 **Always document your project**. We suggest to have a README.md file in your project DIR.
 
-## 3\)  crontab and rsync
+## 3\)  Backup your data regularly
 
-**It's necessary to backup data regularly.** You may start to learn [how to back up files using crontab and rsync](https://lulab.gitbook.io/training/part-i.-programming-skills/3.bash-and-github#example-ii).
+**It's necessary to backup data regularly.** 
+
+* Here is a tutorial for data backup methods and tips: [How to backup](../../appendix/appendix-iii.-how-to-backup.md)
+* For advanced users, you may start to learn [how to back up files using **crontab** and **rsync**](https://lulab.gitbook.io/training/part-i.-programming-skills/3.bash-and-github#example-ii).
 
 > [More tips on 备份数据、保存中间数据 \| 数据安全](https://www.evernote.com/l/ABLaXPPQIg1FM5Kgl1AoLqLj67CR1Cv44ws)
 
