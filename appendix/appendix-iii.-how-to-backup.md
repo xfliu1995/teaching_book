@@ -79,20 +79,20 @@ rsync -a --delete /home /backups
 
 **Perform a "push" copy sync**
 ```bash
-rsync /etc/hosts user@172.22.220.21 :/home/xugang/hosts
+rsync /etc/hosts user@172.22.220.21:/home/xugang/hosts
 ```
 
 **Perform a "pull" replication synchronization**
 ```bash
-rsync user@172.22.220.21 :/home/xugang/hosts /etc/hosts
+rsync user@172.22.220.21:/home/xugang/hosts /etc/hosts
 rsync -aqzH --delete --delay-updates \ 
-user@172.22.220.21 :/home/xugang/hosts /etc/hosts
+user@172.22.220.21:/home/xugang/hosts /etc/hosts
 ```
 
 **mirror centos at 0:10 AM everyday**
 ```bash
 10 0 * * * rsync -aqzH –delete \
- --delay-updates user@172.22.220.21 :/home/xugang/hosts /etc/hosts
+ --delay-updates user@172.22.220.21:/home/xugang/hosts /etc/hosts
 ```
 
 | Parameter | Mean |
