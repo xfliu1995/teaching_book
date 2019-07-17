@@ -165,6 +165,21 @@ git push origin master
 
 ## Cloud storage
 
-* [Nextcloud](http://lulab.life.tsinghua.edu.cn/nextcloud/) \(实验室内部搭建的云存储。\)
-* [Tsinghua cloud](https://cloud.tsinghua.edu.cn/) \(清华云,在校内使用速度快。\)
-* [Nutstore cloud](https://www.jianguoyun.com/)\(商业云存储，每个月有免费的备份流量。\)
+* [Nextcloud](http://lulab.life.tsinghua.edu.cn/nextcloud/) 
+实验室内部搭建的云存储。找实验室管理人员开通账户。
+
+* [Tsinghua cloud](https://cloud.tsinghua.edu.cn/) 
+清华云,在校内使用速度快。
+
+* [Nutstore cloud](https://www.jianguoyun.com/)
+商业云存储，每个月有免费的备份流量。自己申请账号使用。
+
+## Backup tool that comes with the system
+
+**Mac**
+[Back up your Mac with Time Machine](https://support.apple.com/en-us/HT201250)
+
+**Windows**
+[How to back up or transfer your data on a Windows-based computer](https://support.microsoft.com/en-us/help/971759/how-to-back-up-or-transfer-your-data-on-a-windows-based-computer)
+
+
