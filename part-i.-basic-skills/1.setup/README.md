@@ -34,5 +34,9 @@
 
 > [More tips on 备份数据、保存中间数据 \| 数据安全](https://www.evernote.com/l/ABLaXPPQIg1FM5Kgl1AoLqLj67CR1Cv44ws)
 
-\*\*\*\*
+## **4\) Homework**
+
+* 安装和使用docker
+* 学习和练习一种editor
+* 构建自己的project文件夹，写README.md, 并且学会备份这个文件夹。
 
