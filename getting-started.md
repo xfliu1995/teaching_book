@@ -44,7 +44,7 @@
 ## 3\) Homework
 
 1. 注册一个GitHub账户，创建一个仓库，写好`README.md`。尝试使用Git管理自己的代码并同步至GitHub。
-2. 尝试使用Markdown语言，熟悉其语法。
+2. 尝试使用Markdown语言，熟悉其语法, 利用Markdown语言和github page功能写一个自己的网页，例如： [https://lulab.github.io](https://lulab.github.io/)
 
 ## 4\) Learning Materials
 
