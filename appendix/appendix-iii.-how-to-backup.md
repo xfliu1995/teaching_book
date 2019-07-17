@@ -176,10 +176,10 @@ git push origin master
 
 ## Backup tool that comes with the system
 
-**Mac**
+**Mac:**  
 [Back up your Mac with Time Machine](https://support.apple.com/en-us/HT201250)
 
-**Windows**
+**Windows:**  
 [How to back up or transfer your data on a Windows-based computer](https://support.microsoft.com/en-us/help/971759/how-to-back-up-or-transfer-your-data-on-a-windows-based-computer)
 
 
