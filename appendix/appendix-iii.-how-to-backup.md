@@ -28,7 +28,34 @@ Linux crontab是用来定期执行程序的命令。
 |Column 5:| Week 0 to 7 (0 and 7 for Sunday)|
 |Column 6:| Command to run|
 
+---
+**Edit .bashrc file in the $HOME directory**
+```bash
+EDITOR=vi; export EDITOR
+```
+**Create a file called usercron (space separated)**
+```bash
+15 1 * * * /bin/echo 'date' > /dev/console
+```
+**Running file**
+```bash
+crontab usercron
+```
 
+---
+**List the crontab file with the -l parameter:**
+```bash
+$ crontab -l
+0,15,30,45 18-06 * * * /bin/echo `date` > dev/tty1
+```
+**Edit crontab file**
+```bash
+$ crontab -e 
+```
+**crontab file to make a backup**
+```bash
+$ crontab -l > $HOME/mycron
+```
 
 ## Remote data synchronization tool: rsync
 
