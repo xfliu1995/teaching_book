@@ -161,5 +161,7 @@ git commit -m '$time'
 git push origin master
 ```
 
+**Use [GitHub Desktop App](https://desktop.github.com/)**
+
 ## Software: Nutstore
 
