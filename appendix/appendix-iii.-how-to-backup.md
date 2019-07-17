@@ -120,7 +120,7 @@ vi .ssh/authorized_keys
 
 ## Backup your code: GitHub
 
-**Create your new repository on GitHub**
+**Create your new repository on [GitHub](https://github.com/new)**
 
 **create a new repository on the command line**
 ```bash
