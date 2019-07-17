@@ -165,6 +165,6 @@ git push origin master
 
 ## Cloud storage
 
-* [Nextcloud](http://lulab.life.tsinghua.edu.cn/nextcloud/) \(实验室内部使用。\)
-* [Tsinghua cloud](https://cloud.tsinghua.edu.cn/) \(清华云，需要清华大学的账号。\)
+* [Nextcloud](http://lulab.life.tsinghua.edu.cn/nextcloud/) \(实验室内部搭建的云存储。\)
+* [Tsinghua cloud](https://cloud.tsinghua.edu.cn/) \(清华云,在校内使用速度快。\)
 * [Nutstore cloud](https://www.jianguoyun.com/)\(商业云存储，每个月有免费的备份流量。\)
