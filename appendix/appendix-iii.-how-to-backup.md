@@ -70,6 +70,43 @@ $ crontab -l > $HOME/mycron
 
 ## Remote data synchronization tool: rsync
 
+rsync命令是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件。
+
+**Synchronize data on local disk**
+```bash
+rsync -a --delete /home /backups 
+```
+
+**Perform a "push" copy sync**
+```bash
+rsync /etc/hosts user@172.22.220.21 :/home/xugang/hosts
+```
+
+**Perform a "pull" replication synchronization**
+```bash
+rsync user@172.22.220.21 :/home/xugang/hosts /etc/hosts
+rsync -aqzH --delete --delay-updates \ 
+user@172.22.220.21 :/home/xugang/hosts /etc/hosts
+```
+
+**mirror centos at 0:10 AM everyday**
+```bash
+10 0 * * * rsync -aqzH –delete \
+ --delay-updates user@172.22.220.21 :/home/xugang/hosts /etc/hosts
+```
+
+| Parameter | Mean |
+| :--- | :--- |
+|-a:| 以递归方式传输文件|
+|--delete:| 删除那些接收端还有而发送端已经不存在的文件|
+|-q:| 精简输出模式|
+|-z:| 在传输文件时进行压缩处理|
+|-H:| 保持硬链接文件|
+|-t:| 对比两边文件的时间戳和文件大小.如果一致，则就认为两边文件一样，对此文件就不再采取更新动作了|
+|-I:| 挨个文件去发起数据同步|
+|--port=PORT:| 端口号|
+
+
 ## Backup your code: GitHub
 
 ## Software: Nutstore
