@@ -106,6 +106,15 @@ user@172.22.220.21:/home/xugang/hosts /etc/hosts
 |-I:| 挨个文件去发起数据同步|
 |--port=PORT:| 端口号|
 
+**Generate SSH key**
+```bash
+ssh-keygen -t rsa -b 2048
+```
+**Copy your keys to the target server:**
+```bash
+ssh id@server
+vi .ssh/authorized_keys
+```
 
 ## Backup your code: GitHub
 
