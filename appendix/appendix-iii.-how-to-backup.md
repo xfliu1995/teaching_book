@@ -120,5 +120,46 @@ vi .ssh/authorized_keys
 
 ## Backup your code: GitHub
 
+**Create your new repository on GitHub**
+
+**create a new repository on the command line**
+```bash
+echo "# test" >> README.md 
+git init 
+git add README.md 
+git commit -m "first commit" 
+git remote add origin https://github.com/xug15/test.git 
+git push -u origin master
+```
+
+**Download repository**
+```bash
+git clone https://github.com/xug15/test.git
+```
+
+**Save the change of your codes.**
+```bash
+git add *
+git add –u .
+git commit -m ‘20190705v1’
+```
+
+**Update your codes into the GitHub**
+```bash
+git push origin master
+Username for 'https://github.com': xug15
+Password for 'https://xug15@github.com':
+```
+
+**Auto update bash**
+```bash
+time=`date`
+echo $time
+git add -u .
+git add *
+git commit -m '$time'
+git push origin master
+```
+
 ## Software: Nutstore
 
