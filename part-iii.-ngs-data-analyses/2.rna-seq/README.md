@@ -1,7 +1,7 @@
 # 2.RNA-seq
 
-* [**Differential expression**](https://lulab.gitbooks.io/teaching/part-ii.-ngs-pipelines/6.1.differential-expression.html)
-* [**Alternative splicing**](https://lulab.gitbooks.io/teaching/part-ii.-ngs-pipelines/6.2.alternative-splicing.html)
+* [**Differential expression**](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/2.rna-seq/2.1.differential-expression)
+* [**Alternative splicing**](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/2.rna-seq/2.2.alternative-splicing)
 
 ## More Reading: RNA-seq Analysis Pipelines
 
