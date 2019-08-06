@@ -2,7 +2,7 @@
 
 ## workflow
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/RBP.pipeline.png)
+![](../../.gitbook/assets/RBP.pipeline.png)
 
 ## 1. get CLIP-seq data
 
@@ -91,7 +91,7 @@ density name    class
 
 boxplot of RBP enrichment
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/RBP_enrichment.png)
+![](../../.gitbook/assets/RBP_enrichment.png)
 
 [example](https://github.com/YuminTHU/training_class/tree/master/data/RBP_interaction)
 
