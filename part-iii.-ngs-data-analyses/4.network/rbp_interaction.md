@@ -91,7 +91,7 @@ density name    class
 
 boxplot of RBP enrichment
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/RBP_enrichment.png)
+![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/RBP_enrichment.png)
 
 [example](https://github.com/YuminTHU/training_class/tree/master/data/RBP_interaction)
 
