@@ -4,7 +4,7 @@
 
 ## 1.Pipeline
 
-![](https://github.com/lulab/teaching_book/blob/master/.gitbook/assets/co-expression-pipeline.png)
+![](../../../.gitbook/assets/co-expression-pipeline.png)
 
 首先计算基因之间的相关系数，构建基因网络\(correlation network of genes\)，然后将具有相似表达模式的基因划分成模块\(module\)。随后计算各个模块与样本表型数据之间的相关性，对特定的感兴趣的模块分析核心基因\(hub gene，通常是转录因子等关键的调控因子\)，并将特定模块的基因提取出来，进行GO/KEGG等分析。
 
