@@ -1,5 +1,9 @@
 # 4.1.Co-expression Network
 
+![](../../.gitbook/assets/co-expression-pipeline.png)
+
+# Co-expression
+
 ## Co-expression
 
 ## 1.Pipeline
@@ -24,7 +28,7 @@
 Import data
 
 ```r
-setwd("/Share2/home/lulab/xixiaochen/training_share2/co_expression")
+setwd("/Share2/home/lulab/xixiaochen/training_share2/co_expression/")
 datExpr <- readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/input_fpkm_matrix.rds")
 datTraits <- readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/data_traits.rds")
 ```
@@ -36,7 +40,7 @@ datExpr[1:4,1:4]
 dim(datExpr)
 ```
 
-```text
+```
 #           ENSG00000210082 ENSG00000198712 ENSG00000198804 ENSG00000210845
 #GSM1172844        78053.20       103151.73       112917.53        92808.32
 #GSM1172845        96200.86       157203.85       163847.92        93501.17
@@ -54,7 +58,7 @@ datTraits[1:4,]
 dim(datTraits)
 ```
 
-```text
+```
 #                  gsm cellline       subtype
 #GSM1172844 GSM1172844    184A1 Non-malignant
 #GSM1172845 GSM1172845    184B5 Non-malignant
@@ -79,22 +83,26 @@ dim(datTraits)
 ## 3.Running steps
 
 ### WGCNA分析
-
 #### 基本概念
+WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同表达的基因模块(module)，并探索基因网络与关注的表型之间的关联关系，以及网络中的核心基因。
 
-WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同表达的基因模块\(module\)，并探索基因网络与关注的表型之间的关联关系，以及网络中的核心基因。
-
-适用于复杂的数据模式，推荐5组\(或者15个样品\)以上的数据。一般可应用的研究方向有：不同器官或组织类型发育调控、同一组织不同发育调控、非生物胁迫不同时间点应答、病原菌侵染后不同时间点应答。
+适用于复杂的数据模式，推荐5组(或者15个样品)以上的数据。一般可应用的研究方向有：不同器官或组织类型发育调控、同一组织不同发育调控、非生物胁迫不同时间点应答、病原菌侵染后不同时间点应答。
 
 #### 基本原理
 
 从方法上来讲，WGCNA分为**表达量聚类分析和表型关联**两部分，主要包括基因之间相关系数计算、基因模块的确定、共表达网络、模块与性状关联四个步骤。
 
-第一步计算任意两个基因之间的相关系数（Person Coefficient）。为了衡量两个基因是否具有相似表达模式，一般需要设置阈值来筛选，高于阈值的则认为是相似的。但是这样如果将阈值设为0.8，那么很难说明0.8和0.79两个是有显著差别的。因此，**WGCNA分析时采用相关系数加权值，即对基因相关系数取N次幂**，使得网络中的基因之间的连接服从**无尺度网络分布\(scale-freenetworks\)** ，这种算法更具生物学意义。
+第一步计算任意两个基因之间的相关系数（Person Coefficient）。为了衡量两个基因是否具有相似表达模式，一般需要设置阈值来筛选，高于阈值的则认为是相似的。但是这样如果将阈值设为0.8，那么很难说明0.8和0.79两个是有显著差别的。因此，**WGCNA分析时采用相关系数加权值，即对基因相关系数取N次幂**，使得网络中的基因之间的连接服从**无尺度网络分布(scale-freenetworks)** ，这种算法更具生物学意义。
 
 **无尺度网络分布**：大部分节点只和很少节点连接，而有极少的节点与非常多的节点连接，生物体选择scale-free network可以保证少数关键基因执行着主要功能，只要保证hub的完整性，整个生命体系的基本活动在一定刺激影响下将不会受到太大影响。
 
-第三步得到模块之后可以做很多下游分析： （1）模块的功能富集 （2）模块与性状之间的相关性 （3）模块与样本间的相关系数 （4）找到模块的核心基因 （5）利用关系预测基因功能
+第三步得到模块之后可以做很多下游分析：
+（1）模块的功能富集
+（2）模块与性状之间的相关性
+（3）模块与样本间的相关系数
+（4）找到模块的核心基因
+（5）利用关系预测基因功能
+
 
 ### 3.0 Install packages
 
@@ -122,7 +130,7 @@ powers = c(c(1:10), seq(from=12, to=20, by=2))
 sft=pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
 ```
 
-```text
+```
 #pickSoftThreshold: will use block size 5000.
 # pickSoftThreshold: calculating connectivity for given powers...
 #   ..working on genes 1 through 5000 of 5000
@@ -145,7 +153,7 @@ sft=pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
 ```
 
 ```r
-pdf(file="/Share2/home/lulab/xixiaochen/training/co_expression/soft_thresholding.pdf",width=9, height=5)
+pdf(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/soft_thresholding.pdf",width=9, height=5)
 #Plot the results:
 par(mfrow = c(1,2))
 cex1 = 0.9
@@ -178,6 +186,7 @@ sft$powerEstimate
 ### 3.3 One-step network construction and module detection
 
 把输入的表达矩阵的**几千个基因归类成了几十个模块。**大体思路：计算基因间的邻接性，根据邻接性计算基因间的相似性，然后推出基因间的相异性系数，并据此得到基因间的系统聚类树。
+
 
 ```r
 net = blockwiseModules(datExpr,
@@ -222,7 +231,7 @@ table(mergedColors)
 #         1671            37           279 
 
 #Plot the dendrogram and the module colors underneath
-pdf(file="/Share2/home/lulab/xixiaochen/training/co_expression/module_visualization.pdf",width=9, height=5)
+pdf(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/module_visualization.pdf",width=9, height=5)
 plotDendroAndColors(net$dendrograms[[1]], mergedColors[net$blockGenes[[1]]],
                     "Module colors",
                     dendroLabels = FALSE, hang = 0.03,
@@ -246,7 +255,7 @@ MEs = moduleEigengenes(datExpr, moduleColors)$eigengenes
 #Add the weight to existing module eigengenes
 MET = orderMEs(MEs)
 #Plot the relationships between the eigengenes and the trait
-pdf(file="/Share/home/xixiaochen/project/training/eigengenes_trait_relationship.pdf",width=7, height=9)
+pdf(file="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/eigengenes_trait_relationship.pdf",width=7, height=9)
 par(cex = 0.9)
 plotEigengeneNetworks(MET,"", marDendro=c(0,4,1,2), 
                       marHeatmap=c(3,4,1,2), cex.lab=0.8, xLabelsAngle=90)
@@ -274,7 +283,7 @@ MEs = orderMEs(MEs0)
 moduleTraitCor = cor(MEs, design, use = "p")
 moduleTraitPvalue = corPvalueStudent(moduleTraitCor, nSamples)
 
-pdf(file="/Share/home/xixiaochen/project/training/module_trait_relationship.pdf",width=9, height=10)
+pdf(file="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/module_trait_relationship.pdf",width=9, height=10)
 #Display the correlations and their p-values
 textMatrix = paste(signif(moduleTraitCor, 2), "\n(",
                    signif(moduleTraitPvalue, 1), ")", sep = "")
@@ -297,9 +306,11 @@ dev.off()
 
 通过模块与各种表型的相关系数，可以很清楚的挑选自己感兴趣的模块进行下游分析了。这个图就是把moduleTraitCor这个矩阵给用热图可视化一下。
 
+
 ![](../../.gitbook/assets/module_trait_relationship.png)
 
 从上图已经可以看到跟乳腺癌分类相关的基因模块了，包括"Basal" "Claudin-low" "Luminal" "Non-malignant" "unknown" 这5类所对应的不同模块的基因列表。可以看到每一种乳腺癌都有跟它强烈相关的模块，可以作为它的表达signature，模块里面的基因可以拿去做下游分析。我们看到Luminal表型跟棕色的模块相关性高达0.86，而且极其显著的相关，所以值得我们挖掘，这个模块里面的基因是什么，为什么如此的相关呢？
+
 
 ### 3.7 Select specific module
 
@@ -413,7 +424,7 @@ module = "brown"
 probes = colnames(datExpr)
 inModule = (moduleColors == module)
 modProbes = probes[inModule]
-write.table(modProbes,file="/Share/home/xixiaochen/project/training/geneID_brown.txt",sep="\t",quote=F,row.names=F,col.names=F)
+write.table(modProbes,file="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/geneID_brown.txt",sep="\t",quote=F,row.names=F,col.names=F)
 ```
 
 The output file looks like:
@@ -430,10 +441,8 @@ head geneID_brown.txt
 We could use the gene ID list for GO/KEGG analysis.
 
 ## 4 Appendix：functional annotation of lncRNA
-
 ### 4.1 GO/KEGG analysis of the module which interested lncRNAs are involved in.
-
-在WGCNA得到模块之后，通过fisher exact test分析感兴趣的lncRNA\(例如：上调或者下调\)是否在这些模块中显著富集，挑选出显著富集的模块中的protein coding genes做功能分析。
+在WGCNA得到模块之后，通过fisher exact test分析感兴趣的lncRNA(例如：上调或者下调)是否在这些模块中显著富集，挑选出显著富集的模块中的protein coding genes做功能分析。
 
 ![](../../.gitbook/assets/co-expression.lncRNA.png)
 
@@ -443,7 +452,7 @@ Library packages and load the input data
 
 ```r
 library(multtest)
-lnc_mRNA_dataExpr <- readRDS(file="/Share/home/xixiaochen/project/training/lnc_mRNA_dataExpr.rds")
+lnc_mRNA_dataExpr <- readRDS(file="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/lnc_mRNA_dataExpr.rds")
 ```
 
 The input file looks like:
@@ -490,15 +499,15 @@ Pcc_pvalue[1:4,1:4]
 ```
 
 ```r
-write.table(Pcc, file ="/Share/home/xixiaochen/project/training/pcc.txt", quote = F, row.names = F, sep="\t")
-write.table(Pcc_pvalue, file ="/Share/home/xixiaochen/project/training/pcc_pvalue.txt", quote = F,row.names = F, sep="\t")
+write.table(Pcc, file ="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/pcc.txt", quote = F, row.names = F, sep="\t")
+write.table(Pcc_pvalue, file ="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/pcc_pvalue.txt", quote = F,row.names = F, sep="\t")
 
 #Get the row and column names
 pcc_pvalue_colnames=colnames(Pcc_pvalue)
 pcc_pvalue_rownames=rownames(Pcc_pvalue)
 
-write.table(pcc_pvalue_colnames, file ="/Share/home/xixiaochen/project/training/Pcc_pvalue_colnames.txt", quote = F, row.names = F, sep="\t")
-write.table(pcc_pvalue_rownames, file ="/Share/home/xixiaochen/project/training/Pcc_pvalue_rownames.txt", quote = F, row.names = F, sep="\t")
+write.table(pcc_pvalue_colnames, file ="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/Pcc_pvalue_colnames.txt", quote = F, row.names = F, sep="\t")
+write.table(pcc_pvalue_rownames, file ="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/Pcc_pvalue_rownames.txt", quote = F, row.names = F, sep="\t")
 ```
 
 ```bash
@@ -510,7 +519,7 @@ sed -n '5198,19029p' pcc.txt | cut -f 1-5196 > lnc_coding_pcc.txt
 
 ```r
 #use the multtest package
-raw_pvalue = read.table("/Share/home/xixiaochen/project/training/lnc_coding_pvalue.txt", sep='\t', quote="", comment="")
+raw_pvalue = read.table("/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/lnc_coding_pvalue.txt", sep='\t', quote="", comment="")
 #The input file looks like
 dim(raw_pvalue)
 #[1] 13832  5196
@@ -527,7 +536,7 @@ raw_pvalue[1:4,1:4]
 
 ```r
 #Calculate the adjusted p-values
-setwd("/Share/home/xixiaochen/project/training/adjp/")
+setwd("/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/adjp/")
 #the multtest package: output=adjusted p-values from small to large order, index=original row and column information
 for (i in seq(1,dim(raw_pvalue)[2])){
   ad=mt.rawp2adjp(raw_pvalue[,i], proc=c("Bonferroni"))
@@ -553,7 +562,7 @@ the get\_gene\_pairs.py contains:
 import pandas as pd
 import numpy as np
 import os
-fold_path='/Share/home/xixiaochen/project/training/adjp/'
+fold_path='/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/adjp/'
 file_li=os.listdir(fold_path)
 adjp_fi_li=[]
 for i in range(len(file_li)):
@@ -570,8 +579,8 @@ fi_adjp=pd.DataFrame(adjp_fi_li)
 adjp_T=fi_adjp.T
 comp_adjp=adjp_T[adjp_T<0.01]
 #add gene names, each row represents a protein-coding gene, each column represents a lncRNA
-col_file='/Share/home/xixiaochen/project/training/Pcc_pvalue_colnames.txt'
-row_file='/Share/home/xixiaochen/project/training/Pcc_pvalue_rownames.txt'
+col_file='/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/Pcc_pvalue_colnames.txt'
+row_file='/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/Pcc_pvalue_rownames.txt'
 col=pd.read_csv(col_file)
 colnames=list(col['x'])[:5196]
 row=pd.read_csv(row_file)
@@ -595,7 +604,7 @@ def com_get_pair(df):
     df_df.columns=['coding genes','lncRNA','Pcc']
     return df_df
 #filter Pcc in top 5%
-pcc_file='/Share/home/xixiaochen/project/training/lnc_coding_pcc.txt'
+pcc_file='/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/lnc_coding_pcc.txt'
 pcc=pd.read_csv(pcc_file,sep='\t',header=None)
 #filter Pcc in bottom 5%
 pcc=abs(pcc)
@@ -607,9 +616,9 @@ cut_pcc=all_pcc_se.quantile(0.95)
 pcc_cut=pcc[pcc>cut_pcc]
 pcc_df=com_get_pair(pcc_cut)
 adjp_df=com_get_pair(comp_adjp)
-pcc_out_file='/Share/home/xixiaochen/project/training/pcc_cut.txt'
+pcc_out_file='/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/pcc_cut.txt'
 pcc_df.to_csv(pcc_out_file,sep='\t',index=False)
-adjp_out_file='/Share/home/xixiaochen/project/training/adjp_cut.txt'
+adjp_out_file='/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/adjp_cut.txt'
 adjp_df.to_csv(adjp_out_file,sep='\t',index=False)
 ```
 
@@ -708,4 +717,5 @@ We could extract the mRNA gene set for GO/KEGG analysis.
 [https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html)
 
 [example](https://github.com/YuminTHU/training_class/tree/master/data/co_expression)
+
 
