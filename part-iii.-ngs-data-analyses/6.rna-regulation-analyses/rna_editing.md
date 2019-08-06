@@ -4,19 +4,19 @@
 
 Pre-mRNA molecules transcribed from the genome may fold to form double-stranded RNA \(dsRNA\) secondary structures. dsRNA-specific adenosine deaminase \(ADAR\) enzymes bind these structures and deaminate some adenosines to inosines. If these inosines are located in an exon, they will be present in the mature mRNA.
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/RNA_editing.F1.png)
+![](../../.gitbook/assets/RNA_editing.F1.png)
 
 Reverse transcription replaces inosines in mRNA with guanosines in the cDNA. Thus, the hallmark of RNA editing is a consistent A → G mismatch between RNA sequencing \(RNA-seq\) data and the reference genomic sequence to which it is aligned.
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/RNA_editing.F2.png)
+![](../../.gitbook/assets/RNA_editing.F2.png)
 
 Four main types of mRNA editing have been studied in recent decades. A-to-I RNA editing is the most common in terms of the range of organisms affected, the breadth of tissues edited and the number of editing sites.
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/RNA_editing.F3.png)
+![](../../.gitbook/assets/RNA_editing.F3.png)
 
 Editing can modify protein function, generate new protein products and alter gene regulation.
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/RNA_editing.F4.png)
+![](../../.gitbook/assets/RNA_editing.F4.png)
 
 ## long RNA-seq
 
@@ -28,7 +28,7 @@ RNAEditor: easy detection of RNA editing events and the introduction of editing 
 
 #### pipeline
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/RNA_editing.F5.png)
+![](../../.gitbook/assets/RNA_editing.F5.png)
 
 #### Website
 
@@ -48,7 +48,7 @@ Identifying RNA Editing Sites in miRNAs by Deep Sequencing
 
 #### pipeline
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/RNA_editing.F6.png)
+![](../../.gitbook/assets/RNA_editing.F6.png)
 
 #### Website
 
