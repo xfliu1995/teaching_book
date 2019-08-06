@@ -2,7 +2,7 @@
 
 ## background
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/shapemap.png)
+![](../../.gitbook/assets/shapemap.png)
 
 RNA is treated with a SHAPE reagent that reacts at conformationally dynamic nucleotides. During reverse transcription, polymerase reads through chemical adducts in the RNA and incorporates a nucleotide noncomplementary to the original sequence \(red\) into the cDNA. The resulting cDNA is sequenced using any massively parallel approach to create a mutational profile. Sequencing reads are aligned to a reference sequence, and nucleotide-resolution mutation rates are calculated, corrected for background and normalized, producing a standard SHAPE reactivity profile. SHAPE reactivities can then be used to model secondary structures, visualize competing and alternative structures, or quantify any process or function that modulates local nucleotide RNA dynamics.
 
@@ -31,11 +31,11 @@ shapemapper \
 
 3. example-results\_TPP\_histograms.pdf
 
-   ![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/example-results_TPP_histograms.png)
+   ![](../../.gitbook/assets/example-results_TPP_histograms.png)
 
 4. example-results\_TPP\_profiles.pdf 
 
-   ![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/example-results_TPP_profiles.png)
+   ![](../../.gitbook/assets/example-results_TPP_profiles.png)
 
 5. example-results\_TPP.shape
 
