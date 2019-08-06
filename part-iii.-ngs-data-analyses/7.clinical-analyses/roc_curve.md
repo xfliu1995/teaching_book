@@ -228,7 +228,7 @@ plot(roc, main = 'ROC Curve')
 
 The curve should look like this:
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/ROCplot_multiple_features.jpeg)
+![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/ROCplot_multiple_features.jpeg)
 
 ## Reference
 
