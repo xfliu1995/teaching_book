@@ -24,9 +24,9 @@
 Import data
 
 ```r
-setwd("/Share/home/xixiaochen/project/training/")
-datExpr <- readRDS(file="/Share2/home/lulab/xixiaochen/training/co_expression/input_fpkm_matrix.rds")
-datTraits <- readRDS(file="/Share2/home/lulab/xixiaochen/training/co_expression/data_traits.rds")
+setwd("/Share2/home/lulab/xixiaochen/training_share2/co_expression")
+datExpr <- readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/input_fpkm_matrix.rds")
+datTraits <- readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/data_traits.rds")
 ```
 
 Data character
