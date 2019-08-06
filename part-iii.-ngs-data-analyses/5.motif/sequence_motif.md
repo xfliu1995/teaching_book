@@ -2,7 +2,7 @@
 
 ## workflow
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/seq_motif.pipeline.png)
+![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/seq_motif.pipeline.png)
 
 ## 1. get UTR or promoter sequence
 
@@ -245,7 +245,7 @@ meme -dna -maxsize 1000000 \
 
 output
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/sequence_meme.png)
+![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/sequence_meme.png)
 
 ### 6.2 known motif enrichment
 
@@ -272,7 +272,7 @@ output
 
    example output
 
-   ![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/sequence_ame.png)
+   ![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/sequence_ame.png)
 
 download the example input files from [sequence\_motif](https://github.com/YuminTHU/training_class/tree/master/files/sequence_motif)
 
