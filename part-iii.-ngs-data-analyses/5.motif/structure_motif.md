@@ -2,7 +2,7 @@
 
 ## workflow
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/structure_motif.pipeline.png)
+![](../../.gitbook/assets/structure_motif.pipeline.png)
 
 ## 0. get interested sequence and control sequence as sequence motif analysis
 
@@ -52,7 +52,7 @@ weblogo -a 'ZAQXSWCDEVFRBGTNHY' -f BEAMready_m1_run1_wl.fa -D fasta \
 
 ### 1.4.3 example output
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/structure_motif.BEAM.png)
+![](../../.gitbook/assets/structure_motif.BEAM.png)
 
 ## 2. RNApromo
 
@@ -77,7 +77,7 @@ ATAAGAGACCACAAGCGACCCGCAGGGCCAGACGTTCTTCGCCGAGAGTCGTCGGGGTTTCCTGCTTCAACAGTGCTTGG
 
 #### example output
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/structure_motif.RNApromo.png)
+![](../../.gitbook/assets/structure_motif.RNApromo.png)
 
 ### 2.3 find known motifs
 
