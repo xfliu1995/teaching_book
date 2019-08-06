@@ -1,8 +1,5 @@
 # 4.1.Co-expression Network
 
-![](../../.gitbook/assets/co-expression-pipeline.png)
-
-# Co-expression
 
 ## Co-expression
 
