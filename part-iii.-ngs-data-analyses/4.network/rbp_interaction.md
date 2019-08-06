@@ -2,7 +2,7 @@
 
 ## workflow
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/RBP.pipeline.png)
+![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/RBP.pipeline.png)
 
 ## 1. get CLIP-seq data
 
