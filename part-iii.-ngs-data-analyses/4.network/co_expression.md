@@ -165,7 +165,7 @@ text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
 dev.off()
 ```
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/soft_thresholding.png)
+![](https://github.com/lulab/teaching_book/blob/master/.gitbook/assets/soft_thresholding.png)
 
 软阈值（即权重参数，可以理解为相关系数的β次幂）取值默认为1到30，上述图形的横轴均代表软阈值，左图的纵轴数值越大，说明该网络越逼近无尺度网络，右图的纵轴表示对应的基因模块中所有基因邻接性的均值。
 
@@ -232,7 +232,7 @@ plotDendroAndColors(net$dendrograms[[1]], mergedColors[net$blockGenes[[1]]],
 dev.off()
 ```
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/module_visualization.png)
+![](https://github.com/lulab/teaching_book/blob/master/.gitbook/assets/module_visualization.png)
 
 ### 3.5 Quantify module similarity by eigengene correlation
 
@@ -253,7 +253,7 @@ plotEigengeneNetworks(MET,"", marDendro=c(0,4,1,2),
 dev.off()
 ```
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/eigengenes_trait_relationship.png)
+![](https://github.com/lulab/teaching_book/blob/master/.gitbook/assets/eigengenes_trait_relationship.png)
 
 The top part of this plot represents the eigengene dendrogram and the lower part of this plot represents the eigengene adjacency heatmap.
 
@@ -297,7 +297,7 @@ dev.off()
 
 通过模块与各种表型的相关系数，可以很清楚的挑选自己感兴趣的模块进行下游分析了。这个图就是把moduleTraitCor这个矩阵给用热图可视化一下。
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/module_trait_relationship.png)
+![](https://github.com/lulab/teaching_book/blob/master/.gitbook/assets/module_trait_relationship.png)
 
 从上图已经可以看到跟乳腺癌分类相关的基因模块了，包括"Basal" "Claudin-low" "Luminal" "Non-malignant" "unknown" 这5类所对应的不同模块的基因列表。可以看到每一种乳腺癌都有跟它强烈相关的模块，可以作为它的表达signature，模块里面的基因可以拿去做下游分析。我们看到Luminal表型跟棕色的模块相关性高达0.86，而且极其显著的相关，所以值得我们挖掘，这个模块里面的基因是什么，为什么如此的相关呢？
 
@@ -379,7 +379,7 @@ cyt = exportNetworkToCytoscape(filter,
     nodeAttr = moduleColors[inModule][1:nTop])
 ```
 
-#### ![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/cytoscapeinput-edges-filter-brown2.png)
+#### ![](https://github.com/lulab/teaching_book/blob/master/.gitbook/assets/cytoscapeinput-edges-filter-brown2.png)
 
 This plot is visualized by Cytoscape.
 
@@ -435,7 +435,7 @@ We could use the gene ID list for GO/KEGG analysis.
 
 在WGCNA得到模块之后，通过fisher exact test分析感兴趣的lncRNA\(例如：上调或者下调\)是否在这些模块中显著富集，挑选出显著富集的模块中的protein coding genes做功能分析。
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/co-expression.lncRNA.png)
+![](https://github.com/lulab/teaching_book/blob/master/.gitbook/assets/co-expression.lncRNA.png)
 
 ### 4.2 Construct the lncRNA-mRNA co-expression network, functional analysis of mRNAs which are co-expressed with these interested lncRNAs.
 
