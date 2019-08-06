@@ -2,7 +2,7 @@
 
 ## workflow
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/ribo_seq.pipeline.png)
+![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/ribo_seq.pipeline.png)
 
 ## 背景介绍
 
@@ -10,7 +10,7 @@
 
 Ribo-seq是2009年Weissman课题组首次发表的研究细胞内蛋白翻译图谱的新型二代测序技术，用来描述全基因组水平蛋白质的翻译情况。主要是选择性捕捉80S核糖体及其结合的RNA片段而定位核糖体所位于的RNA的位置。具体步骤为：在细胞裂解物中富集多聚核糖体（polysome）；将多聚核糖体用核酸酶（RNA nuclease）消化成单核糖体（monosome）；选择性的收集和富集80S核糖体并经纯化得到80S核糖体所保护的RNA片段。在此过程中，将80S核糖体保护的RNA片段进行下一步构建文库和测序（图1）。最后，通过生物信息学的分析获得细胞当前状态下的翻译图谱 。Ribo-seq数据测得的RNA片段长短与small RNA-seq相似，大约分布在25~35nt区间。由于Ribo-seq是特异性描述细胞的翻译组，因此其数据的测序片段大多比对到基因组的CDS区域（coding region）。此外，Ribo-seq还有一个明显区别于其他RNA-seq的特点，即Ribo-seq的序列在CDS区域往往呈现3-nt的周期性（图1）。这主要依赖于翻译过程中核糖体通常以3-nt的周期进行移动。
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/Ribo_seq.F1.png)
+![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/Ribo_seq.F1.png)
 
 图1
 
@@ -80,7 +80,7 @@ P-site directory, including : 1. name.psite1nt.txt : the Ribo-seq reads length a
 
    我们收集了所有已被注释的起始密码子并将 这些起始密码子和Ribo-seq 比对上的序列进行重合，分别计算Ribo-seq序列的5’端偏离起始密码子的第一个碱基A的距离\(offset\)。根据 Ribo-seq测序片段长度的不同，我们进一步将Ribo-seq片段分成多个组分。在每个长度对应的组分里，作出Ribo-seq片段5’端偏离起始密码子A的距离\(offset\)的直方图。
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/Ribo_seq.F2.png)
+![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/Ribo_seq.F2.png)
 
 每一行代表不同长度的 Ribo-seq 测序片段的直方图。该数据中，30nt的reads数目最多，在30nt长度的Ribo-seq片段中，我们可以明显的看到在距离为13nt的位点含有一个峰值\(peak\)。鉴于大部分核糖体会在翻译起始位点停滞较多的时间，因此对于30nt长的Ribo-seq片段，其P-site位点的定义应该代表直方图中绝大多数的核糖体，因此我们将P-site位点应该定义为峰值最高的第13个碱基\(13nt\)的位置。
 
