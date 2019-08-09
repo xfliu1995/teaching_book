@@ -49,3 +49,45 @@
 
 [@Bilibili](https://player.bilibili.com/player.html?aid=30590572&cid=53393101&page=1)
 
+### 7.exRNA-seq
+
+[@Youtube](https://youtu.be/ovSVpqcDB8o)
+
+[@Bilibili](https://player.bilibili.com/player.html?aid=30591172&cid=53394108&page=1)
+
+### a\) Mapping
+
+[@Youtube](https://youtu.be/5v2fbx93TF4)
+
+[@Bilibili](https://player.bilibili.com/player.html?aid=30591535&cid=53394590&page=1)
+
+### b\) Run your job example in bash
+
+[@Youtube](https://youtu.be/BqxHRxxBVeQ)
+
+[@Bilibili](https://player.bilibili.com/player.html?aid=30592322&cid=53396126&page=1)
+
+### a\) Expression matrix
+
+[@Youtube](https://youtu.be/DPGpPuzVg_o)
+
+[@Bilibili](https://player.bilibili.com/player.html?aid=30592382&cid=53396383&page=1)
+
+### a. Differential expression
+
+[@Youtube](https://youtu.be/xGocWkPqgOA)
+
+[@Bilibili](https://player.bilibili.com/player.html?aid=30592492&cid=53396615&page=1)
+
+### a\) Normalization 1
+
+[@Youtube](https://youtu.be/QCxNIGrTWh0)
+
+[@Bilibili](https://player.bilibili.com/player.html?aid=30592584&cid=53396844&page=1)
+
+### b\) Normalization 2
+
+[@Youtube](https://youtu.be/QDy2grY78DE)
+
+[@Bilibili](https://player.bilibili.com/player.html?aid=30592643&cid=53396972&page=1)
+
