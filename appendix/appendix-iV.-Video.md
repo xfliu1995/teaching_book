@@ -25,13 +25,13 @@
 
 [@Bilibili](https://player.bilibili.com/player.html?aid=30590318&cid=53392706&page=1)
 
-### 4a.R Basics
+### 4a\) R Basics
 
 [@Youtube](https://youtu.be/A0YKZgxvpXM)
 
 [@Bilibili](https://player.bilibili.com/player.html?aid=30590474&cid=53392848&page=1)
 
-### 4b.R Advanced \(by Yang Eric Li\)
+### 4b\) R Advanced \(by Yang Eric Li\)
 
 [@Youtube](https://youtu.be/HeIAZ3pgsxQ)
 
@@ -55,37 +55,37 @@
 
 [@Bilibili](https://player.bilibili.com/player.html?aid=30591172&cid=53394108&page=1)
 
-### a\) Mapping
+### 8a\) Mapping
 
 [@Youtube](https://youtu.be/5v2fbx93TF4)
 
 [@Bilibili](https://player.bilibili.com/player.html?aid=30591535&cid=53394590&page=1)
 
-### b\) Run your job example in bash
+### 8b\) Run your job example in bash
 
 [@Youtube](https://youtu.be/BqxHRxxBVeQ)
 
 [@Bilibili](https://player.bilibili.com/player.html?aid=30592322&cid=53396126&page=1)
 
-### a\) Expression matrix
+### 9. Expression matrix
 
 [@Youtube](https://youtu.be/DPGpPuzVg_o)
 
 [@Bilibili](https://player.bilibili.com/player.html?aid=30592382&cid=53396383&page=1)
 
-### a. Differential expression
+### 10. Differential expression
 
 [@Youtube](https://youtu.be/xGocWkPqgOA)
 
 [@Bilibili](https://player.bilibili.com/player.html?aid=30592492&cid=53396615&page=1)
 
-### a\) Normalization 1
+### 11a\) Normalization 1
 
 [@Youtube](https://youtu.be/QCxNIGrTWh0)
 
 [@Bilibili](https://player.bilibili.com/player.html?aid=30592584&cid=53396844&page=1)
 
-### b\) Normalization 2
+### 11b\) Normalization 2
 
 [@Youtube](https://youtu.be/QDy2grY78DE)
 
