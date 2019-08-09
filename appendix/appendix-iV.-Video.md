@@ -13,13 +13,13 @@
 [@Bilibili](https://player.bilibili.com/player.html?aid=30617423&cid=53443343&page=1)
 
 
-### 2a\) Linux
+### 2. Linux
 
 [@youtube](https://youtu.be/cOmJvMjn5CU)
 
 [@Bilibili](https://player.bilibili.com/player.html?aid=30590225&cid=53392482&page=1)
 
-### 3a\) Bash and Github
+### 3. Bash and Github
 
 [@Youtube](https://youtu.be/mXAdfWw-OBg)
 
