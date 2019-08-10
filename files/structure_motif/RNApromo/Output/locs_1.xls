@@ -1,0 +1,11 @@
+Seq ID	Start	End	Score	Sequence	Structure
+Pos_2	33	48	19.7698	UUCAACAGUGUUUGGA	(((((......)))))
+Pos_7	104	119	19.3706	GGGAGCAGUGUCUUCC	(((((......)))))
+Pos_3	16	31	19.1064	GUCCUCAGUGCAGGGC	(((((......)))))
+Pos_1	30	52	18.073	GACGUUCUUCGCCGAGAGUCGUC	(((((((((....))))).))))
+Pos_4	6	21	17.0778	UUUGUCAGUGCACAAA	(((((......)))))
+Pos_5	104	119	16.5508	AGCUACAGUGUUAGCU	(((((......)))))
+Pos_8	96	106	14.6633	CACCCCAGCCC	...........
+Pos_9	32	47	14.5906	GAGCCAGUGUGUUUCU	((((......))))..
+Pos_10	133	152	9.15077	CAACCUCCACCUUCUGGGUU	.(((((.........)))))
+Pos_6	1	16	6.81293	UAUGGAGAUUUCCAUA	(((((......)))))

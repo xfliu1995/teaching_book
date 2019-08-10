@@ -1,0 +1,217 @@
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|153$1	185	36	72	33.2354
+ddddd[bb[affffffmmmmffffff]a]bbdddd]	SeqCat01|193$1	185	68	104	28.9338
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|21$1	185	114	150	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|192$1	185	63	99	33.2354
+ggggg[bb[affffffmmmmffffff]a]bbggggg	SeqCat01|55$1	185	146	182	30.5556
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|74$1	185	62	98	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|28$1	185	37	73	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|121$1	185	48	84	33.2354
+ggggg[bb[affffffmmmmffffff]a]bbggggg	SeqCat01|76$1	185	61	97	30.5556
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|138$1	185	81	117	30.8272
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|118$1	185	131	167	30.8272
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|143$1	185	89	125	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|60$1	185	139	175	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|189$1	185	143	179	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|124$1	185	111	147	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|72$1	185	139	175	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|44$1	185	110	146	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|68$1	186	121	157	33.2354
+hhhhh[bb[affffffmmmmffffff]a]bbhhhhh	SeqCat01|173$1	185	106	142	28.1507
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|161$1	185	127	163	33.2354
+ggggg[bb[affffffmmmmffffff]a]bbggggg	SeqCat01|31$1	185	36	72	30.5556
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|99$1	185	102	138	30.8272
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|43$1	185	111	147	33.2354
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|5$1	185	54	90	30.8272
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|98$1	185	106	142	33.2354
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|51$1	185	43	79	30.8272
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|62$1	185	46	82	30.8272
+ggggg[bb[affffffmmmmffffff]a]bbggggg	SeqCat01|49$1	185	84	120	30.5556
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|12$1	185	107	143	33.2354
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|158$1	185	148	184	30.8272
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|71$1	185	102	138	30.8272
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|18$1	185	72	108	33.2354
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|80$1	185	70	106	30.8272
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|175$1	185	45	81	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|141$1	185	102	138	33.2354
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|95$1	185	77	113	30.8272
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|115$1	185	125	161	30.8272
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|152$1	185	101	137	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|36$1	185	74	110	33.2354
+ggggg[bb[affffffmmmmffffff]a]bbggggg	SeqCat01|16$1	185	84	120	30.5556
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|90$1	185	89	125	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|39$1	185	113	149	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|54$1	185	30	66	33.2354
+ggggg[bb[affffffmmmmffffff]a]bbggggg	SeqCat01|146$1	185	112	148	30.5556
+fffff[bb[affffffmmmmffffff]a]bbfffff	SeqCat01|38$1	185	33	69	30.8272
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|166$1	185	77	113	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|25$1	185	96	132	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|102$1	185	70	106	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|127$1	185	132	168	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|75$1	185	43	79	33.2354
+ggggg[bb[affffffmmmmffffff]a]bbggggg	SeqCat01|140$1	185	115	151	30.5556
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|128$1	185	116	152	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|88$1	185	96	132	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|13$1	185	91	127	33.2354
+eeeee[bb[affffffmmmmffffff]a]bbeeeee	SeqCat01|172$1	185	70	106	33.2354
+
+#otherMatches
+
+#Seq PSSM
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|153$1	su1	36	72	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|193$1	su1	68	104	28.9338
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|21$1	su1	114	150	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|192$1	su1	63	99	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|55$1	su1	146	182	30.5556
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|74$1	su1	62	98	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|28$1	su1	37	73	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|121$1	su1	48	84	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|76$1	su1	61	97	30.5556
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|138$1	su1	81	117	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|118$1	su1	131	167	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|143$1	su1	89	125	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|60$1	su1	139	175	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|189$1	su1	143	179	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|124$1	su1	111	147	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|72$1	su1	139	175	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|44$1	su1	110	146	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|68$1	su1	121	157	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|173$1	su1	106	142	28.1507
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|161$1	su1	127	163	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|31$1	su1	36	72	30.5556
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|99$1	su1	102	138	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|43$1	su1	111	147	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|5$1	su1	54	90	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|98$1	su1	106	142	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|51$1	su1	43	79	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|62$1	su1	46	82	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|49$1	su1	84	120	30.5556
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|12$1	su1	107	143	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|158$1	su1	148	184	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|71$1	su1	102	138	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|18$1	su1	72	108	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|80$1	su1	70	106	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|175$1	su1	45	81	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|141$1	su1	102	138	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|95$1	su1	77	113	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|115$1	su1	125	161	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|152$1	su1	101	137	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|36$1	su1	74	110	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|16$1	su1	84	120	30.5556
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|90$1	su1	89	125	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|39$1	su1	113	149	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|54$1	su1	30	66	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|146$1	su1	112	148	30.5556
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|38$1	su1	33	69	30.8272
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|166$1	su1	77	113	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|25$1	su1	96	132	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|102$1	su1	70	106	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|127$1	su1	132	168	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|75$1	su1	43	79	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|140$1	su1	115	151	30.5556
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|128$1	su1	116	152	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|88$1	su1	96	132	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|13$1	su1	91	127	33.2354
+GACGUACUUCAUAGGAUCAUUUCUAUAGUAGACGUC	SeqCat01|172$1	su1	70	106	33.2354
+
+#DB
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|153$1	su1	36	72	33.2354
+(((((.((.(((((((....)))))).).)))))).	SeqCat01|193$1	su1	68	104	28.9338
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|21$1	su1	114	150	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|192$1	su1	63	99	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|55$1	su1	146	182	30.5556
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|74$1	su1	62	98	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|28$1	su1	37	73	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|121$1	su1	48	84	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|76$1	su1	61	97	30.5556
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|138$1	su1	81	117	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|118$1	su1	131	167	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|143$1	su1	89	125	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|60$1	su1	139	175	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|189$1	su1	143	179	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|124$1	su1	111	147	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|72$1	su1	139	175	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|44$1	su1	110	146	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|68$1	su1	121	157	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|173$1	su1	106	142	28.1507
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|161$1	su1	127	163	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|31$1	su1	36	72	30.5556
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|99$1	su1	102	138	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|43$1	su1	111	147	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|5$1	su1	54	90	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|98$1	su1	106	142	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|51$1	su1	43	79	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|62$1	su1	46	82	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|49$1	su1	84	120	30.5556
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|12$1	su1	107	143	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|158$1	su1	148	184	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|71$1	su1	102	138	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|18$1	su1	72	108	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|80$1	su1	70	106	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|175$1	su1	45	81	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|141$1	su1	102	138	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|95$1	su1	77	113	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|115$1	su1	125	161	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|152$1	su1	101	137	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|36$1	su1	74	110	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|16$1	su1	84	120	30.5556
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|90$1	su1	89	125	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|39$1	su1	113	149	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|54$1	su1	30	66	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|146$1	su1	112	148	30.5556
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|38$1	su1	33	69	30.8272
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|166$1	su1	77	113	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|25$1	su1	96	132	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|102$1	su1	70	106	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|127$1	su1	132	168	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|75$1	su1	43	79	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|140$1	su1	115	151	30.5556
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|128$1	su1	116	152	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|88$1	su1	96	132	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|13$1	su1	91	127	33.2354
+(((((.((.(((((((....)))))).).)))))))	SeqCat01|172$1	su1	70	106	33.2354
+
+#PSSM
+e : 0.61	f : 0.21	g : 0.12	d : 0.01	h : 0.01	
+e : 0.61	f : 0.21	g : 0.12	d : 0.01	h : 0.01	
+e : 0.61	f : 0.21	g : 0.12	d : 0.01	h : 0.01	
+e : 0.61	f : 0.21	g : 0.12	d : 0.01	h : 0.01	
+e : 0.61	f : 0.21	g : 0.12	d : 0.01	h : 0.01	
+[ : 1.00	
+b : 1.00	
+b : 1.00	
+[ : 1.00	
+a : 1.00	
+f : 1.00	
+f : 1.00	
+f : 1.00	
+f : 1.00	
+f : 1.00	
+f : 1.00	
+m : 1.00	
+m : 1.00	
+m : 1.00	
+m : 1.00	
+f : 1.00	
+f : 1.00	
+f : 1.00	
+f : 1.00	
+f : 1.00	
+f : 1.00	
+] : 1.00	
+a : 1.00	
+] : 1.00	
+b : 1.00	
+b : 1.00	
+e : 0.61	f : 0.21	g : 0.12	d : 0.01	h : 0.01	
+e : 0.61	f : 0.21	g : 0.12	d : 0.01	h : 0.01	
+e : 0.61	f : 0.21	g : 0.12	d : 0.01	h : 0.01	
+e : 0.61	f : 0.21	g : 0.12	d : 0.01	h : 0.01	
+e : 0.61	f : 0.21	g : 0.12	] : 0.01	h : 0.01	
+
+#score	0.0
+#seq	55
+#width	36
+#escape	true
+#onStep	-1
+#minSteps	-1
+#maxSteps	-1
