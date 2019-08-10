@@ -139,3 +139,4 @@ seq_8:0    0.233537   95      115     ACACCCCAGCCCUGCAGUGUA   ((((..((....))..))
 
 [http://www.cs.toronto.edu/~hilal/rnacontext/](http://www.cs.toronto.edu/~hilal/rnacontext/)
 
+download the example input files from [structure\_motif](https://github.com/YuminTHU/training_class/tree/master/files/structure_motif)
