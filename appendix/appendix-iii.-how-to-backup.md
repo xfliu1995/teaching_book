@@ -117,8 +117,7 @@ ssh-keygen -t rsa -b 2048
 ```
 **2. Copy your keys to the target server:**
 ```bash
-ssh id@server
-vi .ssh/authorized_keys
+ssh-copy-id user@server_ip # if port add: -p 2200
 ```
 
 ## Backup your code: GitHub
