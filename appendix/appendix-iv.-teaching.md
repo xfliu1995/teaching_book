@@ -3,6 +3,7 @@
 ## Teaching Lecture PPTs
 
 * [Bioinfo 2019](https://cloud.tsinghua.edu.cn/d/f361101fc62e49df960b/?p=/bioinfo2019/Lectures&mode=list)
+* [Bioinfo 2018](https://cloud.tsinghua.edu.cn/d/f361101fc62e49df960b/?p=/bioinfo2018&mode=list)
 
 ## Teaching Dockers
 
