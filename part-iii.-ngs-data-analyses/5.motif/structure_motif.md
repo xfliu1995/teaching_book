@@ -52,7 +52,7 @@ weblogo -a 'ZAQXSWCDEVFRBGTNHY' -f BEAMready_m1_run1_wl.fa -D fasta \
 
 ### 1.4.3 example output
 
-![](../../.gitbook/assets/structure_motif.BEAM.png)
+![](../../.gitbook/assets/structure_motif.beam.png)
 
 ## 2. RNApromo
 
@@ -77,7 +77,7 @@ ATAAGAGACCACAAGCGACCCGCAGGGCCAGACGTTCTTCGCCGAGAGTCGTCGGGGTTTCCTGCTTCAACAGTGCTTGG
 
 #### example output
 
-![](../../.gitbook/assets/structure_motif.RNApromo.png)
+![](../../.gitbook/assets/structure_motif.rnapromo.png)
 
 ### 2.3 find known motifs
 
@@ -91,7 +91,7 @@ rnamotifs08_motif_match.pl database.tab -cm model.cm
 
 #### input
 
-The database is then specified in the following format:    database.tab
+The database is then specified in the following format: database.tab
 
 ```text
 seq_1    AUAAGAGACCACAAGCGACCCGCAGGGCCAGACGUUCUUCGCCGAGAGUCGUCGGGGUUUCCUGCUUCAACAGUGCUUGGACGGAACCCGGCGCUCGUUCCCCACCCCGGCCGGCCGCCCAUAGCCAGCCCUCCGUCACCUCUUCACCGCACCCUCGGACUGCCCCAAGGCCCCCGCCGCCGCUCCA    .............((((..(.((.(((((.(((((((((....))))).))))(((((.((((((...(((((((((.((......)).)))))).))).........(((.(((........))).)))..................))).....)))..)))))..)))))..)).).))))...
@@ -140,3 +140,4 @@ seq_8:0    0.233537   95      115     ACACCCCAGCCCUGCAGUGUA   ((((..((....))..))
 [http://www.cs.toronto.edu/~hilal/rnacontext/](http://www.cs.toronto.edu/~hilal/rnacontext/)
 
 download the example input files from [structure\_motif](https://github.com/YuminTHU/training_class/tree/master/files/structure_motif)
+

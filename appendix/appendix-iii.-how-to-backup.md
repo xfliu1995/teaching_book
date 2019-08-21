@@ -2,10 +2,9 @@
 
 ## Scheduled task: crontab
 
-Linux crontab是用来定期执行程序的命令。  
+Linux crontab是用来定期执行程序的命令。
 
 [在线crontab生成器](https://crontab-generator.org/)
-
 
 **Edit .bashrc file in the $HOME directory**
 
@@ -76,16 +75,19 @@ $ crontab -l > $HOME/mycron
 rsync命令是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件。
 
 **Synchronize data on local disk**
+
 ```bash
-rsync -a --delete /home /backups 
+rsync -a --delete /home /backups
 ```
 
 **Perform a "push" copy sync**
+
 ```bash
 rsync /etc/hosts user@172.22.220.21:/home/xugang/hosts
 ```
 
 **Perform a "pull" replication synchronization**
+
 ```bash
 rsync user@172.22.220.21:/home/xugang/hosts /etc/hosts
 rsync -aqzH --delete --delay-updates \ 
@@ -93,6 +95,7 @@ user@172.22.220.21:/home/xugang/hosts /etc/hosts
 ```
 
 **mirror centos at 0:10 AM everyday**
+
 ```bash
 10 0 * * * rsync -aqzH –delete \
  --delay-updates user@172.22.220.21:/home/xugang/hosts /etc/hosts
@@ -100,31 +103,35 @@ user@172.22.220.21:/home/xugang/hosts /etc/hosts
 
 | Parameter | Mean |
 | :--- | :--- |
-|-a:| 以递归方式传输文件|
-|--delete:| 删除那些接收端还有而发送端已经不存在的文件|
-|-q:| 精简输出模式|
-|-z:| 在传输文件时进行压缩处理|
-|-H:| 保持硬链接文件|
-|-t:| 对比两边文件的时间戳和文件大小.如果一致，则就认为两边文件一样，对此文件就不再采取更新动作了|
-|-I:| 挨个文件去发起数据同步|
-|--port=PORT:| 端口号|
+| -a: | 以递归方式传输文件 |
+| --delete: | 删除那些接收端还有而发送端已经不存在的文件 |
+| -q: | 精简输出模式 |
+| -z: | 在传输文件时进行压缩处理 |
+| -H: | 保持硬链接文件 |
+| -t: | 对比两边文件的时间戳和文件大小.如果一致，则就认为两边文件一样，对此文件就不再采取更新动作了 |
+| -I: | 挨个文件去发起数据同步 |
+| --port=PORT: | 端口号 |
 
 **How to automatically enter a password when logging in to the system**
 
 **1. Generate SSH key**
+
 ```bash
 ssh-keygen -t rsa -b 2048
 ```
+
 **2. Copy your keys to the target server:**
+
 ```bash
 ssh-copy-id user@server_ip # if port add: -p 2200
 ```
 
 ## Backup your code: GitHub
 
-**Create your new repository on [GitHub](https://github.com/new)**
+**Create your new repository on** [**GitHub**](https://github.com/new)
 
 **create a new repository on the command line**
+
 ```bash
 echo "# test" >> README.md 
 git init 
@@ -135,11 +142,13 @@ git push -u origin master
 ```
 
 **Download repository**
+
 ```bash
 git clone https://github.com/xug15/test.git
 ```
 
 **Save the change of your codes.**
+
 ```bash
 git add *
 git add –u .
@@ -147,6 +156,7 @@ git commit -m ‘20190705v1’
 ```
 
 **Update your codes into the GitHub**
+
 ```bash
 git push origin master
 Username for 'https://github.com': xug15
@@ -154,6 +164,7 @@ Password for 'https://xug15@github.com':
 ```
 
 **Auto update bash**
+
 ```bash
 time=`date`
 echo $time
@@ -163,18 +174,13 @@ git commit -m '$time'
 git push origin master
 ```
 
-**Use [GitHub Desktop App](https://desktop.github.com/)**
+**Use** [**GitHub Desktop App**](https://desktop.github.com/)
 
 ## Cloud storage
 
-* [Nextcloud](http://lulab.life.tsinghua.edu.cn/nextcloud/)   
-实验室内部搭建的云存储。找实验室管理人员开通账户。
-
-* [Tsinghua cloud](https://cloud.tsinghua.edu.cn/)    
-清华云,在校内使用速度快。
-
-* [Nutstore cloud](https://www.jianguoyun.com/)  
-商业云存储，每个月有免费的备份流量。自己申请账号使用。
+* [Nextcloud](http://lulab.life.tsinghua.edu.cn/nextcloud/) 实验室内部搭建的云存储。找实验室管理人员开通账户。
+* [Tsinghua cloud](https://cloud.tsinghua.edu.cn/) 清华云,在校内使用速度快。
+* [Nutstore cloud](https://www.jianguoyun.com/) 商业云存储，每个月有免费的备份流量。自己申请账号使用。
 
 ## Backup tool that comes with the system
 
@@ -183,5 +189,4 @@ git push origin master
 
 **Windows:**  
 [How to back up or transfer your data on a Windows-based computer](https://support.microsoft.com/en-us/help/971759/how-to-back-up-or-transfer-your-data-on-a-windows-based-computer)
-
 

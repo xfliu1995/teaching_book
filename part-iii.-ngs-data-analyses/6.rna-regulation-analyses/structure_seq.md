@@ -25,17 +25,17 @@ shapemapper \
 ### input
 
 1. TPPplus: modified fasta file
-2. TPPminus: untreated fasta file 
+2. TPPminus: untreated fasta file
 
    **output**
 
 3. example-results\_TPP\_histograms.pdf
 
-   ![](../../.gitbook/assets/example-results_TPP_histograms.png)
+   ![](../../.gitbook/assets/example-results_tpp_histograms.png)
 
-4. example-results\_TPP\_profiles.pdf 
+4. example-results\_TPP\_profiles.pdf
 
-   ![](../../.gitbook/assets/example-results_TPP_profiles.png)
+   ![](../../.gitbook/assets/example-results_tpp_profiles.png)
 
 5. example-results\_TPP.shape
 
