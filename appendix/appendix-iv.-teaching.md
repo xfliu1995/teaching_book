@@ -2,11 +2,14 @@
 
 ## Teaching Lecture PPTs
 
+* [Bioinfo 2019](https://cloud.tsinghua.edu.cn/d/f361101fc62e49df960b/?p=/bioinfo2019/Lectures&mode=list)
+
 ## Teaching Dockers
 
-| Chapter | Docker |
+| Chapter | [Docker](https://cloud.tsinghua.edu.cn/d/fca636508ef04b569f54/?p=/Docker&mode=list) |
 | :--- | :--- |
-| PART I.  | @Docker |
+| PART I + II + PART III.1-2 | Bioinfo\_Basic@[Docker](https://cloud.tsinghua.edu.cn/d/fca636508ef04b569f54/?p=/Docker&mode=list) |
+| PART III. 3. ChIP-seq | ChIP-seq |
 
 ## Teaching Videos
 
