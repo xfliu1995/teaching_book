@@ -9,7 +9,7 @@
 
 | Chapter | [Docker](https://cloud.tsinghua.edu.cn/d/fca636508ef04b569f54/?p=/Docker&mode=list) |
 | :--- | :--- |
-| PART I + II + PART III.1-3 | Bioinfo\_Basic@[Docker](https://cloud.tsinghua.edu.cn/d/fca636508ef04b569f54/?p=/Docker&mode=list) |
+| PART I + II + PART III.1-3 | [bioinfo_PartI-PartII-PartIII1-3.tar.gz](https://cloud.tsinghua.edu.cn/f/a74250736c6748a0867b/) |
 
 
 ## Teaching Videos
