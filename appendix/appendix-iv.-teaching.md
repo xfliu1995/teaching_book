@@ -9,8 +9,8 @@
 
 | Chapter | [Docker](https://cloud.tsinghua.edu.cn/d/fca636508ef04b569f54/?p=/Docker&mode=list) |
 | :--- | :--- |
-| PART I + II + PART III.1-2 | Bioinfo\_Basic@[Docker](https://cloud.tsinghua.edu.cn/d/fca636508ef04b569f54/?p=/Docker&mode=list) |
-| PART III. 3. ChIP-seq | ChIP-seq |
+| PART I + II + PART III.1-3 | Bioinfo\_Basic@[Docker](https://cloud.tsinghua.edu.cn/d/fca636508ef04b569f54/?p=/Docker&mode=list) |
+
 
 ## Teaching Videos
 
