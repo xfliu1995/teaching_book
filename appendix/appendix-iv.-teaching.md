@@ -27,7 +27,8 @@
 | 6.perl | [@Youtube](https://youtu.be/2jOGbVfuyjA) | [@Bilibili](https://player.bilibili.com/player.html?aid=30590572&cid=53393101&page=1) |
 | 7.exRNA-seq | [@Youtube](https://youtu.be/ovSVpqcDB8o) | [@Bilibili](https://player.bilibili.com/player.html?aid=30591172&cid=53394108&page=1) |
 | 8a\) Mapping | [@Youtube](https://youtu.be/5v2fbx93TF4) | [@Bilibili](https://player.bilibili.com/player.html?aid=30591535&cid=53394590&page=1) |
-| 8b\) Run your job example in bash | [@Youtube](https://youtu.be/BqxHRxxBVeQ) | [@Bilibili](https://player.bilibili.com/player.html?aid=30592322&cid=53396126&page=1) |
+| 8b\) Genome browser | [@youtube](https://youtu.be/6_1ZcVw7ptU) | [@bilibili](https://www.bilibili.com/video/av30448472/) |
+| 8c\) Run your job example in bash | [@Youtube](https://youtu.be/BqxHRxxBVeQ) | [@Bilibili](https://player.bilibili.com/player.html?aid=30592322&cid=53396126&page=1) |
 | 9. Expression matrix | [@Youtube](https://youtu.be/DPGpPuzVg_o) | [@Bilibili](https://player.bilibili.com/player.html?aid=30592382&cid=53396383&page=1) |
 | 10. Differential expression | [@Youtube](https://youtu.be/xGocWkPqgOA) | [@Bilibili](https://player.bilibili.com/player.html?aid=30592492&cid=53396615&page=1) |
 | 11a\) Normalization 1 | [@Youtube](https://youtu.be/QCxNIGrTWh0) | [@Bilibili](https://player.bilibili.com/player.html?aid=30592584&cid=53396844&page=1) |
