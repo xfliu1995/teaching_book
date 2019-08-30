@@ -1,6 +1,74 @@
 # Appendix III. How to Backup
 
-## Scheduled task: crontab
+## Basic
+
+### 1\) Cloud storage
+
+* [Tsinghua cloud](https://cloud.tsinghua.edu.cn/) based on seafile 清华云,在校内使用速度快。
+* [Nutstore cloud](https://www.jianguoyun.com/) 商业云存储，每个月有免费的备份流量。自己申请账号使用。
+* [Nextcloud](http://lulab.life.tsinghua.edu.cn/nextcloud/) 实验室内部搭建的云存储。找实验室管理人员开通账户。
+
+### 2\) Backup tool that comes with the system
+
+**Mac:**  
+[Back up your Mac with Time Machine](https://support.apple.com/en-us/HT201250)
+
+**Windows:**  
+[How to back up or transfer your data on a Windows-based computer](https://support.microsoft.com/en-us/help/971759/how-to-back-up-or-transfer-your-data-on-a-windows-based-computer)
+
+## Advanced
+
+### 3\) Backup your code on GitHub
+
+**Create your new repository on** [**GitHub**](https://github.com/new)
+
+**create a new repository on the command line**
+
+```bash
+echo "# test" >> README.md 
+git init 
+git add README.md 
+git commit -m "first commit" 
+git remote add origin https://github.com/xug15/test.git 
+git push -u origin master
+```
+
+**Download repository**
+
+```bash
+git clone https://github.com/xug15/test.git
+```
+
+**Save the change of your codes.**
+
+```bash
+git add *
+git add –u .
+git commit -m ‘20190705v1’
+```
+
+**Update your codes into the GitHub**
+
+```bash
+git push origin master
+Username for 'https://github.com': xug15
+Password for 'https://xug15@github.com':
+```
+
+**Auto update bash**
+
+```bash
+time=`date`
+echo $time
+git add -u .
+git add *
+git commit -m '$time'
+git push origin master
+```
+
+**Use** [**GitHub Desktop App**](https://desktop.github.com/)
+
+### 4\) Schedule tasks in Linux: crontab
 
 Linux crontab是用来定期执行程序的命令。
 
@@ -70,7 +138,7 @@ $ crontab -e
 $ crontab -l > $HOME/mycron
 ```
 
-## Remote data synchronization tool: rsync
+### 5\) Remote data synchronization tool: rsync
 
 rsync命令是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件。
 
@@ -126,67 +194,9 @@ ssh-keygen -t rsa -b 2048
 ssh-copy-id user@server_ip # if port add: -p 2200
 ```
 
-## Backup your code: GitHub
+## More
 
-**Create your new repository on** [**GitHub**](https://github.com/new)
+* For advanced users, you can learn [how to back up files using **crontab** and **rsync**](https://lulab.gitbook.io/training/part-i.-programming-skills/3.bash-and-github#example-ii).
 
-**create a new repository on the command line**
-
-```bash
-echo "# test" >> README.md 
-git init 
-git add README.md 
-git commit -m "first commit" 
-git remote add origin https://github.com/xug15/test.git 
-git push -u origin master
-```
-
-**Download repository**
-
-```bash
-git clone https://github.com/xug15/test.git
-```
-
-**Save the change of your codes.**
-
-```bash
-git add *
-git add –u .
-git commit -m ‘20190705v1’
-```
-
-**Update your codes into the GitHub**
-
-```bash
-git push origin master
-Username for 'https://github.com': xug15
-Password for 'https://xug15@github.com':
-```
-
-**Auto update bash**
-
-```bash
-time=`date`
-echo $time
-git add -u .
-git add *
-git commit -m '$time'
-git push origin master
-```
-
-**Use** [**GitHub Desktop App**](https://desktop.github.com/)
-
-## Cloud storage
-
-* [Nextcloud](http://lulab.life.tsinghua.edu.cn/nextcloud/) 实验室内部搭建的云存储。找实验室管理人员开通账户。
-* [Tsinghua cloud](https://cloud.tsinghua.edu.cn/) 清华云,在校内使用速度快。
-* [Nutstore cloud](https://www.jianguoyun.com/) 商业云存储，每个月有免费的备份流量。自己申请账号使用。
-
-## Backup tool that comes with the system
-
-**Mac:**  
-[Back up your Mac with Time Machine](https://support.apple.com/en-us/HT201250)
-
-**Windows:**  
-[How to back up or transfer your data on a Windows-based computer](https://support.microsoft.com/en-us/help/971759/how-to-back-up-or-transfer-your-data-on-a-windows-based-computer)
+## 
 

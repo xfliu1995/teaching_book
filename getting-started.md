@@ -28,6 +28,8 @@
 * gitbook \(例如：本文档） 
 
 > 我们鼓励利用github，github自带的wiki，gitbook，清华云等云服务；对习惯离线编辑同学有如下软件推荐： Mac: [typora](https://typora.io/), [Bear](https://bear.app/), [MWeb](https://zh.mweb.im/); Windows: [typora](https://typora.io/), [Madoko](https://www.madoko.net/)
+>
+> [Markdown Syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) \| [Excel Table to Markdown](https://www.tablesgenerator.com/markdown_tables) \| [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/)
 
 ## 2\) 本教程使用说明
 
