@@ -15,6 +15,8 @@
 
 | Content | Youtube | Bilibili | Source |
 | :--- | :--- | :--- | :--- |
-| Install Docker | [@Youtube](https://youtu.be/c1ldhV7dAhg) | [@Bilibili](https://www.bilibili.com/video/av30426956/) | [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/#group/7836/lib/63522c16-a0b9-40c1-a601-ac310535756f/Bioinformatics%20Tutorial/Video/Basic%20Videos) |
-| Genome Browser: IGV | [@Youtube](https://youtu.be/6_1ZcVw7ptU) | [@Bilibili](https://www.bilibili.com/video/av30448472/) |[Tsinghua Cloud](https://cloud.tsinghua.edu.cn/#group/7836/lib/63522c16-a0b9-40c1-a601-ac310535756f/Bioinformatics%20Tutorial/Video/Basic%20Videos) |
-| Genome Browser: UCSC | [@Youtube](https://youtu.be/eTgEtfI65hA) | [@Bilibili](https://www.bilibili.com/video/av30448417) |[Tsinghua Cloud](https://cloud.tsinghua.edu.cn/#group/7836/lib/63522c16-a0b9-40c1-a601-ac310535756f/Bioinformatics%20Tutorial/Video/Basic%20Videos) |
+| Install Docker | [@Youtube](https://youtu.be/c1ldhV7dAhg) | [@Bilibili](https://www.bilibili.com/video/av30426956/)      |
+| Genome Browser: IGV | [@Youtube](https://youtu.be/6_1ZcVw7ptU) | [@Bilibili](https://www.bilibili.com/video/av30448472/) |
+| Genome Browser: UCSC | [@Youtube](https://youtu.be/eTgEtfI65hA) | [@Bilibili](https://www.bilibili.com/video/av30448417) |
+
+> **Source Files** (Private) @ [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/#group/7836/lib/63522c16-a0b9-40c1-a601-ac310535756f/Bioinformatics%20Tutorial/Video/Basic%20Videos)
