@@ -14,19 +14,19 @@
 
 `管理` -&gt; `导入虚拟电脑`
 
-![](../../.gitbook/assets/vm-1.png)
+![](../.gitbook/assets/vm-1.png)
 
 选中上一步下载完成的 `bioinfo_tsinghua.virtualbox.ova`
 
-![](../../.gitbook/assets/vm-2.png)
+![](../.gitbook/assets/vm-2.png)
 
 > **注意：** 路径名不能有空格、中文等，可以直接放在某一磁盘下，比如这里我们放在了 D 盘。
 
-![](../../.gitbook/assets/vm-3.png)
+![](../.gitbook/assets/vm-3.png)
 
 导入时一般使用默认选项即可。如果 C 盘空间不足，可以修改以下最后一个选项——`虚拟硬盘`，需要手动输入路径，与上文一样，不能有空格、中文等。
 
-![](../../.gitbook/assets/vm-4.png)
+![](../.gitbook/assets/vm-4.png)
 
 ### 2d\) 启动虚拟机
 
@@ -36,7 +36,7 @@
 
 ### 2e\) 打开 Terminal
 
-![](../../.gitbook/assets/ubuntu-terminal.gif)
+![](../.gitbook/assets/ubuntu-terminal.gif)
 
 ### 2f\) 运行
 
