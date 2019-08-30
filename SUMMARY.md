@@ -11,6 +11,7 @@
 * [2.Linux](part-i.-basic-skills/2.linux/README.md)
   * [2.1 Basic Command](part-i.-basic-skills/2.linux/2.1.linux-basic-command.md)
   * [2.2 Practice Guide](part-i.-basic-skills/2.linux/2.2.linux-practice-guide.md)
+  * [2.3 Linux Bash](part-i.-basic-skills/2.linux/2.3.linux-bash.md)
 * [3.R](part-i.-basic-skills/3.r/README.md)
   * [3.1 R Basics](part-i.-basic-skills/3.r/3.1.r-basics.md)
   * [3.2 Plot with R](part-i.-basic-skills/3.r/3.2.plots-with-r.md)
