@@ -8,6 +8,9 @@
 3. 知乎
 {% endhint %}
 
+> ⭐: **必读**  
+> :sparkles: : **推荐**
+
 ## 📖 1\) Recommended Books <a id="self-study"></a>
 
 ### 📖**a. 参考书 - 综合** 
