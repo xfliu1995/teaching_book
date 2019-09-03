@@ -2,19 +2,20 @@
 
 ## 📖 1\) Recommended Books <a id="self-study"></a>
 
-### 📖**a. 参考书 - 综合** _选择性阅读的案头书_
+### 📖**a. 参考书 - 综合** 
+
+> **选择性阅读的案头书**
 
 * ⭐《[Computational Biology](https://ocw.mit.edu/ans7870/6/6.047/f15/MIT6_047F15_Compiled.pdf)》by [_Manolis Kellis_](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-047-computational-biology-fall-2015/) _@ MIT_ 
 * ⭐《[Genomics of Human Diseases](https://github.com/wglab/dragonstar2019)》 by _Kai Wang et al. @ Dragon Star Bioinformatics Course_
+* 《生物信息学》樊龙江  主编
+* 《生物信息学》李霞，雷健波，李亦学 等 编
 
-> **More:**
->
-> * 《生物信息学》樊龙江  主编
-> * 《生物信息学》李霞，雷健波，李亦学 等 编
 
-### \*\*\*\*
 
-### 📖 **b. 参考书 - 工具书** _按需阅读和练习_
+### 📖 **b. 参考书 - 工具书**
+
+> **按需阅读和练习**
 
 > Better to learn and practice **3** basic techniques \(完成任何一个要求即可：1. 1000行以上的程序； 2. 认可证书，例如在线课程的正式）
 >
@@ -41,7 +42,9 @@
 
 
 
-### 📖 c. 参考书 - 进阶类 _半年以上经验_
+### 📖 c. 参考书 - 进阶类
+
+> **半年以上经验**
 
 * ⭐**《Bioinformatics Data Skills》**by ****Vince Buffalo
 * More Recommended Books by [Bioinformatics Tutorial - Advanced](https://lulab.gitbook.io/training/appendix/appendix-i.keep-learning)
