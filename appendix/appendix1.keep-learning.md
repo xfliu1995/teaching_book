@@ -9,7 +9,7 @@
 {% endhint %}
 
 > ⭐: **必读**  
-> :sparkles: : **推荐**
+> ✨: **推荐**
 
 ## 📖 1\) Recommended Books <a id="self-study"></a>
 
@@ -18,7 +18,7 @@
 > **选择性阅读的案头书**
 
 * ⭐《[Computational Biology](https://ocw.mit.edu/ans7870/6/6.047/f15/MIT6_047F15_Compiled.pdf)》by [_Manolis Kellis_](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-047-computational-biology-fall-2015/) _@ MIT_ 
-* :sparkles:《[Genomics of Human Diseases](https://github.com/wglab/dragonstar2019)》 by _Kai Wang et al. @ Dragon Star Bioinformatics Course_
+* ✨《[Genomics of Human Diseases](https://github.com/wglab/dragonstar2019)》 by _Kai Wang et al. @ Dragon Star Bioinformatics Course_
 * 《生物信息学》樊龙江  主编
 * 《生物信息学》李霞，雷健波，李亦学 等 编
 
@@ -58,8 +58,8 @@
 > **半年以上经验**
 
 * ⭐《Bioinformatics Data Skills》by _Vince Buffalo_
-* :sparkles: [Statistics for biologist](http://www.nature.com/collections/qghhqm/) by _Nature_
-* :sparkles: More Recommended Books by [Bioinformatics Tutorial - Advanced](https://lulab.gitbook.io/training/appendix/appendix-i.keep-learning)
+* ✨[Statistics for biologist](http://www.nature.com/collections/qghhqm/) by _Nature_
+* ✨More Recommended Books by [Bioinformatics Tutorial - Advanced](https://lulab.gitbook.io/training/appendix/appendix-i.keep-learning)
 * More [Misc Learning Materials](https://cloud.tsinghua.edu.cn/d/e63019c19d59449992fc/)
 
 ## 2\) Recommended on-line Courses
@@ -69,11 +69,11 @@
 
 ## 3\) Recommended Tips <a id="share-script"></a>
 
-* :sparkles: [One Tip Per Day](http://onetipperday.sterding.com/) \(e.g. [How to tell which library type to use ](http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html)\)
+* ✨[One Tip Per Day](http://onetipperday.sterding.com/) \(e.g. [How to tell which library type to use ](http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html)\)
 
 ## 4\) Recommended Tools and Scripts <a id="share-script"></a>
 
-* :sparkles: [Recommended Bioinformatics Tools](https://lulab.gitbook.io/training/appendix/appendix-iv.useful-tools-for-bioinformatics)
+* ✨[Recommended Bioinformatics Tools](https://lulab.gitbook.io/training/appendix/appendix-iv.useful-tools-for-bioinformatics)
 * Scripts:  [Lu Lab](https://github.com/lulab/shared_scripts) \|\| [Zhi J. Lu](https://github.com/urluzhi/scripts) 
 * Plots: [Lu Lab](%20https://github.com/lulab/shared_scripts/tree/master/plots) \|\| [Zhi J. Lu](https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot)
 
