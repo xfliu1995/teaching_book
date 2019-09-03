@@ -15,7 +15,7 @@
 > **选择性阅读的案头书**
 
 * ⭐《[Computational Biology](https://ocw.mit.edu/ans7870/6/6.047/f15/MIT6_047F15_Compiled.pdf)》by [_Manolis Kellis_](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-047-computational-biology-fall-2015/) _@ MIT_ 
-* ⭐《[Genomics of Human Diseases](https://github.com/wglab/dragonstar2019)》 by _Kai Wang et al. @ Dragon Star Bioinformatics Course_
+* :sparkles:《[Genomics of Human Diseases](https://github.com/wglab/dragonstar2019)》 by _Kai Wang et al. @ Dragon Star Bioinformatics Course_
 * 《生物信息学》樊龙江  主编
 * 《生物信息学》李霞，雷健波，李亦学 等 编
 
