@@ -1,5 +1,13 @@
 # Appendix I. Keep Learning
 
+{% hint style="info" %}
+在生物信息学的学习和应用中，最重要的、最有用的基本工具和技能，过去一直是，我相信将来的很长一段时间也会是：
+
+1. google
+2. wikipedia
+3. 知乎
+{% endhint %}
+
 ## 📖 1\) Recommended Books <a id="self-study"></a>
 
 ### 📖**a. 参考书 - 综合** 
@@ -53,7 +61,7 @@
 
 ## 2\) Recommended on-line Courses
 
-* Bioinformatics: [生物信息导论和方法](https://www.coursera.org/course/pkubioinfo) \(北大, MOOC\)
+* [生物信息导论和方法](https://www.coursera.org/course/pkubioinfo) \(北大, MOOC\)
 * [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) \(UC SanDiego\)
 
 ## 3\) Recommended Tips <a id="share-script"></a>
