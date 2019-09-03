@@ -12,7 +12,8 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
 
 **综合**
 
-* 《[Computational Biology](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-047-computational-biology-fall-2015/)》[PDF](https://ocw.mit.edu/ans7870/6/6.047/f15/MIT6_047F15_Compiled.pdf) Manolis Kellis @ _MIT_ 
+* 《[Computational Biology](https://ocw.mit.edu/ans7870/6/6.047/f15/MIT6_047F15_Compiled.pdf)》by [Manolis Kellis](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-047-computational-biology-fall-2015/) @ _MIT_ 
+* 《[Genomics of Human Diseases](https://github.com/wglab/dragonstar2019)》 by Kai Wang et al. @ Dragon Star Bioinformatics Course
 * 《[生物信息学](http://ibi.zju.edu.cn/bioinplant/courses/jianyaomulu.htm)》主编：樊龙江
 
 > **More:**
@@ -94,13 +95,12 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
 
 ### 1b\) Recommended on-line Courses
 
-* [Genomics of Human Diseases](https://github.com/wglab/dragonstar2019)  \(Kai Wang et al. @ Dragon Star Bioinformatics Course\)
 * Bioinformatics: [生物信息导论和方法](https://www.coursera.org/course/pkubioinfo) \(北大, MOOC\)
 * [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) \(UC SanDiego\)
 
 ## 2\) Advanced Training <a id="advanced"></a>
 
-* **《Bioinformatics Data Skills》**
+* **《Bioinformatics Data Skills》**by ****Vince Buffalo
 
 > **More:**
 >
