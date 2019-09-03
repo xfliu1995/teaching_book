@@ -54,7 +54,7 @@
 
 > **半年以上经验**
 
-* ⭐**《Bioinformatics Data Skills》**by ****_Vince Buffalo_
+* ⭐《Bioinformatics Data Skills》by _Vince Buffalo_
 * ⭐[Statistics for biologist](http://www.nature.com/collections/qghhqm/) by _Nature_
 * ⭐More Recommended Books by [Bioinformatics Tutorial - Advanced](https://lulab.gitbook.io/training/appendix/appendix-i.keep-learning)
 * More [Misc Learning Materials](https://cloud.tsinghua.edu.cn/d/e63019c19d59449992fc/)
