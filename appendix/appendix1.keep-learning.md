@@ -63,9 +63,9 @@
 
 ## 2\) Recommended on-line Courses
 
-* [Genomics of Human Diseases](https://github.com/wglab/dragonstar2019) \(5-day course by _Kai Wang et al._\)
 * [生物信息导论和方法](https://www.coursera.org/course/pkubioinfo) \(北大, MOOC\)
 * [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) \(UC SanDiego\)
+* [Genomics of Human Diseases](https://github.com/wglab/dragonstar2019) \(DragonStar Course\)
 
 ## 3\) Recommended Tips <a id="share-script"></a>
 
