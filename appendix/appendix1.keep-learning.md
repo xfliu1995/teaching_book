@@ -64,7 +64,7 @@
 ## 2\) Recommended on-line Courses
 
 * [生物信息导论和方法](https://www.coursera.org/course/pkubioinfo) \(北大, MOOC\)
-* [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) \(UC SanDiego\)
+* [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) \(UC SanDiego, coursera\)
 * [Genomics of Human Diseases](https://github.com/wglab/dragonstar2019) \(DragonStar Course\)
 
 ## 3\) Recommended Tips <a id="share-script"></a>
