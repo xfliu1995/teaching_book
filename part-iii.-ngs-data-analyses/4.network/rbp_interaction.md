@@ -1,14 +1,16 @@
 # 4.3.RBP-RNA Interactions
 
-## workflow
+## 1\) workflow
 
 ![](../../.gitbook/assets/rbp.pipeline.png)
 
-## 1. get CLIP-seq data
+## 2\) RBP enrichment
 
-### 1.1 download from [http://lulab.life.tsinghua.edu.cn/postar/download.php](http://lulab.life.tsinghua.edu.cn/postar/download.php)
+### \(1\) get CLIP-seq data
 
-### 1.2 get from /BioII/lulab\_b/shared/projects/POSTAR2/CLIP\_seq/bed
+#### download from [http://lulab.life.tsinghua.edu.cn/postar/download.php](http://lulab.life.tsinghua.edu.cn/postar/download.php)
+
+#### get from /BioII/lulab\_b/shared/projects/POSTAR2/CLIP\_seq/bed
 
 human\_RBP\_eCLIP\_hg38.txt
 
@@ -34,9 +36,9 @@ column10:data accession
 column11:score(Piranha score: Peak heights from the CLIP-seq data; PARalyzer score: T-to-C transition ratios ranging from 0 to 1, ratios greater than 0.5 indicate protein-binding while less than 0.5 indicate without protein-binding; CIMS score: Mismatch peak heights from the CLIP-seq data; CITS score: Truncated peak heights from the CLIP-seq data; eCLIP score: -log10 P-value, the threshold is 3.)
 ```
 
-## 2. prepare interested bed and background bed
+### \(2\) prepare interested bed and background bed
 
-### 2.1 interested bed
+#### interested bed
 
 up.bed
 
@@ -46,11 +48,11 @@ chr1    1167119 1167149 ENSG00000207730.3__1167119__1167149__2  .       +
 chr1    1167134 1167164 ENSG00000207730.3__1167134__1167164__3  .       +
 ```
 
-### 2.2 prepare background bed from interested bed
+#### prepare background bed from interested bed
 
 the same as method in sequence\_motif \(1\) downstream/upstream 1000bp \(2\) shuffle the input sequence \(3\) shuffle the genome sequence
 
-## 3. overlap between CLIP-seq peaks and interested/background bed
+### \(3\) overlap between CLIP-seq peaks and interested/background bed
 
 use intersectBed \(bedtools\) command to get the overlaps of CLIP-seq peaks
 
@@ -59,9 +61,9 @@ intersectBed -wa -wb -s -a up.bed -b human_RBP_eCLIP_hg38.txt >up.eCLIP.hg38.txt
 intersectBed -wa -wb -s -a up_background.bed -b human_RBP_eCLIP_hg38.txt >up_background.eCLIP.hg38.txt
 ```
 
-## 4. compare RBP enrichment
+### \(4\) compare RBP enrichment
 
-### 4.1 percentage of region with CLIP-seq peaks
+#### percentage of region with CLIP-seq peaks
 
 ```text
 cut -f 4 up.bed |sort -u|wc -l
@@ -74,7 +76,7 @@ cut -f 4 up_background.eCLIP.hg38.txt |sort -u|wc -l
 544
 ```
 
-### 4.2 RBP enrichment in each region
+#### RBP enrichment in each region
 
 ```text
 cat <(cut -f 4,13 up.eCLIP.hg38.txt |sort -u|cut -f 1|sort|uniq -c|sed 's/^[ \t]*//g'|sed 's/ /\t/g'|awk 'BEGIN{FS="\t";OFS="\t"}{print $1,$2,"up"}') <(cut -f 4,13 up_background.eCLIP.hg38.txt |sort -u|cut -f 1|sort|uniq -c|sed 's/^[ \t]*//g'|sed 's/ /\t/g'|awk 'BEGIN{FS="\t";OFS="\t"}{print $1,$2,"up_bg"}')|sed '1i density\tname\tclass' >RBP_enrichment.txt
