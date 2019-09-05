@@ -6,7 +6,7 @@
 
 1958年，Edward L. Kaplan 和Paul Meier也首次在临床研究中提出了生存曲线的概念，又被称作Kaplan-Meier曲线，主要用来对各组患者的生存状况进行描述。绘制生存曲线最主要的目的是进行生存分析，即通过将终点事件和出现这一终点所经历的时间结合起来进行统计分析，从而对两组患者的预后进行比较。
 
-### 1.Pipeline
+### 1) Pipeline
 
 **Survival analysis** is a branch of statistics for analyzing the expected duration of time until one or more events happen, such as death in biological organisms and failure in mechanical systems. \([https://en.wikipedia.org/wiki/Survival\_analysis](https://en.wikipedia.org/wiki/Survival_analysis)\)
 
@@ -20,23 +20,23 @@
 
 Reference: [http://www.sthda.com/english/wiki/cox-proportional-hazards-model](http://www.sthda.com/english/wiki/cox-proportional-hazards-model)
 
-### 2.Data structure
+### 2) Data structure
 
 | File name | Description |
 | :--- | :--- |
 | rna.rds | RSEM normalized counts value matrix |
 | clinical\_info.rds, LIHC.merged\_only\_clinical\_clin\_format.txt, all\_clin.rds | Clinical information for TCGA samples |
 
-#### **2.1 Input data**
+#### **(1) Input data**
 
 Import data
 
 ```r
-setwd("/Share/home/xixiaochen/project/training/")
-rna = readRDS(file="/Share/home/xixiaochen/project/training/rna.rds")
+setwd("/Share2/home/lulab/xixiaochen/training_share2/survival_curve/")
+rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/rna.rds")
 #if you don't want to normalize and scale expression data, just load data:
-#exp = readRDS(file="/Share/home/xixiaochen/project/training/exp.rds")
-clinical_info = readRDS(file="/Share/home/xixiaochen/project/training/clinical_info.rds")
+#exp = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/exp.rds")
+clinical_info = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/clinical_info.rds")
 ```
 
 Data character
@@ -76,7 +76,7 @@ dim(clinical_info)
 
 TCGA barcode information: [https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf](https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf)
 
-**2.3 Data preprocessing**
+**(3) Data preprocessing**
 
 ```r
 #get the index of the normal/control samples
@@ -159,18 +159,18 @@ dim(exp)
 #16897 genes, 313 samples
 
 #You could read this exp matrix from:
-#exp = readRDS(file="/Share/home/xixiaochen/project/training/exp.rds")
+#exp = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/exp.rds")
 ```
 
-### 3.Running steps
+### 3) Running steps
 
-**3.0 Install packages**
+**(0) Install packages**
 
 ```r
 install.packages(c("survival", "survminer", "limma"))
 ```
 
-**3.1 Library package**
+**(1) Library package**
 
 ```r
 library("survival")
@@ -178,7 +178,7 @@ library("survminer")
 library("limma")
 ```
 
-**3.2 Create event vector for RNASeq data**
+**(2) Create event vector for RNASeq data**
 
 ```r
 rna_event = t(apply(exp, 1, function(x) ifelse(abs(x) > 1.96, 1, 0)))
@@ -198,7 +198,7 @@ table(rna_event2[ind_gene,])
 #In the total 313 samples, CCDC58 gene are not differentially expressed in 168 samples, up-regulated differentially expressed in 145 samples.
 ```
 
-**3.3 Fit survival curves**
+**(3) Fit survival curves**
 
 ```r
 survplotdata = cbind(as.numeric(as.character(clinical_info$new_death)), clinical_info$death_event, rna_event[ind_gene,])
@@ -228,11 +228,11 @@ fit = survfit(Surv(new_death, death_event) ~ CCDC58, data = survplotdata)
 #fit2 = survfit(Surv(new_death, death_event) ~ CCDC58+TP53, data = survplotdata2)
 ```
 
-**3.4 Draw survival curves**
+**(4) Draw survival curves**
 
 ```r
 #draw survival curves
-pdf(file="/Share/home/xixiaochen/project/training/CCDC58_LIHC.pdf")
+pdf(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/CCDC58_LIHC.pdf")
 ggsurvplot(fit,
     risk.table = TRUE,
     pval = TRUE,
@@ -251,9 +251,9 @@ dev.off()
 
 \*: each '+' represent a censored sample.
 
-### 4.Appendix
+### 4) Appendix
 
-#### **4.1 Download TCGA RNAseq data and clinical data**
+#### **(1) Download TCGA RNAseq data and clinical data**
 
 We could download data of TCGA liver cancer \(LIHC\) following:
 
@@ -263,7 +263,7 @@ We could download data of TCGA liver cancer \(LIHC\) following:
 4. unzip the files
 5. rename the folders as "RNA" and "Clinical"
 
-#### **4.2 Data preprocessing**
+#### **(2) Data preprocessing**
 
 ```r
 #read RNA file 
@@ -287,12 +287,12 @@ rna = rna[-remove,]
 table(substr(colnames(rna),14,14))
 #So we have 373 tumor and 50 normal
 #OR you could read this data from:
-#rna = readRDS(file="/Share/home/xixiaochen/project/training/rna.rds")
+#rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/rna.rds")
 ####The following data processing steps are in the "2.3 Data preprocessing" part####
 ```
 
 ```r
-z_rna = readRDS(file="/Share/home/xixiaochen/project/training/z_rna.rds")
+z_rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/z_rna.rds")
 #read the Clinical file, in this case i transposed it to keep the clinical feature title as column name
 clinical <- t(read.table('Clinical/LIHC.merged_only_clinical_clin_format.txt',header=T, row.names=1, sep='\t'))
 clinical = as.data.frame(clinical)
@@ -380,8 +380,17 @@ clinical_info = all_clin[ind_clin,]
 #clinical_info = readRDS(file="/Share/home/xixiaochen/project/training/clinical_info.rds")
 ####The following data processing steps are in the "2.3 Data preprocessing" part####
 ```
-
-### 5.Reference
+### 5.Homework
+Please plot the survival curves about the patients with up-regulated differentially expressed and not altered expressed AFP gene in TCGA LIHC data.
+```r
+input files:
+exp = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/exp.rds") #if you don't want to normalize and scale expression data, just load the exp.rds
+clinical_info = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/clinical_info.rds")
+or 
+rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/rna.rds")
+clinical_info = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/clinical_info.rds")
+```
+### 6.Reference
 
 [https://www.biostars.org/p/153013/](https://www.biostars.org/p/153013/)
 
