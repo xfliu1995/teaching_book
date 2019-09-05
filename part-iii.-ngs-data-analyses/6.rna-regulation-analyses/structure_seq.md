@@ -29,15 +29,15 @@ shapemapper \
 
 ### output
 
-3. example-results\_TPP\_histograms.pdf
+1. example-results\_TPP\_histograms.pdf
 
    ![](../../.gitbook/assets/example-results_tpp_histograms.png)
 
-4. example-results\_TPP\_profiles.pdf
+2. example-results\_TPP\_profiles.pdf
 
    ![](../../.gitbook/assets/example-results_tpp_profiles.png)
 
-5. example-results\_TPP.shape
+3. example-results\_TPP.shape
 
    ```text
    1    -999
@@ -52,7 +52,7 @@ shapemapper \
    column2: reactivity
    ```
 
-6. example-results\_TPP.map
+4. example-results\_TPP.map
 
    ```text
    1    -999    0    G
@@ -69,7 +69,7 @@ shapemapper \
    column4: nucleotide sequence
    ```
 
-7. example-results\_TPP\_profile.txt
+5. example-results\_TPP\_profile.txt
 
    ```text
    Nucleotide    Sequence    Modified_mutations    Modified_read_depth    Modified_effective_depthModified_rate    Untreated_mutations    Untreated_read_depth    Untreated_effective_depth    Untreated_rate    Denatured_mutations    Denatured_read_depth    Denatured_effective_depth    Denatured_rate    Reactivity_profile    Std_err    HQ_profile    HQ_stderr    Norm_profile    Norm_stderr
