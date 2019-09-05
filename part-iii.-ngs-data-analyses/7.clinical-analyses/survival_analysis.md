@@ -380,7 +380,7 @@ clinical_info = all_clin[ind_clin,]
 #clinical_info = readRDS(file="/Share/home/xixiaochen/project/training/clinical_info.rds")
 ####The following data processing steps are in the "2.3 Data preprocessing" part####
 ```
-### 5.Homework
+### 5) Homework
 Please plot the survival curves about the patients with up-regulated differentially expressed and not altered expressed AFP gene in TCGA LIHC data.
 ```r
 input files:
@@ -390,7 +390,7 @@ or
 rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/rna.rds")
 clinical_info = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/clinical_info.rds")
 ```
-### 6.Reference
+### 6) Reference
 
 [https://www.biostars.org/p/153013/](https://www.biostars.org/p/153013/)
 
