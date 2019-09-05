@@ -1,6 +1,6 @@
 # 6.1.RNA Editing
 
-## Background
+## 1\) Background
 
 Pre-mRNA molecules transcribed from the genome may fold to form double-stranded RNA \(dsRNA\) secondary structures. dsRNA-specific adenosine deaminase \(ADAR\) enzymes bind these structures and deaminate some adenosines to inosines. If these inosines are located in an exon, they will be present in the mature mRNA.
 
@@ -18,43 +18,41 @@ Editing can modify protein function, generate new protein products and alter gen
 
 ![](../../.gitbook/assets/rna_editing.f4.png)
 
-## long RNA-seq
-
-### RNAEditor
+## 2\) long RNA-seq（RNAEditor）
 
 #### Paper
 
 RNAEditor: easy detection of RNA editing events and the introduction of editing islands
 
-#### pipeline
+### \(1\) pipeline
 
 ![](../../.gitbook/assets/rna_editing.f5.png)
 
-#### Website
+### \(2\) Website
 
 [http://rnaeditor.uni-frankfurt.de/index.php](http://rnaeditor.uni-frankfurt.de/index.php)
 
-#### Pipeline
+### \(3\) Pipeline
 
 ```text
 RNAEditor -i Fastq-Files [Fastq-Files ...] -c Configuration File
 ```
 
-## small RNA-seq
+## 3\) small RNA-seq
 
-#### Paper
+### \(1\) Paper
 
 Identifying RNA Editing Sites in miRNAs by Deep Sequencing
 
-#### pipeline
+### \(2\) pipeline
 
 ![](../../.gitbook/assets/rna_editing.f6.png)
 
-#### Website
+### \(3\) Website
 
 [https://www.tau.ac.il/~elieis/miR\_editing/](https://www.tau.ac.il/~elieis/miR_editing/)
 
-#### Pipeline
+### \(4\) Pipeline
 
 step1. Filtering Low- Quality Reads and Trimming Sequence Adapters
 
@@ -80,7 +78,7 @@ step4. Using binomial statistics to remove sequencing errors
 perl Binomial_analysis.pl main_output.txt >binomial_output.txt
 ```
 
-## citation
+## 4\) citation
 
 1. A-to-I RNA editing — immune protector and transcriptome diversifier. Eli Eisenberg, et al. Nature Reviews, 2018.
 2. RNAEditor: easy detection of RNA editing events andthe introduction of editing islands. David John, et al. Briefings in Bioinformatics, 2017.
