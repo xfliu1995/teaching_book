@@ -22,12 +22,12 @@ shapemapper \
 #--denatured --folder TPPdenat
 ```
 
-### input
+### \(1\) input
 
 1. TPPplus: modified fasta file
 2. TPPminus: untreated fasta file
 
-### output
+### \(2\) output
 
 1. example-results\_TPP\_histograms.pdf
 
