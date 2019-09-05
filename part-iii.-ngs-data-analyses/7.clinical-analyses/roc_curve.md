@@ -1,12 +1,12 @@
 # 7.1.ROC Curve
 
-## introduction
+## 1\) introduction
 
 在信号检测理论中，接收者操作特征曲线（receiver operating characteristic curve）是一种坐标图式的分析工具，用于（1）选择最佳的信号侦测模型，舍弃次佳的模型（2）在同一模型中设定最佳阈值。
 
 ROC分析的是二元分类模型，也就是输出结果只有两种类别的模型，例如：（阳性/阴性）（有病/没病）等。
 
-**术语**
+### \(1\) 术语
 
 |  |  | 真实值 | 真实值 | 总数 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -45,7 +45,7 @@ ACC = \(TP + TN\) / \(P + N\), 即：\(真阳性+真阴性\) / 总样本数
 
 假发现率 \(FDR\)：FDR = FP / \(FP + TP\)
 
-**ROC曲线**
+### \(2\) ROC曲线
 
 x轴：伪阳性率（FPR）; Y轴：真阳性率（TPR）
 
@@ -77,7 +77,9 @@ TPR = TP/\(TP+FN\) = 77/\(77+323\) = 0.77，FPR = FP/\(FP+TN\) = 45/\(45+55\) = 
 
 将同一模型每个阈值 的 \(FPR, TPR\) 座标都画在ROC空间里，就成为特定模型的ROC曲线。
 
-## Draw ROC curve using single feature
+## 2\) running steps
+
+### \(1\) Draw ROC curve using single feature
 
 When we use single feature to draw ROC curve, we need to install and include `pROC` and `ggplot2` package. The data we will be using is displayed below:
 
@@ -126,7 +128,7 @@ The curve should look like the following. Notice that false positive rate \(0 to
 
 ![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/ROCplot_single_feature.jpeg)
 
-## Draw ROC curve using multiple features
+### \(2\) Draw ROC curve using multiple features
 
 The following part discusses how to draw ROC curve using R with multiple features. To accomplish this, we should make sure that the `ROCR` package has been installed and included in the program. We use random forest to construct a model to predict the type. The data we will be using is displayed below:
 
@@ -230,7 +232,7 @@ The curve should look like this:
 
 ![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/ROCplot_multiple_features.jpeg)
 
-## Reference
+## 3\) Reference
 
 \[1\] Fawcett, Tom. "An Introduction to ROC Analysis." Pattern Recognition Letters 27.8 \(2006\): 861-74.
 
