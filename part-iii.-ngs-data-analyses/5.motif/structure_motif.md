@@ -1,16 +1,18 @@
 # 5.2.Structure Motif
 
-## workflow
+## 1\) workflow
 
 ![](../../.gitbook/assets/structure_motif.pipeline.png)
 
-## 0. get interested sequence and control sequence as sequence motif analysis
+## 2\) running steps
 
-## 1.BEAM
+### \(1\) get interested sequence and control sequence as sequence motif analysis
+
+### \(2\) BEAM
 
 [http://beam.uniroma2.it/home](http://beam.uniroma2.it/home)
 
-### 1.1 Use RNAfold to get dot-bracket
+#### Use RNAfold to get dot-bracket
 
 Compute the best \(MFE\) structure for this sequence \(primary sequence with dot-bracket\)
 
@@ -18,28 +20,28 @@ Compute the best \(MFE\) structure for this sequence \(primary sequence with dot
 RNAfold <test.fa >dot.fa
 ```
 
-### 1.2 Get file with BEAR notation ---&gt; fastB \(fastBEAR\).
+#### Get file with BEAR notation ---&gt; fastB \(fastBEAR\).
 
 ```text
 awk '/^>/ {print; getline; print; getline; print $1}' dot.fa >dot_to_encode.fa
 java -jar /BioII/lulab_b/songyabing/motif_analysis/software/BEAM/beam-2.0/BearEncoder.new.jar dot_to_encode.fa BEAMready.fa
 ```
 
-### 1.3 get structure motifs
+#### get structure motifs
 
 ```text
 java -jar /BioII/lulab_b/songyabing/motif_analysis/software/BEAM/beam-2.0/BEAM_release1.6.1.jar -f BEAMready.fa -w 10 -W 40 -M 3
 ```
 
-### 1.4 visualize motifs with weblogo
+#### visualize motifs with weblogo
 
-#### 1.4.1 install weblogo
+##### install weblogo
 
 ```text
 pip install weblogo
 ```
 
-#### 1.4.2 visualize structure motifs
+##### visualize structure motifs
 
 ```text
 weblogo -a 'ZAQXSWCDEVFRBGTNHY' -f BEAMready_m1_run1_wl.fa -D fasta \
@@ -50,23 +52,23 @@ weblogo -a 'ZAQXSWCDEVFRBGTNHY' -f BEAMready_m1_run1_wl.fa -D fasta \
 -C limegreen NHY 'InternalLoopBranch'
 ```
 
-### 1.4.3 example output
+#### example output
 
 ![](../../.gitbook/assets/structure_motif.beam.png)
 
-## 2. RNApromo
+### \(3\) RNApromo
 
-### 2.1 download
+#### download
 
 [https://genie.weizmann.ac.il/pubs/rnamotifs08/64bit\_exe\_rnamotifs08\_motif\_finder.tar.gz](https://genie.weizmann.ac.il/pubs/rnamotifs08/64bit_exe_rnamotifs08_motif_finder.tar.gz)
 
-### 2.2 predict structure motifs
+#### predict structure motifs
 
 ```text
 rnamotifs08_motif_finder.pl -positive_seq input_pos_seq.fa -output_dir Output
 ```
 
-#### input
+##### input
 
 Positive sequences - a fasta format file containing the sequences to predict motifs on.
 
@@ -75,21 +77,21 @@ Positive sequences - a fasta format file containing the sequences to predict mot
 ATAAGAGACCACAAGCGACCCGCAGGGCCAGACGTTCTTCGCCGAGAGTCGTCGGGGTTTCCTGCTTCAACAGTGCTTGGACGGAACCCGGCGCTCGTTCCCCACCCCGGCCGGCCGCCCATAGCCAGCCCTCCGTCACCTCTTCACCGCACCCTCGGACTGCCCCAAGGCCCCCGCCGCCGCTCCA
 ```
 
-#### example output
+##### example output
 
 ![](../../.gitbook/assets/structure_motif.rnapromo.png)
 
-### 2.3 find known motifs
+#### find known motifs
 
 After learning a motif, you can search a database of sequences to find positions that match the motif you learned. To do that you need to first match a secondary structure to each of the input sequences in your database, either using existing structure prediction algorithms, or using some other information.
 
-### 2.3.1 Produce a likelihood score for each sequence in the database.
+##### Produce a likelihood score for each sequence in the database.
 
 ```text
 rnamotifs08_motif_match.pl database.tab -cm model.cm
 ```
 
-#### input
+###### input
 
 The database is then specified in the following format: database.tab
 
@@ -97,7 +99,7 @@ The database is then specified in the following format: database.tab
 seq_1    AUAAGAGACCACAAGCGACCCGCAGGGCCAGACGUUCUUCGCCGAGAGUCGUCGGGGUUUCCUGCUUCAACAGUGCUUGGACGGAACCCGGCGCUCGUUCCCCACCCCGGCCGGCCGCCCAUAGCCAGCCCUCCGUCACCUCUUCACCGCACCCUCGGACUGCCCCAAGGCCCCCGCCGCCGCUCCA    .............((((..(.((.(((((.(((((((((....))))).))))(((((.((((((...(((((((((.((......)).)))))).))).........(((.(((........))).)))..................))).....)))..)))))..)))))..)).).))))...
 ```
 
-#### output
+###### output
 
 ```text
 seq_2:0    19.7698
@@ -112,9 +114,9 @@ seq_6:0    6.81294
 seq_8:0    0.233537
 ```
 
-### 2.3.2 Produce a likelihood score for the best motif position in each sequence in the database, and the position itself.
+##### Produce a likelihood score for the best motif position in each sequence in the database, and the position itself.
 
-#### output
+###### output
 
 ```text
 seq_2:0    19.7698    33      48      UUCAACAGUGUUUGGA        (((((......)))))        <<<<<,,,,,,>>>>>
@@ -129,13 +131,13 @@ seq_6:0    6.81294    1       16      UAUGGAGAUUUCCAUA        (((((......)))))  
 seq_8:0    0.233537   95      115     ACACCCCAGCCCUGCAGUGUA   ((((..((....))..)))).   <<<<,,--,,,,---->>>>,
 ```
 
-## 3. other tools
+### \(4\) other tools
 
-### 3.1 GraphProt:modelling binding preferences of RNA-binding proteins
+#### GraphProt:modelling binding preferences of RNA-binding proteins
 
 [https://github.com/dmaticzka/GraphProt](https://github.com/dmaticzka/GraphProt)
 
-### 3.2 RNAcontext: A New Method for Learning the Sequence and Structure Binding Preferences of RNA-Binding Proteins
+#### RNAcontext: A New Method for Learning the Sequence and Structure Binding Preferences of RNA-Binding Proteins
 
 [http://www.cs.toronto.edu/~hilal/rnacontext/](http://www.cs.toronto.edu/~hilal/rnacontext/)
 
