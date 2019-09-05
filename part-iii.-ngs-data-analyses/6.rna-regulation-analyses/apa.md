@@ -1,18 +1,18 @@
 # 6.2.APA \(Alternative Polyadenylation\)
 
-## workflow
+## 1\) workflow
 
 ![](../../.gitbook/assets/apa.f1.jpg)
 
-## Background
+## 2\) Background
 
 Alternative polyadenylation \(APA\) leading to the production of two mRNA isoforms with different 3ʹ untranslated regions \(3ʹ UTRs\)The dynamic usage of the 3’untranslated region \(3’UTR\) resulting from alternative polyadenylation \(APA\) is emerging as a pervasive mechanism for regulating mRNA diversity, stability and translation. ![](../../.gitbook/assets/apa.f2.jpg)
 
-## Data Processing
+## 3\) Data Processing (DaPars)
 
-### DaPars
+### \(1\) Generate region annotation 
 
-#### step1. Generate region annotation: python DaPars\_Extract\_Anno.py -b gene.bed -s symbol\_map.txt -o extracted\_3UTR.bed
+python DaPars\_Extract\_Anno.py -b gene.bed -s symbol\_map.txt -o extracted\_3UTR.bed
 
 DaPars will use the extracted distal polyadenylation sites to infer the proximal polyadenylation sites based on the alignment wiggle files of two samples. The output in this step will be used by the next step.
 
@@ -20,7 +20,7 @@ DaPars will use the extracted distal polyadenylation sites to infer the proximal
 python DaPars_Extract_Anno.py -b hg19_refseq_whole_gene.bed -s hg19_4_19_2012_Refseq_id_from_UCSC.txt -o hg19_refseq_extracted_3UTR.bed
 ```
 
-**input**
+#### input
 
 1. hg19\_refseq\_whole\_gene.bed \(bed12 format\)
 
@@ -38,7 +38,7 @@ python DaPars_Extract_Anno.py -b hg19_refseq_whole_gene.bed -s hg19_4_19_2012_Re
    NM_052998    ADC
    ```
 
-   **output**
+#### output
 
    hg19\_refseq\_extracted\_3UTR.bed
 
@@ -48,7 +48,7 @@ python DaPars_Extract_Anno.py -b hg19_refseq_whole_gene.bed -s hg19_4_19_2012_Re
    chr11    92623657    92629635    NM_001008781|FAT3|chr11|+    0    +
    ```
 
-#### step2. Main function to get final result
+### \(2\) Main function to get final result
 
 ```text
 python DaPars_main.py configure_file
@@ -56,7 +56,7 @@ python DaPars_main.py configure_file
 
 Run this function to get the final result. The configure file is the only parameter for DaPars\_main.py, which stores all the parameters.
 
-**input**
+#### input
 
 1. configure\_file
 
@@ -97,11 +97,11 @@ PDUI_cutoff=0.5
 Fold_change_cutoff=0.59
 ```
 
-**output**
+#### output
 
 ![](../../.gitbook/assets/apa.f3.jpg)
 
-#### step3. Filter diff-APA events
+### \(3\)  Filter diff-APA events
 
 FDR\_cutoff, PDUI\_cutoff, Fold\_change\_cutoff → Pass filer \(Y nor N\)
 
