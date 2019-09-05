@@ -1,12 +1,12 @@
 # 6.3.Ribo-seq
 
-## workflow
+## 1\) workflow
 
 ![](../../.gitbook/assets/ribo_seq.pipeline.png)
 
-## 背景介绍
+## 2\) 背景介绍
 
-### Ribo-seq原理
+#### Ribo-seq原理
 
 Ribo-seq是2009年Weissman课题组首次发表的研究细胞内蛋白翻译图谱的新型二代测序技术，用来描述全基因组水平蛋白质的翻译情况。主要是选择性捕捉80S核糖体及其结合的RNA片段而定位核糖体所位于的RNA的位置。具体步骤为：在细胞裂解物中富集多聚核糖体（polysome）；将多聚核糖体用核酸酶（RNA nuclease）消化成单核糖体（monosome）；选择性的收集和富集80S核糖体并经纯化得到80S核糖体所保护的RNA片段。在此过程中，将80S核糖体保护的RNA片段进行下一步构建文库和测序（图1）。最后，通过生物信息学的分析获得细胞当前状态下的翻译图谱 。Ribo-seq数据测得的RNA片段长短与small RNA-seq相似，大约分布在25~35nt区间。由于Ribo-seq是特异性描述细胞的翻译组，因此其数据的测序片段大多比对到基因组的CDS区域（coding region）。此外，Ribo-seq还有一个明显区别于其他RNA-seq的特点，即Ribo-seq的序列在CDS区域往往呈现3-nt的周期性（图1）。这主要依赖于翻译过程中核糖体通常以3-nt的周期进行移动。
 
@@ -14,11 +14,11 @@ Ribo-seq是2009年Weissman课题组首次发表的研究细胞内蛋白翻译图
 
 图1
 
-## 数据处理
+## 3\) 数据处理
 
 download scripts from [https://github.com/lulab/Ribowave](https://github.com/lulab/Ribowave)
 
-### Requirements
+### \(1\) Requirements
 
 #### software:
 
@@ -28,7 +28,7 @@ R, bedtools v2.25.0
 
 reshape, ggplot2, rhdf5, methods, wmtsa, parallel
 
-### Pre-processing
+### \(2\) Pre-processing
 
 #### 0. create annotation
 
@@ -36,14 +36,14 @@ reshape, ggplot2, rhdf5, methods, wmtsa, parallel
 scripts/create_annotation.sh -G annotation_fly/dmel-all-r6.18.gtf -f annotation_fly/dmel-all-chromosome-r6.18.fasta  -o annotation_fly  -s scripts;
 ```
 
-**input files**
+##### input files
 
 1. : the annotation gtf should contain start\_codon and stop\_codon information,eg: dmel-all-r6.18.gtf
 2. : genome fasta ,eg: dmel-all-chromosome-r6.18.fasta
 3. : the directory for all the annotation output
 4. : the directory of all the scripts in the package
 
-**output files**
+##### output files
 
 annotation directory, including : 1. start\_codon.bed : the bed file annotating start codon 2. final.ORFs : all identified ORFs, eg: FBtr0300105\_0\_31\_546 where FBtr0300105 refers to the transcript, 0 refers to the reading frame relative to the start of transcript, 31 refers to the start site, 546 refers to the stop codon.
 
@@ -57,7 +57,7 @@ This step determines the P-site position for each Ribo-seq reads length by overl
 scripts/P-site_determination.sh -i GSE52799/SRR1039770.sort.bam -S annotation_fly/start_codon.bed -o GSE52799 -n SRR1039770 -s scripts;
 ```
 
-**input files**
+##### input files
 
 1. : secondary alignment removed to ensure one genomic position per aligned read and sorted
 2. annotation :
@@ -68,7 +68,7 @@ scripts/P-site_determination.sh -i GSE52799/SRR1039770.sort.bam -S annotation_fl
 4. : the name of all the output file, default: test. eg: SRR1039770
 5. : the directory of all the scripts in the package
 
-**output files**
+##### output files
 
 P-site directory, including : 1. name.psite1nt.txt : the Ribo-seq reads length and its corresponding P-sites position\(= offset + 1\). It may look this this :
 
@@ -94,7 +94,7 @@ This step creats the P-site track for transcripts of interests using determined 
 scripts/create_track_Ribo.sh -i GSE52799/SRR1039770.sort.bam -G annotation_fly/X.exons.gtf -g annotation_fly/genome -P GSE52799/P-site/SRR1039770.psite1nt.txt -o GSE52799 -n SRR1039770 -s scripts;
 ```
 
-**input files**
+##### input files
 
 1. 1. : a gtf file for only the exons from transcripts of interest, eg: X.exons.gtf
 2. : the file including all the chromosomes and its genome size. Noted: genome can be obtained by using samtools faidx function with the input of fasta file. genome may look like this:
@@ -114,7 +114,7 @@ scripts/create_track_Ribo.sh -i GSE52799/SRR1039770.sort.bam -G annotation_fly/X
 5. : the name of all the output file, default: test. eg: SRR1039770
 6. : the directory of all the scripts in the package
 
-**output files**
+##### output files
 
 1. bedgraph/name directory, including :
 
@@ -127,7 +127,7 @@ scripts/create_track_Ribo.sh -i GSE52799/SRR1039770.sort.bam -G annotation_fly/X
    FBtr0070603    0,0,0,0,0,0,0,0,0,0,0,0,75,2,7,10,7,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,3,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
    ```
 
-### Main function
+### \(3\)  Main function
 
 #### 3. RiboWave
 
@@ -204,7 +204,7 @@ mkdir -p Ribowave;
 scripts/Ribowave -PD -T 9012445  GSE52799/mRNA/SRR1039761.RPKM -a GSE52799/bedgraph/SRR1039770/final.psite -b annotation_fly/final.ORFs -o GSE52799/Ribowave -n SRR1039770 -s scripts -p 8;
 ```
 
-**input files**
+##### input files
 
 1. bedgraph/name:
 
@@ -222,7 +222,7 @@ scripts/Ribowave -PD -T 9012445  GSE52799/mRNA/SRR1039761.RPKM -a GSE52799/bedgr
  FBtr0100864    11475.6
 ```
 
-**output files**
+##### output files
 
 1. name.PF\_psite    : the denoised signal track\(PF P-sites signal track\) at transcriptome wide. It looks similar as the input final psite.
 2. including chi-square P-value information. It may look like this :
@@ -273,7 +273,7 @@ scripts/Ribowave -PD -T 9012445  GSE52799/mRNA/SRR1039761.RPKM -a GSE52799/bedgr
    column6: CRF score describing the potential of frameshift
    ```
 
-## 数据库推荐
+## 4\) 数据库推荐
 
 [http://lulab.life.tsinghua.edu.cn/postar/](http://lulab.life.tsinghua.edu.cn/postar/)
 
