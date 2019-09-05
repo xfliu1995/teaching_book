@@ -1,12 +1,14 @@
 # 5.1.Sequence Motif
 
-## workflow
+## 1\) workflow
 
 ![](../../.gitbook/assets/seq_motif.pipeline.png)
 
-## 1. get UTR or promoter sequence
+## 2\) running steps
 
-### 1.1 install R package GenomicFeatures and biozhuoer tools \(cnode\)
+### \(1\) get UTR or promoter sequence
+
+#### install R package GenomicFeatures and biozhuoer tools \(cnode\)
 
 GenomicFeatures package used to extract needed sequence
 
@@ -21,7 +23,7 @@ if (!('devtools' %in% .packages(T))) install.packages('devtools');
 devtools::install_github('dongzhuoer/biozhuoer');
 ```
 
-### 1.2 generate txdb object
+#### generate txdb object
 
 There are many functions for us to get genme annotation file:
 
@@ -30,7 +32,7 @@ gtf_file="/BioII/lulab_b/shared/genomes/human_hg38/anno/gtf/gencode.v27.annotati
 txdb <- makeTxDbFromGFF(gtf_file, format="gtf")
 ```
 
-### 1.3 get 3'UTR & 5'UTR site range
+#### get 3'UTR & 5'UTR site range
 
 ```text
 utr5p = fiveUTRsByTranscript(txdb, use.names=T)
@@ -43,7 +45,7 @@ write.table(utr3p.df, "utr3p.info", row.names=FALSE, sep='\t',quote=FALSE )
 write.table(utr5p.df, "utr5p.info", row.names=FALSE, sep='\t' ,quote=FALSE)
 ```
 
-### 1.4 get promoter site range
+#### get promoter site range
 
 ```text
 promoter=promoters(txdb)
@@ -51,9 +53,9 @@ promoter.df=as.data.frame(promoter)
 write.table(promoter.df, "promoter.info", row.names=FALSE, sep='\t' ,quote=FALSE)
 ```
 
-## 2. intersect with interested genes
+### \(2\) intersect with interested genes
 
-### 2.1 interested 3'UTR
+#### interested 3'UTR
 
 ```text
 sort -t $'\t' -k 2 utr3p.info|join -o 1.3 2.1 1.2 1.9 1.4 1.5 1.6 1.7 1.8 1.10 -t $'\t' -1 2 -2 2 - \
@@ -77,7 +79,7 @@ column9: exon_id
 column10: exon_rank
 ```
 
-### 2.2 interested promoter
+#### interested promoter
 
 ```text
 sort -t $'\t' -k 7 promoter.info|join -o 1.1 2.1 1.7 1.2  1.3 1.4 1.5 1.6 -t $'\t' -1 7 -2 2 - \
@@ -100,9 +102,9 @@ column7: strand
 column8: transprict_id
 ```
 
-## 3. convert to bed format
+### \(3\) convert to bed format
 
-### 3.1 3'UTR bed info
+#### 3'UTR bed info
 
 ```text
 cat interested_three_prime_UTR.info | \
@@ -121,7 +123,7 @@ column5: transcript
 column6: strand
 ```
 
-### 3.2 promoter bed info
+#### promoter bed info
 
 ```text
 cat interested_promoter.info | \
@@ -140,16 +142,16 @@ column5: transcript
 column6: strand
 ```
 
-## 4. get genome sequence
+### \(4\) get genome sequence
 
-### 4.1 get 3'UTR related genome sequence
+#### get 3'UTR related genome sequence
 
 ```text
 bedtools getfasta -s -name -fi /BioII/lulab_b/shared/genomes/human_hg38/sequence/GRCh38.p10.genome.fa \
   -bed interested_three_prime_UTR.bed -fo interested_three_prime_UTR.fa
 ```
 
-### 4.2 concatenate sequences of the same 3’ UTR
+#### concatenate sequences of the same 3’ UTR
 
 ```text
 concatenate_seq <- function(fasta_file) {
@@ -161,14 +163,14 @@ concatenate_seq <- function(fasta_file) {
 concatenate_seq('interested_three_prime_UTR.fa')
 ```
 
-### 4.3 get promoter related genome sequence
+#### get promoter related genome sequence
 
 ```text
 bedtools getfasta -s -name -fi /BioII/lulab_b/shared/genomes/human_hg38/sequence/GRCh38.p10.genome.fa \
   -bed interested_promoter.bed -fo interested_promoter.fa
 ```
 
-### 4.4 concatenate sequences of the same promoter
+#### concatenate sequences of the same promoter
 
 ```text
 concatenate_seq <- function(fasta_file) {
@@ -180,18 +182,18 @@ concatenate_seq <- function(fasta_file) {
 concatenate_seq('interested_promoter.fa')
 ```
 
-## 5. generate random sequence as background sequence
+### \(5\) generate random sequence as background sequence
 
 there are three mothods to get random sequence: 1. shuffle the input sequence 2. downsteam 1000bp 3. bedtools shuffle
 
-### 5.1 shuffle the input sequence
+#### shuffle the input sequence
 
 ```text
 fasta-shuffle-letters interested_three_prime_UTR.fa interested_three_prime_UTR.control
 fasta-shuffle-letters interested_promoter.fa interested_promoter.control
 ```
 
-### 5.2 downstream 1000bp as bg
+#### downstream 1000bp as bg
 
 [https://dongzhuoer.github.io/diff\_exp\_2018\_zhuoer/motif.html](https://dongzhuoer.github.io/diff_exp_2018_zhuoer/motif.html)
 
@@ -219,7 +221,7 @@ slide('interested_promoter.bed', 'interested_promoter_downstream.bed')
 
 repeat get promoter and get 3'UTR section
 
-### 5.3 bedtools shuffle
+#### bedtools shuffle
 
 ```text
 bedtools shuffle -i interested_three_prime_UTR.bed \
@@ -231,9 +233,9 @@ bedtools shuffle -i interested_promoter.bed \
 
 repeat get promoter and get 3'UTR section
 
-## 6. motif enrichment
+### \(6\) motif enrichment
 
-### 6.1 de novo motif discovery
+#### de novo motif discovery
 
 ```text
 meme -dna -maxsize 1000000 \
@@ -247,7 +249,7 @@ output
 
 ![](../../.gitbook/assets/sequence_meme.png)
 
-### 6.2 known motif enrichment
+#### known motif enrichment
 
 1. download known motif from meme
 2. add de novo motif file by meme
