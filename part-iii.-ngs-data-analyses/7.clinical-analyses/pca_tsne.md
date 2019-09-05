@@ -32,9 +32,9 @@ import IPython
 from IPython.display import IFrame
 ```
 
-## prerequisite
+## 1\) prerequisite
 
-### load plotting functions
+### \(1\) load plotting functions
 
 embed pdf; std\_plot; display dataframe
 
@@ -50,9 +50,9 @@ reload(figure_template)
 from figure_template import display_dataframe, embed_pdf_figure, embed_pdf_pages,std_plot,legendhandle
 ```
 
-## PCA&t-SNE visualization
+## 2\) PCA&t-SNE visualization
 
-### PCA \(principle component analysis\)
+### \(1\) PCA \(principle component analysis\)
 
 * 通过线性组合得到贡献最大的、可解释的变量\(principle components\)
 * 数据的降维和可视化
@@ -403,7 +403,7 @@ PCA_plot_sns(ax[1], input_table.T,year_class,'PCA')
 #embed_pdf_figure()
 ```
 
-### t-SNE
+### \(2\) t-SNE
 
 [https://www.jiqizhixin.com/articles/2017-11-13-7](https://www.jiqizhixin.com/articles/2017-11-13-7)  
  [http://www.datakit.cn/blog/2017/02/05/t\_sne\_full.html](http://www.datakit.cn/blog/2017/02/05/t_sne_full.html)  
@@ -423,9 +423,9 @@ fig.tight_layout()
 #embed_pdf_figure()
 ```
 
-## PCA analysis in Matrix Processing
+## 3\) PCA analysis in Matrix Processing
 
-### environment
+### \(1\) environment
 
 ```python
 import pandas as pd
@@ -675,7 +675,7 @@ if not os.path.exists(savepath):
     os.mkdir(savepath)
 ```
 
-### color
+### \(2\) color
 
 ```python
 sns.palplot(Pastel2[8])
@@ -780,7 +780,7 @@ A
 legendhandle(np.unique(A),False,2)
 ```
 
-### uca\_knn
+### \(3\) uca\_knn
 
 ```python
 def convert_label_to_int(sample_class):
@@ -1095,7 +1095,7 @@ IFrame('https://drive.google.com/file/d/1yWvw3fwWeSSrBgmhz_uaC4oQ0wltkIge/previe
       width=800,height=600)
 ```
 
-### PCA
+### \(4\) PCA
 
 ```python
 def PCA_plot_with_uca_score_sns(ax,data,sampleclass,batchinfo, method = 'PCA'):
