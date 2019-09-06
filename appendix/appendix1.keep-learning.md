@@ -50,7 +50,7 @@
 
 ### 📖 c. 参考书 - 统计类
 
-* 《Principle of Biostatistics》by _Marcello Pagano, Kimberlee Gauvreau_
+* 《Principles of Biostatistics》by _Marcello Pagano, Kimberlee Gauvreau_
 * [Statistics for biologist](http://www.nature.com/collections/qghhqm/) by _Nature_
 
 ### 📖 d. 参考书 - 进阶类
