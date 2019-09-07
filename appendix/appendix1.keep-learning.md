@@ -33,7 +33,7 @@
 
 1. ⭐Quick R \([online](http://www.statmethods.net/)\)  _OR_ 《R语言实战》 \(《R in action》\)
 2. ⭐《笨办法学 Python》（《Learn Python The Hard Way》）_OR_ 《Beginning Perl for Bioinformatics》
-3. ⭐《鸟哥的Linux私房菜-基础学习篇》 \(推荐章节\)
+3. ⭐《[鸟哥的Linux私房菜-基础学习篇](https://www.ctolib.com/docs/sfile/vbird-linux-basic-4e)》 \(推荐章节\)
 
 > **Linux 推荐章节：**
 >
