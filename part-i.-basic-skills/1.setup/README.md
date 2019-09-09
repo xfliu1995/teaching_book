@@ -20,7 +20,7 @@ Learn how to do our jobs efficiently and reproducibly.
 
 ### A. [Vim](http://www.vim.org/) 
 
-> You can start from simple version of Vim, like [MacVim](https://www.vim.org/download.php#mac).
+> You can start from a simple version of Vim, like [MacVim](https://www.vim.org/download.php#mac).
 >
 > Then, you can [**learn vim progressively**](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/), and it will be your last text editor. There isn’t any better text editor that I know of. It is hard to learn, but incredible to use.I suggest you teach yourself Vim in 4 steps:
 >
