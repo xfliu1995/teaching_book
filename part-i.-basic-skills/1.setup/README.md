@@ -18,7 +18,7 @@ Learn how to do our jobs efficiently and reproducibly.
 
 ## 1\) Learn an Editor
 
-### A. [vim](http://www.vim.org/) 
+### A. [Vim](http://www.vim.org/) 
 
 > [**Learn vim progressively**](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/), and it will be your last text editor. There isn’t any better text editor that I know of. It is hard to learn, but incredible to use.I suggest you teach yourself Vim in 4 steps:
 >
@@ -27,7 +27,7 @@ Learn how to do our jobs efficiently and reproducibly.
 > 3. Feel Better, Stronger, Faster
 > 4. Use superpowers of vim
 
-### B. **Atom** 
+### B. [Atom](https://github.com/atom) 
 
 > A hackable text editor for the 21st century. See [how to use Atom](https://www.evernote.com/l/ABJeb9FdBc1BC6AZSgWh4Ujc_StdcFYl-kw).
 
