@@ -18,18 +18,18 @@ Learn how to do our jobs efficiently and reproducibly.
 
 ## 1\) Learn an Editor
 
-### A. **Vim** -- [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
+### A. [vim](http://www.vim.org/) 
 
-> Learn [vim](http://www.vim.org/) and it will be your last text editor. There isn’t any better text editor that I know of. It is hard to learn, but incredible to use.I suggest you teach yourself Vim in 4 steps:
+> [**Learn vim progressively**](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/), and it will be your last text editor. There isn’t any better text editor that I know of. It is hard to learn, but incredible to use.I suggest you teach yourself Vim in 4 steps:
 >
 > 1. **Survive**
 > 2. Feel comfortable
 > 3. Feel Better, Stronger, Faster
 > 4. Use superpowers of vim
 
-### B. **Atom --** [Tutorial and Tips ](https://www.evernote.com/l/ABJeb9FdBc1BC6AZSgWh4Ujc_StdcFYl-kw)
+### B. **Atom** 
 
-> A hackable text editor for the 21st century
+> A hackable text editor for the 21st century. See [how to use Atom](https://www.evernote.com/l/ABJeb9FdBc1BC6AZSgWh4Ujc_StdcFYl-kw).
 
 ## 2\) README
 
@@ -47,5 +47,4 @@ Learn how to do our jobs efficiently and reproducibly.
 
 * 安装和使用docker
 * 学习和练习一种editor
-* 构建自己的project文件夹，写README.md, 并且学会备份这个文件夹。
 
