@@ -14,7 +14,7 @@ Learn how to do our jobs efficiently and reproducibly.
 
 1.1 Work on [**Docker**](1.1.docker.md)
 
-1.2 Work on [**Cluster**](1.2-cluster.md)\*\*\*\*
+1.2 Work on [**Cluster**](1.2-cluster.md)
 
 ## 1\) Learn an Editor
 
