@@ -11,7 +11,7 @@ description: 生物信息学实践教程 - 基础篇 (2019版)
 ## Teaching Philosophy
 
 {% hint style="info" %}
-**Study and Practice 格物致知 知行合一**
+**[🎦](https://www.bilibili.com/video/av67132141?pop_share=1) Study and Practice \| 格物致知 知行合一**
 
 We teach professional skills in bioinformatics. These skills are not just running software. They will give you freedom of exploring various real data.
 {% endhint %}
