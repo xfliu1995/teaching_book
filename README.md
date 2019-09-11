@@ -47,7 +47,7 @@ We teach professional skills in bioinformatics. These skills are not just runnin
 
 ## Contributors
 
-Yumin Zhu, Gang Xu, Zhuoer Dong, Xupeng Chen, Xi Hu, Jingyi Cao, Xiaocheng Xi, Siqi Wang, Yumin Zhu, Jingjian Lin and Zhi J. Lu\*
+Yumin Zhu, Gang Xu, Zhuoer Dong, Xupeng Chen, Xi Hu, Jingyi Cao, Xiaocheng Xi, Siqi Wang and Zhi J. Lu\*
 
 \*Corresponding to Zhi J. Lu
 
