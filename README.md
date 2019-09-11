@@ -49,8 +49,8 @@ We teach professional skills in bioinformatics. These skills are not just runnin
 
 Yumin Zhu<sup>1</sup>, Gang Xu<sup>1</sup>, Xiaocheng Xi, Xupeng Chen, Zhuoer Dong, Xi Hu, Jingyi Cao, Siqi Wang and Zhi J. Lu\*
 
-<sup>1</sup>Contributed Equally
-\*Corresponding to Zhi J. Lu
+> <sup>1</sup>Contributed Equally
+> \*Corresponding to Zhi J. Lu
 
 ## Contact Us
 
