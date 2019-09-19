@@ -27,7 +27,7 @@ cd /home/test/linux
 ls
 ```
 
-> [docker使用方式](../1.setup/1.1.docker#use-container)
+> [docker使用方式](../1.setup/1.1.docker)
 
 
 
