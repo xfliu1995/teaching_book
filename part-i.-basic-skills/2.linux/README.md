@@ -28,9 +28,9 @@ ls
 ```
 
 > 本教程docker使用方式：
-> 1. 运行容器:  `docker exec -it bioinfo_tsinghua bash`
-> 2. 进行Linux系统的相关操作
-> 3. 退出容器：`exit`
+> -  1. 运行容器:  `docker exec -it bioinfo_tsinghua bash`
+> -  2. 进行Linux系统的相关操作
+> -  3. 退出容器：`exit`
 
 
 
