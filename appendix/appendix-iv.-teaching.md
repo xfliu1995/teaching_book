@@ -9,7 +9,7 @@
 
 | Chapter | Docker Images |
 | :--- | :--- |
-| PART I + II + PART III.1-3 | [bioinfo\_PartI-PartII-PartIII1-3.tar.gz](https://cloud.tsinghua.edu.cn/d/caa53a001d7647cbb06c/) |
+| PART I + II + PART III.1-3 | [bioinfo\_PartI-PartII-PartIII1-3.tar.gz](https://cloud.tsinghua.edu.cn/f/d13efde9c3e9413ba4ee/) |
 
 ## Teaching Videos
 
