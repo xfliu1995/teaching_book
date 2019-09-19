@@ -10,15 +10,17 @@
 
 * **Chapter: PART I + II + PART III.1-3**
   * docker: [bioinfo\_PartI-PartII-PartIII1-3.tar.gz](https://cloud.tsinghua.edu.cn/f/d13efde9c3e9413ba4ee/)
-  * software needed:
+  * software for PART II 1. Blast
     * blast
+  * software for PART II 2. Conservation Analysis
+    * ??
+  * software for PART II 3.1 GO Enrichment Analysis
     * ??
 * **Chapter: PART III.4**
-
-  * docker: [bioinfo_PARTIII4.tar.gz]()
-  * software needed:
-
-    * ??
+* docker: [bioinfo_PARTIII4.tar.gz]()
+  * software for PART III 4
+  
+  * ??
     * ??
 
 ## Teaching Videos
