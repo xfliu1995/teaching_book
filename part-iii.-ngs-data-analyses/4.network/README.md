@@ -4,7 +4,7 @@
 
 - [4.1.Co-expression Network](co_expression.md)
 - [4.2.miRNA Targets](4.2.mirna-targets.md)
-- [4.3.RBP-RNA Interactions](rbp_interaction.m)
+- [4.3.RBP-RNA Interactions](rbp_interaction.md)
 
 
 
