@@ -194,9 +194,15 @@ ssh-keygen -t rsa -b 2048
 ssh-copy-id user@server_ip # if port add: -p 2200
 ```
 
-## More
+### 6) More Reading for advanced users
 
-* For advanced users, you can learn [how to back up files using **crontab** and **rsync**](https://lulab.gitbook.io/training/part-i.-programming-skills/3.bash-and-github#example-ii).
+* [how to back up files using **crontab** and **rsync**](https://lulab.gitbook.io/training/part-i.-programming-skills/3.bash-and-github#example-ii).
 
-## 
+* 《[鸟哥的Linux私房菜-基础学习篇](https://www.ctolib.com/docs/sfile/vbird-linux-basic-4e)》 \(25章推荐章节\)
+
+  > **Linux 推荐章节：**
+  >
+  > - 第25章 LINUX备份策略: 25.2.2完整备份的差异备份; 25.3鸟哥的备份策略; 25.4灾难恢复的考虑; 25.5重点回顾
+
+
 

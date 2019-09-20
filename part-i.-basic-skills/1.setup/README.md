@@ -45,8 +45,7 @@ Learn how to do our jobs efficiently and reproducibly.
 
 > [Tips on 备份数据、保存中间数据 \| 数据安全](https://www.evernote.com/l/ABLaXPPQIg1FM5Kgl1AoLqLj67CR1Cv44ws)
 
-## **4\) Homework**
+## 4\) Homework
 
 * 安装和使用docker
 * 学习和练习一种editor
-

@@ -5,23 +5,18 @@
 * [Bioinfo 2019](https://cloud.tsinghua.edu.cn/d/f361101fc62e49df960b/?p=/bioinfo2019/Lectures&mode=list)
 * [Bioinfo 2018](https://cloud.tsinghua.edu.cn/d/f361101fc62e49df960b/?p=/bioinfo2018&mode=list)
 
-## Teaching Dockers
+## Teaching Docker
+
+| Chapter | Docker Images | Software Installed |
+| :--- | :--- | ---- |
+| PART I + II + PART III.1-3 | [bioinfo\_PartI-PartII-PartIII1-3.tar.gz](https://cloud.tsinghua.edu.cn/f/d13efde9c3e9413ba4ee/) | blast V?; ??; ?? |
+| PART III.4.network | [bioinfo_PARTIII4.network.tar.gz]() | blast V?; ??; ?? |
+| PART III.5.motif |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 
-* **Chapter: PART I + II + PART III.1-3**
-  * docker: [bioinfo\_PartI-PartII-PartIII1-3.tar.gz](https://cloud.tsinghua.edu.cn/f/d13efde9c3e9413ba4ee/)
-  * software for PART II 1. Blast
-    * blast
-  * software for PART II 2. Conservation Analysis
-    * ??
-  * software for PART II 3.1 GO Enrichment Analysis
-    * ??
-* **Chapter: PART III.4**
-* docker: [bioinfo_PARTIII4.tar.gz]()
-  * software for PART III 4
-  
-  * ??
-    * ??
 
 ## Teaching Videos
 
