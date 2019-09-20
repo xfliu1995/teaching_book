@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-* [3.1 GO](part-ii.-basic-analyses/3.function-analysis/3.1.go.md)
-* [3.2 KEGG](part-ii.-basic-analyses/3.function-analysis/3.2.kegg.md)
-* [3.3 GSEA](part-ii.-basic-analyses/3.function-analysis/3.3.gsea.md)
+* [3.1 GO](3.1.go.md)
+* [3.2 KEGG](3.2.kegg.md)
+* [3.3 GSEA](3.3.gsea.md)
 
 当我们找到一些感兴趣的基因后（比如在某种处理条件下，与对照相比，表达量有明显差异的基因），我们希望能从这些基因中提炼出生物学意义。
 
