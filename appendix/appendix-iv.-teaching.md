@@ -9,7 +9,7 @@
 
 | Chapter | Docker Images | Software Installed |
 | :--- | :--- | ---- |
-| PART I + II + PART III.1-3 | [bioinfo\_PartI-PartII-PartIII1-3.tar.gz](https://cloud.tsinghua.edu.cn/f/d13efde9c3e9413ba4ee/) | BLAST 2.6.0+; bowtie 1.0.0; samtools 1.7 (using htslib 1.7-2); TopHat v2.0.9; cufflinks v2.1.1; cuffmerge v2.1.1; cuffdiff v2.1.1; R 3.5.1; perl v5.26.1; Python 2.7; bamtools 1.0.2; java 1.8.0_181; rMATS-turbo-Linux-UCS4 v3.1.0; |
+| PART I + II + PART III.1-3 | [bioinfo\_PartI-PartII-PartIII1-3.tar.gz](https://cloud.tsinghua.edu.cn/f/d13efde9c3e9413ba4ee/) | BLAST 2.6.0+; bowtie 1.0.0; samtools 1.7 (using htslib 1.7-2); TopHat v2.0.9; cufflinks v2.1.1; cuffmerge v2.1.1; cuffdiff v2.1.1; R 3.5.1; perl v5.26.1; Python 2.7; bamtools 1.0.2; java 1.8.0_181; rMATS-turbo-Linux-UCS4 v3.1.0; homer v4.10.3；|
 | PART III.4.network | [bioinfo_PARTIII4.network.tar.gz]() | blast V?; ??; ?? |
 | PART III.5.motif |  |  |
 |  |  |  |
