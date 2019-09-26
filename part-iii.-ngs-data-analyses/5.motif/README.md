@@ -28,4 +28,4 @@ ls
 
 ### 方法2: 直接下载
 
-- 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_III/5.Motif)
+- 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_III/5.motif)
