@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-- [6.1.RNA editing](co_expression.md)
-- [6.2.APA (Alternative Polyadenylation)](4.2.mirna-targets.md)
-- [6.3.Ribo-seq](rbp_interaction.md)
-- [6.4.Structure-seq](rbp_interaction.md)
-- [6.5.Modification (m6A-seq)](rbp_interaction.md)
+- [6.1.RNA editing](rna_editing.md)
+- [6.2.APA (Alternative Polyadenylation)](apa.md)
+- [6.3.Ribo-seq](ribo_seq.md)
+- [6.4.Structure-seq](structure_seq.md)
+- [6.5.Modification (m6A-seq)](6.5.modification-m6a-seq.md)
 
 
 
