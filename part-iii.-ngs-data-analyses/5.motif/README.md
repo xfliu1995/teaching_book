@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-- [5.1.Sequence Motif](co_expression.md)
-- [5.2.Structure Motif](4.2.mirna-targets.md)
+- [5.1.Sequence Motif](sequence_motif.md)
+- [5.2.Structure Motif](structure_motif.md)
 
 
 
