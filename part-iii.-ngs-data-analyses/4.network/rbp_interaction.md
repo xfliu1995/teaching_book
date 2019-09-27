@@ -95,5 +95,8 @@ boxplot of RBP enrichment
 
 ![](../../.gitbook/assets/rbp_enrichment.png)
 
-[example](https://github.com/YuminTHU/training_class/tree/master/data/RBP_interaction)
+
+## 3\) Homework
+根据提供的上调gene的ID,自己准备作为比较的背景gene,并详细写清楚得到背景gene的步骤；比较这些上调gene和背景gene的3‘UTR区域RBP的富集程度；最后提交每一步的代码和相应的图。相应的文件在本章节的[homework](https://github.com/lulab/teaching_book/tree/master/files/PART_III/4.network/RBP_interaction/RBP_interaction.homework)文件夹下。
+
 
