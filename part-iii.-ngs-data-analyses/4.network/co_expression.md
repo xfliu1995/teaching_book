@@ -1,6 +1,24 @@
 # 4.1.Co-expression Network
 
 ## Co-expression
+## 0) Background
+### WGCNA分析
+
+#### 基本概念
+
+WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同表达的基因模块\(module\)，并探索基因网络与关注的表型之间的关联关系，以及网络中的核心基因。
+
+适用于复杂的数据模式，推荐5组\(或者15个样品\)以上的数据。一般可应用的研究方向有：不同器官或组织类型发育调控、同一组织不同发育调控、非生物胁迫不同时间点应答、病原菌侵染后不同时间点应答。
+
+#### 基本原理
+
+从方法上来讲，WGCNA分为**表达量聚类分析和表型关联**两部分，主要包括基因之间相关系数计算、基因模块的确定、共表达网络、模块与性状关联四个步骤。
+
+第一步计算任意两个基因之间的相关系数（Person Coefficient）。为了衡量两个基因是否具有相似表达模式，一般需要设置阈值来筛选，高于阈值的则认为是相似的。但是这样如果将阈值设为0.8，那么很难说明0.8和0.79两个是有显著差别的。因此，**WGCNA分析时采用相关系数加权值，即对基因相关系数取N次幂**，使得网络中的基因之间的连接服从**无尺度网络分布\(scale-freenetworks\)** ，这种算法更具生物学意义。
+
+**无尺度网络分布**：大部分节点只和很少节点连接，而有极少的节点与非常多的节点连接，生物体选择scale-free network可以保证少数关键基因执行着主要功能，只要保证hub的完整性，整个生命体系的基本活动在一定刺激影响下将不会受到太大影响。
+
+第三步得到模块之后可以做很多下游分析：模块的功能富集；模块与性状之间的相关性；模块与样本间的相关系数；找到模块的核心基因；利用关系预测基因功能。
 
 ## 1) Pipeline
 
@@ -21,20 +39,49 @@
 | input\_fpkm\_matrix.rds | GSE48213 breast cancer gene expression matrix \(top 5,000\) |
 | data\_traits.rds | 56 cell lines information for the GSM data in GSE48213 |
 
-Import data
+### (3) Output data
+
+| File name | Description |
+| :--- | :--- |
+| FPKM-TOM-block.1.Rdata | Standarded R file contains the consensus topological overlaps for WGCNA results of the GSE48213 data |
+| CytoscapeInput-edges-brown.txt/CytoscapeInput-edges-filter-brown.txt | Input file contains network edge information for Cytoscape |
+| CytoscapeInput-nodes-brown.txt/CytoscapeInput-nodes-filter-brown.txt | Input file contains network node information for Cytoscape |
+| geneID\_brown.txt | Total gene ID list in specific modules |
+
+## 3) Running steps
+
+### (0) Install packages
 
 ```r
-setwd("/Share2/home/lulab/xixiaochen/training_share2/co_expression/")
-datExpr <- readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/input_fpkm_matrix.rds")
-datTraits <- readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/data_traits.rds")
+#In R:
+source("https://bioconductor.org/biocLite.R")
+biocLite(c("AnnotationDbi", "impute","GO.db", "preprocessCore", "multtest"))
+install.packages(c("WGCNA", "stringr", "reshape2"))
+```
+
+### (1) Library the WGCNA package
+
+```r
+library(WGCNA)
+```
+### (2) Import data
+
+```r
+#In R:
+setwd("/home/test/Network/co_expression/")
+datExpr <- readRDS(file="/home/test/Network/co_expression/input_fpkm_matrix.rds")
+datTraits <- readRDS(file="/home/test/Network/co_expression/data_traits.rds")
 ```
 
 Data character
 
 ```r
+#In R:
 datExpr[1:4,1:4]
 dim(datExpr)
 ```
+
+A brief look of the datExpr:
 
 ```text
 #           ENSG00000210082 ENSG00000198712 ENSG00000198804 ENSG00000210845
@@ -50,9 +97,12 @@ dim(datExpr)
 ```
 
 ```r
+#In R:
 datTraits[1:4,]
 dim(datTraits)
 ```
+
+A brief look of the datTraits:
 
 ```text
 #                  gsm cellline       subtype
@@ -67,52 +117,11 @@ dim(datTraits)
 #### The rownames of datExpr and datTraits are matched.
 ```
 
-### (3) Output data
 
-| File name | Description |
-| :--- | :--- |
-| FPKM-TOM-block.1.Rdata | Standarded R file contains the consensus topological overlaps for WGCNA results of the GSE48213 data |
-| CytoscapeInput-edges-brown.txt/CytoscapeInput-edges-filter-brown.txt | Input file contains network edge information for Cytoscape |
-| CytoscapeInput-nodes-brown.txt/CytoscapeInput-nodes-filter-brown.txt | Input file contains network node information for Cytoscape |
-| geneID\_brown.txt | Total gene ID list in specific modules |
-
-## 3) Running steps
-
-### WGCNA分析
-
-#### 基本概念
-
-WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同表达的基因模块\(module\)，并探索基因网络与关注的表型之间的关联关系，以及网络中的核心基因。
-
-适用于复杂的数据模式，推荐5组\(或者15个样品\)以上的数据。一般可应用的研究方向有：不同器官或组织类型发育调控、同一组织不同发育调控、非生物胁迫不同时间点应答、病原菌侵染后不同时间点应答。
-
-#### 基本原理
-
-从方法上来讲，WGCNA分为**表达量聚类分析和表型关联**两部分，主要包括基因之间相关系数计算、基因模块的确定、共表达网络、模块与性状关联四个步骤。
-
-第一步计算任意两个基因之间的相关系数（Person Coefficient）。为了衡量两个基因是否具有相似表达模式，一般需要设置阈值来筛选，高于阈值的则认为是相似的。但是这样如果将阈值设为0.8，那么很难说明0.8和0.79两个是有显著差别的。因此，**WGCNA分析时采用相关系数加权值，即对基因相关系数取N次幂**，使得网络中的基因之间的连接服从**无尺度网络分布\(scale-freenetworks\)** ，这种算法更具生物学意义。
-
-**无尺度网络分布**：大部分节点只和很少节点连接，而有极少的节点与非常多的节点连接，生物体选择scale-free network可以保证少数关键基因执行着主要功能，只要保证hub的完整性，整个生命体系的基本活动在一定刺激影响下将不会受到太大影响。
-
-第三步得到模块之后可以做很多下游分析： （1）模块的功能富集 （2）模块与性状之间的相关性 （3）模块与样本间的相关系数 （4）找到模块的核心基因 （5）利用关系预测基因功能
-
-### (0) Install packages
+### (3) Pick the soft thresholding power
 
 ```r
-source("https://bioconductor.org/biocLite.R")
-biocLite(c("AnnotationDbi", "impute","GO.db", "preprocessCore", "multtest"))
-install.packages(c("WGCNA", "stringr", "reshape2"))
-```
-
-### (1) Library the WGCNA package
-
-```r
-library(WGCNA)
-```
-
-### (2) Pick the soft thresholding power
-
-```r
+#In R:
 options(stringsAsFactors = FALSE)
 #open multithreading 
 enableWGCNAThreads()
@@ -121,6 +130,8 @@ powers = c(c(1:10), seq(from=12, to=20, by=2))
 #Call the network topology analysis function，choose a soft-threshold to fit a scale-free topology to the network
 sft=pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
 ```
+
+A brief look of the output from the command line:
 
 ```text
 #pickSoftThreshold: will use block size 5000.
@@ -145,7 +156,8 @@ sft=pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
 ```
 
 ```r
-pdf(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/soft_thresholding.pdf",width=9, height=5)
+#In R:
+pdf(file="/home/test/Network/co_expression/soft_thresholding.pdf",width=9, height=5)
 #Plot the results:
 par(mfrow = c(1,2))
 cex1 = 0.9
@@ -170,16 +182,18 @@ dev.off()
 软阈值（即权重参数，可以理解为相关系数的β次幂）取值默认为1到30，上述图形的横轴均代表软阈值，左图的纵轴数值越大，说明该网络越逼近无尺度网络，右图的纵轴表示对应的基因模块中所有基因邻接性的均值。
 
 ```r
+#In R:
 sft$powerEstimate
 #[1] 6
 #best_beta = sft$powerEstimate
 ```
 
-### (3) One-step network construction and module detection
+### (4) One-step network construction and module detection
 
 把输入的表达矩阵的**几千个基因归类成了几十个模块。**大体思路：计算基因间的邻接性，根据邻接性计算基因间的相似性，然后推出基因间的相异性系数，并据此得到基因间的系统聚类树。
 
 ```r
+#In R:
 net = blockwiseModules(datExpr,
                  power = sft$powerEstimate,
                  maxBlockSize = 6000,
@@ -191,6 +205,8 @@ net = blockwiseModules(datExpr,
                  verbose = 3)
 ```
 
+A brief look of the net$colors:
+
 ```r
 table(net$colors)
 #   0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15 
@@ -200,11 +216,12 @@ table(net$colors)
 #### table(net$colors) show the total modules and genes in each modules. The '0' means genes do not belong to any module.
 ```
 
-### (4) Module visualization
+### (5) Module visualization
 
 这里用不同的颜色来代表那些所有的模块，其中灰色默认是无法归类于任何模块的那些基因，如果灰色模块里面的基因太多，那么前期对表达矩阵挑选基因的步骤可能就不太合适。
 
 ```r
+#In R:
 #Convert labels to colors for plotting
 mergedColors = labels2colors(net$colors)
 table(mergedColors)
@@ -222,7 +239,7 @@ table(mergedColors)
 #         1671            37           279 
 
 #Plot the dendrogram and the module colors underneath
-pdf(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/module_visualization.pdf",width=9, height=5)
+pdf(file="/home/test/Network/co_expression/module_visualization.pdf",width=9, height=5)
 plotDendroAndColors(net$dendrograms[[1]], mergedColors[net$blockGenes[[1]]],
                     "Module colors",
                     dendroLabels = FALSE, hang = 0.03,
@@ -234,9 +251,10 @@ dev.off()
 
 ![](../../.gitbook/assets/module_visualization.png)
 
-### (5) Quantify module similarity by eigengene correlation
+### (6) Quantify module similarity by eigengene correlation
 
 ```r
+#In R:
 #Quantify module similarity by eigengene correlation
 #Eigengene: One of a set of right singular vectors of a gene's x samples matrix that tabulates, e.g., the mRNA or gene expression of the genes across the samples.
 
@@ -246,7 +264,7 @@ MEs = moduleEigengenes(datExpr, moduleColors)$eigengenes
 #Add the weight to existing module eigengenes
 MET = orderMEs(MEs)
 #Plot the relationships between the eigengenes and the trait
-pdf(file="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/eigengenes_trait_relationship.pdf",width=7, height=9)
+pdf(file="/home/test/Network/co_expression/eigengenes_trait_relationship.pdf",width=7, height=9)
 par(cex = 0.9)
 plotEigengeneNetworks(MET,"", marDendro=c(0,4,1,2), 
                       marHeatmap=c(3,4,1,2), cex.lab=0.8, xLabelsAngle=90)
@@ -257,11 +275,12 @@ dev.off()
 
 The top part of this plot represents the eigengene dendrogram and the lower part of this plot represents the eigengene adjacency heatmap.
 
-### (6) Find the relationships between modules and traits
+### (7) Find the relationships between modules and traits
 
 模块与性状之间的关系
 
 ```r
+#In R:
 #Plot the relationships between modules and traits
 design = model.matrix(~0+ datTraits$subtype)
 colnames(design) = levels(datTraits$subtype)
@@ -274,7 +293,7 @@ MEs = orderMEs(MEs0)
 moduleTraitCor = cor(MEs, design, use = "p")
 moduleTraitPvalue = corPvalueStudent(moduleTraitCor, nSamples)
 
-pdf(file="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/module_trait_relationship.pdf",width=9, height=10)
+pdf(file="/home/test/Network/co_expression/module_trait_relationship.pdf",width=9, height=10)
 #Display the correlations and their p-values
 textMatrix = paste(signif(moduleTraitCor, 2), "\n(",
                    signif(moduleTraitPvalue, 1), ")", sep = "")
@@ -301,13 +320,14 @@ dev.off()
 
 从上图已经可以看到跟乳腺癌分类相关的基因模块了，包括"Basal" "Claudin-low" "Luminal" "Non-malignant" "unknown" 这5类所对应的不同模块的基因列表。可以看到每一种乳腺癌都有跟它强烈相关的模块，可以作为它的表达signature，模块里面的基因可以拿去做下游分析。我们看到Luminal表型跟棕色的模块相关性高达0.86，而且极其显著的相关，所以值得我们挖掘，这个模块里面的基因是什么，为什么如此的相关呢？
 
-### (7) Select specific module
+### (8) Select specific module
 
 We choose the "brown" module in trait “Luminal” for further analyses.
 
-#### (7.1) Intramodular connectivity, module membership, and screening for intramodular hub genes
+#### (8.1) Intramodular connectivity, module membership, and screening for intramodular hub genes
 
 ```r
+#In R:
 #Intramodular connectivity, module membership, and screening for intramodular hub genes
 #Intramodular connectivity
 connet=abs(cor(datExpr,use="p"))^6
@@ -338,9 +358,10 @@ hubgenes
 #[1] "ENSG00000124664" "ENSG00000129514" "ENSG00000143578"
 ```
 
-#### (7.2) Export the network
+#### (8.2) Export the network
 
 ```r
+#In R:
 #Export the network
 #Recalculate topological overlap
 TOM = TOMsimilarityFromExpr(datExpr, power = 6) 
@@ -403,9 +424,10 @@ head CytoscapeInput-nodes-filter-brown.txt
 #ENSG00000129514    NA    brown
 ```
 
-#### (7.3) Extract gene IDs in specific module
+#### (8.3) Extract gene IDs in specific module
 
 ```r
+#In R:
 #Extract gene IDs in specific module
 #Select module
 module = "brown"
@@ -413,12 +435,13 @@ module = "brown"
 probes = colnames(datExpr)
 inModule = (moduleColors == module)
 modProbes = probes[inModule]
-write.table(modProbes,file="/Share2/home/lulab/xixiaochen/Share/xixiaochen/project/training/geneID_brown.txt",sep="\t",quote=F,row.names=F,col.names=F)
+write.table(modProbes,file="/home/test/Network/co_expression/geneID_brown.txt",sep="\t",quote=F,row.names=F,col.names=F)
 ```
 
 The output file looks like:
 
 ```bash
+#Bash Shell command:
 head geneID_brown.txt
 #ENSG00000170421
 #ENSG00000111057
@@ -429,291 +452,16 @@ head geneID_brown.txt
 
 We could use the gene ID list for GO/KEGG analysis.
 
-## 4) Appendix：functional annotation of lncRNA
 
-### (1) GO/KEGG analysis of the module which interested lncRNAs are involved in.
-
-在WGCNA得到模块之后，通过fisher exact test分析感兴趣的lncRNA\(例如：上调或者下调\)是否在这些模块中显著富集，挑选出显著富集的模块中的protein coding genes做功能分析。
-
-![](../../.gitbook/assets/co-expression.lncrna.png)
-
-### (2) Construct the lncRNA-mRNA co-expression network, functional analysis of mRNAs which are co-expressed with these interested lncRNAs.
-
-Library packages and load the input data
-
-```r
-library(multtest)
-lnc_mRNA_dataExpr2 <- readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/co_expression/lnc_mRNA_dataExpr.rds")
-```
-
-The input file looks like:
-
-```r
-dim(lnc_mRNA_dataExpr2)
-#[1]     6 2000
-#The input data contains 6 samples, 2000 genes (1500 protein coding genes, 500 lncRNAs). 
-lnc_mRNA_dataExpr2[1:4,1:4]
-#         ENSMUSG00000000031.16 ENSMUSG00000006462.6 ENSMUSG00000006638.14 ENSMUSG00000010492.10
-#Ctrl1Hip             0.0000000             0.249761              0.186874               0.120363
-#Ctrl2Hip             0.0510846             0.157029              0.221414               0.272098
-#Ctrl3Hip             0.0504136             0.168071              0.373061               0.134684
-#RF1Hip               0.0000000             0.166485              0.250347               0.492554
-####Each row represents a sample, each column represents a gene
-```
-
-Calculate the pearson correlation between every two genes.
-
-```r
-#Calculate the pearson correlation
-Pcc = cor(lnc_mRNA_dataExpr2, method = "pearson")
-
-#Calculate the p-values of the pearson correlation
-Pcc_pvalue = corPvalueFisher(Pcc, 6, twoSided = TRUE)
-
-dim(Pcc)
-#[1] 2000 2000
-Pcc[1:4,1:4]
-#                      ENSMUSG00000000031.16 ENSMUSG00000006462.6 ENSMUSG00000006638.14 ENSMUSG00000010492.10
-#ENSMUSG00000000031.16            1.00000000            0.1619654            0.09256716            -0.4244842
-#ENSMUSG00000006462.6             0.16196545            1.0000000           -0.50330176            -0.5484968
-#ENSMUSG00000006638.14            0.09256716           -0.5033018            1.00000000            -0.2397083
-#ENSMUSG00000010492.10           -0.42448423           -0.5484968           -0.23970829             1.0000000
-
-dim(Pcc_pvalue)
-#[1] 19028 19028
-Pcc_pvalue[1:4,1:4]
-#                      ENSMUSG00000000031.16 ENSMUSG00000006462.6 ENSMUSG00000006638.14 ENSMUSG00000010492.10
-#ENSMUSG00000000031.16             0.0000000            0.7771578             0.8722577             0.4325254
-#ENSMUSG00000006462.6              0.7771578            0.0000000             0.3375244             0.2858186
-#ENSMUSG00000006638.14             0.8722577            0.3375244             0.0000000             0.6719851
-#ENSMUSG00000010492.10             0.4325254            0.2858186             0.6719851             0.0000000
-```
-
-```r
-write.table(Pcc, file ="/Share2/home/lulab/xixiaochen/training_share2/co_expression/pcc.txt", quote = F, row.names = F, sep="\t")
-write.table(Pcc_pvalue, file ="/Share2/home/lulab/xixiaochen/training_share2/co_expression/pcc_pvalue.txt", quote = F,row.names = F, sep="\t")
-
-#Get the row and column names
-pcc_pvalue_colnames=colnames(Pcc_pvalue)
-pcc_pvalue_rownames=rownames(Pcc_pvalue)
-
-write.table(pcc_pvalue_colnames, file ="/Share2/home/lulab/xixiaochen/training_share2/co_expression/Pcc_pvalue_colnames.txt", quote = F, row.names = F, sep="\t")
-write.table(pcc_pvalue_rownames, file ="/Share2/home/lulab/xixiaochen/training_share2/co_expression/Pcc_pvalue_rownames.txt", quote = F, row.names = F, sep="\t")
-```
-
-```bash
-#Bash Shell command:
-#Extract the "protein coding gene & lncRNA" gene-gene pairs
-sed -n '502,2001p' pcc_pvalue.txt | cut -f 1-500 > lnc_coding_pvalue.txt
-sed -n '502,2001p' pcc.txt | cut -f 1-500 > lnc_coding_pcc.txt
-```
-
-```r
-#use the multtest package
-raw_pvalue = read.table("/Share2/home/lulab/xixiaochen/training_share2/co_expression/lnc_coding_pvalue.txt", sep='\t', quote="", comment="")
-#The input file looks like
-dim(raw_pvalue)
-#[1] 1500  500
-raw_pvalue[1:4,1:4]
-#           V1        V2        V3        V4
-#1 0.4096710 0.396465705 0.2057436 0.80999264
-#2 0.6188956 0.004920709 0.6733839 0.20778508
-#3 0.5070725 0.931732205 0.7584698 0.66705000
-#4 0.9983747 0.465891803 0.3436047 0.03568696
-#2000 genes = 1500 protein coding genes, 500 lncRNAs
-#Each row represents a protein-coding gene, each column represents a lncRNA.
-#The row names are in the "Pcc_pvalue_rownames.txt" file, the column names are in the "Pcc_pvalue_colnames.txt".
-```
-
-```r
-#Calculate the adjusted p-values
-setwd("/Share2/home/lulab/xixiaochen/training_share2/co_expression/adjp/")
-#the multtest package: output=adjusted p-values from small to large order, index=original row and column information
-for (i in seq(1,dim(raw_pvalue)[2])){
-  ad=mt.rawp2adjp(raw_pvalue[,i], proc=c("Bonferroni"))
-  adjp=ad$adjp[,2]
-  order_index=ad$index
-  re=matrix=cbind(adjp,order_index)
-  out_file=paste(as.character(i),'txt',sep='.')
-  write.table(re, file =out_file, quote = F, row.names = F,sep="\t")
-}
-```
-
-In the previous step, we will get 500 files. In this step, process these file to get gene pairs with an adjusted P-value of 0.01 or less and with a Pcc value ranked in the top or bottom 0.05 percentile.
-
-```bash
-#Bash Shell command:
-python get_gene_pairs.py
-perl get_gene_pairs.pl adjp_cut.txt pcc_cut.txt gene_pairs.txt
-```
-
-the get\_gene\_pairs.py contains:
-
-```python
-import pandas as pd
-import numpy as np
-import os
-fold_path='/Share2/home/lulab/xixiaochen/training_share2/co_expression/adjp/'
-file_li=os.listdir(fold_path)
-adjp_fi_li=[]
-for i in range(len(file_li)):
-    adjp_pre_li=[]
-    file_name=str(i+1)+'.txt'
-    file_path=fold_path+file_name
-    #print file_path
-    data=pd.read_csv(file_path,sep='\t')
-    data=data.set_index('order_index').sort_index()
-    adjp=data['adjp']
-    adjp_pre_li=list(adjp)
-    adjp_fi_li.append(adjp_pre_li)
-fi_adjp=pd.DataFrame(adjp_fi_li)
-adjp_T=fi_adjp.T
-comp_adjp=adjp_T[adjp_T<0.01]
-#add gene names, each row represents a protein-coding gene, each column represents a lncRNA
-col_file='/Share2/home/lulab/xixiaochen/training_share2/co_expression/Pcc_pvalue_colnames.txt'
-row_file='/Share2/home/lulab/xixiaochen/training_share2/co_expression/Pcc_pvalue_rownames.txt'
-col=pd.read_csv(col_file)
-colnames=list(col['x'])[:500]
-row=pd.read_csv(row_file)
-rownames=list(row['x'])[500:]
-def com_get_pair(df):
-    df.columns=colnames
-    df.index=rownames
-    a=[]
-    for i in range(df.index.size):
-        for j in range(df.columns.size):
-            b=[]
-            if not np.isnan(df.iloc[i][j]):
-                #add the row names
-                b.append(df.iloc[i].name)
-                #add the column names
-                b.append(df.iloc[:,j].name)
-                #add value
-                b.append(df.iloc[i][j])
-                a.append(b)
-    df_df=pd.DataFrame(a)
-    df_df.columns=['coding genes','lncRNA','Pcc']
-    return df_df
-#filter Pcc in top 5%
-pcc_file='/Share2/home/lulab/xixiaochen/training_share2/co_expression/lnc_coding_pcc.txt'
-pcc=pd.read_csv(pcc_file,sep='\t',header=None)
-#filter Pcc in bottom 5%
-pcc=abs(pcc)
-all_pcc=[]
-for i in range(pcc.columns.size):
-    all_pcc.extend(list(pcc.iloc[:,i]))
-all_pcc_se=pd.Series(all_pcc)
-cut_pcc=all_pcc_se.quantile(0.95)
-pcc_cut=pcc[pcc>cut_pcc]
-pcc_df=com_get_pair(pcc_cut)
-adjp_df=com_get_pair(comp_adjp)
-pcc_out_file='/Share2/home/lulab/xixiaochen/training_share2/co_expression/pcc_cut.txt'
-pcc_df.to_csv(pcc_out_file,sep='\t',index=False)
-adjp_out_file='/Share2/home/lulab/xixiaochen/training_share2/co_expression/adjp_cut.txt'
-adjp_df.to_csv(adjp_out_file,sep='\t',index=False)
-```
-
-the get\_gene\_pairs.pl contains:
-
-```perl
-#! /usr/bin/perl
-open I1, "<$ARGV[0]";
-open I2, "<$ARGV[1]";
-open OUT, ">$ARGV[2]";
-my %list;
-while(<I1>){
-    chomp;
-    @data0 = split/\t/,$_;
-    if(/^coding(.*)/){}
-    else{
-        $list{$data0[0].$data0[1]} = $data0[2];
-    }
-}
-while(<I2>){
-    chomp;
-    @data = split/\t/,$_;
-    if(/^coding(.*)/){
-        print OUT "mRNA\tlncRNA\tpcc\tadjp\n";
-    }
-    if(exists $list{$data[0].$data[1]}){
-        $adjp = $list{$data[0].$data[1]};
-        print OUT "$_\t$adjp\n";
-    }
-}        
-close I1;
-close I2;
-close OUT;
-```
-
-In the "python get\_gene\_pairs.py" step, the input files include:
-
-| File name | Description |
-| :--- | :--- |
-| All files in the "~/adjp/" directory | The 5,196 files are the results for adjusted p-values |
-| Pcc\_pvalue\_colnames.txt | Column names for the adjusted p-value matrix |
-| Pcc\_pvalue\_rownames.txt | Row names for the adjusted p-value matrix |
-| lnc\_coding\_pcc.txt | Pcc value matrix, each row represent a protein-coding gene, each column represent a lncRNA |
-
-Please make sure all the input files and the python script are in the same work directory.
-
-The output files looks like:
-
-```bash
-#Bash Shell command:
-head pcc_cut.txt
-#coding genes            lncRNA                    Pcc
-#ENSMUSG00000085431.7	ENSMUSG00000033015.16	1.0
-#ENSMUSG00000085431.7	ENSMUSG00000037910.2	1.0
-#ENSMUSG00000085431.7	ENSMUSG00000038152.4	0.898454912289789
-#ENSMUSG00000085431.7	ENSMUSG00000039545.15	0.940380543474745
-#ENSMUSG00000085431.7	ENSMUSG00000040657.3	1.0
-#ENSMUSG00000085431.7	ENSMUSG00000041674.16	0.8245987116435991
-#Each row show a protein-coding gene & lncRNA gene-gene pair, and their Pcc value.
-
-head adjp_cut.txt
-#coding genes            lncRNA                   Pcc
-#ENSMUSG00000085431.7	ENSMUSG00000033015.16	0.0
-#ENSMUSG00000085431.7	ENSMUSG00000037910.2	0.0
-#ENSMUSG00000085431.7	ENSMUSG00000040657.3	0.0
-#ENSMUSG00000085431.7	ENSMUSG00000055159.7	0.0
-#ENSMUSG00000085431.7	ENSMUSG00000073144.4	0.0
-#ENSMUSG00000085431.7	ENSMUSG00000073652.10	0.0048784147212109
-#Each row show a protein-coding gene & lncRNA gene-gene pair, and their adjusted p-value.
-```
-
-In the "perl get\_gene\_pairs.pl adjp\_cut.txt pcc\_cut.txt gene\_pairs.txt" step, the input files include:
-
-Please make sure all the input files and the perl script are in the same work directory.
-
-| File name | Description |
-| :--- | :--- |
-| pcc\_cut.txt | Pcc values of the "protein-coding gene & lncRNA" gene-gene pairs |
-| adjp\_cut.txt | Adjusted p-value of the "protein-coding gene & lncRNA" gene-gene pairs |
-
-the output file looks like:
-
-```bash
-head gene_pairs.txt 
-#mRNA                    lncRNA                   pcc  adjp
-#ENSMUSG00000085431.7	ENSMUSG00000033015.16	1.0	0.0
-#ENSMUSG00000085431.7	ENSMUSG00000037910.2	1.0	0.0
-#ENSMUSG00000085431.7	ENSMUSG00000040657.3	1.0	0.0
-#ENSMUSG00000085431.7	ENSMUSG00000055159.7	1.0	0.0
-#ENSMUSG00000085431.7	ENSMUSG00000073144.4	1.0	0.0
-#ENSMUSG00000085431.7	ENSMUSG00000073652.10	0.9907736676388159	0.0048784147212109
-#Each row show a protein-coding gene & lncRNA gene-gene pair, and their Pcc value, adjusted p-value.
-```
-
-We could extract the mRNA gene set for GO/KEGG analysis.
-
-## 5) Homework
+## 4) Homework
 Input data:
 ```bash
-/Share2/home/lulab/xixiaochen/training_share2/co_expression/homework_FemaleLiver-01-dataInput.RData
+/home/test/Network/co_expression/homework/homework_FemaleLiver-01-dataInput.RData
 134 samples, 3600 genes; each row represents a sample, each column represents a gene.
 ```
+Please try to construct an automatic network and detect module (Choosing the soft-thresholding power, One-step network construction and module detection) from the homework_FemaleLiver-01-dataInput.RData. Please plot two figures: 1.Analysis of network topology(Scale independence, Mean connectivity) for various soft-thresholding powers, 2.The dendrogram and the module colors underneath.
 
-## 6) Reference
+## 5) Reference
 
 [https://github.com/jmzeng1314/my\_WGCNA](https://github.com/jmzeng1314/my_WGCNA)
 
