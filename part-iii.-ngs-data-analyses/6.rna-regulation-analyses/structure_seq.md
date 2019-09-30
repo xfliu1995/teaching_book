@@ -78,4 +78,7 @@ shapemapper \
    1    g    0    4788    4335    0.000000    0    5206    4666    0.000000    0    nan    0.000000    0.000000    nan    nan    nan    nan
    2    g    0    4837    3405    0.000000    0    5270    3643    0.000000    0    nan    0.000000    0.000000    nan    nan    nan    nan
    ```
-
+   
+   
+## 3\) Homework
+简述structure-seq的原理，查阅文献解释reactivity的含义。
