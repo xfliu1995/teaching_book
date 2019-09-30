@@ -33,8 +33,6 @@ RNAEditor: easy detection of RNA editing events and the introduction of editing 
 download software and annotation files in the "Install" and "Download annotations" page.
 
 ## 5\) Running steps
-
-### \(1\) input
 #### 1. fastq file
 #### 2. configuration file
 A brief look of configuration file
