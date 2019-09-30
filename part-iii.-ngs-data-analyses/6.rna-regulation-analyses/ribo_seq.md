@@ -16,7 +16,9 @@ Ribo-seq是2009年Weissman课题组首次发表的研究细胞内蛋白翻译图
 
 ## 3\) 数据处理
 
-download scripts from [https://github.com/lulab/Ribowave](https://github.com/lulab/Ribowave)
+download scripts from [Ribowave](https://github.com/lulab/Ribowave)
+
+download example data from [example](http://lulab.life.tsinghua.edu.cn/RiboWave/RiboWave_v1.0.tar.gz)
 
 ### \(1\) Requirements
 
@@ -277,3 +279,5 @@ scripts/Ribowave -PD -T 9012445  GSE52799/mRNA/SRR1039761.RPKM -a GSE52799/bedgr
 
 [http://lulab.life.tsinghua.edu.cn/postar/](http://lulab.life.tsinghua.edu.cn/postar/)
 
+## 5\) Homework
+解释TE(translation efficiency)的含义，用Ribo-seq.homework文件夹中的文件计算TE,并思考调研其他方法计算TE。
