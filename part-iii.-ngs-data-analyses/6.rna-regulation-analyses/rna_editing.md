@@ -18,23 +18,53 @@ Editing can modify protein function, generate new protein products and alter gen
 
 ![](../../.gitbook/assets/rna_editing.f4.png)
 
-## 2\) long RNA-seq（RNAEditor）
-
-#### Paper
+## 2\) Paper
 
 RNAEditor: easy detection of RNA editing events and the introduction of editing islands
 
-### \(1\) pipeline
+## 3\) pipeline
 
 ![](../../.gitbook/assets/rna_editing.f5.png)
 
-### \(2\) Website
+## 4\) Website
 
 [http://rnaeditor.uni-frankfurt.de/index.php](http://rnaeditor.uni-frankfurt.de/index.php)
+
 download software and annotation files in the "Install" and "Download annotations" page.
 
-### \(3\) Running steps
+## 5\) Running steps
 
+### \(1\) input
+#### 1. fastq file
+#### 2. configuration file
+A brief look of configuration file
+```
+# This file is used to configure the behaviour of RNAeditor
+
+# Standard input files
+refGenome = ~/rnaEditor_annotations/human/GRCH38/Homo_sapiens.GRCh38.dna.primary_assembly.fa
+gtfFile = ~/rnaEditor_annotations/human/GRCH38/Homo_sapiens.GRCh38.83.gtf
+dbSNP = ~/rnaEditor_annotations/human/GRCH38/dbSNP_ensemble2.vcf
+hapmap = ~/rnaEditor_annotations/human/GRCH38/HAPMAP.vcf
+omni = ~/rnaEditor_annotations/human/GRCH38/1000GenomeProject.vcf
+esp = ~/rnaEditor_annotations/human/GRCH38/ESP.vcf
+aluRegions = ~/rnaEditor_annotations/human/GRCH38/repeats.bed
+output = default
+sourceDir = /usr/local/bin/
+maxDiff = 0.04
+seedDiff = 2
+standCall = 0
+standEmit = 0
+edgeDistance = 3
+intronDistance = 5
+minPts = 5
+eps = 50
+paired = False
+keepTemp = True
+overwrite = False
+threads = 5
+```
+#### 3. starting analysis
 ```text
 RNAEditor -i Fastq-Files [Fastq-Files ...] -c Configuration File
 ```
