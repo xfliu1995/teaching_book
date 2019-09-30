@@ -105,3 +105,6 @@ Fold_change_cutoff=0.59
 
 FDR\_cutoff, PDUI\_cutoff, Fold\_change\_cutoff → Pass filer \(Y nor N\)
 
+## 3\) Homework
+运行示例文件，理解输出文件“DaPars_Test_data_All_Prediction_Results.txt”中每一列的含义，(1)解释PDUI的含义；（2）写脚本过滤adjusted.P_val<=0.05,PDUI_Group_diff>=0.5, PDUI_fold_change>=0.59的作为diff-APA events，和Pass_filter为“Y“筛选出来的diff-APA events做比较。
+
