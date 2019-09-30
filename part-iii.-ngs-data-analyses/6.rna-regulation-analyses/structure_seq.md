@@ -10,6 +10,8 @@ RNA is treated with a SHAPE reagent that reacts at conformationally dynamic nucl
 
 ShapeMapper automates the calculation of RNA structure probing reactivities from mutational profiling \(MaP\) experiments, in which chemical adducts on RNA are detected as internal mutations in cDNA through reverse transcription and read out by massively parallel sequencing.
 
+download scripts and example data from: https://github.com/Weeks-UNC/shapemapper2
+
 ```text
 shapemapper \
 --target TPP.fa \
