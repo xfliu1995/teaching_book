@@ -28,7 +28,7 @@
 ### 3b\) Backup your code with GitHub in Terminal
 
 * **Setup**
-  * [**set up ssh-key**](#ssh-key)  (optinal)
+  * [**set up ssh-key**](#40-setup-ssh-key-optional)  (optinal)
   * **add a setting file:** ~/.gitconfig
 
 ```bash
@@ -107,7 +107,7 @@ git push origin
 
 ### 4) Backup data using rsync and crontab
 
-#### 4.0) Setup ssh key (optional)  {#ssh-key}
+#### 4.0) Setup ssh key (optional)
 
 * (a) Generate SSH key
 
