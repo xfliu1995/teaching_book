@@ -70,7 +70,7 @@ RNAEditor -i sample.fq -c configuration.txt
 ```
 
 ## 6\) Homework
-参照RNAEditor网页上[Documentation](http://rnaeditor.uni-frankfurt.de/documentation.php)页面，理解示例文件运行完的输出结果中sample.vcf和sample.gvf的含义。根据sample.gvf文件，统计RNA编辑位点在基因组上的分布（3‘UTR,intron等各不同区域各有多少RNA editing sites,用柱形图展示）；计算每个RNA编辑位点的editing ratio。
+参照RNAEditor网页上[Documentation](http://rnaeditor.uni-frankfurt.de/documentation.php)页面，理解示例文件运行完的输出结果中sample.vcf和sample.gvf的含义。根据sample.gvf文件，统计RNA编辑位点在基因组上的分布（3‘UTR,intron等各不同区域各有多少RNA editing sites,用柱形图展示）；在sample.gvf最后添加一列，计算每个RNA编辑位点的editing ratio。
 
 ## 7\) Reference
 1. A-to-I RNA editing — immune protector and transcriptome diversifier. Eli Eisenberg, et al. Nature Reviews, 2018.
