@@ -35,13 +35,13 @@ java -jar /BioII/lulab_b/songyabing/motif_analysis/software/BEAM/beam-2.0/BEAM_r
 
 #### visualize motifs with weblogo
 
-##### install weblogo
+**install weblogo**
 
 ```text
 pip install weblogo
 ```
 
-##### visualize structure motifs
+**visualize structure motifs**
 
 ```text
 weblogo -a 'ZAQXSWCDEVFRBGTNHY' -f BEAMready_m1_run1_wl.fa -D fasta \
@@ -68,7 +68,7 @@ weblogo -a 'ZAQXSWCDEVFRBGTNHY' -f BEAMready_m1_run1_wl.fa -D fasta \
 rnamotifs08_motif_finder.pl -positive_seq input_pos_seq.fa -output_dir Output
 ```
 
-##### input
+**input**
 
 Positive sequences - a fasta format file containing the sequences to predict motifs on.
 
@@ -77,7 +77,7 @@ Positive sequences - a fasta format file containing the sequences to predict mot
 ATAAGAGACCACAAGCGACCCGCAGGGCCAGACGTTCTTCGCCGAGAGTCGTCGGGGTTTCCTGCTTCAACAGTGCTTGGACGGAACCCGGCGCTCGTTCCCCACCCCGGCCGGCCGCCCATAGCCAGCCCTCCGTCACCTCTTCACCGCACCCTCGGACTGCCCCAAGGCCCCCGCCGCCGCTCCA
 ```
 
-##### example output
+**example output**
 
 ![](../../.gitbook/assets/structure_motif.rnapromo.png)
 
@@ -85,13 +85,13 @@ ATAAGAGACCACAAGCGACCCGCAGGGCCAGACGTTCTTCGCCGAGAGTCGTCGGGGTTTCCTGCTTCAACAGTGCTTGG
 
 After learning a motif, you can search a database of sequences to find positions that match the motif you learned. To do that you need to first match a secondary structure to each of the input sequences in your database, either using existing structure prediction algorithms, or using some other information.
 
-##### Produce a likelihood score for each sequence in the database.
+**Produce a likelihood score for each sequence in the database.**
 
 ```text
 rnamotifs08_motif_match.pl database.tab -cm model.cm
 ```
 
-###### input
+**input**
 
 The database is then specified in the following format: database.tab
 
@@ -99,7 +99,7 @@ The database is then specified in the following format: database.tab
 seq_1    AUAAGAGACCACAAGCGACCCGCAGGGCCAGACGUUCUUCGCCGAGAGUCGUCGGGGUUUCCUGCUUCAACAGUGCUUGGACGGAACCCGGCGCUCGUUCCCCACCCCGGCCGGCCGCCCAUAGCCAGCCCUCCGUCACCUCUUCACCGCACCCUCGGACUGCCCCAAGGCCCCCGCCGCCGCUCCA    .............((((..(.((.(((((.(((((((((....))))).))))(((((.((((((...(((((((((.((......)).)))))).))).........(((.(((........))).)))..................))).....)))..)))))..)))))..)).).))))...
 ```
 
-###### output
+**output**
 
 ```text
 seq_2:0    19.7698
@@ -114,9 +114,9 @@ seq_6:0    6.81294
 seq_8:0    0.233537
 ```
 
-##### Produce a likelihood score for the best motif position in each sequence in the database, and the position itself.
+**Produce a likelihood score for the best motif position in each sequence in the database, and the position itself.**
 
-###### output
+**output**
 
 ```text
 seq_2:0    19.7698    33      48      UUCAACAGUGUUUGGA        (((((......)))))        <<<<<,,,,,,>>>>>

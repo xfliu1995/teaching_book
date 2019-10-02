@@ -1,7 +1,9 @@
 # 4.1.Co-expression Network
 
 ## Co-expression
-## 0) Background
+
+## 0\) Background
+
 ### WGCNA分析
 
 #### 基本概念
@@ -20,17 +22,17 @@ WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同
 
 第三步得到模块之后可以做很多下游分析：模块的功能富集；模块与性状之间的相关性；模块与样本间的相关系数；找到模块的核心基因；利用关系预测基因功能。
 
-## 1) Pipeline
+## 1\) Pipeline
 
 ![](../../.gitbook/assets/co-expression-pipeline.png)
 
 首先计算基因之间的相关系数，构建基因网络\(correlation network of genes\)，然后将具有相似表达模式的基因划分成模块\(module\)。随后计算各个模块与样本表型数据之间的相关性，对特定的感兴趣的模块分析核心基因\(hub gene，通常是转录因子等关键的调控因子\)，并将特定模块的基因提取出来，进行GO/KEGG等分析。
 
-## 2) Data structure
+## 2\) Data structure
 
-### (1) Getting software & data
+### \(1\) Getting software & data
 
-### (2) Input data
+### \(2\) Input data
 
 输入数据的准备：这里主要是表达矩阵，如果是转录组数据，最好是RPKM值或者其它归一化好的表达量。然后就是临床信息或者其它表型，总之就是样本的属性。
 
@@ -39,7 +41,7 @@ WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同
 | input\_fpkm\_matrix.rds | GSE48213 breast cancer gene expression matrix \(top 5,000\) |
 | data\_traits.rds | 56 cell lines information for the GSM data in GSE48213 |
 
-### (3) Output data
+### \(3\) Output data
 
 | File name | Description |
 | :--- | :--- |
@@ -48,9 +50,9 @@ WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同
 | CytoscapeInput-nodes-brown.txt/CytoscapeInput-nodes-filter-brown.txt | Input file contains network node information for Cytoscape |
 | geneID\_brown.txt | Total gene ID list in specific modules |
 
-## 3) Running steps
+## 3\) Running steps
 
-### (0) Install packages
+### \(0\) Install packages
 
 ```r
 #In R:
@@ -59,12 +61,13 @@ biocLite(c("AnnotationDbi", "impute","GO.db", "preprocessCore", "multtest"))
 install.packages(c("WGCNA", "stringr", "reshape2"))
 ```
 
-### (1) Library the WGCNA package
+### \(1\) Library the WGCNA package
 
 ```r
 library(WGCNA)
 ```
-### (2) Import data
+
+### \(2\) Import data
 
 ```r
 #In R:
@@ -117,8 +120,7 @@ A brief look of the datTraits:
 #### The rownames of datExpr and datTraits are matched.
 ```
 
-
-### (3) Pick the soft thresholding power
+### \(3\) Pick the soft thresholding power
 
 ```r
 #In R:
@@ -188,7 +190,7 @@ sft$powerEstimate
 #best_beta = sft$powerEstimate
 ```
 
-### (4) One-step network construction and module detection
+### \(4\) One-step network construction and module detection
 
 把输入的表达矩阵的**几千个基因归类成了几十个模块。**大体思路：计算基因间的邻接性，根据邻接性计算基因间的相似性，然后推出基因间的相异性系数，并据此得到基因间的系统聚类树。
 
@@ -216,7 +218,7 @@ table(net$colors)
 #### table(net$colors) show the total modules and genes in each modules. The '0' means genes do not belong to any module.
 ```
 
-### (5) Module visualization
+### \(5\) Module visualization
 
 这里用不同的颜色来代表那些所有的模块，其中灰色默认是无法归类于任何模块的那些基因，如果灰色模块里面的基因太多，那么前期对表达矩阵挑选基因的步骤可能就不太合适。
 
@@ -251,7 +253,7 @@ dev.off()
 
 ![](../../.gitbook/assets/module_visualization.png)
 
-### (6) Quantify module similarity by eigengene correlation
+### \(6\) Quantify module similarity by eigengene correlation
 
 ```r
 #In R:
@@ -275,7 +277,7 @@ dev.off()
 
 The top part of this plot represents the eigengene dendrogram and the lower part of this plot represents the eigengene adjacency heatmap.
 
-### (7) Find the relationships between modules and traits
+### \(7\) Find the relationships between modules and traits
 
 模块与性状之间的关系
 
@@ -320,11 +322,11 @@ dev.off()
 
 从上图已经可以看到跟乳腺癌分类相关的基因模块了，包括"Basal" "Claudin-low" "Luminal" "Non-malignant" "unknown" 这5类所对应的不同模块的基因列表。可以看到每一种乳腺癌都有跟它强烈相关的模块，可以作为它的表达signature，模块里面的基因可以拿去做下游分析。我们看到Luminal表型跟棕色的模块相关性高达0.86，而且极其显著的相关，所以值得我们挖掘，这个模块里面的基因是什么，为什么如此的相关呢？
 
-### (8) Select specific module
+### \(8\) Select specific module
 
 We choose the "brown" module in trait “Luminal” for further analyses.
 
-#### (8.1) Intramodular connectivity, module membership, and screening for intramodular hub genes
+#### \(8.1\) Intramodular connectivity, module membership, and screening for intramodular hub genes
 
 ```r
 #In R:
@@ -358,7 +360,7 @@ hubgenes
 #[1] "ENSG00000124664" "ENSG00000129514" "ENSG00000143578"
 ```
 
-#### (8.2) Export the network
+#### \(8.2\) Export the network
 
 ```r
 #In R:
@@ -424,7 +426,7 @@ head CytoscapeInput-nodes-filter-brown.txt
 #ENSG00000129514    NA    brown
 ```
 
-#### (8.3) Extract gene IDs in specific module
+#### \(8.3\) Extract gene IDs in specific module
 
 ```r
 #In R:
@@ -452,16 +454,18 @@ head geneID_brown.txt
 
 We could use the gene ID list for GO/KEGG analysis.
 
+## 4\) Homework
 
-## 4) Homework
 Input data:
+
 ```bash
 /home/test/Network/co_expression/homework/homework_FemaleLiver-01-dataInput.RData
 134 samples, 3600 genes; each row represents a sample, each column represents a gene.
 ```
-Please try to construct an automatic network and detect module (Choosing the soft-thresholding power, One-step network construction and module detection) from the homework_FemaleLiver-01-dataInput.RData. Please plot two figures: 1.Analysis of network topology(Scale independence, Mean connectivity) for various soft-thresholding powers, 2.The dendrogram and the module colors underneath.
 
-## 5) Reference
+Please try to construct an automatic network and detect module \(Choosing the soft-thresholding power, One-step network construction and module detection\) from the homework\_FemaleLiver-01-dataInput.RData. Please plot two figures: 1.Analysis of network topology\(Scale independence, Mean connectivity\) for various soft-thresholding powers, 2.The dendrogram and the module colors underneath.
+
+## 5\) Reference
 
 [https://github.com/jmzeng1314/my\_WGCNA](https://github.com/jmzeng1314/my_WGCNA)
 

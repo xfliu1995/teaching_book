@@ -6,11 +6,11 @@
 
 RNA is treated with a SHAPE reagent that reacts at conformationally dynamic nucleotides. During reverse transcription, polymerase reads through chemical adducts in the RNA and incorporates a nucleotide noncomplementary to the original sequence \(red\) into the cDNA. The resulting cDNA is sequenced using any massively parallel approach to create a mutational profile. Sequencing reads are aligned to a reference sequence, and nucleotide-resolution mutation rates are calculated, corrected for background and normalized, producing a standard SHAPE reactivity profile. SHAPE reactivities can then be used to model secondary structures, visualize competing and alternative structures, or quantify any process or function that modulates local nucleotide RNA dynamics.
 
-## 2\) running steps (shapemapper)
+## 2\) running steps \(shapemapper\)
 
 ShapeMapper automates the calculation of RNA structure probing reactivities from mutational profiling \(MaP\) experiments, in which chemical adducts on RNA are detected as internal mutations in cDNA through reverse transcription and read out by massively parallel sequencing.
 
-download scripts and example data from: https://github.com/Weeks-UNC/shapemapper2
+download scripts and example data from: [https://github.com/Weeks-UNC/shapemapper2](https://github.com/Weeks-UNC/shapemapper2)
 
 ```text
 shapemapper \
@@ -78,7 +78,8 @@ shapemapper \
    1    g    0    4788    4335    0.000000    0    5206    4666    0.000000    0    nan    0.000000    0.000000    nan    nan    nan    nan
    2    g    0    4837    3405    0.000000    0    5270    3643    0.000000    0    nan    0.000000    0.000000    nan    nan    nan    nan
    ```
-   
-   
+
 ## 3\) Homework
+
 简述structure-seq的原理，查阅文献解释reactivity的含义。
+

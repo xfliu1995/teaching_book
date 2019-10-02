@@ -8,9 +8,9 @@
 
 Alternative polyadenylation \(APA\) leading to the production of two mRNA isoforms with different 3ʹ untranslated regions \(3ʹ UTRs\)The dynamic usage of the 3’untranslated region \(3’UTR\) resulting from alternative polyadenylation \(APA\) is emerging as a pervasive mechanism for regulating mRNA diversity, stability and translation. ![](../../.gitbook/assets/apa.f2.jpg)
 
-## 3\) Data Processing (DaPars)
+## 3\) Data Processing \(DaPars\)
 
-### \(1\) Generate region annotation 
+### \(1\) Generate region annotation
 
 python DaPars\_Extract\_Anno.py -b gene.bed -s symbol\_map.txt -o extracted\_3UTR.bed
 
@@ -40,13 +40,13 @@ python DaPars_Extract_Anno.py -b hg19_refseq_whole_gene.bed -s hg19_4_19_2012_Re
 
 #### output
 
-   hg19\_refseq\_extracted\_3UTR.bed
+hg19\_refseq\_extracted\_3UTR.bed
 
-   ```text
+```text
    chr14    50792327    50792946    NM_001003805|ATP5S|chr14|+    0    +
    chr9    95473645    95477745    NM_001003800|BICD2|chr9|-    0    -
    chr11    92623657    92629635    NM_001008781|FAT3|chr11|+    0    +
-   ```
+```
 
 ### \(2\) Main function to get final result
 
@@ -106,5 +106,6 @@ Fold_change_cutoff=0.59
 FDR\_cutoff, PDUI\_cutoff, Fold\_change\_cutoff → Pass filer \(Y nor N\)
 
 ## 3\) Homework
-运行示例文件，理解输出文件“DaPars_Test_data_All_Prediction_Results.txt”中每一列的含义，(1)解释PDUI的含义；（2）写脚本过滤adjusted.P_val<=0.05,PDUI_Group_diff>=0.5, PDUI_fold_change>=0.59的作为diff-APA events，和Pass_filter为“Y“筛选出来的diff-APA events做比较。
+
+运行示例文件，理解输出文件“DaPars\_Test\_data\_All\_Prediction\_Results.txt”中每一列的含义，\(1\)解释PDUI的含义；（2）写脚本过滤adjusted.P\_val&lt;=0.05,PDUI\_Group\_diff&gt;=0.5, PDUI\_fold\_change&gt;=0.59的作为diff-APA events，和Pass\_filter为“Y“筛选出来的diff-APA events做比较。
 

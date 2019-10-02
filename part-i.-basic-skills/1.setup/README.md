@@ -18,7 +18,7 @@ Learn how to do our jobs efficiently and reproducibly.
 
 ## 1\) Learn an Editor
 
-### A. [Vim](http://www.vim.org/) 
+### A. [Vim](http://www.vim.org/)
 
 > You can start from a simple version of Vim, like [MacVim](https://www.vim.org/download.php#mac).
 >
@@ -29,7 +29,7 @@ Learn how to do our jobs efficiently and reproducibly.
 > 3. Feel Better, Stronger, Faster
 > 4. Use superpowers of vim
 
-### B. [Atom](https://github.com/atom) 
+### B. [Atom](https://github.com/atom)
 
 > A hackable text editor for the 21st century. See [how to use Atom](https://www.evernote.com/l/ABJeb9FdBc1BC6AZSgWh4Ujc_StdcFYl-kw).
 
@@ -39,7 +39,7 @@ Learn how to do our jobs efficiently and reproducibly.
 
 ## 3\)  Backup your data regularly
 
-**It's necessary to backup data regularly.** 
+**It's necessary to backup data regularly.**
 
 * Here is a tutorial for data backup methods and tips: [How to backup](../../appendix/appendix-iii.-how-to-backup.md)
 
@@ -49,3 +49,4 @@ Learn how to do our jobs efficiently and reproducibly.
 
 * 安装和使用docker
 * 学习和练习一种editor
+

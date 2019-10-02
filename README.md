@@ -4,14 +4,12 @@ description: 生物信息学实践教程 - 基础篇 (2019版)
 
 # Bioinformatics Tutorial - Basic
 
-
-
 ![](.gitbook/assets/intro.png)
 
 ## Teaching Philosophy
 
 {% hint style="info" %}
-**[🎦](https://www.bilibili.com/video/av67132141?pop_share=1) Study and Practice \| 格物致知 知行合一**
+[**🎦**](https://www.bilibili.com/video/av67132141?pop_share=1) **Study and Practice \| 格物致知 知行合一**
 
 We teach professional skills in bioinformatics. These skills are not just running software. They will give you freedom of exploring various real data.
 {% endhint %}
@@ -47,10 +45,9 @@ We teach professional skills in bioinformatics. These skills are not just runnin
 
 ## Contributors
 
-Yumin Zhu<sup>1</sup>, Gang Xu<sup>1</sup>, Xiaocheng Xi, Xupeng Chen, Zhuoer Dong, Xi Hu, Jingyi Cao, Siqi Wang and Zhi J. Lu\*
+Yumin Zhu1, Gang Xu1, Xiaocheng Xi, Xupeng Chen, Zhuoer Dong, Xi Hu, Jingyi Cao, Siqi Wang and Zhi J. Lu\*
 
-> <sup>1</sup>Contributed Equally
-> \*Corresponding to Zhi J. Lu
+> 1Contributed Equally \*Corresponding to Zhi J. Lu
 
 ## Contact Us
 

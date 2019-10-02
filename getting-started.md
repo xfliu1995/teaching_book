@@ -41,17 +41,14 @@
 
 > 例如， GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作，所有相对目录均是相对于该目录。
 
-
 ## 3\) Homework
 
-1. 注册一个GitHub账户，创建一个`repo`(仓库)，写好`README.md`。尝试使用Git(初学者可以用github的[桌面版软件](https://desktop.github.com/)）管理自己的代码并同步GitHub云端和本地文件。
+1. 注册一个GitHub账户，创建一个`repo`\(仓库\)，写好`README.md`。尝试使用Git\(初学者可以用github的[桌面版软件](https://desktop.github.com/)）管理自己的代码并同步GitHub云端和本地文件。
 2. 尝试使用Markdown语言，熟悉其语法, 利用Markdown语言和github page功能写一个自己的网页，例如： [https://lulab.github.io](http://lulab.github.io)
 
 ## 4\) Learning Materials
 
 > see more learning materials in [Appendix I. Keep Learning](appendix/appendix1.keep-learning.md)
-
-
 
 ## 休息一会
 

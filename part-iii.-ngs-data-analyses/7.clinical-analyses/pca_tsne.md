@@ -58,9 +58,9 @@ from figure_template import display_dataframe, embed_pdf_figure, embed_pdf_pages
 * 数据的降维和可视化
 
 [PCA](https://zhuanlan.zhihu.com/p/37777074)  
- [SVD](https://mp.weixin.qq.com/s/Dv51K8JETakIKe5dPBAPVg)  
- [Hinton理解的PCA](https://www.jianshu.com/p/76c64cd0b5ad)  
- [PCA和SVD的区别与联系](https://blog.csdn.net/wangjian1204/article/details/50642732)
+[SVD](https://mp.weixin.qq.com/s/Dv51K8JETakIKe5dPBAPVg)  
+[Hinton理解的PCA](https://www.jianshu.com/p/76c64cd0b5ad)  
+[PCA和SVD的区别与联系](https://blog.csdn.net/wangjian1204/article/details/50642732)
 
 PCA的主要思想是将n维特征映射到k维上，这k维是新的彼此正交的特征，也被称为主成分。PCA的工作就是从原始的空间中顺序地找一组相互正交的坐标轴，新的坐标轴的选择与数据本身密切相关。其中，第一个新坐标轴选择是原始数据中方差最大的方向，第二个新坐标轴选取是与第一个坐标轴正交的平面中使得方差最大的，第三个轴是与第1,2个轴正交的平面中方差最大的。依次类推，可以得到n个这样的坐标轴。通过这种方式获得的新的坐标轴。
 
@@ -406,9 +406,9 @@ PCA_plot_sns(ax[1], input_table.T,year_class,'PCA')
 ### \(2\) t-SNE
 
 [https://www.jiqizhixin.com/articles/2017-11-13-7](https://www.jiqizhixin.com/articles/2017-11-13-7)  
- [http://www.datakit.cn/blog/2017/02/05/t\_sne\_full.html](http://www.datakit.cn/blog/2017/02/05/t_sne_full.html)  
- [http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/](http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/)  
- [t-SNE使用中的问题](http://bindog.github.io/blog/2018/07/31/t-sne-tips/)
+[http://www.datakit.cn/blog/2017/02/05/t\_sne\_full.html](http://www.datakit.cn/blog/2017/02/05/t_sne_full.html)  
+[http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/](http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/)  
+[t-SNE使用中的问题](http://bindog.github.io/blog/2018/07/31/t-sne-tips/)
 
 ```python
 IFrame('http://bindog.github.io/blog/2018/07/31/t-sne-tips/', width=800, height=450)

@@ -2,13 +2,11 @@
 
 ## Table of Contents
 
-- [6.1.RNA editing](rna_editing.md)
-- [6.2.APA (Alternative Polyadenylation)](apa.md)
-- [6.3.Ribo-seq](ribo_seq.md)
-- [6.4.Structure-seq](structure_seq.md)
-- [6.5.Modification (m6A-seq)](6.5.modification-m6a-seq.md)
-
-
+* [6.1.RNA editing](rna_editing.md)
+* [6.2.APA \(Alternative Polyadenylation\)](apa.md)
+* [6.3.Ribo-seq](ribo_seq.md)
+* [6.4.Structure-seq](structure_seq.md)
+* [6.5.Modification \(m6A-seq\)](6.5.modification-m6a-seq.md)
 
 ## Files Needed
 
@@ -23,12 +21,11 @@ ls
 
 > 本教程docker使用方式：
 >
-> - 1) 运行容器:  `docker exec -it bioinfo_tsinghua bash`
-> - 2) 进行Linux系统的相关操作
-> - 3) 退出容器：`exit`
-
-
+> * 1\) 运行容器:  `docker exec -it bioinfo_tsinghua bash`
+> * 2\) 进行Linux系统的相关操作
+> * 3\) 退出容器：`exit`
 
 ### 方法2: 直接下载
 
-- 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_III/)
+* 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_III/)
+
