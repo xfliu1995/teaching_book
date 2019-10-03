@@ -28,12 +28,16 @@
 
 ## Part III. NGS DATA ANALYSES
 
+### Basic
+
 * [1.Mapping](part-iii.-ngs-data-analyses/1.mapping.md)
 * [2.RNA-seq](part-iii.-ngs-data-analyses/2.rna-seq/README.md)
   * [2.1 Differential Expression](part-iii.-ngs-data-analyses/2.rna-seq/2.1.differential-expression.md)
   * [2.2 Alternative Splicing](part-iii.-ngs-data-analyses/2.rna-seq/2.2.alternative-splicing.md)
 * [3.ChIP-seq](part-iii.-ngs-data-analyses/3.chip-seq.md)
-* [More Analyses](part-iii.-ngs-data-analyses/4.more-analyses.md)
+
+### Advanced
+
 * [4.Network](part-iii.-ngs-data-analyses/4.network/README.md)
   * [4.1.Co-expression Network](part-iii.-ngs-data-analyses/4.network/co_expression.md)
   * [4.2.miRNA Targets](part-iii.-ngs-data-analyses/4.network/4.2.mirna-targets.md)
