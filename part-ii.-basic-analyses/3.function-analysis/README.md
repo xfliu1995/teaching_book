@@ -16,11 +16,13 @@
 
 更多内容请参考 [Ten Years of Pathway Analysis: Current Approaches and Outstanding Challenges](https://doi.org/10.1371/journal.pcbi.1002375)
 
-## Files Needed
+## Files Needed {#files}
 
 ### 方法1: 使用docker
 
-加载完我们提供的image后，文件都已经准备好了，可以这样查看：
+本章中， 3.1 GO 和 3.2 KEGG都不需要docker就能练习，可以直接去“**方法2**”直接下载所需文件。
+
+3.3 GSEA 可以加载完我们提供的image后，文件都已经准备好了，可以这样查看：
 
 ```bash
 cd /home/test/
@@ -35,5 +37,5 @@ ls
 
 ### 方法2: 直接下载
 
-* 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_II)
+如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_II)
 
