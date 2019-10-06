@@ -13,7 +13,7 @@
 | PART III.4.network | [bioinfo\_PARTIII4.network.tar.gz](appendix-iv.-teaching.md) | R 3.5.1; miRanda-aug2010; psRobot v1.2; bedtools v2.27.1 |
 | PART III.5.motif |  | R 3.5.1; meme 4.11.4; RNAfold 2.4.8; BEAM; RNApromo |
 | PART III.6.RNA Regulation Analysis 1 |  | RNAEditor;perl v5.26.1; DaPars; Ribowave; R 3.5.1; bedtools v2.25.0; shapemapper |
-| PART III.6.RNA Regulation Analysis 2 | [bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz](https://cloud.tsinghua.edu.cn/f/d13efde9c3e9413ba4ee/) | perl v5.26.1; DaPars; Ribowave; R 3.5.1; bedtools v2.25.0; shapemapper |
+| PART III.6.RNA Regulation Analysis 2 | [bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/) | perl v5.26.1; DaPars; Ribowave; R 3.5.1; bedtools v2.25.0; shapemapper |
 | PART III.7.Clinical Analysis |  | R 3.5.1; Python 2.7 |
 |  |  |  |
 
