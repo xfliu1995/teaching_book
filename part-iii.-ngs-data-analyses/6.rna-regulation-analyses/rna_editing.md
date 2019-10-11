@@ -44,14 +44,14 @@ A brief look of configuration file
 # This file is used to configure the behaviour of RNAeditor
 
 # Standard input files
-refGenome = ~/rnaEditor_annotations/human/GRCH38/Homo_sapiens.GRCh38.dna.primary_assembly.fa
-gtfFile = ~/rnaEditor_annotations/human/GRCH38/Homo_sapiens.GRCh38.83.gtf
-dbSNP = ~/rnaEditor_annotations/human/GRCH38/dbSNP_ensemble2.vcf
-hapmap = ~/rnaEditor_annotations/human/GRCH38/HAPMAP.vcf
-omni = ~/rnaEditor_annotations/human/GRCH38/1000GenomeProject.vcf
-esp = ~/rnaEditor_annotations/human/GRCH38/ESP.vcf
-aluRegions = ~/rnaEditor_annotations/human/GRCH38/repeats.bed
-output = default
+refGenome = /data2/Homo_sapiens.GRCh38.dna.primary_assembly.fa
+gtfFile = /data2/Homo_sapiens.GRCh38.83.gtf
+dbSNP = /data2/dbSNP.vcf
+hapmap = /data2/HAPMAP.vcf
+omni = /data2/1000GenomeProject.vcf
+esp = /data2/ESP.vcf
+aluRegions = /data2/Repeats.bed
+output = /apps/RNAEditor/output/chr1
 sourceDir = /usr/local/bin/
 maxDiff = 0.04
 seedDiff = 2
@@ -70,7 +70,11 @@ threads = 5
 ### 3. starting analysis
 
 ```text
-RNAEditor -i sample.fq -c configuration.txt
+cd /home/test
+mkdir /apps/RNAEditor/output
+cd /apps/RNAEditor
+RNAEditor.py -i /data/chr1.fq  -c /data/config
+mv /apps/RNAEditor/output/ /home/test
 ```
 
 ## 6\) Homework
