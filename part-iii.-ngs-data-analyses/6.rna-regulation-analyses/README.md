@@ -24,7 +24,7 @@ docker exec -it rnaeditor bash
 cd /home/test
 ```
 
-6.2 APA, Ribo-seq, Structure-seq
+6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq
 下载 [bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/)
 
 启动新的docker.
