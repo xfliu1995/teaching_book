@@ -9,7 +9,7 @@
 Alternative polyadenylation \(APA\) leading to the production of two mRNA isoforms with different 3ʹ untranslated regions \(3ʹ UTRs\)The dynamic usage of the 3’untranslated region \(3’UTR\) resulting from alternative polyadenylation \(APA\) is emerging as a pervasive mechanism for regulating mRNA diversity, stability and translation. ![](../../.gitbook/assets/apa.f2.jpg)
 
 ## 3\) Data Processing \(DaPars\)
-[启动 6.2 APA Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
+[启动 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
 ```sh
 cd /home/test/rna_regulation/apa
 ```
