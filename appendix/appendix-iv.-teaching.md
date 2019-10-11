@@ -12,7 +12,7 @@
 | PART I + II + PART III.1-3 | [bioinfo\_PartI-PartII-PartIII1-3.tar.gz](https://cloud.tsinghua.edu.cn/f/d13efde9c3e9413ba4ee/) | BLAST 2.6.0+; bowtie 1.0.0; samtools 1.7 \(using htslib 1.7-2\); TopHat v2.0.9; cufflinks v2.1.1; cuffmerge v2.1.1; cuffdiff v2.1.1; R 3.5.1; perl v5.26.1; Python 2.7; bamtools 1.0.2; java 1.8.0\_181; rMATS-turbo-Linux-UCS4 v3.1.0; homer v4.10.3； |
 | PART III.4.network | [bioinfo\_PARTIII4.network.tar.gz](appendix-iv.-teaching.md) | R 3.5.1; miRanda-aug2010; psRobot v1.2; bedtools v2.27.1 |
 | PART III.5.motif |  | R 3.5.1; meme 4.11.4; RNAfold 2.4.8; BEAM; RNApromo |
-| PART III.6.RNA Regulation Analysis 1 |  | RNAEditor |
+| PART III.6.RNA Regulation Analysis 1 | [bioinfo_rnaeditor.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/) | RNAEditor |
 | PART III.6.RNA Regulation Analysis 2 | [bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/) | perl v5.26.1; DaPars; Ribowave; R 3.5.1; bedtools v2.25.0; shapemapper |
 | PART III.7.Clinical Analysis |  | R 3.5.1; Python 2.7 |
 |  |  |  |
