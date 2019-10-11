@@ -12,17 +12,29 @@
 
 ### 方法1: 使用docker
 
-加载完我们提供的image后，文件都已经准备好了，可以这样查看：
+6.1 RNA Editing
+下载 [bioinfo_rnaeditor.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/)
+
+启动新的docker.
 
 ```bash
-cd /home/test/
-ls
+docker load -i ~/Desktop/bioinfo_rnaeditor.tar.gz
+docker run --name=rnaeditor -dt  -h bioinfo_docker --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/data2 gangxu/rnaeditor:1.4
+docker exec -it rnaeditor bash
+cd /home/test
 ```
 
-> 本教程docker使用方式：
->
-> * 1\) 运行容器:  `docker exec -it bioinfo_tsinghua bash`
-> * 2\) 进行Linux系统的相关操作
+6.2 APA, Ribo-seq, Structure-seq
+下载 [bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/)
+
+启动新的docker.
+
+```bash
+docker load -i ~/Desktop/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
+docker run --name=rnaregulation -dt  -h bioinfo_docker --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share gangxu/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure:latest
+docker exec -it rnaregulation bash
+cd /home/test
+```
 > * 3\) 退出容器：`exit`
 
 ### 方法2: 直接下载
