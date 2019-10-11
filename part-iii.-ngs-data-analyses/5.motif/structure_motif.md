@@ -10,7 +10,7 @@
 
 ### \(2\) BEAM
 
-[http://beam.uniroma2.it/home](http://beam.uniroma2.it/home)
+[http://www.beam.uniroma2.it](http://www.beam.uniroma2.it)
 
 #### Use RNAfold to get dot-bracket
 
