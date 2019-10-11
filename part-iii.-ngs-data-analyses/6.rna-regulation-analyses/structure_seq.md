@@ -8,6 +8,13 @@ RNA is treated with a SHAPE reagent that reacts at conformationally dynamic nucl
 
 ## 2\) running steps \(shapemapper\)
 
+[启动 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
+```sh
+cd /home/test/rna_regulation/structure_seq
+
+cd example_data
+```
+
 ShapeMapper automates the calculation of RNA structure probing reactivities from mutational profiling \(MaP\) experiments, in which chemical adducts on RNA are detected as internal mutations in cDNA through reverse transcription and read out by massively parallel sequencing.
 
 download scripts and example data from: [https://github.com/Weeks-UNC/shapemapper2](https://github.com/Weeks-UNC/shapemapper2)
@@ -17,11 +24,10 @@ shapemapper \
 --target TPP.fa \
 --name "example-results" \
 --overwrite \
+--min-depth 4000 \
 --modified --folder TPPplus \
 --untreated --folder TPPminus \
---star-aligner
---verbose
-#--denatured --folder TPPdenat
+--denatured --folder TPPdenat
 ```
 
 ### \(1\) input
