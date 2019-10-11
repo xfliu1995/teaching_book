@@ -19,7 +19,10 @@
 
 ```bash
 docker load -i ~/Desktop/bioinfo_rnaeditor.tar.gz
-docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/data2 gangxu/rnaeditor:1.4
+# 解压数据 (或者双击解压)
+unzip data2.zip
+
+docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v ~/Desktop/data2:/data2 gangxu/rnaeditor:1.4
 docker exec -it rnaeditor bash
 cd /home/test
 ```
