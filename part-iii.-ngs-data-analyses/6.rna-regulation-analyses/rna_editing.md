@@ -34,6 +34,8 @@ download software and annotation files in the "Install" and "Download annotation
 
 ## 5\) Running steps
 
+[启动 6.1 RNA Editing Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
+
 ### 1. fastq file
 
 ### 2. configuration file
