@@ -278,3 +278,8 @@ output
 
 download the example input files from [sequence\_motif](https://github.com/YuminTHU/training_class/tree/master/files/sequence_motif)
 
+## 3\) Homework
+1. 理解“concatenate sequences of the same 3'UTR”的含义，并找出一个具体的gene的3’UTR当做例子，解释这一步实现的效果。
+2. 自己写一个脚本实现“concatenate sequences of the same 3'UTR”这一步，并以上面找到的具体gene的3'UTR当做示例，展示输入文件，输出文件，及运行脚本。
+
+
