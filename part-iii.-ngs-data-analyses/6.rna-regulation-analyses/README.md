@@ -13,7 +13,7 @@
 ### 方法1: 使用docker
 
 6.1 RNA Editing
-下载 [bioinfo_rnaeditor.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/)
+下载 [bioinfo_rnaeditor.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/) 和 [data2.zip](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/)
 
 启动新的docker.
 
