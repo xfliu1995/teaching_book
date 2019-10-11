@@ -19,7 +19,7 @@
 
 ```bash
 docker load -i ~/Desktop/bioinfo_rnaeditor.tar.gz
-docker run --name=rnaeditor -dt  -h bioinfo_docker --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/data2 gangxu/rnaeditor:1.4
+docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/data2 gangxu/rnaeditor:1.4
 docker exec -it rnaeditor bash
 cd /home/test
 ```
@@ -31,7 +31,7 @@ cd /home/test
 
 ```bash
 docker load -i ~/Desktop/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
-docker run --name=rnaregulation -dt  -h bioinfo_docker --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share gangxu/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure:latest
+docker run --name=rnaregulation -dt -h bioinfo_docker --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share gangxu/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure:latest
 docker exec -it rnaregulation bash
 cd /home/test
 ```
