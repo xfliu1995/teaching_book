@@ -13,7 +13,7 @@
 ### 方法1: 使用docker
 
 6.1 RNA Editing
-下载 [bioinfo_rnaeditor.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/) 和 [data2.zip](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/)
+下载 [bioinfo_rnaeditor.tar.gz](https://lulab2.gitbook.io/teaching/appendix/appendix-iv.-teaching#teaching-docker) 和 [data2.zip](https://lulab2.gitbook.io/teaching/appendix/appendix-iv.-teaching#teaching-docker)
 
 启动新的docker.
 
@@ -30,7 +30,7 @@ cd /home/test
 > *  退出容器：`exit`
 
 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq
-下载 [bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/)
+下载 [bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz](https://lulab2.gitbook.io/teaching/appendix/appendix-iv.-teaching#teaching-docker)
 
 启动新的docker.
 
