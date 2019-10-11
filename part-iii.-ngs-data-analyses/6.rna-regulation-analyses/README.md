@@ -21,8 +21,8 @@
 docker load -i ~/Desktop/bioinfo_rnaeditor.tar.gz
 # 解压数据 (或者双击解压)
 unzip data2.zip
-
-docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v ~/Desktop/data2:/data2 gangxu/rnaeditor:1.4
+#文件目录为/Users/xugang/Downloads/data2,启动时，挂载目录。
+docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v /Users/xugang/Downloads/data2:/data2 gangxu/rnaeditor:1.4
 docker exec -it rnaeditor bash
 cd /home/test
 ```
