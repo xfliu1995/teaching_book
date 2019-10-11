@@ -23,6 +23,7 @@ docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v ~/
 docker exec -it rnaeditor bash
 cd /home/test
 ```
+> *  退出容器：`exit`
 
 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq
 下载 [bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/)
@@ -35,7 +36,7 @@ docker run --name=rnaregulation -dt -h bioinfo_docker --restart unless-stopped -
 docker exec -it rnaregulation bash
 cd /home/test
 ```
-> * 3\) 退出容器：`exit`
+> *  退出容器：`exit`
 
 ### 方法2: 直接下载
 
