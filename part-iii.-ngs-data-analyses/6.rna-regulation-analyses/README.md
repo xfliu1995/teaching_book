@@ -22,7 +22,11 @@ docker load -i ~/Desktop/bioinfo_rnaeditor.tar.gz
 # 解压数据 (或者双击解压)
 unzip data2_part1.zip
 unzip data2_part2.zip
+
 #将文件夹中的data2文件合并。
+mv data2_part1/data2/ /Users/xugang/Downloads/data2
+mv data2_part2/dbSNP.vcf* /Users/xugang/Downloads/data2
+
 #文件目录为/Users/xugang/Downloads/data2,启动时，挂载目录。
 #自己运行时记得改为自己的目录地址。
 docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v /Users/xugang/Downloads/data2:/data2 gangxu/rnaeditor:1.4
