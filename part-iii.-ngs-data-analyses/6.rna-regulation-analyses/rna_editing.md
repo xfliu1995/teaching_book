@@ -46,13 +46,13 @@ A brief look of configuration file
 # This file is used to configure the behaviour of RNAeditor
 
 # Standard input files
-refGenome = /data2/Homo_sapiens.GRCh38.dna.primary_assembly.fa
-gtfFile = /data2/Homo_sapiens.GRCh38.83.gtf
-dbSNP = /data2/dbSNP.vcf
-hapmap = /data2/HAPMAP.vcf
-omni = /data2/1000GenomeProject.vcf
-esp = /data2/ESP.vcf
-aluRegions = /data2/Repeats.bed
+refGenome = /home/test/data/Homo_sapiens.GRCh38.ch1.fa
+gtfFile = /home/test/data/Homo_sapiens.GRCh38.chr1.gtf
+dbSNP = /home/test/data/dbSNP.vcf.new
+hapmap = /home/test/data/HAPMAP.vcf
+omni = /home/test/data/1000GenomeProject.vcf
+esp = /home/test/data/ESP.chr1.vcf
+aluRegions = /home/test/data/Repeats.chr1.bed
 output = /apps/RNAEditor/output/chr1
 sourceDir = /usr/local/bin/
 maxDiff = 0.04
@@ -72,11 +72,11 @@ threads = 5
 ### 3. starting analysis
 
 ```text
-cd /home/test
+rm -rf /apps/RNAEditor/output
 mkdir /apps/RNAEditor/output
 cd /apps/RNAEditor
-RNAEditor.py -i /data/chr1.fq  -c /data/config
-mv /apps/RNAEditor/output/ /home/test
+RNAEditor.py -i /home/test/chr1.fq  -c /home/test/config_new
+mv /apps/RNAEditor/output/ /home/test/out_new
 ```
 
 ## 6\) Homework
