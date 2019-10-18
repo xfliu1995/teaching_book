@@ -34,7 +34,7 @@ reshape, ggplot2, rhdf5, methods, wmtsa, parallel
 [启动 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
 ```sh
 cd /home/test/rna_regulation/ribo-wave
-PATH=/home/test/software/bedtools2/bin:$PATH
+export PATH=/home/test/software/bedtools2/bin:$PATH
 ```
 
 #### 0. create annotation(已经完成，此步耗时较长，建议直接使用已经提前建好的注释文件)
