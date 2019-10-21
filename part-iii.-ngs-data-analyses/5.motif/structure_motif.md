@@ -69,3 +69,5 @@ weblogo -a 'ZAQXSWCDEVFRBGTNHY' -f BEAMready_m1_run1_wl.fa -D fasta \
 
 download the example input files from [structure\_motif](https://github.com/YuminTHU/training_class/tree/master/files/structure_motif)
 
+## 3\) running steps
+解释可视化的structure motif中不同字符的含义。可参考相应的文献或是网站。
