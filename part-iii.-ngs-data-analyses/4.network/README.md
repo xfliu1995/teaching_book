@@ -31,6 +31,14 @@ ls
 > * 2\) 进行Linux系统的相关操作
 > * 3\) 退出容器：`exit`
 
+4.2 miRNA target
+
+```sh
+
+docker run -dt --name mirna --restart unless-stopped -v ~/Downloads/data:/data mirna_targets:v0.1
+
+```
+
 ### 方法2: 直接下载
 
 * 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_III/4.network)
