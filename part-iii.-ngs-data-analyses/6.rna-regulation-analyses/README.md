@@ -35,7 +35,7 @@ cd /home/test
 ```bash
 docker load -i ~/Desktop/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
 docker run --name=rnaregulation -dt -h bioinfo_docker --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share gangxu/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure:latest
-docker exec -it rnaregulation bash
+docker exec -u root -it rnaregulation bash
 cd /home/test/rna_regulation
 ```
 > *  退出容器：`exit`
