@@ -2,7 +2,7 @@
 
 ## structure motif analysis
 ### 1) workflow
-![](../assets/structure_motif.pipeline.png)
+![](../../.gitbook/assets/structure_motif.pipeline.png)
 
 ---
 如果你学习完了Sequence Motif，那么本节所需文件就在你的docker bioinfo_tsinghua容器的`/home/test/motif/structure_motif/`目录下，如果没学上面的小节，你也可以按照这个目录自己放置文件，源文件在这里[清华大学云盘](https://cloud.tsinghua.edu.cn/d/8bf3e363bae145c69469/)文件名为`example_motif.tar.gz`
