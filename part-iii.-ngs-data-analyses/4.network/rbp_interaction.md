@@ -98,8 +98,8 @@ R
 library(ggplot2)
 library(reshape2)
 
-data    =       read.table(RBP_enrichment.txt,head=T);
-pdf(rbp_enrichment.pdf,width=3,height=6);
+data    =       read.table('/home/test/rbp/RBP_enrichment.txt',head=T);
+pdf('/home/test/rbp/rbp_enrichment.pdf',width=3,height=6);
 
 attach(data)
 boxplot(density~class,data=data,outline=F,col=c("red","gray"))
