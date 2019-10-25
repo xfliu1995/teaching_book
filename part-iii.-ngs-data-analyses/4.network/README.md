@@ -10,6 +10,9 @@
 
 ### 方法1: 使用docker
 
+4.1 Co-expression Network 下载 [bioinfo-coexp.tar.gz](https://lulab2.gitbook.io/teaching/appendix/appendix-iv.-teaching) 启动新的docker.
+
+
 ```sh
 docker load -i ~/Downloads/bioinfo-coexp.tar.gz
 docker run -dt --name coexpression --restart unless-stopped -v ~/Downloads/data:/data gangxu/coexpression:1.4
