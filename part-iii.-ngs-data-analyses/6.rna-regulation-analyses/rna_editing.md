@@ -66,7 +66,7 @@ eps = 50
 paired = False
 keepTemp = True
 overwrite = False
-threads = 5
+threads = 1
 ```
 
 ### 3. starting analysis
