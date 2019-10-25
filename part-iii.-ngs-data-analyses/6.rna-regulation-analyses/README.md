@@ -21,7 +21,7 @@ docker load -i ~/Desktop/bioinfo_rnaeditor.tar.gz
 
 #文件目录为/Users/xugang/Downloads/data2,启动时，挂载目录。
 #自己运行时记得改为自己的目录地址。
-docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v /Users/xugang/Downloads/data2:/data2 gangxu/rnaeditor:1.8
+docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v ~/Downloads/data2:/data2 gangxu/rnaeditor:1.8
 docker exec -it rnaeditor bash
 cd /home/test
 ```
