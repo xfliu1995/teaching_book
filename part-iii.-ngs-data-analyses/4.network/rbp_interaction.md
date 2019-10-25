@@ -57,6 +57,8 @@ the same as method in sequence\_motif \(1\) downstream/upstream 1000bp \(2\) shu
 use intersectBed \(bedtools\) command to get the overlaps of CLIP-seq peaks
 
 ```text
+cd /home/test/rbp
+
 intersectBed -wa -wb -s -a up.bed -b human_RBP_eCLIP_hg38.txt >up.eCLIP.hg38.txt
 intersectBed -wa -wb -s -a up_background.bed -b human_RBP_eCLIP_hg38.txt >up_background.eCLIP.hg38.txt
 ```
