@@ -93,6 +93,20 @@ density name    class
 
 boxplot of RBP enrichment
 
+```
+R
+library(ggplot2)
+library(reshape2)
+
+data    =       read.table(RBP_enrichment.txt,head=T);
+pdf(rbp_enrichment.pdf,width=3,height=6);
+
+attach(data)
+boxplot(density~class,data=data,outline=F,col=c("red","gray"))
+dev.off()
+
+```
+
 ![](../../.gitbook/assets/rbp_enrichment.png)
 
 ## 3\) Homework
