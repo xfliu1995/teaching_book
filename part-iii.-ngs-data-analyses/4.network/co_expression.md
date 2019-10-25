@@ -459,7 +459,7 @@ We could use the gene ID list for GO/KEGG analysis.
 Input data:
 
 ```bash
-/home/bioc/homework/homework_FemaleLiver-01-dataInput.RData
+/home/bioc/homework_FemaleLiver-01-dataInput.RData
 134 samples, 3600 genes; each row represents a sample, each column represents a gene.
 ```
 
