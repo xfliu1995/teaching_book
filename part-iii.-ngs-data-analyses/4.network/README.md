@@ -11,13 +11,14 @@
 ### 方法1: 使用docker
 
 ```sh
+docker load -i ~/Downloads/bioinfo-coexp.tar.gz
 docker run -dt --name coexpression --restart unless-stopped -v ~/Downloads/data:/data gangxu/coexpression:1.4
 ```
 
 加载完我们提供的image后，文件都已经准备好了，可以这样查看：
 
 ```bash
-cd /home/test/
+cd /home/bioc
 ls
 ```
 
