@@ -107,6 +107,10 @@ attach(data)
 boxplot(density~class,data=data,outline=F,col=c("red","gray"))
 dev.off()
 
+q()
+# Save workspace image? [y/n/c]: n
+
+# Enter
 ```
 
 ![](../../.gitbook/assets/rbp_enrichment.png)
