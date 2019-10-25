@@ -71,9 +71,9 @@ library(WGCNA)
 
 ```r
 #In R:
-setwd("/home/test/Network/co_expression/")
-datExpr <- readRDS(file="/home/test/Network/co_expression/input_fpkm_matrix.rds")
-datTraits <- readRDS(file="/home/test/Network/co_expression/data_traits.rds")
+setwd("/home/bioc")
+datExpr <- readRDS(file="/home/bioc/input_fpkm_matrix.rds")
+datTraits <- readRDS(file="/home/bioc/data_traits.rds")
 ```
 
 Data character
@@ -159,7 +159,7 @@ A brief look of the output from the command line:
 
 ```r
 #In R:
-pdf(file="/home/test/Network/co_expression/soft_thresholding.pdf",width=9, height=5)
+pdf(file="/home/bioc/soft_thresholding.pdf",width=9, height=5)
 #Plot the results:
 par(mfrow = c(1,2))
 cex1 = 0.9
@@ -241,7 +241,7 @@ table(mergedColors)
 #         1671            37           279 
 
 #Plot the dendrogram and the module colors underneath
-pdf(file="/home/test/Network/co_expression/module_visualization.pdf",width=9, height=5)
+pdf(file="/home/bioc/module_visualization.pdf",width=9, height=5)
 plotDendroAndColors(net$dendrograms[[1]], mergedColors[net$blockGenes[[1]]],
                     "Module colors",
                     dendroLabels = FALSE, hang = 0.03,
@@ -266,7 +266,7 @@ MEs = moduleEigengenes(datExpr, moduleColors)$eigengenes
 #Add the weight to existing module eigengenes
 MET = orderMEs(MEs)
 #Plot the relationships between the eigengenes and the trait
-pdf(file="/home/test/Network/co_expression/eigengenes_trait_relationship.pdf",width=7, height=9)
+pdf(file="/home/bioc/eigengenes_trait_relationship.pdf",width=7, height=9)
 par(cex = 0.9)
 plotEigengeneNetworks(MET,"", marDendro=c(0,4,1,2), 
                       marHeatmap=c(3,4,1,2), cex.lab=0.8, xLabelsAngle=90)
@@ -295,7 +295,7 @@ MEs = orderMEs(MEs0)
 moduleTraitCor = cor(MEs, design, use = "p")
 moduleTraitPvalue = corPvalueStudent(moduleTraitCor, nSamples)
 
-pdf(file="/home/test/Network/co_expression/module_trait_relationship.pdf",width=9, height=10)
+pdf(file="/home/bioc/module_trait_relationship.pdf",width=9, height=10)
 #Display the correlations and their p-values
 textMatrix = paste(signif(moduleTraitCor, 2), "\n(",
                    signif(moduleTraitPvalue, 1), ")", sep = "")
@@ -437,7 +437,7 @@ module = "brown"
 probes = colnames(datExpr)
 inModule = (moduleColors == module)
 modProbes = probes[inModule]
-write.table(modProbes,file="/home/test/Network/co_expression/geneID_brown.txt",sep="\t",quote=F,row.names=F,col.names=F)
+write.table(modProbes,file="/home/bioc/geneID_brown.txt",sep="\t",quote=F,row.names=F,col.names=F)
 ```
 
 The output file looks like:
@@ -459,7 +459,7 @@ We could use the gene ID list for GO/KEGG analysis.
 Input data:
 
 ```bash
-/home/test/Network/co_expression/homework/homework_FemaleLiver-01-dataInput.RData
+/home/bioc/homework/homework_FemaleLiver-01-dataInput.RData
 134 samples, 3600 genes; each row represents a sample, each column represents a gene.
 ```
 
