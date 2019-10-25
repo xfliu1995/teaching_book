@@ -10,6 +10,10 @@
 
 ### 方法1: 使用docker
 
+```sh
+docker run -dt --name coexpression --restart unless-stopped -v ~/Download/data:/data gangxu/coexpression:1.3 
+```
+
 加载完我们提供的image后，文件都已经准备好了，可以这样查看：
 
 ```bash
@@ -19,7 +23,7 @@ ls
 
 > 本教程docker使用方式：
 >
-> * 1\) 运行容器:  `docker exec -it bioinfo_tsinghua bash`
+> * 1\) 运行容器:  `docker exec -it coexpression bash`
 > * 2\) 进行Linux系统的相关操作
 > * 3\) 退出容器：`exit`
 
