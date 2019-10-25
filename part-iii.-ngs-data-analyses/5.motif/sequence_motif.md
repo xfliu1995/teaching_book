@@ -376,7 +376,7 @@ cp -r promoter_de_novo/ ~/share/
 
 output
 
-![](../assets/sequence_meme.png)
+![](../../.gitbook/assets/sequence_meme.png)
 
 ##### 6.2 known motif enrichment
 
@@ -409,7 +409,7 @@ interested_promoter.fa \
 
    example output
 
-![](../assets/sequence_ame.png)
+![](../../.gitbook/assets/sequence_ame.png)
 
 ### 3) Homework
 1. 理解“concatenate sequences of the same 3'UTR”的含义，并找出一个具体的gene的3’UTR当做例子，解释这一步实现的效果。
