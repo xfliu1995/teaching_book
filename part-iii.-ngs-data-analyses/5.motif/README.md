@@ -12,6 +12,7 @@
 加载完我们提供的image后，文件都已经准备好了，可以这样查看：
 
 ```bash
+docker load -i bioinfo_motif.tar.gz
 cd /home/test/
 ls
 ```
