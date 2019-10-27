@@ -41,6 +41,16 @@ docker run -dt --name mirna --restart unless-stopped -v ~/Downloads/data:/data g
 
 ```
 
+4.3 RBP-RNA Interactions
+
+```sh
+
+docker load -i ~/Downloads/bioinfo_rbp.tar.gz
+
+docker run -dt --name mirna --restart unless-stopped -v ~/Downloads/data:/data gangxu/bioinfo_rbp:1.0
+
+```
+
 ### 方法2: 直接下载
 
 * 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_III/4.network)
