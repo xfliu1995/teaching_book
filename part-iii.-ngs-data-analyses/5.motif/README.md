@@ -13,13 +13,14 @@
 
 ```bash
 docker load -i bioinfo_motif.tar.gz
-cd /home/test/
-ls
+
+docker run -dt --name motif --restart unless-stopped -v ~/Downloads/data:/data gangxu/motif:1.0
+
 ```
 
 > 本教程docker使用方式：
 >
-> * 1\) 运行容器:  `docker exec -it bioinfo_tsinghua bash`
+> * 1\) 运行容器:  `docker exec -it motif bash`
 > * 2\) 进行Linux系统的相关操作
 > * 3\) 退出容器：`exit`
 
