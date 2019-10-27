@@ -31,11 +31,13 @@ ls
 > * 2\) 进行Linux系统的相关操作
 > * 3\) 退出容器：`exit`
 
-4.2 miRNA target
+4.2 miRNA target 
 
 ```sh
 
-docker run -dt --name mirna --restart unless-stopped -v ~/Downloads/data:/data mirna_targets:v0.1
+docker load -i ~/Downloads/bioinfo_mirna_target.tar.gz
+
+docker run -dt --name mirna --restart unless-stopped -v ~/Downloads/data:/data gangxu/seq_motif:1.0
 
 ```
 
