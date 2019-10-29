@@ -4,7 +4,7 @@
 ![](../../.gitbook/assets/ribo_seq.pipeline.png)
 
 ### 2) 背景介绍
-#### (1) Ribo-seq原理
+
 Ribo-seq是2009年Weissman课题组首次发表的研究细胞内蛋白翻译图谱的新型二代测序技术，用来描述全基因组水平蛋白质的翻译情况。主要是**选择性捕捉80S核糖体及其结合的RNA片段而定位核糖体所位于的RNA的位置**。
 
 具体步骤为：
@@ -20,18 +20,11 @@ Ribo-seq数据测得的RNA片段长短与small RNA-seq相似，大约分布在25
 
 图1
 
-#### (2) 环境准备
-##### 2.1
-download scripts from https://github.com/lulab/Ribowave
-##### 2.2 Requirements
-###### 2.2.1 software: 
-R, bedtools v2.25.0
-###### 2.2.2 R packages: 
-reshape, ggplot2, rhdf5, methods, wmtsa, parallel
+### 3) running steps
 
-##### (3) Pre-processing
+#### (1) Pre-processing
+
 [启动ribo-seq所用的docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)（按照链接所示加载新的环境）
-
 启动新的docker环境
 ```
 docker load -i ~/Desktop/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
@@ -43,8 +36,8 @@ docker exec -it rnaregulation bash
 cd /home/test/rna_regulation
 cd /home/test/rna_regulation/ribo-wave
 ```
-### 3) running steps
-#### (1) create annotation
+
+#### (2) create annotation
 ```
 # bedtools2没有添加到环境变量中，需要临时添加
 export PATH=$PATH:test@bioinfo_docker:~/software/bedtools2/bin
@@ -67,7 +60,7 @@ annotation directory, including :
 1. start_codon.bed : the bed file annotating start codon
 2. final.ORFs : all identified ORFs, eg: FBtr0300105_0_31_546 where FBtr0300105 refers to the transcript, 0 refers to the reading frame relative to the start of transcript, 31 refers to the start site, 546 refers to the stop codon.
 
-#### (2) P-site determination
+#### (3) P-site determination
 核糖体上具有一系列与蛋白质合成有关的结合位点与催化位点，分别为A位点(aminoacyl-site，A-site)，P位点(peptidyl-site，P-site)和E位点(exit-site，E- site)先后与tRNA发生结合。P位点是肽段翻译延长的主要场所，在该位点上tRNA将携带的氨基酸移交给旁边的肽段从而使得肽段序列发生延长。为了能够更加明显的观察到3-nt的周期性，在处理Ribo-seq数据时我们参考之前已发表的方法，对每一条Ribo-seq比对上的测序片段转换为其对应的P-site位点。
 
 This step determines the P-site position for each Ribo-seq reads length by overlapping with the annotated start codons from previous step
