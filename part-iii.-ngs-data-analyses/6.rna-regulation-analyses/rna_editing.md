@@ -30,7 +30,6 @@ RNAEditor: easy detection of RNA editing events and the introduction of editing 
 
 [http://rnaeditor.uni-frankfurt.de/index.php](http://rnaeditor.uni-frankfurt.de/index.php)
 
-download software and annotation files in the "Install" and "Download annotations" page.
 
 ## 5\) Running steps
 
