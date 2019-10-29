@@ -31,7 +31,7 @@ RNAEditor: easy detection of RNA editing events and the introduction of editing 
 [http://rnaeditor.uni-frankfurt.de/index.php](http://rnaeditor.uni-frankfurt.de/index.php)
 
 
-## 5\) Running steps
+## 5\) Running steps (RNAEditor)
 
 [启动 6.1 RNA Editing Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
 
