@@ -6,7 +6,8 @@
 
 ## 2\) Background
 
-Alternative polyadenylation \(APA\) leading to the production of two mRNA isoforms with different 3ʹ untranslated regions \(3ʹ UTRs\)The dynamic usage of the 3’untranslated region \(3’UTR\) resulting from alternative polyadenylation \(APA\) is emerging as a pervasive mechanism for regulating mRNA diversity, stability and translation. ![](../../.gitbook/assets/apa.f2.jpg)
+Alternative polyadenylation \(APA\) leading to the production of two mRNA isoforms with different 3ʹ untranslated regions \(3ʹ UTRs\)The dynamic usage of the 3’untranslated region \(3’UTR\) resulting from alternative polyadenylation \(APA\) is emerging as a pervasive mechanism for regulating mRNA diversity, stability and translation.
+![](../../.gitbook/assets/apa.f2.jpg)
 
 ## 3\) Data Processing \(DaPars\)
 [启动 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
@@ -17,9 +18,9 @@ cd /home/test/rna_regulation/apa
 
 ### \(1\) Generate region annotation
 
-python DaPars\_Extract\_Anno.py -b gene.bed -s symbol\_map.txt -o extracted\_3UTR.bed
-
 DaPars will use the extracted distal polyadenylation sites to infer the proximal polyadenylation sites based on the alignment wiggle files of two samples. The output in this step will be used by the next step.
+
+#### running steps
 
 ```text
 DaPars_Extract_Anno.py -b hg19_refseq_whole_gene.bed -s hg19_4_19_2012_Refseq_id_from_UCSC.txt -o hg19_refseq_extracted_3UTR.bed
@@ -27,7 +28,7 @@ DaPars_Extract_Anno.py -b hg19_refseq_whole_gene.bed -s hg19_4_19_2012_Refseq_id
 
 #### input
 
-1. hg19\_refseq\_whole\_gene.bed \(bed12 format\)
+hg19\_refseq\_whole\_gene.bed \(bed12 format\)
 
    ```text
    chr1    66999824    67210768    NM_032291    0    +    67000041    67208778    25    227,64,25,72,57,55,176,12,12,25,52,86,93,75,501,128,127,60,112,156,133,203,65,165,2013,    0,91705,98928,101802,105635,108668,109402,126371,133388,136853,137802,139139,142862,145536,147727,155006,156048,161292,185152,195122,199606,205193,206516,207130,208931,
@@ -35,7 +36,7 @@ DaPars_Extract_Anno.py -b hg19_refseq_whole_gene.bed -s hg19_4_19_2012_Refseq_id
    chr1    16767166    16786584    NM_001145278    0    +    16767256    16785385    104,101,105,82,109,178,76,1248,    0,2960,7198,7388,8421,11166,15146,18170,
    ```
 
-2. hg19\_4\_19\_2012\_Refseq\_id\_from\_UCSC.txt
+hg19\_4\_19\_2012\_Refseq\_id\_from\_UCSC.txt
 
    ```text
    #name    name2
@@ -55,6 +56,8 @@ hg19\_refseq\_extracted\_3UTR.bed
 
 ### \(2\) Main function to get final result
 
+#### running steps
+
 ```text
 DaPars_main.py configure_file
 ```
@@ -63,9 +66,9 @@ Run this function to get the final result. The configure file is the only parame
 
 #### input
 
-1. configure\_file
+configure\_file
 
-The format of the configure is:
+The format of the configure file is:
 
 ```text
 #The following file is the result of step 1.
