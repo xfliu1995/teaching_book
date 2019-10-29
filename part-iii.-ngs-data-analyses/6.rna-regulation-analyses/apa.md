@@ -9,7 +9,7 @@
 Alternative polyadenylation \(APA\) leading to the production of two mRNA isoforms with different 3ʹ untranslated regions \(3ʹ UTRs\)The dynamic usage of the 3’untranslated region \(3’UTR\) resulting from alternative polyadenylation \(APA\) is emerging as a pervasive mechanism for regulating mRNA diversity, stability and translation.
 ![](../../.gitbook/assets/apa.f2.jpg)
 
-## 3\) Data Processing \(DaPars\)
+## 3\) Running steps 
 [启动 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
 ```sh
 cd /home/test/rna_regulation/apa
@@ -20,7 +20,7 @@ cd /home/test/rna_regulation/apa
 
 DaPars will use the extracted distal polyadenylation sites to infer the proximal polyadenylation sites based on the alignment wiggle files of two samples. The output in this step will be used by the next step.
 
-#### running steps
+#### starting analysis
 
 ```text
 DaPars_Extract_Anno.py -b hg19_refseq_whole_gene.bed -s hg19_4_19_2012_Refseq_id_from_UCSC.txt -o hg19_refseq_extracted_3UTR.bed
@@ -56,7 +56,7 @@ hg19\_refseq\_extracted\_3UTR.bed
 
 ### \(2\) Main function to get final result
 
-#### running steps
+#### starting analysis
 
 ```text
 DaPars_main.py configure_file
