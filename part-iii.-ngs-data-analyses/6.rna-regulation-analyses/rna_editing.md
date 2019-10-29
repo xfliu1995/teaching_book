@@ -22,7 +22,7 @@ Editing can modify protein function, generate new protein products and alter gen
 
 RNAEditor: easy detection of RNA editing events and the introduction of editing islands
 
-## 3\) pipeline
+## 3\) Pipeline
 
 ![](../../.gitbook/assets/rna_editing.f5.png)
 
