@@ -36,9 +36,11 @@ download software and annotation files in the "Install" and "Download annotation
 
 [启动 6.1 RNA Editing Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
 
-### 1. fastq file
+### \(1\) input file
 
-### 2. configuration file
+#### fastq file
+
+#### configuration file
 
 A brief look of configuration file
 
@@ -69,7 +71,7 @@ overwrite = False
 threads = 1
 ```
 
-### 3. starting analysis
+### \(1\) starting analysis
 
 ```text
 rm -rf /apps/RNAEditor/output
