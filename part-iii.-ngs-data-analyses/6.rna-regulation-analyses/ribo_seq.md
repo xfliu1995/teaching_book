@@ -1,9 +1,9 @@
 # 6.3.Ribo-seq
 
-### 1) workflow
+### 1) Workflow
 ![](../../.gitbook/assets/ribo_seq.pipeline.png)
 
-### 2) 背景介绍
+### 2) Background
 
 Ribo-seq是2009年Weissman课题组首次发表的研究细胞内蛋白翻译图谱的新型二代测序技术，用来描述全基因组水平蛋白质的翻译情况。主要是**选择性捕捉80S核糖体及其结合的RNA片段而定位核糖体所位于的RNA的位置**。
 
@@ -20,7 +20,7 @@ Ribo-seq数据测得的RNA片段长短与small RNA-seq相似，大约分布在25
 
 图1
 
-### 3) running steps (RiboWave)
+### 3) Running steps (RiboWave)
 
 #### (1) Pre-processing
 
@@ -37,7 +37,7 @@ cd /home/test/rna_regulation
 cd /home/test/rna_regulation/ribo-wave
 ```
 
-#### (2) create annotation
+#### (2) Create annotation
 ```
 # bedtools2没有添加到环境变量中，需要临时添加
 export PATH=$PATH:test@bioinfo_docker:~/software/bedtools2/bin
@@ -181,7 +181,7 @@ TE = 翻译水平的abundance/转录水平的abundance，反映翻译效率。
 It might take hours to perform the analysis if the input is large. It is recommended to specify the number of CPU cores through the -p option.
 
 Run Ribowave on example:
-##### Denoise the P-site track
+#### Denoise the P-site track
 ```
 # 在/home/test/rna_regulation/ribo-wave目录下
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -193,7 +193,7 @@ script/Ribowave  \
 -s script \
 -p 8
 ```
-##### Identifying translated ORF
+#### Identifying translated ORF
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -205,7 +205,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-##### Estimating abundance
+#### Estimating abundance
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -217,7 +217,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-##### Estimating TE
+#### Estimating TE
 IMPORTANT : when estimating TE, user should input the sequenced depth of Ribo-seq and the FPKM value from paired RNA-seq
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -230,7 +230,7 @@ script/Ribowave \
 -s scripts \
 -p 8
 ```
-##### Calculating frameshift potential
+#### Calculating frameshift potential
 on annotated ORFs
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -244,7 +244,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-##### Multiple functions
+#### Multiple functions
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -258,7 +258,7 @@ script/Ribowave \
 -p 8
 ```
 
-###### input files
+##### input files
 1. bedgraph/name:
 P-site track: output from the previous step, containing the P-site track of transcripts of interest, eg: final.psite
 2. ORF_list: ORFs of interest ,eg : final.ORFs. It is generated in the step of create_annotation.sh
@@ -273,7 +273,7 @@ P-site track: output from the previous step, containing the P-site track of tran
  FBtr0100864	11475.6
 ```
 
-###### output files
+##### output files
 1. name.PF_psite: the denoised signal track(PF P-sites signal track) at transcriptome wide. It looks similar as the input final psite.
 2. including chi-square P-value information. It may look like this :
 ```
@@ -313,7 +313,7 @@ column5: Relative position of PF P-sites after the shift ,eg : 1413,1440;1789 wh
 column6: CRF score describing the potential of frameshift
 ```
 
-### 4) 数据库推荐
+### 4) Database
 http://lulab.life.tsinghua.edu.cn/postar/
 
 ### 5) Homework
