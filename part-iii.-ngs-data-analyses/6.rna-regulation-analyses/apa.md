@@ -1,6 +1,6 @@
 # 6.2.APA \(Alternative Polyadenylation\)
 
-## 1\) workflow
+## 1\) Workflow
 
 ![](../../.gitbook/assets/apa.f1.jpg)
 
