@@ -50,15 +50,15 @@ script/create_annotation.sh \
 ```
 
 ##### input files
-1. annotation.gtf: the annotation gtf should contain start_codon and stop_codon information, eg: dmel-all-r6.18.gtf
-2. genome.fasta: genome fasta, eg: dmel-all-chromosome-r6.18.fasta
-3. annotation_dir: the directory for all the annotation output
-4. scripts_dir: the directory of all the scripts in the package
+* annotation.gtf: the annotation gtf should contain start_codon and stop_codon information, eg: dmel-all-r6.18.gtf
+* genome.fasta: genome fasta, eg: dmel-all-chromosome-r6.18.fasta
+* annotation_dir: the directory for all the annotation output
+* scripts_dir: the directory of all the scripts in the package
 
 ##### output files
 annotation directory, including :
-1. start_codon.bed: the bed file annotating start codon
-2. final.ORFs: all identified ORFs, eg: FBtr0300105_0_31_546 where FBtr0300105 refers to the transcript, 0 refers to the reading frame relative to the start of transcript, 31 refers to the start site, 546 refers to the stop codon.
+* start_codon.bed: the bed file annotating start codon
+* final.ORFs: all identified ORFs, eg: FBtr0300105_0_31_546 where FBtr0300105 refers to the transcript, 0 refers to the reading frame relative to the start of transcript, 31 refers to the start site, 546 refers to the stop codon.
 
 #### (3) P-site determination
 核糖体上具有一系列与蛋白质合成有关的结合位点与催化位点，分别为A位点(aminoacyl-site，A-site)，P位点(peptidyl-site，P-site)和E位点(exit-site，E-site)先后与tRNA发生结合。P位点是肽段翻译延长的主要场所，在该位点上tRNA将携带的氨基酸移交给旁边的肽段从而使得肽段序列发生延长。为了能够更加明显的观察到3-nt的周期性，在处理Ribo-seq数据时我们参考之前已发表的方法，对每一条Ribo-seq比对上的测序片段转换为其对应的P-site位点。
@@ -74,11 +74,11 @@ script/P-site_determination.sh \
 -s script;
 ```
 ##### input files
-1. Ribo_bam: secondary alignment removed to ensure one genomic position per aligned read and sorted
-2. start_codon.bed: annotated start site start_codon.bed. It is generated in the create_annotation.sh step
-3. out_dir: the directory of the output result, eg: GSE52799
-4. study_name: the name of all the output file, default: test. eg: SRR1039770
-5. scripts_dir: the directory of all the scripts in the package
+* Ribo_bam: secondary alignment removed to ensure one genomic position per aligned read and sorted
+* start_codon.bed: annotated start site start_codon.bed. It is generated in the create_annotation.sh step
+* out_dir: the directory of the output result, eg: GSE52799
+* study_name: the name of all the output file, default: test. eg: SRR1039770
+* scripts_dir: the directory of all the scripts in the package
 
 **查看输出**
 ```
@@ -93,11 +93,11 @@ $ cp *pdf /home/test/share/
 ##### output files
 
 P-site directory, including :
-1. name.psite1nt.txt: the Ribo-seq reads length and its corresponding P-sites position(= offset + 1). It may look this this :
+* name.psite1nt.txt: the Ribo-seq reads length and its corresponding P-sites position(= offset + 1). It may look this this :
 ```
 30  13
 ```
-2. name.psite.pdf: the PDF displaying the histogram of aggregated reads
+* name.psite.pdf: the PDF displaying the histogram of aggregated reads
 我们收集了所有已被注释的起始密码子并将 这些起始密码子和Ribo-seq 比对上的序列进行重合，分别计算Ribo-seq序列的5’端偏离起始密码子的第一个碱基A的距离(offset)。根据 Ribo-seq测序片段长度的不同，我们进一步将Ribo-seq片段分成多个组分。在每个长度对应的组分里，作出Ribo-seq片段5’端偏离起始密码子A的距离(offset)的直方图。
 
 ![](../../.gitbook/assets/ribo_seq.f2.png)
@@ -122,19 +122,19 @@ script/create_track_Ribo.sh \
 -s script
 ```
 ##### input files
-1. Ribo_bam
-2. exons.gtf: a gtf file for only the exons from transcripts of interest, eg: X.exons.gtf
-3. chromosome_size: the file including all the chromosomes and its genome size. Noted: genome can be obtained by using samtools faidx function with the input of fasta file. genome may look like this:
+* Ribo_bam
+* exons.gtf: a gtf file for only the exons from transcripts of interest, eg: X.exons.gtf
+* chromosome_size: the file including all the chromosomes and its genome size. Noted: genome can be obtained by using samtools faidx function with the input of fasta file. genome may look like this:
   ```
   2L	23513712
   2R	25286936
   3L	28110227
   3R	32079331 
   ```
-4. P-site_position: the file listing the P-site position for each read length. This file can be found in the output of previous step, eg: name.psite1nt.txt
-5. out_dir: the directory of the output result, eg: GSE52799
-6. study_name: the name of all the output file, default: test. eg: SRR1039770
-7. scripts_dir: the directory of all the scripts in the package
+* P-site_position: the file listing the P-site position for each read length. This file can be found in the output of previous step, eg: name.psite1nt.txt
+* out_dir: the directory of the output result, eg: GSE52799
+* study_name: the name of all the output file, default: test. eg: SRR1039770
+* scripts_dir: the directory of all the scripts in the package
 
 **查看生成文件**
 
@@ -146,7 +146,7 @@ $ less final.psite
 ```
     
 ##### output files
-1. bedgraph/name directory, including :
+* bedgraph/name directory, including :
 final.psite : P-site track at transcriptome wide. It may look like this :
 ```
 FBtr0070533	0,0,0,0,0,0,0,0,0,0,0,0,6,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,0,0,0,0,1,0,2,1,0,0,0,0,0,0,4,8,0,0,3,0,5,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -158,30 +158,30 @@ FBtr0070603	0,0,0,0,0,0,0,0,0,0,0,0,75,2,7,10,7,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 #### (5) RiboWave main function
 This step can achieve multiple functions :
 
-1. denoising [denoise]
+* denoising [denoise]
 
 降噪:在降噪过程运用了小波变换来去除原始信号中非3-nt周期性的信号使得保留的信号均具有翻译的3-nt周期性，即PF P-site信号轨迹。
 
-2. providing predicted p.value for each given ORF to identify its translation status [pvalue,-P]
+* providing predicted p.value for each given ORF to identify its translation status [pvalue,-P]
 
 鉴定ORF的翻译潜能：根据该转录本上经降噪后的P-sites是否富集在该ORF所在的阅读框内，判断ORF的翻译潜能。P<0.05即具有翻译活性。
 
-3. providing reads density (P-site/PF P-site) for each given ORF [density,-D]
+* providing reads density (P-site/PF P-site) for each given ORF [density,-D]
 
 reads density = ORF上reads数/ORF长度，反映翻译水平的abundance。
 
-4. providing translation efficiency (TE) estimation for each given ORF [TE,-T]
+* providing translation efficiency (TE) estimation for each given ORF [TE,-T]
 
 TE = 翻译水平的abundance/转录水平的abundance，反映翻译效率。
 
-5. providing frameshift potential (CRF score) for each given ORF [CRF,-F]
+* providing frameshift potential (CRF score) for each given ORF [CRF,-F]
 
 鉴定潜在核糖体移码现象。
 
 It might take hours to perform the analysis if the input is large. It is recommended to specify the number of CPU cores through the -p option.
 
 Run Ribowave on example:
-#### Denoise the P-site track
+##### Denoise the P-site track
 ```
 # 在/home/test/rna_regulation/ribo-wave目录下
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -193,7 +193,7 @@ script/Ribowave  \
 -s script \
 -p 8
 ```
-#### Identifying translated ORF
+##### Identifying translated ORF
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -205,7 +205,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-#### Estimating abundance
+##### Estimating abundance
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -217,7 +217,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-#### Estimating TE
+##### Estimating TE
 IMPORTANT : when estimating TE, user should input the sequenced depth of Ribo-seq and the FPKM value from paired RNA-seq
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -230,7 +230,7 @@ script/Ribowave \
 -s scripts \
 -p 8
 ```
-#### Calculating frameshift potential
+##### Calculating frameshift potential
 on annotated ORFs
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -244,7 +244,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-#### Multiple functions
+##### Multiple functions
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -259,11 +259,11 @@ script/Ribowave \
 ```
 
 ##### input files
-1. bedgraph/name:
+* bedgraph/name:
 P-site track: output from the previous step, containing the P-site track of transcripts of interest, eg: final.psite
-2. ORF_list: ORFs of interest ,eg : final.ORFs. It is generated in the step of create_annotation.sh
-3. Ribo-seq sequenced depth: the sequenced depth of Ribo-seq to calculate FPKM , eg: 9012445
-4. RNA FPKM: FPKM table. It may look like this :
+* ORF_list: ORFs of interest ,eg : final.ORFs. It is generated in the step of create_annotation.sh
+* Ribo-seq sequenced depth: the sequenced depth of Ribo-seq to calculate FPKM , eg: 9012445
+* RNA FPKM: FPKM table. It may look like this :
   
 ```
  FBtr0100871	22262
@@ -274,8 +274,8 @@ P-site track: output from the previous step, containing the P-site track of tran
 ```
 
 ##### output files
-1. name.PF_psite: the denoised signal track(PF P-sites signal track) at transcriptome wide. It looks similar as the input final psite.
-2. including chi-square P-value information. It may look like this :
+* name.PF_psite: the denoised signal track(PF P-sites signal track) at transcriptome wide. It looks similar as the input final psite.
+* including chi-square P-value information. It may look like this :
 ```
 column1-4: basic information about the ORF
 column5: reads coverage within the ORF
@@ -284,26 +284,27 @@ column7: Values estimating the relative abundance of PF P-sites outside of the s
 column8: Reads intensity at the current start codon
 ```
 result directory, including :
-3. name.95%.mx: RiboWave makes the prediction on the translation initiation sites and gives the final translated product output (p.value < 0.05) . It may look like this :
+
+* name.95%.mx: RiboWave makes the prediction on the translation initiation sites and gives the final translated product output (p.value < 0.05) . It may look like this :
 ```
 FBtr0070007_2_93_1028
 FBtr0070008_1_128_943
 FBtr0070025_2_135_1094
 ```
-4. name.density: reads density ( PF P-site ) of given ORFs. It may look like this :
+* name.density: reads density ( PF P-site ) of given ORFs. It may look like this :
 ```
 column1-4: basic information about the ORF
 column5: number of PF P-sites in transcript
 column6: number of PF P-sites in given ORF
 column7: density of PF P-sites in given ORF
 ```
-5. name.TE: TE of given ORFs. It may look like this :
+* name.TE: TE of given ORFs. It may look like this :
 ```
 column1: transcript
 column2: ORF
 column3: TE
 ```
-6. name.CRF.final: ORFs that might experience reading frame translocation. It may look like this :
+* name.CRF.final: ORFs that might experience reading frame translocation. It may look like this :
 ```
 column1: ORF
 column2: start of frameshift
