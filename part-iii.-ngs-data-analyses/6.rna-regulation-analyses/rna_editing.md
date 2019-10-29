@@ -71,7 +71,7 @@ overwrite = False
 threads = 1
 ```
 
-### \(1\) starting analysis
+### \(2\) starting analysis
 
 ```text
 rm -rf /apps/RNAEditor/output
