@@ -21,8 +21,10 @@ docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#
 docker load -i ~/Desktop/bioinfo_rnaeditor.tar.gz
 
 #注意：下面的文件挂载目录为/Users/xugang/Downloads/data2, 自己运行时记得改为自己新建的一个目录名称。
-docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v ~/Downloads/data2:/data2 gangxu/rnaeditor:1.8
+docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v /Users/xugang/Downloads/data2:/data2 gangxu/rnaeditor:1.8
+
 docker exec -it rnaeditor bash
+
 cd /home/test
 ```
 
@@ -32,8 +34,11 @@ cd /home/test
 ```bash
 docker load -i ~/Desktop/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
 
+#注意：下面的文件挂载目录为~/Desktop/bioinfo_tsinghua_share, 自己运行时记得改为自己新建的一个目录名称。
 docker run --name=rnaregulation -dt -h bioinfo_docker --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share gangxu/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure:latest
+
 docker exec -u root -it rnaregulation bash
+
 cd /home/test/rna_regulation
 ```
 
