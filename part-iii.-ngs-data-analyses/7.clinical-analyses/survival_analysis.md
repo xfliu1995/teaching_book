@@ -1,12 +1,10 @@
 # 7.3.Survival Analysis
 
-## Survival analysis
-
-### 背景介绍
+### 1\) Background
 
 1958年，Edward L. Kaplan 和Paul Meier也首次在临床研究中提出了生存曲线的概念，又被称作Kaplan-Meier曲线，主要用来对各组患者的生存状况进行描述。绘制生存曲线最主要的目的是进行生存分析，即通过将终点事件和出现这一终点所经历的时间结合起来进行统计分析，从而对两组患者的预后进行比较。
 
-### 1\) Pipeline
+### 2\) Pipeline
 
 **Survival analysis** is a branch of statistics for analyzing the expected duration of time until one or more events happen, such as death in biological organisms and failure in mechanical systems. \([https://en.wikipedia.org/wiki/Survival\_analysis](https://en.wikipedia.org/wiki/Survival_analysis)\)
 
@@ -14,13 +12,13 @@
 
 生存分析使用的方法：
 
-1. 描述生存过程：Kaplan-Meier plots to visualize survival curves（根据生存时间分布，估计生存率及其标准误，绘制生存曲线。常用Kaplan-Meier法，还有寿命法）
-2. 比较生存过程：Log-rank test to compare the survival curves of two or more groups（通过比较两组或者多组之间的的生存曲线，一般是生存率及其标准误，从而研究之间的差异，一般用log rank检验\)
-3. 影响生存时间的因素分析：Cox proportional hazards regression to describe the effect of variables on survival（用Cox风险比例模型来分析变量对生存的影响，可以两个及两个以上的因素）
+*  描述生存过程：Kaplan-Meier plots to visualize survival curves（根据生存时间分布，估计生存率及其标准误，绘制生存曲线。常用Kaplan-Meier法，还有寿命法）
+*  比较生存过程：Log-rank test to compare the survival curves of two or more groups（通过比较两组或者多组之间的的生存曲线，一般是生存率及其标准误，从而研究之间的差异，一般用log rank检验\)
+*  影响生存时间的因素分析：Cox proportional hazards regression to describe the effect of variables on survival（用Cox风险比例模型来分析变量对生存的影响，可以两个及两个以上的因素）
 
 Reference: [http://www.sthda.com/english/wiki/cox-proportional-hazards-model](http://www.sthda.com/english/wiki/cox-proportional-hazards-model)
 
-### 2\) Data structure
+### 3\) Data structure
 
 | File name | Description |
 | :--- | :--- |
@@ -76,7 +74,7 @@ dim(clinical_info)
 
 TCGA barcode information: [https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf](https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf)
 
-**\(3\) Data preprocessing**
+#### **\(2\) Data preprocessing**
 
 ```r
 #get the index of the normal/control samples
@@ -162,15 +160,15 @@ dim(exp)
 #exp = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/exp.rds")
 ```
 
-### 3\) Running steps
+### 4\) Running steps
 
-**\(0\) Install packages**
+#### **\(1\) Install packages**
 
 ```r
 install.packages(c("survival", "survminer", "limma"))
 ```
 
-**\(1\) Library package**
+#### **\(2\) Library package**
 
 ```r
 library("survival")
@@ -178,7 +176,7 @@ library("survminer")
 library("limma")
 ```
 
-**\(2\) Create event vector for RNASeq data**
+#### **\(3\) Create event vector for RNASeq data**
 
 ```r
 rna_event = t(apply(exp, 1, function(x) ifelse(abs(x) > 1.96, 1, 0)))
@@ -198,7 +196,7 @@ table(rna_event2[ind_gene,])
 #In the total 313 samples, CCDC58 gene are not differentially expressed in 168 samples, up-regulated differentially expressed in 145 samples.
 ```
 
-**\(3\) Fit survival curves**
+#### **\(4\) Fit survival curves**
 
 ```r
 survplotdata = cbind(as.numeric(as.character(clinical_info$new_death)), clinical_info$death_event, rna_event[ind_gene,])
@@ -228,7 +226,7 @@ fit = survfit(Surv(new_death, death_event) ~ CCDC58, data = survplotdata)
 #fit2 = survfit(Surv(new_death, death_event) ~ CCDC58+TP53, data = survplotdata2)
 ```
 
-**\(4\) Draw survival curves**
+#### **\(5\) Draw survival curves**
 
 ```r
 #draw survival curves
@@ -251,17 +249,17 @@ dev.off()
 
 \*: each '+' represent a censored sample.
 
-### 4\) Appendix
+### 5\) Appendix
 
 #### **\(1\) Download TCGA RNAseq data and clinical data**
 
 We could download data of TCGA liver cancer \(LIHC\) following:
 
-1. ​go to FireBrowse \([http://gdac.broadinstitute.org/](http://gdac.broadinstitute.org/)\), select "LIHC" -&gt; "Browse"
-2. from "mRNASeq" select "illuminahiseq\_rnaseqv2-RSEM\_genes\_normalized" and save it
-3. from "Clinical" select "Merge\_Clinical" and download it
-4. unzip the files
-5. rename the folders as "RNA" and "Clinical"
+*  ​go to FireBrowse \([http://gdac.broadinstitute.org/](http://gdac.broadinstitute.org/)\), select "LIHC" -&gt; "Browse"
+*  from "mRNASeq" select "illuminahiseq\_rnaseqv2-RSEM\_genes\_normalized" and save it
+*  from "Clinical" select "Merge\_Clinical" and download it
+*  unzip the files
+*  rename the folders as "RNA" and "Clinical"
 
 #### **\(2\) Data preprocessing**
 
@@ -381,7 +379,7 @@ clinical_info = all_clin[ind_clin,]
 ####The following data processing steps are in the "2.3 Data preprocessing" part####
 ```
 
-### 5\) Homework
+### 6\) Homework
 
 Please plot the survival curves about the patients with up-regulated differentially expressed and not altered expressed AFP gene in TCGA LIHC data.
 
@@ -394,7 +392,7 @@ rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve
 clinical_info = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/clinical_info.rds")
 ```
 
-### 6\) Reference
+### 7\) Reference
 
 [https://www.biostars.org/p/153013/](https://www.biostars.org/p/153013/)
 

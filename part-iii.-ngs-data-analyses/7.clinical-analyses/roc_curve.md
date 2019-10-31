@@ -2,11 +2,11 @@
 
 ## 1\) introduction
 
-在信号检测理论中，接收者操作特征曲线（receiver operating characteristic curve）是一种坐标图式的分析工具，用于（1）选择最佳的信号侦测模型，舍弃次佳的模型（2）在同一模型中设定最佳阈值。
+在信号检测理论中，接收者操作特征曲线（receiver operating characteristic curve）是一种坐标图式的分析工具，用于选择最佳的信号侦测模型，舍弃次佳的模型; 或者在同一模型中设定最佳阈值。
 
 ROC分析的是二元分类模型，也就是输出结果只有两种类别的模型，例如：（阳性/阴性）（有病/没病）等。
 
-### \(1\) 术语
+### \(1\) terminology
 
 |  |  | 真实值 | 真实值 | 总数 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -45,7 +45,7 @@ ACC = \(TP + TN\) / \(P + N\), 即：\(真阳性+真阴性\) / 总样本数
 
 假发现率 \(FDR\)：FDR = FP / \(FP + TP\)
 
-### \(2\) ROC曲线
+### \(2\) ROC curve
 
 x轴：伪阳性率（FPR）; Y轴：真阳性率（TPR）
 
@@ -83,7 +83,7 @@ TPR = TP/\(TP+FN\) = 77/\(77+323\) = 0.77，FPR = FP/\(FP+TN\) = 45/\(45+55\) = 
 
 When we use single feature to draw ROC curve, we need to install and include `pROC` and `ggplot2` package. The data we will be using is displayed below:
 
-| SampleID | Expression\_of\_miR-1 | Type |
+| SampleID | Expression\_of\_miR_1 | Type |
 | :--- | :--- | :--- |
 | 1 | 66 | cancer |
 | 2 | 32 | normal |
@@ -111,28 +111,29 @@ Here, we present a single feature model. In the data, the first column stands fo
 First we are going to input the data using `data.frame`. The code is as follows:
 
 ```r
+#In R:
 SampleID <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
-Expression_of_miR-1 <- c(66, 32, 73, 82, 61, 71, 50, 41, 67, 45, 91, 72, 20, 85, 10, 74, 53, 41, 22, 49)
+Expression_of_miR_1 <- c(66, 32, 73, 82, 61, 71, 50, 41, 67, 45, 91, 72, 20, 85, 10, 74, 53, 41, 22, 49)
 Type <- c("cancer", "normal", "normal", "cancer", "normal", "normal", "normal", "cancer", "normal", "normal", "cancer", "normal", "normal", "cancer", "normal", "cancer", "cancer", "normal", "normal", "cancer")
-SampleData <- data.frame(SampleID, Expression_of_miR-1, Type)
+SampleData <- data.frame(SampleID, Expression_of_miR_1, Type)
 ```
 
 Then using special function `roc` to construct ROC curve and use `plot` function to display the curve:
 
 ```r
-rocobj <- roc(SampleData$Type, SampleData$Expression_of_miR-1)
+rocobj <- roc(SampleData$Type, SampleData$Expression_of_miR_1)
 plot(rocobj)
 ```
 
 The curve should look like the following. Notice that false positive rate \(0 to 1\) equals specificity \(1 to 0\), and true positive rate \(0 to 1\) equals sensitivity \(0 to 1\).
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/ROCplot_single_feature.jpeg)
+![](../../.gitbook/assets/7.1.ROCplot_single_feature.jpeg)
 
 ### \(2\) Draw ROC curve using multiple features
 
 The following part discusses how to draw ROC curve using R with multiple features. To accomplish this, we should make sure that the `ROCR` package has been installed and included in the program. We use random forest to construct a model to predict the type. The data we will be using is displayed below:
 
-| SampleID | Expression\_of\_miR-1 | Expression\_of\_miR-2 | Expression\_of\_miR-3 | Type |
+| SampleID | Expression\_of\_miR_1 | Expression\_of\_miR_2 | Expression\_of\_miR_3 | Type |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | 12 | 55 | 74 | cancer |
 | 2 | 87 | 44 | 46 | normal |
@@ -166,11 +167,11 @@ First, we input the data into R using `data.frame`.
 
 ```r
 SampleID <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25)
-Expression_of_miR-1 <- c(12, 87, 70, 74, 46, 58, 55, 33, 60, 50, 70, 22, 68, 90, 10, 78, 50, 70, 81, 44, 20, 51, 40, 30, 81)
-Expression_of_miR-2 <- c(55, 44, 23, 35, 43, 31, 40, 50, 20, 22, 50, 60, 10, 30, 40, 50, 60, 33, 31, 11, 56, 31, 11, 60, 13)
-Expression_of_miR-3 <- c(74, 46, 56, 69, 59, 90, 30, 76, 34, 11, 60, 90, 9, 20, 39, 23, 82, 51, 12, 5, 44, 17, 4, 57, 24)
+Expression_of_miR_1 <- c(12, 87, 70, 74, 46, 58, 55, 33, 60, 50, 70, 22, 68, 90, 10, 78, 50, 70, 81, 44, 20, 51, 40, 30, 81)
+Expression_of_miR_2 <- c(55, 44, 23, 35, 43, 31, 40, 50, 20, 22, 50, 60, 10, 30, 40, 50, 60, 33, 31, 11, 56, 31, 11, 60, 13)
+Expression_of_miR_3 <- c(74, 46, 56, 69, 59, 90, 30, 76, 34, 11, 60, 90, 9, 20, 39, 23, 82, 51, 12, 5, 44, 17, 4, 57, 24)
 Type <- c("cancer", "normal", "normal", "normal", "cancer", "cancer", "normal", "cancer", "normal", "normal", "cancer", "cancer", "normal", "normal", "cancer", "normal", "cancer", "normal", "normal", "normal", "cancer", "normal", "normal", "normal", "normal")
-SampleData <- data.frame(SampleID, Expression_of_miR-1, Expression_of_miR-2, Expression_of_miR-3, Type)
+SampleData <- data.frame(SampleID, Expression_of_miR_1, Expression_of_miR_2, Expression_of_miR_3, Type)
 ```
 
 Set random seed so that the repeatability is ensured.
@@ -230,7 +231,7 @@ plot(roc, main = 'ROC Curve')
 
 The curve should look like this:
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/ROCplot_multiple_features.jpeg)
+![](../../.gitbook/assets/7.2.ROCplot_multiple_features.jpeg)
 
 ## 3\) Reference
 
