@@ -12,7 +12,7 @@
 
 ### 方法1: 使用docker
 
-docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-dockers)所示，本大章包括2个images：
+docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-docker)所示，本大章包括2个images：
 
 (1) **6.1 RNA Editing**: bioinfo_rnaeditor.1.8.tar.gz
 
