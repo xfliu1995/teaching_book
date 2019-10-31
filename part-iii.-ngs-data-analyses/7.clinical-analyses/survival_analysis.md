@@ -1,12 +1,10 @@
 # 7.3.Survival Analysis
 
-## Survival analysis
-
-### 背景介绍
+### 1\) Background
 
 1958年，Edward L. Kaplan 和Paul Meier也首次在临床研究中提出了生存曲线的概念，又被称作Kaplan-Meier曲线，主要用来对各组患者的生存状况进行描述。绘制生存曲线最主要的目的是进行生存分析，即通过将终点事件和出现这一终点所经历的时间结合起来进行统计分析，从而对两组患者的预后进行比较。
 
-### 1\) Pipeline
+### 2\) Pipeline
 
 **Survival analysis** is a branch of statistics for analyzing the expected duration of time until one or more events happen, such as death in biological organisms and failure in mechanical systems. \([https://en.wikipedia.org/wiki/Survival\_analysis](https://en.wikipedia.org/wiki/Survival_analysis)\)
 
@@ -20,7 +18,7 @@
 
 Reference: [http://www.sthda.com/english/wiki/cox-proportional-hazards-model](http://www.sthda.com/english/wiki/cox-proportional-hazards-model)
 
-### 2\) Data structure
+### 3\) Data structure
 
 | File name | Description |
 | :--- | :--- |
@@ -76,7 +74,7 @@ dim(clinical_info)
 
 TCGA barcode information: [https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf](https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf)
 
-**\(3\) Data preprocessing**
+**\(2\) Data preprocessing**
 
 ```r
 #get the index of the normal/control samples
@@ -162,15 +160,15 @@ dim(exp)
 #exp = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/exp.rds")
 ```
 
-### 3\) Running steps
+### 4\) Running steps
 
-**\(0\) Install packages**
+**\(1\) Install packages**
 
 ```r
 install.packages(c("survival", "survminer", "limma"))
 ```
 
-**\(1\) Library package**
+**\(2\) Library package**
 
 ```r
 library("survival")
@@ -178,7 +176,7 @@ library("survminer")
 library("limma")
 ```
 
-**\(2\) Create event vector for RNASeq data**
+**\(3\) Create event vector for RNASeq data**
 
 ```r
 rna_event = t(apply(exp, 1, function(x) ifelse(abs(x) > 1.96, 1, 0)))
@@ -198,7 +196,7 @@ table(rna_event2[ind_gene,])
 #In the total 313 samples, CCDC58 gene are not differentially expressed in 168 samples, up-regulated differentially expressed in 145 samples.
 ```
 
-**\(3\) Fit survival curves**
+**\(4\) Fit survival curves**
 
 ```r
 survplotdata = cbind(as.numeric(as.character(clinical_info$new_death)), clinical_info$death_event, rna_event[ind_gene,])
@@ -228,7 +226,7 @@ fit = survfit(Surv(new_death, death_event) ~ CCDC58, data = survplotdata)
 #fit2 = survfit(Surv(new_death, death_event) ~ CCDC58+TP53, data = survplotdata2)
 ```
 
-**\(4\) Draw survival curves**
+**\(5\) Draw survival curves**
 
 ```r
 #draw survival curves
@@ -251,7 +249,7 @@ dev.off()
 
 \*: each '+' represent a censored sample.
 
-### 4\) Appendix
+### 5\) Appendix
 
 #### **\(1\) Download TCGA RNAseq data and clinical data**
 
@@ -381,7 +379,7 @@ clinical_info = all_clin[ind_clin,]
 ####The following data processing steps are in the "2.3 Data preprocessing" part####
 ```
 
-### 5\) Homework
+### 6\) Homework
 
 Please plot the survival curves about the patients with up-regulated differentially expressed and not altered expressed AFP gene in TCGA LIHC data.
 
@@ -394,7 +392,7 @@ rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve
 clinical_info = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/clinical_info.rds")
 ```
 
-### 6\) Reference
+### 7\) Reference
 
 [https://www.biostars.org/p/153013/](https://www.biostars.org/p/153013/)
 
