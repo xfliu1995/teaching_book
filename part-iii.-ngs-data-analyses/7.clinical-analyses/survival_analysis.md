@@ -74,7 +74,7 @@ dim(clinical_info)
 
 TCGA barcode information: [https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf](https://docs.gdc.cancer.gov/Encyclopedia/pages/images/TCGA-TCGAbarcode-080518-1750-4378.pdf)
 
-**\(2\) Data preprocessing**
+#### **\(2\) Data preprocessing**
 
 ```r
 #get the index of the normal/control samples
@@ -162,13 +162,13 @@ dim(exp)
 
 ### 4\) Running steps
 
-**\(1\) Install packages**
+#### **\(1\) Install packages**
 
 ```r
 install.packages(c("survival", "survminer", "limma"))
 ```
 
-**\(2\) Library package**
+#### **\(2\) Library package**
 
 ```r
 library("survival")
@@ -176,7 +176,7 @@ library("survminer")
 library("limma")
 ```
 
-**\(3\) Create event vector for RNASeq data**
+#### **\(3\) Create event vector for RNASeq data**
 
 ```r
 rna_event = t(apply(exp, 1, function(x) ifelse(abs(x) > 1.96, 1, 0)))
@@ -196,7 +196,7 @@ table(rna_event2[ind_gene,])
 #In the total 313 samples, CCDC58 gene are not differentially expressed in 168 samples, up-regulated differentially expressed in 145 samples.
 ```
 
-**\(4\) Fit survival curves**
+#### **\(4\) Fit survival curves**
 
 ```r
 survplotdata = cbind(as.numeric(as.character(clinical_info$new_death)), clinical_info$death_event, rna_event[ind_gene,])
@@ -226,7 +226,7 @@ fit = survfit(Surv(new_death, death_event) ~ CCDC58, data = survplotdata)
 #fit2 = survfit(Surv(new_death, death_event) ~ CCDC58+TP53, data = survplotdata2)
 ```
 
-**\(5\) Draw survival curves**
+#### **\(5\) Draw survival curves**
 
 ```r
 #draw survival curves
