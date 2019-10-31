@@ -126,7 +126,7 @@ plot(rocobj)
 
 The curve should look like the following. Notice that false positive rate \(0 to 1\) equals specificity \(1 to 0\), and true positive rate \(0 to 1\) equals sensitivity \(0 to 1\).
 
-![](https://github.com/lulab/teaching_book/tree/111533151bd2caeac6adcddfc75d075428e9a2df/part-iii.-ngs-data-analyses/assets/ROCplot_single_feature.jpeg)
+![](../../.gitbook/assets/7.1.ROCplot_single_feature.jpeg)
 
 ### \(2\) Draw ROC curve using multiple features
 
@@ -230,7 +230,7 @@ plot(roc, main = 'ROC Curve')
 
 The curve should look like this:
 
-![](https://github.com/lulab/teaching_book/tree/master/.gitbook/assets/ROCplot_multiple_features.jpeg)
+![](../../.gitbook/assets/7.1.ROCplot_multiple_features.jpeg)
 
 ## 3\) Reference
 
