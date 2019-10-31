@@ -6,7 +6,7 @@
 
 ROC分析的是二元分类模型，也就是输出结果只有两种类别的模型，例如：（阳性/阴性）（有病/没病）等。
 
-### \(1\) 术语
+### \(1\) terminology
 
 |  |  | 真实值 | 真实值 | 总数 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -230,7 +230,7 @@ plot(roc, main = 'ROC Curve')
 
 The curve should look like this:
 
-![](../../.gitbook/assets/7.1.ROCplot_multiple_features.jpeg)
+![](../../.gitbook/assets/7.2.ROCplot_multiple_features.jpeg)
 
 ## 3\) Reference
 
