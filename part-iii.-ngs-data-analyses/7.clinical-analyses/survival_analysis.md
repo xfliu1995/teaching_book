@@ -12,9 +12,9 @@
 
 生存分析使用的方法：
 
-1. 描述生存过程：Kaplan-Meier plots to visualize survival curves（根据生存时间分布，估计生存率及其标准误，绘制生存曲线。常用Kaplan-Meier法，还有寿命法）
-2. 比较生存过程：Log-rank test to compare the survival curves of two or more groups（通过比较两组或者多组之间的的生存曲线，一般是生存率及其标准误，从而研究之间的差异，一般用log rank检验\)
-3. 影响生存时间的因素分析：Cox proportional hazards regression to describe the effect of variables on survival（用Cox风险比例模型来分析变量对生存的影响，可以两个及两个以上的因素）
+*  描述生存过程：Kaplan-Meier plots to visualize survival curves（根据生存时间分布，估计生存率及其标准误，绘制生存曲线。常用Kaplan-Meier法，还有寿命法）
+*  比较生存过程：Log-rank test to compare the survival curves of two or more groups（通过比较两组或者多组之间的的生存曲线，一般是生存率及其标准误，从而研究之间的差异，一般用log rank检验\)
+*  影响生存时间的因素分析：Cox proportional hazards regression to describe the effect of variables on survival（用Cox风险比例模型来分析变量对生存的影响，可以两个及两个以上的因素）
 
 Reference: [http://www.sthda.com/english/wiki/cox-proportional-hazards-model](http://www.sthda.com/english/wiki/cox-proportional-hazards-model)
 
@@ -255,11 +255,11 @@ dev.off()
 
 We could download data of TCGA liver cancer \(LIHC\) following:
 
-1. ​go to FireBrowse \([http://gdac.broadinstitute.org/](http://gdac.broadinstitute.org/)\), select "LIHC" -&gt; "Browse"
-2. from "mRNASeq" select "illuminahiseq\_rnaseqv2-RSEM\_genes\_normalized" and save it
-3. from "Clinical" select "Merge\_Clinical" and download it
-4. unzip the files
-5. rename the folders as "RNA" and "Clinical"
+*  ​go to FireBrowse \([http://gdac.broadinstitute.org/](http://gdac.broadinstitute.org/)\), select "LIHC" -&gt; "Browse"
+*  from "mRNASeq" select "illuminahiseq\_rnaseqv2-RSEM\_genes\_normalized" and save it
+*  from "Clinical" select "Merge\_Clinical" and download it
+*  unzip the files
+*  rename the folders as "RNA" and "Clinical"
 
 #### **\(2\) Data preprocessing**
 
