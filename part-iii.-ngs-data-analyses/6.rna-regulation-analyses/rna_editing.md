@@ -33,7 +33,7 @@ RNAEditor: easy detection of RNA editing events and the introduction of editing 
 
 ## 5\) Running steps (RNAEditor)
 
-[启动 6.1 RNA Editing Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
+请首先启动相应 [Docker](README.md#files)，进入工作目录。
 
 ### \(1\) input file
 
@@ -82,10 +82,10 @@ mv /apps/RNAEditor/output/ /home/test/out_new
 
 ## 6\) Homework
 
-参照RNAEditor网页上[Documentation](http://rnaeditor.uni-frankfurt.de/documentation.php)页面，理解示例文件运行完的输出结果中sample.vcf和sample.gvf的含义。根据sample.gvf文件，统计RNA编辑位点在基因组上的分布（3‘UTR,intron等各不同区域各有多少RNA editing sites,用柱形图展示）；在sample.gvf最后添加一列，计算每个RNA编辑位点的editing ratio。
+* 参照RNAEditor网页上[Documentation](http://rnaeditor.uni-frankfurt.de/documentation.php)页面，理解示例文件运行完的输出结果中sample.vcf和sample.gvf的含义。根据sample.gvf文件，统计RNA编辑位点在基因组上的分布（3‘UTR,intron等各不同区域各有多少RNA editing sites,用柱形图展示）；在sample.gvf最后添加一列，计算每个RNA编辑位点的editing ratio。
 
 ## 7\) Reference
 
-1. A-to-I RNA editing — immune protector and transcriptome diversifier. Eli Eisenberg, et al. Nature Reviews, 2018.
-2. RNAEditor: easy detection of RNA editing events andthe introduction of editing islands. David John, et al. Briefings in Bioinformatics, 2017.
+* A-to-I RNA editing — immune protector and transcriptome diversifier. Eli Eisenberg, et al. Nature Reviews, 2018.
+* RNAEditor: easy detection of RNA editing events andthe introduction of editing islands. David John, et al. Briefings in Bioinformatics, 2017.
 

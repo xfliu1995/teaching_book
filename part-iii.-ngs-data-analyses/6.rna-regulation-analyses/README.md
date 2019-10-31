@@ -6,39 +6,37 @@
 * [6.2.APA \(Alternative Polyadenylation\)](apa.md)
 * [6.3.Ribo-seq](ribo_seq.md)
 * [6.4.Structure-seq](structure_seq.md)
-* [6.5.Modification \(m6A-seq\)](6.5.modification-m6a-seq.md)
+* 6.5.Modification: not completed yet
 
-## Files Needed
+## Files Needed {#files}
 
 ### 方法1: 使用docker
 
-6.1 RNA Editing
-下载 [bioinfo_rnaeditor.1.8.tar.gz](https://lulab2.gitbook.io/teaching/appendix/appendix-iv.-teaching#teaching-docker)
-启动新的docker.
+docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-dockers)所示，本大章包括2个images：
+
+(1) **6.1 RNA Editing**: bioinfo_rnaeditor.1.8.tar.gz
+
 
 ```bash
 docker load -i ~/Desktop/bioinfo_rnaeditor.tar.gz
 
-#文件目录为/Users/xugang/Downloads/data2,启动时，挂载目录。
-#自己运行时记得改为自己的目录地址。
+#注意：下面的文件挂载目录为/Users/xugang/Downloads/data2, 自己运行时记得改为自己新建的一个目录名称。
 docker run --name=rnaeditor -dt -h bioinfo_docker --restart unless-stopped -v ~/Downloads/data2:/data2 gangxu/rnaeditor:1.8
 docker exec -it rnaeditor bash
 cd /home/test
 ```
-> *  退出容器：`exit`
 
-6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq
-下载 [bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz](https://lulab2.gitbook.io/teaching/appendix/appendix-iv.-teaching#teaching-docker)
 
-启动新的docker.
+(2) **6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq**：bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
 
 ```bash
 docker load -i ~/Desktop/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
+
 docker run --name=rnaregulation -dt -h bioinfo_docker --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share gangxu/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure:latest
 docker exec -u root -it rnaregulation bash
 cd /home/test/rna_regulation
 ```
-> *  退出容器：`exit`
+
 
 ### 方法2: 直接下载
 

@@ -24,20 +24,15 @@ Ribo-seq数据测得的RNA片段长短与small RNA-seq相似，大约分布在25
 
 #### (1) Pre-processing
 
-[启动ribo-seq所用的docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)（按照链接所示加载新的环境）
-启动新的docker环境
-```
-docker load -i ~/Desktop/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
-docker run —name=rnaregulation -dt -h bioinfo_docker —restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share gangxu/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure:latest
-docker exec -it rnaregulation bash
-```
-进入工作目录
+启动ribo-seq所用的 [Docker](README.md#files)，进入工作目录
+
 ```
 cd /home/test/rna_regulation
 cd /home/test/rna_regulation/ribo-wave
 ```
 
 #### (2) Create annotation
+
 ```
 # bedtools2没有添加到环境变量中，需要临时添加
 export PATH=$PATH:test@bioinfo_docker:~/software/bedtools2/bin
@@ -144,7 +139,7 @@ $ ls
 final.psite
 $ less final.psite
 ```
-    
+
 ##### output files
 * bedgraph/name directory, including :
 final.psite : P-site track at transcriptome wide. It may look like this :
@@ -318,4 +313,6 @@ column6: CRF score describing the potential of frameshift
 http://lulab.life.tsinghua.edu.cn/postar/
 
 ### 5) Homework
-解释TE的含义，用教程中的示例文件算出TE，并画出TE的分布。
+
+* 解释TE的含义，用教程中的示例文件算出TE，并画出TE的分布。
+

@@ -10,11 +10,10 @@ Alternative polyadenylation \(APA\) leading to the production of two mRNA isofor
 ![](../../.gitbook/assets/apa.f2.jpg)
 
 ## 3\) Running steps (DaPars)
-[启动 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
+启动 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq的 [Docker](README.md#files)，然后进入工作目录
 ```sh
 cd /home/test/rna_regulation/apa
 ```
-
 
 ### \(1\) Generate region annotation
 
@@ -115,5 +114,5 @@ FDR\_cutoff, PDUI\_cutoff, Fold\_change\_cutoff → Pass filer \(Y nor N\)
 
 ## 3\) Homework
 
-运行示例文件，理解输出文件“DaPars\_Test\_data\_All\_Prediction\_Results.txt”中每一列的含义，\(1\)解释PDUI的含义；（2）写脚本过滤adjusted.P\_val&lt;=0.05,PDUI\_Group\_diff&gt;=0.5, PDUI\_fold\_change&gt;=0.59的作为diff-APA events，和Pass\_filter为“Y“筛选出来的diff-APA events做比较。
+* 运行示例文件，理解输出文件“DaPars\_Test\_data\_All\_Prediction\_Results.txt”中每一列的含义，\(1\)解释PDUI的含义；（2）写脚本过滤adjusted.P\_val&lt;=0.05,PDUI\_Group\_diff&gt;=0.5, PDUI\_fold\_change&gt;=0.59的作为diff-APA events，和Pass\_filter为“Y“筛选出来的diff-APA events做比较。
 

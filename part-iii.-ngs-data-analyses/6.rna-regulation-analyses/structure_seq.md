@@ -8,10 +8,9 @@ RNA is treated with a SHAPE reagent that reacts at conformationally dynamic nucl
 
 ## 2\) Running steps \(shapemapper\)
 
-[启动 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq Docker](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)
+请首先启动相应 [Docker](README.md#files)，进入工作目录：
 ```sh
 cd /home/test/rna_regulation/structure_seq
-
 cd example_data
 ```
 
@@ -87,5 +86,5 @@ shapemapper \
 
 ## 3\) Homework
 
-简述structure-seq的原理，查阅文献解释reactivity的含义。
+* 简述structure-seq的原理，查阅文献解释reactivity的含义。
 
