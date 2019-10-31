@@ -111,6 +111,7 @@ Here, we present a single feature model. In the data, the first column stands fo
 First we are going to input the data using `data.frame`. The code is as follows:
 
 ```r
+#In R:
 SampleID <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
 Expression_of_miR-1 <- c(66, 32, 73, 82, 61, 71, 50, 41, 67, 45, 91, 72, 20, 85, 10, 74, 53, 41, 22, 49)
 Type <- c("cancer", "normal", "normal", "cancer", "normal", "normal", "normal", "cancer", "normal", "normal", "cancer", "normal", "normal", "cancer", "normal", "cancer", "cancer", "normal", "normal", "cancer")
