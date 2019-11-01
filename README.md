@@ -53,10 +53,10 @@ Yumin Zhu1, Gang Xu1, Xiaocheng Xi, Xupeng Chen, Zhuoer Dong, Xi Hu, Jingyi Cao,
 
 * Lu Lab 鲁 志 实验室
 * School of Life Sciences, Tsinghua University, Beijing, China
-* e-mai: lulab AT biomed.tsinghua.edu.cn
+* e-mai: lulab1 AT tsinghua.edu.cn
 * Hompage: [http://lulab.life.tsinghua.edu.cn](http://lulab.life.tsinghua.edu.cn)
 * GitHub: [https://lulab.github.io](https://lulab.github.io)
-* Books: [https://lulab.gitbook.io](https://lulab.gitbook.io); [https://lulab2.gitbook.io](https://lulab2.gitbook.io) 
+* Books: [https://lulab.gitbook.io](https://lulab.gitbook.io)
 * Software: [http://software.ncrnalab.org](http://software.ncrnalab.org)
 
 ## Copyright
