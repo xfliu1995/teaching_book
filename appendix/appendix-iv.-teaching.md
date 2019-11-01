@@ -31,7 +31,7 @@
 | Content | Youtube | Bilibili |
 | :--- | :--- | :--- |
 | How to use docker | [@Youtube](https://youtu.be/vp0t2T1KFG4) | [@Bilibili](https://www.bilibili.com/video/av66604789?pop_share=1) |
-| Linux \([视频配套文档](https://lulab.gitbook.io/training/part-i.-programming-skills/2.linux)\) | [@Youtube](https://youtu.be/cOmJvMjn5CU)  | [@Bilibili](https://player.bilibili.com/player.html?aid=30590225&cid=53392482&page=1)  |
+| Linux \([视频配套文档](https://lulab1.gitbook.io/training/part-i.-programming-skills/2.linux)\) | [@Youtube](https://youtu.be/cOmJvMjn5CU)  | [@Bilibili](https://player.bilibili.com/player.html?aid=30590225&cid=53392482&page=1)  |
 | Vim |  [@Youtube](https://youtu.be/isKMZMlSWa0) |  [@Bilibili](https://www.bilibili.com/video/av66604626?pop_share=1) |
 | R | [@Youtube](https://youtu.be/A0YKZgxvpXM) |  [@Bilibili](https://player.bilibili.com/player.html?aid=30590474&cid=53392848&page=1) |
 | Genome Browser: IGV | [@Youtube](https://youtu.be/6_1ZcVw7ptU) | [@Bilibili](https://www.bilibili.com/video/av30448472/) |

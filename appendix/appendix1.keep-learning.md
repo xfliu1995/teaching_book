@@ -59,7 +59,7 @@
 > **半年以上经验**
 
 * ⭐《Bioinformatics Data Skills》by _Vince Buffalo_
-* ✨More Recommended Books by [Bioinformatics Tutorial - Advanced](https://lulab.gitbook.io/training/appendix/appendix-i.keep-learning)
+* ✨More Recommended Books by [Bioinformatics Tutorial - Advanced](https://lulab1.gitbook.io/training/appendix/appendix-i.keep-learning)
 * More [Misc Learning Materials](https://cloud.tsinghua.edu.cn/d/e63019c19d59449992fc/)
 
 ## 🎓 2\) Recommended on-line Courses
