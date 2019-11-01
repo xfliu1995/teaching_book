@@ -10,7 +10,7 @@
 
 ### 方法1: 使用docker
 
-加载完我们提供的image后，文件都已经准备好了，可以这样查看：
+docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-docker)所示，加载完我们提供的image后，文件都已经准备好了，可以这样查看：
 
 ```bash
 cd /home/test/

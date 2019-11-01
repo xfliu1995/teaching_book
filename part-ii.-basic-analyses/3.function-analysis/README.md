@@ -22,7 +22,7 @@
 
 本章中， 3.1 GO 和 3.2 KEGG都不需要docker就能练习，可以直接去“**方法2**”直接下载所需文件。
 
-3.3 GSEA 可以加载完我们提供的image后，文件都已经准备好了，可以这样查看：
+3.3 GSEA 可以加载完我们提供的image后，docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-docker)所示。文件都已经准备好了，可以这样查看：
 
 ```bash
 cd /home/test/

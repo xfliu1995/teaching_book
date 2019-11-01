@@ -6,25 +6,24 @@
 * [4.2.miRNA Targets](4.2.mirna-targets.md)
 * [4.3.RBP-RNA Interactions](rbp_interaction.md)
 
-## Files Needed
+## Files Needed {#files}
 
 ### 方法1: 使用docker
 
 ### 4.1 Co-expression Network 
 
-
-
-下载 [bioinfo-coexp.tar.gz](https://lulab2.gitbook.io/teaching/appendix/appendix-iv.-teaching) 启动新的docker.
+docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-docker)所示，下载 bioinfo-coexp.tar.gz 启动新的docker.
 
 #### 1）Mac
+
 ```sh
 docker load -i ~/Downloads/bioinfo-coexp.tar.gz # 请根据下载文件的实际位置调整输入内容
 mkdir ~/Downloads/data
 docker run -dt --name coexpression --restart unless-stopped -v ~/Downloads/data:/data gangxu/coexpression:1.4
 ```
 
-
 #### 2) Windows
+
 ```sh
 docker load -i Downloads\bioinfo-coexp.tar.gz # 请根据下载文件的实际位置调整输入内容
 mkdir ~/Downloads/data

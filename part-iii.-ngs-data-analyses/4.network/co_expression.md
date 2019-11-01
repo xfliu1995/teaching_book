@@ -32,6 +32,8 @@ WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同
 
 ### \(1\) Getting software & data
 
+[文件和软件获取方式](README.md#files)
+
 ### \(2\) Input data
 
 输入数据的准备：这里主要是表达矩阵，如果是转录组数据，最好是RPKM值或者其它归一化好的表达量。然后就是临床信息或者其它表型，总之就是样本的属性。
@@ -461,20 +463,18 @@ We could use the gene ID list for GO/KEGG analysis.
 
 ## 4\) Homework
 
-Input data:
+* Input data:
 
 ```bash
 /home/bioc/homework_FemaleLiver-01-dataInput.RData
 134 samples, 3600 genes; each row represents a sample, each column represents a gene.
 ```
 
-Please try to construct an automatic network and detect module \(Choosing the soft-thresholding power, One-step network construction and module detection\) from the homework\_FemaleLiver-01-dataInput.RData. 
+* Please try to construct an automatic network and detect module \(Choosing the soft-thresholding power, One-step network construction and module detection\) from the homework\_FemaleLiver-01-dataInput.RData. 
 
-Please plot two figures: 
-
-1.Analysis of network topology\(Scale independence, Mean connectivity\) for various soft-thresholding powers, 
-
-2.The dendrogram and the module colors underneath.
+* Please plot two figures: 
+  1. Analysis of network topology\(Scale independence, Mean connectivity\) for various soft-thresholding powers. 
+  2. The dendrogram and the module colors underneath.
 
 ## 5\) Reference
 
