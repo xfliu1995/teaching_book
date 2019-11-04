@@ -305,8 +305,8 @@ meme -dna -maxsize 2000000 \
   -nmotifs 5 \
   interested_promoter.fa
 # 可以查一查为什么用2000000，用1000000试试？
-# 可以将输出文件夹整个cp到share中查看
-cp -r promoter_de_novo/ ~/share/
+# 可以将输出文件夹整个cp到data中查看
+cp -r promoter_de_novo/ /data
 ```
 
 output
