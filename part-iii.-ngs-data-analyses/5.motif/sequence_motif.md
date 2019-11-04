@@ -16,6 +16,8 @@ fa文件、fa.fai文件、gtf文件、chrom.sizes文件和所需tar.gz文件从�
 There are many functions for us to get genome annotation file/基因组注释文件功能很多:
 
 ```sh
+docker exec -it -u root motif bash
+
 cd /home/test/motif/sequence_motif/practice
 ```
 
