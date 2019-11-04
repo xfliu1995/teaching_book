@@ -11,7 +11,7 @@
 ### 2) running steps
 
 #### (1) get interested sequence and control sequence as sequence motif analysis
-##### 1.1 BEAM
+#### (2) BEAM
 http://beam.uniroma2.it/home
 
 
@@ -22,8 +22,7 @@ docker exec -it -u root motif bash
 cd /home/test/motif/structure_motif/BEAM
 ```
 
-
-##### 1.2 Use RNAfold to get dot-bracket
+##### use RNAfold to get dot-bracket
 Compute the best (MFE) structure for this sequence (primary sequence with dot-bracket)
 ```bash
 RNAfold <test.fa >dot.fa
@@ -31,7 +30,7 @@ less dot.fa
 # 查看生成的序列及点括号文件dot.fa
 ```
 
-##### 1.3 Get file with BEAR notation ---> fastB (fastBEAR).
+##### get file with BEAR notation ---> fastB (fastBEAR).
 
 
 ```
@@ -39,16 +38,14 @@ awk '/^>/ {print; getline; print; getline; print $1}' dot.fa >dot_to_encode.fa
 java -jar /home/test/software/BEAM/beam-2.0/BearEncoder.new.jar dot_to_encode.fa BEAMready.fa
 ```
 
-##### 1.4 get structure motifs
+##### get structure motifs
 ```
 java -jar /home/test/software/beam-2.0/BEAM_release_1.5.1.jar -f BEAMready.fa -w 10 -W 40 -M 3
 ```
 
 ![](https://tva1.sinaimg.cn/large/006y8mN6ly1g85tflwz2qj30pw0citaq.jpg)
 
-##### 1.5 visualize motifs with weblogo
-
-###### 1.5.1 visualize structure motifs
+##### visualize motifs with weblogo
 
 ```bash
 cd /home/test/motif/structure_motif/BEAM/risultati/BEAMready/webLogoOut/motifs
@@ -62,16 +59,16 @@ cp out.jpeg /data
 # 进入share文件夹查看输出结果
 ```
 
-###### 1.5.2 example output
+###### example output
 ![](https://tva1.sinaimg.cn/large/006y8mN6ly1g85thyjml0j30ok08sgo9.jpg)
 
 
 ### 3) other tools 
-#### 3.1 RNApromo
+#### RNApromo
 https://genie.weizmann.ac.il/pubs/rnamotifs08/64bit_exe_rnamotifs08_motif_finder.tar.gz
-#### 3.2 GraphProt:modelling binding preferences of RNA-binding proteins
+#### GraphProt:modelling binding preferences of RNA-binding proteins
 https://github.com/dmaticzka/GraphProt
-#### 3.3 RNAcontext: A New Method for Learning the Sequence and Structure Binding Preferences of RNA-Binding Proteins
+#### RNAcontext: A New Method for Learning the Sequence and Structure Binding Preferences of RNA-Binding Proteins
 http://www.cs.toronto.edu/~hilal/rnacontext/
 
 ## 3\) Homework
