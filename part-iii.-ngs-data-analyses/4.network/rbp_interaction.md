@@ -2,6 +2,7 @@
 
 ## 1\) Background
 CLIP-seq (crosslinking-immunprecipitation and high-throughput sequencing),是一项全基因组水平揭示RNA分子与RNA结合蛋白相互作用的革命性技术。其主要原理是基于RNA分子与RNA结合蛋白在紫外照射下发生耦联，以RNA结合蛋白的特异性抗体将RNA-蛋白质复合体沉淀之后，回收其中的RNA片段，经添加接头、RT-PCR等步骤，对这些分子进行高通量测序，再经生物信息学的分析和处理、总结，挖掘出其特定规律，从而深入揭示RNA结合蛋白与RNA分子的调控作用及其对生命的意义。
+
 POSTAR2数据库中收集了大量的CLIP-seq,并用统一的生物信息学流程鉴定出RBP的结合位点，可以从该数据库中下载得到不同物种里，大量RBP在不同的细胞系、组织或者发育阶段的结合位点。
 
 ## 2\) workflow
