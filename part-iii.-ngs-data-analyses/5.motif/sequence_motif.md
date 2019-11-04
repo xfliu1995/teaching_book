@@ -20,7 +20,7 @@ $ R
 # 载入package-GenomicFeatures
 library("GenomicFeatures")
 # 指定路径
-gtf_file="/home/test/motif/genome/GRCh38.p10.genome.gtf"
+gtf_file="/home/test/motif/sequence_motif/genome/GRCh38.p10.genome.gtf"
 txdb <- makeTxDbFromGFF(gtf_file, format="gtf")
 ```
 运行结果
@@ -65,7 +65,7 @@ $ R
 # 载入package-GenomicFeatures
 library("GenomicFeatures")
 # 指定路径
-gtf_file="/home/test/0.genome/human_hg38/anno/gtf/gencode.v27.annotation.gtf"
+gtf_file="/home/test/motif/sequence_motif/genome/gencode.v27.annotation.gtf"
 txdb <- makeTxDbFromGFF(gtf_file, format="gtf")
 # （如果上一小节没有退出R环境，就可以不用重新载入包和指定变量，可以再试试）没理解不要紧继续往下
 promoter=promoters(txdb)
