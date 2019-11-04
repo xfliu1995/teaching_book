@@ -20,7 +20,7 @@ $ R
 # 载入package-GenomicFeatures
 library("GenomicFeatures")
 # 指定路径
-gtf_file="/home/test/motif/sequence_motif/genome/GRCh38.p10.genome.gtf"
+gtf_file="/home/test/motif/sequence_motif/genome/gencode.v27.annotation.gtf"
 txdb <- makeTxDbFromGFF(gtf_file, format="gtf")
 ```
 运行结果
