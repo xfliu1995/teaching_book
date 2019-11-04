@@ -9,56 +9,9 @@ fa文件、fa.fai文件、gtf文件、chrom.sizes文件和所需tar.gz文件从�
 ### 2)running steps
 
 #### (1) get UTR or promoter sequence
-##### 1.1 install R package GenomicFeatures and biozhuoer tools (cnode)
-需要用root权限进入container bioinfo_tsinghua
 
-GenomicFeatures package used to extract needed sequence/提取所需序列
-
-biozhuoer tools used to concat sequences of the same UTR or promoter/用于连接序列（具有相同UTR或启动子的序列）
-
-**将所需文件放在相应位置**
-```bash
-# 将下载好的gtf文件和tar.gz文件放在share文件夹中
-docker exec -it bioinfo_tsinghua bash
-cp ~/share/example_motif.tar.gz ./
-tar -zxvf example_motif.tar.gz
-rm example_motif.tar.gz
-mkdir -p ~/motif/sequence_motif/genome
-# 将下载好的gtf文件复制到genome目录下
-cd ~/motif/sequence_motif/genome
-cp ~/share/GRCh38.p10.genome.fa ./
-cp ~/share/GRCh38.p10.genome.fa.fai ./
-cp ~/share/hg38.chrom.sizes ./
-# 退出容器
-exit
-```
-
-**配置所需环境**
-To install this package, start R (my R version is “3.5.1”) and enter:
-```bash
-# 系统终端以root身份进入容器
-docker exec -it -u root bioinfo_tsinghua bash
-$ R
-#进入R，依次执行下面几行语句
-source("http://www.bioconductor.org/biocLite.R")
-# 下面这个要跑挺久
-biocLite("GenomicFeatures")
-library("GenomicFeatures")
-if (!("devtools" %in% .packages(T))) install.packages("devtools")
-devtools::install_github("dongzhuoer/biozhuoer")
-# 完成后会显示 *DONE（biozhuoer）
-# 退出R
-q()
-# 退出docker容器
-$ exit
-# 首次进行Sequence Motif分析的时候需要运行上面命令来安装和更新package，再次使用就不需要了
-```
 
 ##### 1.2 对基因组注释文件操作/generate txdb object
-```bash
-mkdir -p /home/test/motif/sequence_motif/practice
-cd /home/test/motif/sequence_motif/practice
-```
 
 There are many functions for us to get genome annotation file/基因组注释文件功能很多:
 ```r
@@ -282,25 +235,7 @@ concatenate_seq('interested_promoter.fa')
 
 
 #### (5) generate random sequence as background sequence
-**MEME安装**
-root用户进入容器
-```bash
-mkdir /home/test/software/MEME
-cd /home/test/software/MEME
-wget http://meme-suite.org/meme-software/5.1.0/meme-5.1.0.tar.gz
-tar zxf meme-5.1.0.tar.gz
-mdir meme
-cd meme-5.1.0
-./configure —-prefix=/home/test/software/MEME/meme —-with-url=http://meme-suite.org/ —-enable-build-libxml2 —-enable-build-libxslt
-make test
-make install
-# 安装完成后加入环境变量
-vim /home/test/.bashrc
-# 在最后添加两行
-export PATH=$PATH:/home/test/software/MEME/meme/bin/
-export PATH=$PATH:/home/test/software/MEME/meme/libexec/meme-5.1.0
-# 保存
-```
+
 there are three mothods to get random sequence: 1. shuffle the input sequence 2. downsteam 1000bp 3. bedtools shuffle
 
 ##### 5.1 shuffle the input sequence
