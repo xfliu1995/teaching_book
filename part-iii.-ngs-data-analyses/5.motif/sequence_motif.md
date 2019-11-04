@@ -241,9 +241,8 @@ concatenate_seq('interested_promoter.fa')
 there are three mothods to get random sequence: 1. shuffle the input sequence 2. downsteam 1000bp 3. bedtools shuffle
 
 ##### 5.1 shuffle the input sequence
-需要按照上述方法安装MEME
+
 ```bash
-/home/test/motif/sequence_motif/practice
 fasta-shuffle-letters \
 interested_three_prime_UTR.fa \
 interested_three_prime_UTR.control
@@ -298,7 +297,6 @@ repeat get promoter and get 3'UTR section
 #### (6) motif enrichment
 
 ##### 6.1 de novo motif discovery
-test用户进入容器
 ```bash
 cd /home/test/motif/sequence_motif/practice/
 meme -dna -maxsize 2000000 \
