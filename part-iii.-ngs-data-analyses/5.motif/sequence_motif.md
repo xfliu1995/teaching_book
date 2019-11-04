@@ -60,6 +60,7 @@ $ ls
 utr3p.info  utr5p.info
 ```
 这样就获取了5’UTR or 3’UTR的位置信息，如下图
+
 ![](https://tva1.sinaimg.cn/large/006y8mN6ly1g85qz19ilzj319e0eaq6i.jpg)
 
 get promoter site range
