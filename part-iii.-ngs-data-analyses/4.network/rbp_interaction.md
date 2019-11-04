@@ -1,16 +1,19 @@
 # 4.3.RBP-RNA Interactions
 
-## 1\) workflow
+## 1\) Background
+CLIP-seq (crosslinking-immunprecipitation and high-throughput sequencing),是一项全基因组水平揭示RNA分子与RNA结合蛋白相互作用的革命性技术。其主要原理是基于RNA分子与RNA结合蛋白在紫外照射下发生耦联，以RNA结合蛋白的特异性抗体将RNA-蛋白质复合体沉淀之后，回收其中的RNA片段，经添加接头、RT-PCR等步骤，对这些分子进行高通量测序，再经生物信息学的分析和处理、总结，挖掘出其特定规律，从而深入揭示RNA结合蛋白与RNA分子的调控作用及其对生命的意义。
+POSTAR2数据库中收集了大量的CLIP-seq,并用统一的生物信息学流程鉴定出RBP的结合位点，可以从该数据库中下载得到不同物种里，大量RBP在不同的细胞系、组织或者发育阶段的结合位点。
+
+## 2\) workflow
 
 ![](../../.gitbook/assets/rbp.pipeline.png)
 
-## 2\) RBP enrichment
+## 3\) RBP enrichment
 
 ### \(1\) get CLIP-seq data
 
-#### download from [http://lulab.life.tsinghua.edu.cn/postar/download.php](http://lulab.life.tsinghua.edu.cn/postar/download.php)
-
-#### get from /BioII/lulab\_b/shared/projects/POSTAR2/CLIP\_seq/bed
+#### 从POSTAR2数据库的下载页面得到RBP的结合位点 [http://lulab.life.tsinghua.edu.cn/postar/download.php](http://lulab.life.tsinghua.edu.cn/postar/download.php)
+我们docker中已提供了下载好的示例文件，为保证CLIP-seq方法的统一和取出较小的文件方便大家联系，我们从human RBP binding sites中提取第八列为eCLIP得到的文件，得到human_RBP_eCLIP_hg38.txt。
 
 human\_RBP\_eCLIP\_hg38.txt
 
