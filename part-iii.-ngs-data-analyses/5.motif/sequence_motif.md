@@ -189,17 +189,12 @@ column6: strand
 #### (4) get genome sequence
 
 
-**安装bedtools**
-**使用docker的root用户进入容器（前面介绍如何使用root身份了）
-```bash
-apt-get install bedtools
-# 退出docker
-```
+
 ##### 4.1 get 3'UTR related genome sequence
-以test身份进入docker容器
+
 
 ```bash
-cd motif/sequence_motif/practice/
+
 bedtools getfasta -s -name -fi ../genome/GRCh38.p10.genome.fa \
   -bed interested_three_prime_UTR.bed -fo interested_three_prime_UTR.fa
 
