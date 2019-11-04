@@ -9,16 +9,16 @@
 
 ---
 ### 2) running steps
-root下,bioinfo_tsinghua container
 
 #### (1) get interested sequence and control sequence as sequence motif analysis
 ##### 1.1 BEAM
 http://beam.uniroma2.it/home
 
-test身份进入容器
+
 ```bash
+docker exec -it -u root motif bash
 # 在这个路径下已经准备了练习文件
-/home/test/motif/structure_motif/BEAM
+
 cd /home/test/motif/structure_motif/BEAM
 ```
 
