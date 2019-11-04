@@ -10,7 +10,7 @@ fa文件、fa.fai文件、gtf文件、chrom.sizes文件和所需tar.gz文件从�
 
 #### (1) get UTR or promoter sequence
 
-##### 对基因组注释文件操作/generate txdb object
+##### 对基因组注释文件操作
 
 There are many functions for us to get genome annotation file/基因组注释文件功能很多:
 
