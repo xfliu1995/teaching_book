@@ -35,6 +35,7 @@ docker run -dt --name coexpression --restart unless-stopped -v ~/Downloads/data:
 
 
 ```bash
+docker exec -it coexpression bash
 cd /home/bioc
 ls
 ```
@@ -54,6 +55,8 @@ ls
 docker load -i ~/Downloads/bioinfo_mirna_target.tar.gz
 
 docker run -dt --name mirna --restart unless-stopped -v ~/Downloads/data:/data mirna_targets:1.0
+
+docker exec -it mirna bash
 
 cd /home/test/mirna
 ```
