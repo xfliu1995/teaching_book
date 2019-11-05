@@ -69,7 +69,7 @@ docker load -i ~/Downloads/bioinfo_rbp.tar.gz
 
 docker run -dt --name rbp --restart unless-stopped -v ~/Downloads/data:/data gangxu/bioinfo_rbp:2.0
 
-docker exec -it rbp bash
+docker exec -u root -it rbp bash
 
 cd /home/test/rbp
 ```
