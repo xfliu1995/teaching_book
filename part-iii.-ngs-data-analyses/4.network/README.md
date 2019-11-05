@@ -66,6 +66,7 @@ docker load -i ~/Downloads/bioinfo_rbp.tar.gz
 
 docker run -dt --name mirna --restart unless-stopped -v ~/Downloads/data:/data gangxu/bioinfo_rbp:1.0
 
+cd /home/test/rbp
 ```
 
 > 注意：4.2，4.3的docker安装均以Mac为例，Windows用户请按4.1案例将"docker load -i ~/..."改为"docker load -i ..."
