@@ -13,7 +13,7 @@ POSTAR2数据库中收集了大量的CLIP-seq,并用统一的生物信息学流�
 
 ### \(1\) get CLIP-seq data
 
-#### 从POSTAR2数据库的下载页面得到RBP的结合位点 [http://lulab.life.tsinghua.edu.cn/postar/download.php](http://lulab.life.tsinghua.edu.cn/postar/download.php)
+从POSTAR2数据库的下载页面得到RBP的结合位点 [http://lulab.life.tsinghua.edu.cn/postar/download.php](http://lulab.life.tsinghua.edu.cn/postar/download.php)
 我们docker中已提供了下载好的示例文件，为保证CLIP-seq方法的统一和取出较小的文件方便大家联系，我们从human RBP binding sites中提取第八列为eCLIP得到的文件，得到human_RBP_eCLIP_hg38.txt。
 
 human\_RBP\_eCLIP\_hg38.txt
