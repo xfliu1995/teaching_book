@@ -64,7 +64,7 @@ cd /home/test/mirna
 
 docker load -i ~/Downloads/bioinfo_rbp.tar.gz
 
-docker run -dt --name mirna --restart unless-stopped -v ~/Downloads/data:/data gangxu/bioinfo_rbp:1.0
+docker run -dt --name mirna --restart unless-stopped -v ~/Downloads/data:/data gangxu/bioinfo_rbp:2.0
 
 cd /home/test/rbp
 ```
