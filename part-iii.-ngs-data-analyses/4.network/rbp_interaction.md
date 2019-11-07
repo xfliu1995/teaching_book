@@ -42,7 +42,7 @@ column11:score(Piranha score: Peak heights from the CLIP-seq data; PARalyzer sco
 
 ### \(2\) prepare interested bed and background bed
 
-#### interested bed
+#### \(2.1\) interested bed
 
 up.bed
 
@@ -52,7 +52,7 @@ chr1    1167119 1167149 ENSG00000207730.3__1167119__1167149__2  .       +
 chr1    1167134 1167164 ENSG00000207730.3__1167134__1167164__3  .       +
 ```
 
-#### prepare background bed from interested bed
+#### \(2.2\) prepare background bed from interested bed
 
 the same as method in sequence\_motif \(1\) downstream/upstream 1000bp \(2\) shuffle the input sequence \(3\) shuffle the genome sequence
 
@@ -69,7 +69,7 @@ intersectBed -wa -wb -s -a up_background.bed -b human_RBP_eCLIP_hg38.txt >up_bac
 
 ### \(4\) compare RBP enrichment
 
-#### percentage of region with CLIP-seq peaks
+#### \(4.1\) percentage of region with CLIP-seq peaks
 
 ```text
 cut -f 4 up.bed |sort -u|wc -l
@@ -82,7 +82,7 @@ cut -f 4 up_background.eCLIP.hg38.txt |sort -u|wc -l
 544
 ```
 
-#### RBP enrichment in each region
+#### \(4.2\) RBP enrichment in each region
 
 ```text
 cat <(cut -f 4,13 up.eCLIP.hg38.txt |sort -u|cut -f 1|sort|uniq -c|sed 's/^[ \t]*//g'|sed 's/ /\t/g'|awk 'BEGIN{FS="\t";OFS="\t"}{print $1,$2,"up"}') <(cut -f 4,13 up_background.eCLIP.hg38.txt |sort -u|cut -f 1|sort|uniq -c|sed 's/^[ \t]*//g'|sed 's/ /\t/g'|awk 'BEGIN{FS="\t";OFS="\t"}{print $1,$2,"up_bg"}')|sed '1i density\tname\tclass' >RBP_enrichment.txt
