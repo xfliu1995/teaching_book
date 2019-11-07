@@ -44,13 +44,13 @@ script/create_annotation.sh \
 -s script
 ```
 
-##### input files
+#### (2.1) input files
 * annotation.gtf: the annotation gtf should contain start_codon and stop_codon information, eg: dmel-all-r6.18.gtf
 * genome.fasta: genome fasta, eg: dmel-all-chromosome-r6.18.fasta
 * annotation_dir: the directory for all the annotation output
 * scripts_dir: the directory of all the scripts in the package
 
-##### output files
+#### (2.2) output files
 annotation directory, including :
 * start_codon.bed: the bed file annotating start codon
 * final.ORFs: all identified ORFs, eg: FBtr0300105_0_31_546 where FBtr0300105 refers to the transcript, 0 refers to the reading frame relative to the start of transcript, 31 refers to the start site, 546 refers to the stop codon.
@@ -68,7 +68,7 @@ script/P-site_determination.sh \
 -n SRR1039770 \
 -s script;
 ```
-##### input files
+#### (3.1) input files
 * Ribo_bam: secondary alignment removed to ensure one genomic position per aligned read and sorted
 * start_codon.bed: annotated start site start_codon.bed. It is generated in the create_annotation.sh step
 * out_dir: the directory of the output result, eg: GSE52799
@@ -85,7 +85,7 @@ $ cp *pdf /home/test/share/
 # 拷贝pdf文件到容器与计算机互通的文件夹，可以用pdf阅读工具打开查看pdf
 ```
 
-##### output files
+#### (3.2) output files
 
 P-site directory, including :
 * name.psite1nt.txt: the Ribo-seq reads length and its corresponding P-sites position(= offset + 1). It may look this this :
@@ -116,7 +116,7 @@ script/create_track_Ribo.sh \
 -n SRR1039770 \
 -s script
 ```
-##### input files
+#### (4.1) input files
 * Ribo_bam
 * exons.gtf: a gtf file for only the exons from transcripts of interest, eg: X.exons.gtf
 * chromosome_size: the file including all the chromosomes and its genome size. Noted: genome can be obtained by using samtools faidx function with the input of fasta file. genome may look like this:
@@ -140,7 +140,7 @@ final.psite
 $ less final.psite
 ```
 
-##### output files
+#### (4.2) output files
 * bedgraph/name directory, including :
 final.psite : P-site track at transcriptome wide. It may look like this :
 ```
@@ -176,7 +176,7 @@ TE = 翻译水平的abundance/转录水平的abundance，反映翻译效率。
 It might take hours to perform the analysis if the input is large. It is recommended to specify the number of CPU cores through the -p option.
 
 Run Ribowave on example:
-##### Denoise the P-site track
+#### (5.1) Denoise the P-site track
 ```
 # 在/home/test/rna_regulation/ribo-wave目录下
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -188,7 +188,7 @@ script/Ribowave  \
 -s script \
 -p 8
 ```
-##### Identifying translated ORF
+#### (5.2) Identifying translated ORF
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -200,7 +200,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-##### Estimating abundance
+#### (5.3) Estimating abundance
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -212,7 +212,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-##### Estimating TE
+#### (5.4) Estimating TE
 IMPORTANT : when estimating TE, user should input the sequenced depth of Ribo-seq and the FPKM value from paired RNA-seq
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -225,7 +225,7 @@ script/Ribowave \
 -s scripts \
 -p 8
 ```
-##### Calculating frameshift potential
+#### (5.5) Calculating frameshift potential
 on annotated ORFs
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -239,7 +239,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-##### Multiple functions
+#### (5.6) Multiple functions
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -253,7 +253,7 @@ script/Ribowave \
 -p 8
 ```
 
-##### input files
+#### (5.7) input files
 * bedgraph/name:
 P-site track: output from the previous step, containing the P-site track of transcripts of interest, eg: final.psite
 * ORF_list: ORFs of interest ,eg : final.ORFs. It is generated in the step of create_annotation.sh
@@ -268,7 +268,7 @@ P-site track: output from the previous step, containing the P-site track of tran
  FBtr0100864	11475.6
 ```
 
-##### output files
+#### (5.8) output files
 * name.PF_psite: the denoised signal track(PF P-sites signal track) at transcriptome wide. It looks similar as the input final psite.
 * including chi-square P-value information. It may look like this :
 ```
