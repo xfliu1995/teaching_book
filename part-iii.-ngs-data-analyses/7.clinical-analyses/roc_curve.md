@@ -243,3 +243,6 @@ The curve should look like this:
 
 \[4\] [https://lulab2.gitbook.io/teaching/part-iii.-machine-learning-basics/8.1-machine-learning-with-r](https://lulab2.gitbook.io/teaching/part-iii.-machine-learning-basics/8.1-machine-learning-with-r)
 
+## 4\) Homework
+用python语言实现ROC curve的绘制，需要提交python代码，应用于上文的单个feature和多个feature的示例文件，并提交输出的图。
+
