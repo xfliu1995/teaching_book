@@ -1541,3 +1541,5 @@ p_mat.columns=['before','after']
 np.sum(p_mat<0.01)
 ```
 
+## 4\) Homework
+在自己的github上创建一个页面，内容为"用R语言实现PCA分析并画图"的教程，需要展示输入文件和输出文件。在作业中提交github的链接即可。
