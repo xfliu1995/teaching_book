@@ -312,8 +312,8 @@ output
 
 #### (6.2) known motif enrichment
 
-1. download known motif from meme
-2. add de novo motif file by meme
+* download known motif from meme
+* add de novo motif file by meme
 
    for 3'UTR
 
