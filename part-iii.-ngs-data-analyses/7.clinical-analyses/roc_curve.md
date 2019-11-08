@@ -110,6 +110,9 @@ Here, we present a single feature model. In the data, the first column stands fo
 
 First we are going to input the data using `data.frame`. The code is as follows:
 
+```
+cd /home/test/roc
+```
 ```r
 #In R:
 SampleID <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
