@@ -129,7 +129,9 @@ Then using special function `roc` to construct ROC curve and use `plot` function
 
 ```r
 rocobj <- roc(SampleData$Type, SampleData$Expression_of_miR_1)
+pdf(file="/home/test/roc/roc.pdf")
 plot(rocobj)
+dev.off()
 ```
 
 The curve should look like the following. Notice that false positive rate \(0 to 1\) equals specificity \(1 to 0\), and true positive rate \(0 to 1\) equals sensitivity \(0 to 1\).
@@ -233,7 +235,9 @@ Then, we can obtain the ROC curve by the following code:
 
 ```r
 roc <- performance(pred, 'tpr', 'fpr')
+pdf(file="/home/test/roc/roc2.pdf")
 plot(roc, main = 'ROC Curve')
+dev.off()
 ```
 
 The curve should look like this:
