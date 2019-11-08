@@ -26,15 +26,20 @@ Reference: [http://www.sthda.com/english/wiki/cox-proportional-hazards-model](ht
 | clinical\_info.rds, LIHC.merged\_only\_clinical\_clin\_format.txt, all\_clin.rds | Clinical information for TCGA samples |
 
 #### **\(1\) Input data**
+```bash
+
+cd /home/test/clinical_analysis
+
+```
 
 Import data
 
 ```r
-setwd("/Share2/home/lulab/xixiaochen/training_share2/survival_curve/")
-rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/rna.rds")
+setwd("/home/test/clinical_analysis")
+rna = readRDS(file="/home/test/clinical_analysis/rna.rds")
 #if you don't want to normalize and scale expression data, just load data:
-#exp = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/exp.rds")
-clinical_info = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/clinical_info.rds")
+#exp = readRDS(file="/home/test/clinical_analysis/exp.rds")
+clinical_info = readRDS(file="/home/test/clinical_analysis/clinical_info.rds")
 ```
 
 Data character
@@ -157,7 +162,7 @@ dim(exp)
 #16897 genes, 313 samples
 
 #You could read this exp matrix from:
-#exp = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/exp.rds")
+#exp = readRDS(file="/home/test/clinical_analysis//exp.rds")
 ```
 
 ### 4\) Running steps
@@ -230,7 +235,7 @@ fit = survfit(Surv(new_death, death_event) ~ CCDC58, data = survplotdata)
 
 ```r
 #draw survival curves
-pdf(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/CCDC58_LIHC.pdf")
+pdf(file="/home/test/clinical_analysis/CCDC58_LIHC.pdf")
 ggsurvplot(fit,
     risk.table = TRUE,
     pval = TRUE,
@@ -385,11 +390,11 @@ Please plot the survival curves about the patients with up-regulated differentia
 
 ```r
 input files:
-exp = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/exp.rds") #if you don't want to normalize and scale expression data, just load the exp.rds
-clinical_info = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/clinical_info.rds")
+exp = readRDS(file="/home/test/clinical_analysis/exp.rds") #if you don't want to normalize and scale expression data, just load the exp.rds
+clinical_info = readRDS(file="/home/test/clinical_analysis/clinical_info.rds")
 or 
-rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/rna.rds")
-clinical_info = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/clinical_info.rds")
+rna = readRDS(file="/home/test/clinical_analysis/rna.rds")
+clinical_info = readRDS(file="/home/test/clinical_analysis/clinical_info.rds")
 ```
 
 ### 7\) Reference
