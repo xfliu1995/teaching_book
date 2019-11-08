@@ -165,7 +165,7 @@ dim(exp)
 #### **\(1\) Install packages**
 
 ```r
-install.packages(c("survival", "survminer", "limma"))
+# install.packages(c("survival", "survminer", "limma"))
 ```
 
 #### **\(2\) Library package**
