@@ -298,7 +298,7 @@ table(substr(colnames(rna),14,14))
 ```r
 z_rna = readRDS(file="/home/test/clinical_analysis/z_rna.rds")
 #read the Clinical file, in this case i transposed it to keep the clinical feature title as column name
-clinical <- t(read.table('Clinical/LIHC.merged_only_clinical_clin_format.txt',header=T, row.names=1, sep='\t'))
+clinical <- t(read.table('Clinical/LIHC.merged_only_clinical_clin_format.txt2',header=T, row.names=1, sep='\t'))
 clinical = as.data.frame(clinical)
 clinical$IDs = toupper(clinical$patient.bcr_patient_barcode)
 #match the patient ID in clinical data with the colnames of z_rna
