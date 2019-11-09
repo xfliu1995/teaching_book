@@ -11,15 +11,34 @@
 ### 方法1: 使用docker
 
 docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-docker)所示，加载完我们提供的image后，文件都已经准备好了，可以这样查看：
-
+ 
+ 7.1 ROC Curve, 7.3 Survival Analysis
+ 
 ```bash
-cd /home/test/
-ls
+docker load -i ~/Desktop/bioinfo_roc_survival.tar.gz
+
+docker run --name=roc -dt -h bioinfo_docker --restart unless-stopped -v ~/Downloads/data:/data gangxu/bioinfo_roc_survival:1.0
+
+docker exec -it roc bash
+
+# 7.1 ROC Curve
+
+cd /home/test/roc
+
+# 7.3 Survival Analysis
+
+cd /home/test/clinical_analysis
+
+```
+
+
+```sh
+
 ```
 
 > 本教程docker使用方式：
 >
-> * 1\) 运行容器:  `docker exec -it bioinfo_tsinghua bash`
+> * 1\) 运行容器:  `docker exec -it roc bash`
 > * 2\) 进行Linux系统的相关操作
 > * 3\) 退出容器：`exit`
 
