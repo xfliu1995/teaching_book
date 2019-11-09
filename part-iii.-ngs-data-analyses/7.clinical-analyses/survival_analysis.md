@@ -290,12 +290,13 @@ rna = rna[-remove,]
 table(substr(colnames(rna),14,14))
 #So we have 373 tumor and 50 normal
 #OR you could read this data from:
-#rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/rna.rds")
+#rna = readRDS(file="/home/test/clinical_analysis/rna.rds")
+
 ####The following data processing steps are in the "2.3 Data preprocessing" part####
 ```
 
 ```r
-z_rna = readRDS(file="/Share2/home/lulab/xixiaochen/training_share2/survival_curve/z_rna.rds")
+z_rna = readRDS(file="/home/test/clinical_analysis/z_rna.rds")
 #read the Clinical file, in this case i transposed it to keep the clinical feature title as column name
 clinical <- t(read.table('Clinical/LIHC.merged_only_clinical_clin_format.txt',header=T, row.names=1, sep='\t'))
 clinical = as.data.frame(clinical)
@@ -380,7 +381,7 @@ ind_clin = which(rownames(all_clin) %in% colnames(z_rna))
 clinical_info = all_clin[ind_clin,]
 
 #OR you could read this data from:
-#clinical_info = readRDS(file="/Share/home/xixiaochen/project/training/clinical_info.rds")
+#clinical_info = readRDS(file="/home/test/clinical_analysis/clinical_info.rds")
 ####The following data processing steps are in the "2.3 Data preprocessing" part####
 ```
 
