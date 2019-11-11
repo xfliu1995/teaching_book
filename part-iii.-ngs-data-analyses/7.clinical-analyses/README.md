@@ -31,11 +31,6 @@ cd /home/test/clinical_analysis
 
 ```
 
-
-```sh
-
-```
-
 > 本教程docker使用方式：
 >
 > * 1\) 运行容器:  `docker exec -it roc bash`
