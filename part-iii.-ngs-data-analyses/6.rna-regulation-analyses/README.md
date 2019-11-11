@@ -39,7 +39,15 @@ docker run --name=rnaregulation -dt -h bioinfo_docker --restart unless-stopped -
 
 docker exec -u root -it rnaregulation bash
 
-cd /home/test/rna_regulation
+
+# APA
+cd /home/test/rna_regulation/apa
+
+# Ribo-seq
+cd /home/test/rna_regulation/ribo-wave
+
+# Structure-seq
+cd /home/test/rna_regulation/structure_seq
 ```
 
 
