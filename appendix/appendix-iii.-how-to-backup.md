@@ -93,7 +93,7 @@ git push origin
 > git push origin master
 > ```
 
-### 4\) Backup data using rsync and crontab
+### \(2\) Backup data using rsync and crontab
 
 #### \(1\) Setup ssh key \(optional\) <a id="ssh-key"></a>
 
@@ -192,7 +192,7 @@ crontab -e
 > | Column 5: | Week 0 to 7 \(0 and 7 for Sunday\) |
 > | Column 6: | Command to run |
 
-### 5\) More Reading for advanced users
+### \(3\) More Reading for advanced users
 
 * 《[鸟哥的Linux私房菜-基础学习篇](https://www.ctolib.com/docs/sfile/vbird-linux-basic-4e)》 \(25章推荐章节\)
 
