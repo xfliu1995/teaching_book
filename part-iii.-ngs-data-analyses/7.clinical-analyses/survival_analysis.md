@@ -260,7 +260,7 @@ dev.off()
 
 We could download data of TCGA liver cancer \(LIHC\) following:
 
-*  ​go to FireBrowse \([http://gdac.broadinstitute.org/](http://gdac.broadinstitute.org/)\), select "LIHC" -&gt; "Browse"
+*  go to FireBrowse \([http://gdac.broadinstitute.org/](http://gdac.broadinstitute.org/)\), select "LIHC" -&gt; "Browse"
 *  from "mRNASeq" select "illuminahiseq\_rnaseqv2-RSEM\_genes\_normalized" and save it
 *  from "Clinical" select "Merge\_Clinical" and download it
 *  unzip the files

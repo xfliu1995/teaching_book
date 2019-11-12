@@ -1,14 +1,16 @@
 # 5.1.Sequence Motif
 
-### 1) workflow
+## 1) workflow
+
 ![](../../.gitbook/assets/seq_motif.pipeline.png)
 
-container: bioinfo_tsinghua
-fa文件、fa.fai文件、gtf文件、chrom.sizes文件和所需tar.gz文件从这里下载[清华大学云盘](https://cloud.tsinghua.edu.cn/d/8bf3e363bae145c69469/)
+## 2) running steps
 
-### 2)running steps
+### (0) Get files
 
-#### (1) get UTR or promoter sequence
+[文件和软件获取方式](README.md#files): fa文件、fa.fai文件、gtf文件、chrom.sizes文件和所需tar.gz文件从这里下载
+
+### (1) fetch UTR or promoter sequences
 
 #### (1.1) 对基因组注释文件操作
 
@@ -89,7 +91,7 @@ promoter.info  utr3p.info  utr5p.info
 test@1a8b4fa42d00:~/motif/sequence_motif/practice$
 ```
 
-#### (2) intersect with interested genes
+### (2) intersect with interested genes
 
 回到bash下对刚刚这几个文件进行进一步加工，获取我们想要的信息
 
@@ -145,8 +147,7 @@ column7: strand
 column8: transprict_id
 ```
 
-
-#### (3) convert to bed format
+### (3) convert to bed format
 
 #### (3.1) UTR bed info
 
@@ -186,7 +187,7 @@ column5: transcript
 column6: strand
 ```
 
-#### (4) get genome sequence
+### (4) get genome sequence
 
 #### (4.1) get 3'UTR related genome sequence
 
@@ -233,7 +234,7 @@ concatenate_seq <- function(fasta_file){biozhuoer::read_fasta(fasta_file) %>% dp
 concatenate_seq('interested_promoter.fa')
 ```
 
-#### (5) generate random sequence as background sequence
+### (5) generate random sequence as background sequence
 
 there are three mothods to get random sequence: 1. shuffle the input sequence 2. downsteam 1000bp 3. bedtools shuffle
 
@@ -280,6 +281,7 @@ slide('interested_promoter.bed', 'interested_promoter_downstream.bed')
 repeat get promoter and get 3'UTR section
 
 #### (5.3) bedtools shuffle
+
 ```bash
 bedtools shuffle -i interested_three_prime_UTR.bed \
 -g ../genome/hg38.chrom.sizes >interested_three_prime_UTR_btools.bed
@@ -290,8 +292,7 @@ bedtools shuffle -i interested_promoter.bed \
 
 repeat get promoter and get 3'UTR section
 
-
-#### (6) motif enrichment
+### (6) motif enrichment
 
 #### (6.1) de novo motif discovery
 ```bash
@@ -343,6 +344,10 @@ interested_promoter.fa \
 
 ![](../../.gitbook/assets/sequence_ame.png)
 
-### 3) Homework
-1. 理解“concatenate sequences of the same 3'UTR”的含义，并找出一个具体的gene的3’UTR当做例子，解释这一步实现的效果。
-2. 自己写一个脚本实现“concatenate sequences of the same 3'UTR”这一步，并以上面找到的具体gene的3'UTR当做示例，展示输入文件，输出文件，及运行脚本。
+
+
+## 3) Homework
+
+* 理解“concatenate sequences of the same 3'UTR”的含义，并找出一个具体的gene的3’UTR当做例子，解释这一步实现的效果。
+
+* 自己写一个脚本实现“concatenate sequences of the same 3'UTR”这一步，并以上面找到的具体gene的3'UTR当做示例，展示输入文件，输出文件，及运行脚本。

@@ -1,17 +1,22 @@
 # 5.2.Structure Motif
 
-## structure motif analysis
-### 1) workflow
+## 1) workflow
+
 ![](../../.gitbook/assets/structure_motif.pipeline.png)
 
 ---
-如果你学习完了Sequence Motif，那么本节所需文件就在你的docker bioinfo_tsinghua容器的`/home/test/motif/structure_motif/`目录下，如果没学上面的小节，你也可以按照这个目录自己放置文件，源文件在这里[清华大学云盘](https://cloud.tsinghua.edu.cn/d/8bf3e363bae145c69469/)文件名为`example_motif.tar.gz`
 
 ---
-### 2) running steps
+## 2) running steps
 
-#### (1) get interested sequence and control sequence as sequence motif analysis
-#### (2) BEAM
+### (1) get interested sequences and background sequences
+
+[文件和软件获取方式](README.md#files) 
+
+
+
+### (2) BEAM
+
 http://beam.uniroma2.it/home
 
 
@@ -23,6 +28,7 @@ cd /home/test/motif/structure_motif/BEAM
 ```
 
 #### (2.1) use RNAfold to get dot-bracket
+
 Compute the best (MFE) structure for this sequence (primary sequence with dot-bracket)
 ```bash
 RNAfold <test.fa >dot.fa
@@ -62,14 +68,22 @@ cp out.jpeg /data
 > example output
 ![](https://tva1.sinaimg.cn/large/006y8mN6ly1g85thyjml0j30ok08sgo9.jpg)
 
+## 3) other tools
 
-### 3) other tools 
-#### RNApromo
+* **RNApromo**
+
 https://genie.weizmann.ac.il/pubs/rnamotifs08/64bit_exe_rnamotifs08_motif_finder.tar.gz
-#### GraphProt:modelling binding preferences of RNA-binding proteins
+* **GraphProt**
+
+modelling binding preferences of RNA-binding proteins
+
 https://github.com/dmaticzka/GraphProt
-#### RNAcontext: A New Method for Learning the Sequence and Structure Binding Preferences of RNA-Binding Proteins
+* **RNAcontext**
+
+A New Method for Learning the Sequence and Structure Binding Preferences of RNA-Binding Proteins
 http://www.cs.toronto.edu/~hilal/rnacontext/
 
-## 3\) Homework
-解释可视化的structure motif中不同字符的含义。可参考相应的文献或是网站。
+## 4\) Homework
+
+* 解释可视化的structure motif中不同字符的含义。可参考相应的文献或是网站。
+

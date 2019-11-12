@@ -13,10 +13,15 @@ POSTAR2数据库中收集了大量的CLIP-seq,并用统一的生物信息学流�
 
 ### \(1\) get CLIP-seq data
 
-从POSTAR2数据库的下载页面得到RBP的结合位点 [http://lulab.life.tsinghua.edu.cn/postar/download.php](http://lulab.life.tsinghua.edu.cn/postar/download.php)
-我们docker中已提供了下载好的示例文件，为保证CLIP-seq方法的统一和取出较小的文件方便大家联系，我们从human RBP binding sites中提取第八列为eCLIP得到的文件，得到human_RBP_eCLIP_hg38.txt。
+[文件和软件获取方式](README.md#files) （我们在 [docker](README.md#files) 中已提供了下载好的示例文件）
 
-human\_RBP\_eCLIP\_hg38.txt
+> * 数据来源： [POSTAR2](http://lulab.life.tsinghua.edu.cn/postar/download.php) 
+>
+> *  为保证CLIP-seq方法的统一和取出较小的文件方便大家练习，我们从human RBP binding sites中提取第八列为eCLIP得到的文件，得到一个较小的文件： `human_RBP_eCLIP_hg38.txt`。
+
+
+
+* 文件示例（human\_RBP\_eCLIP\_hg38.txt）:
 
 ```text
 chr1    187044  187087  human_RBP_eCLIP_ENCODE_1        0       -       AARS    eCLIP   K562    ENCODE  3.02982873699729
@@ -24,7 +29,7 @@ chr1    267418  267466  human_RBP_eCLIP_ENCODE_2        0       -       AARS    
 chr1    630751  630792  human_RBP_eCLIP_ENCODE_3        0       -       AARS    eCLIP   K562    ENCODE  3.5454755693998
 ```
 
-explanation for each column
+* explanation for each column:
 
 ```text
 column1:chromosome
