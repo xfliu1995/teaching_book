@@ -113,7 +113,7 @@ ssh-copy-id user@server_ip    #if port add: -p 2200
 >
 > **但如果下面的步骤中你无需登录remote server, 就无需setup ssh key。**
 
-#### \(4.1\) Prepare a backup script with rsync
+#### \(2\) Prepare a backup script with rsync
 
 * \(a\) First you need to prepare some backup dirs
 
@@ -164,7 +164,7 @@ chmod +x ~/backup.sh
 > | -I: | 挨个文件去发起数据同步 |
 > | --port=PORT: | 端口号 |
 
-#### \(4.2\) Schedule the back tasks with crontab
+#### \(3\) Schedule the back tasks with crontab
 
 crontab是Linux中用来定期执行程序的命令, 你可以使用 [在线crontab生成器](https://crontab-generator.org/)，也可以按如下方式自己编辑：
 
