@@ -73,15 +73,13 @@ cp out.jpeg /data
 * **RNApromo**
 
 https://genie.weizmann.ac.il/pubs/rnamotifs08/64bit_exe_rnamotifs08_motif_finder.tar.gz
+
 * **GraphProt**
 
-modelling binding preferences of RNA-binding proteins
-
-https://github.com/dmaticzka/GraphProt
+modelling binding preferences of RNA-binding proteins: https://github.com/dmaticzka/GraphProt
 * **RNAcontext**
 
-A New Method for Learning the Sequence and Structure Binding Preferences of RNA-Binding Proteins
-http://www.cs.toronto.edu/~hilal/rnacontext/
+A New Method for Learning the Sequence and Structure Binding Preferences of RNA-Binding Proteins: http://www.cs.toronto.edu/~hilal/rnacontext/
 
 ## 4\) Homework
 
