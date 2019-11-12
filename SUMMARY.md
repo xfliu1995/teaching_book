@@ -35,7 +35,7 @@
 * [3.ChIP-seq](part-iii.-ngs-data-analyses/3.chip-seq.md)
 * [4.Network](part-iii.-ngs-data-analyses/4.network/README.md)
   * [4.1.Co-expression Network](part-iii.-ngs-data-analyses/4.network/co_expression.md)
-  * [4.2.miRNA Targets](part-iii.-ngs-data-analyses/4.network/4.2.mirna-targets.md)
+  * [4.2.miRNA Targets](part-iii.-ngs-data-analyses/4.network/mirna-targets.md)
   * [4.3.RBP-RNA Interactions](part-iii.-ngs-data-analyses/4.network/rbp_interaction.md)
 * [5.Motif](part-iii.-ngs-data-analyses/5.motif/README.md)
   * [5.1.Sequence Motif](part-iii.-ngs-data-analyses/5.motif/sequence_motif.md)
