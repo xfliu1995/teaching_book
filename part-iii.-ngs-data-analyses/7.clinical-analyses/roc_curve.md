@@ -175,6 +175,11 @@ Here, the first column stands for the ID number for each sample. The second to t
 First, we input the data into R using `data.frame`.
 
 ```r
+#In R:
+library(ROCR)
+library(randomForest)
+library(pROC)
+
 SampleID <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25)
 Expression_of_miR_1 <- c(12, 87, 70, 74, 46, 58, 55, 33, 60, 50, 70, 22, 68, 90, 10, 78, 50, 70, 81, 44, 20, 51, 40, 30, 81)
 Expression_of_miR_2 <- c(55, 44, 23, 35, 43, 31, 40, 50, 20, 22, 50, 60, 10, 30, 40, 50, 60, 33, 31, 11, 56, 31, 11, 60, 13)
