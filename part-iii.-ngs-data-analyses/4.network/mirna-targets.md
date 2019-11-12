@@ -1,16 +1,18 @@
 # 4.2.miRNA Targets
 
-## 1\) 背景介绍
+## 1\) Background
 
 microRNA\(miRNA\)是一类能够调节基因表达的短单链内源非编码RNA\(约22nt\)，通过与互补的mRNA选择性结合抑制蛋白的产生，广泛存在于动物、植物、病毒等多种有机体中。miRNA在许多生物过程中起关键作用，包括发育、细胞分化、增值、凋亡、肿瘤转移等。
 得到miRNA的靶标gene主要由两种方法：直接从数据库中下载，或是用生物信息学工具预测。
 
 ![](../../.gitbook/assets/mirna.pipeline.png)
 
-## 2\) download from database
+## 2\) Download data from databases
+
 直接从公共数据库中输入miRNA，即可得到miRNA的靶标gene;或者从数据库中下载所有的miRNA和target的对应关系文件。
 
 ### \(1\) miRTarBase: the experimentally validated microRNA-target interactions database
+
 [http://mirtarbase.mbc.nctu.edu.tw/php/index.php](http://mirtarbase.mbc.nctu.edu.tw/php/index.php)
 
 >introduction of miRTarBase
@@ -32,7 +34,7 @@ microRNA\(miRNA\)是一类能够调节基因表达的短单链内源非编码RNA
 
 >Dweep, H et al. miRWalk2.0: a comprehensive atlas of microRNA-target interactions, Nature Methods, 2015.
 
-## 3\) prediction by bioinformatics tools
+## 3\) Prediction using bioinformatics tools
 
 ### \(1\) Getting software & data
 
@@ -326,7 +328,7 @@ Query:          1 TGCCAAAGGAGATTTGCCCTG 21
 Sbjct:        627 ACGGTTTCTTCTAAACGGGAT 607
 ```
 
-### \(3\) other recommended tools:
+## 4\) Other recommended tools
 
 RNAhybrid: [https://bibiserv2.cebitec.uni-bielefeld.de/rnahybrid](https://bibiserv2.cebitec.uni-bielefeld.de/rnahybrid)
 
@@ -336,7 +338,7 @@ psRNATarget: [http://plantgrn.noble.org/psRNATarget/](http://plantgrn.noble.org/
 
 download the example input files from [miRNA\_target](https://github.com/YuminTHU/training_class/tree/master/files/miRNA_target)
 
-## 4\) Homework
+## 5\) Homework
 
 * 根据提供的miRNA序列和target sequence序列，使用miRanda方法预测miRNA在这些target sequence上的靶标位点。相应的文件在本章节的[homework](https://github.com/lulab/teaching_book/tree/master/files/PART_III/4.network/miRNA_target/miRNA_target.homework)文件夹下，将作业以txt格式提交至网络学堂。
 
