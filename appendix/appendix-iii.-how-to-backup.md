@@ -1,26 +1,26 @@
 # Appendix III. How to Backup
 
-## Basic
+## 1\) Basic
 
-### 1\) Cloud storage
+### \(1\) Cloud storage
 
 * [Tsinghua cloud](https://cloud.tsinghua.edu.cn/) based on seafile 清华云,在校内使用速度快。
 * [Nutstore cloud](https://www.jianguoyun.com/) 商业云存储，每个月有免费的备份流量。自己申请账号使用。
 * [Nextcloud](http://lulab.life.tsinghua.edu.cn/nextcloud/) 实验室内部搭建的云存储。找实验室管理人员开通账户。
 
-### 2\) Backup tool that comes with the system
+### \(2\) Backup tool that comes with the system
 
 * **Mac:** [Back up with Time Machine](https://support.apple.com/en-us/HT201250)
 * **Windows:** [Back up on a Windows-based computer](https://support.microsoft.com/en-us/help/971759/how-to-back-up-or-transfer-your-data-on-a-windows-based-computer)
 
-### 3a\) Backup your code with GitHub
+### \(3\) Backup your code with GitHub
 
 * Create and edit your repositories \(repos.\) at [**GitHub**](https://github.com) on line
 * Use [**GitHub Desktop App**](https://desktop.github.com/) to sync your local projects \(code\) with Github repos.
 
-## Advanced
+## 2\) Advanced
 
-### 3b\) Backup your code with GitHub in Terminal
+### \(1\) Backup your code with GitHub in Terminal
 
 * **Setup**
   * [**set up ssh-key**](appendix-iii.-how-to-backup.md#ssh-key)  \(optinal\)
@@ -95,7 +95,7 @@ git push origin
 
 ### 4\) Backup data using rsync and crontab
 
-#### 4.0\) Setup ssh key \(optional\) <a id="ssh-key"></a>
+#### \(1\) Setup ssh key \(optional\) <a id="ssh-key"></a>
 
 * \(a\) Generate SSH key
 
@@ -113,7 +113,7 @@ ssh-copy-id user@server_ip    #if port add: -p 2200
 >
 > **但如果下面的步骤中你无需登录remote server, 就无需setup ssh key。**
 
-#### 4.1\) Prepare a backup script with rsync
+#### \(4.1\) Prepare a backup script with rsync
 
 * \(a\) First you need to prepare some backup dirs
 
@@ -164,7 +164,7 @@ chmod +x ~/backup.sh
 > | -I: | 挨个文件去发起数据同步 |
 > | --port=PORT: | 端口号 |
 
-#### 4.2\) Schedule the back tasks with crontab
+#### \(4.2\) Schedule the back tasks with crontab
 
 crontab是Linux中用来定期执行程序的命令, 你可以使用 [在线crontab生成器](https://crontab-generator.org/)，也可以按如下方式自己编辑：
 
