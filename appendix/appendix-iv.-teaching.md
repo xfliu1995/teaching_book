@@ -1,11 +1,11 @@
 # Appendix IV. Teaching Materials
 
-## Teaching Lecture PPTs
+## 1\) Teaching Lecture PPTs
 
 * [Bioinfo 2019](https://cloud.tsinghua.edu.cn/d/f361101fc62e49df960b/?p=/bioinfo2019/Lectures&mode=list)
 * [Bioinfo 2018](https://cloud.tsinghua.edu.cn/d/f361101fc62e49df960b/?p=/bioinfo2018&mode=list)
 
-## Teaching Docker
+## 2\) Teaching Docker
 
 [**Download Link for Docer images**](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/)
 
@@ -26,7 +26,7 @@
 * **PART III.7.Clinical Analysis** 
   * **software installed**: R 3.5.1; Python 2.7 
 
-## Teaching Videos
+## 3\) Teaching Videos
 
 | Content | Youtube | Bilibili |
 | :--- | :--- | :--- |
