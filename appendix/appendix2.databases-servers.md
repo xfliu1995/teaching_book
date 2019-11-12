@@ -27,7 +27,7 @@
 
 ## 2\) Databases
 
-### 2a\) General
+### \(1\) General
 
 1. NCBI
 
@@ -41,7 +41,7 @@
 
    genome annotation. [http://www.ensembl.org/index.html](http://www.ensembl.org/index.html)
 
-### 2b\) Expression Data
+### \(2\) Expression Data
 
 1. GTEx
 
@@ -63,7 +63,7 @@
 
    ​[http://ibl.mdanderson.org/tanric/\_design/basic/index.html](http://ibl.mdanderson.org/tanric/_design/basic/index.html)​
 
-### 2c\) Exosomal database
+### \(3\) Exosomal database
 
 1.ExoCarta
 
@@ -99,13 +99,13 @@ This database of urinary exosome proteins is based on published protein mass spe
 
 ## 3\) Servers
 
-### 3a\) General
+### \(1\) General
 
 1. BLAST
 
    finds regions of similarity between biological sequences. [https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 
-### 3b\) Gene functional analysis
+### \(2\) Gene functional analysis
 
 1. David
 
@@ -119,7 +119,7 @@ This database of urinary exosome proteins is based on published protein mass spe
 
    gene ontology \(GO\) enrichment analyses of plant and agricultural species. [http://systemsbiology.cau.edu.cn/agriGOv2/](http://systemsbiology.cau.edu.cn/agriGOv2/)
 
-### 3c\) RNA secondary structure
+### \(3\) RNA secondary structure
 
 1. RNAfold
 
@@ -129,7 +129,7 @@ This database of urinary exosome proteins is based on published protein mass spe
 
    RNA secondary structure prediction and analysis. [http://rna.urmc.rochester.edu/RNAstructureWeb/](http://rna.urmc.rochester.edu/RNAstructureWeb/)
 
-### 3d\) miRNA targets prediction
+### \(4\) miRNA targets prediction
 
 1. TargetScan
 
@@ -139,7 +139,7 @@ This database of urinary exosome proteins is based on published protein mass spe
 
    plant small RNA target analysis [https://plantgrn.noble.org/psRNATarget/](https://plantgrn.noble.org/psRNATarget/)
 
-### 3e\) motif analysis
+### \(5\) motif analysis
 
 **sequence**
 

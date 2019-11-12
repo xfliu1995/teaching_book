@@ -17,9 +17,9 @@ docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#
 ```bash
 docker load -i ~/Desktop/bioinfo_roc_survival.tar.gz
 
-docker run --name=roc -dt -h bioinfo_docker --restart unless-stopped -v ~/Downloads/data:/data gangxu/bioinfo_roc_survival:1.0
+docker run --name=bioinfo_roc_survival  -dt -h bioinfo_docker --restart unless-stopped -v ~/Downloads/data:/data gangxu/bioinfo_roc_survival:1.0
 
-docker exec -it roc bash
+docker exec -it bioinfo_roc_survival bash
 
 # 7.1 ROC Curve
 
