@@ -465,10 +465,9 @@ We could use the gene ID list for GO/KEGG analysis.
 
 * Input data:
 
-```bash
-/home/bioc/homework_FemaleLiver-01-dataInput.RData
-134 samples, 3600 genes; each row represents a sample, each column represents a gene.
-```
+* bash
+* /home/bioc/homework_FemaleLiver-01-dataInput.RData
+* 134 samples, 3600 genes; each row represents a sample, each column represents a gene.
 
 * Please try to construct an automatic network and detect module \(Choosing the soft-thresholding power, One-step network construction and module detection\) from the homework\_FemaleLiver-01-dataInput.RData. 
 
