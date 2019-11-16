@@ -19,7 +19,7 @@ docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#
 ```sh
 docker load -i ~/Downloads/bioinfo-coexp.tar.gz # 请根据下载文件的实际位置调整输入内容
 mkdir ~/Downloads/data
-docker run -dt --name coexpression --restart unless-stopped -v ~/Downloads/data:/data gangxu/coexpression:1.4
+docker run -dt --name coexpression --restart unless-stopped -v ~/Downloads/data:/data gangxu/coexpression:1.5
 ```
 
 #### 2) Windows
@@ -27,7 +27,7 @@ docker run -dt --name coexpression --restart unless-stopped -v ~/Downloads/data:
 ```sh
 docker load -i Downloads\bioinfo-coexp.tar.gz # 请根据下载文件的实际位置调整输入内容
 mkdir ~/Downloads/data
-docker run -dt --name coexpression --restart unless-stopped -v ~/Downloads/data:/data gangxu/coexpression:1.4
+docker run -dt --name coexpression --restart unless-stopped -v ~/Downloads/data:/data gangxu/coexpression:1.5
 ```
 
 
