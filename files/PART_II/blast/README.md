@@ -2,13 +2,13 @@
 
 **File List:**
 
-* **dna** Files for blast DNA
+* **dna** Files for blast DNA  
 
-  **H1N1-HA.fasta** Files for virus sequence. 
-  **H7N9-HA.fasta**	Files for virus sequence. 
-  **Yeast.fasta** Files for Yeast sequence.
-  **YeastGenome.fa** Files for Yeast Genome sequence.
+  **H1N1-HA.fasta** Files for virus sequence.   
+  **H7N9-HA.fasta**	Files for virus sequence.   
+  **Yeast.fasta** Files for Yeast sequence.  
+  **YeastGenome.fa** Files for Yeast Genome sequence.  
   
-* **protein** Files for blast protein
+* **protein** Files for blast protein  
 
 
