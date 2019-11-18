@@ -41,7 +41,7 @@ $$
 * 去平均值\(即去中心化\)，即每一位特征减去各自的平均值
 * 算协方差矩阵
  $$\frac{1}{n} XX^T $$
-* 用特征值分解方法求协方差矩阵$\frac{1}{n}XX^T$ 的特征值与特征向量
+* 用特征值分解方法求协方差矩阵$$\frac{1}{n}XX^T$$ 的特征值与特征向量
 * 对特征值从大到小排序，选择其中最大的k个。然后将其对应的k个特征向量分别作为行向量组成特征向量矩阵P
 * 将数据转换到k个特征向量构建的新空间中，即Y=PX
 
@@ -203,10 +203,10 @@ data=np.vstack([Expression_of_miR_1,Expression_of_miR_2,Expression_of_miR_3]).T
 pac_plot(data,sampleclass)
 ```
 PCA的结果如下
-![](../.gitbook/assets/7.2.PCA.png)
+![png](../.gitbook/assets/7.2.PCA.png)
 
 t-SNE的结果如下
-![](../.gitbook/assets/7.2.tSNE.png)
+![png](../.gitbook/assets/7.2.tSNE.png)
 ## 4\) Homework
 1.按照本章给出的教程，对对给定数据集BreastCancer进行可视化，画出PCA和tSNE降维后图，提交一个word/PDF文档。
 >作业要求：
