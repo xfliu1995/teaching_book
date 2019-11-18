@@ -222,7 +222,7 @@ script/Ribowave \
 -b annotation_fly/final.ORFs \
 -o GSE52799/Ribowave \
 -n SRR1039770 \
--s scripts \
+-s script \
 -p 8
 ```
 ##### (5.5) Calculating frameshift potential
