@@ -10,5 +10,10 @@
   **YeastGenome.fa** Files for Yeast Genome sequence.  
   
 * **protein** Files for blast protein  
+  
+  **NMD.fasta** 金属beta酶家族的亚种酶的序列  
+  **VIM.fasta** 金属beta酶家族的亚种酶的序列    
+  
+
 
 
