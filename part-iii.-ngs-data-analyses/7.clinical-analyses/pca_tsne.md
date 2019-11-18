@@ -203,10 +203,12 @@ data=np.vstack([Expression_of_miR_1,Expression_of_miR_2,Expression_of_miR_3]).T
 pac_plot(data,sampleclass)
 ```
 PCA的结果如下
-![png](../.gitbook/assets/7.2.PCA.png)
+
+![png](../../.gitbook/assets/7.2.PCA.png)
 
 t-SNE的结果如下
-![png](../.gitbook/assets/7.2.tSNE.png)
+
+![png](../../.gitbook/assets/7.2.tSNE.png)
 ## 4\) Homework
 1.按照本章给出的教程，对对给定数据集BreastCancer进行可视化，画出PCA和tSNE降维后图，提交一个word/PDF文档。
 >作业要求：
