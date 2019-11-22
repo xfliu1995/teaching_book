@@ -7,7 +7,7 @@
 
 ## 2\) Teaching Docker
 
-[**Download Link for Docer images**](https://cloud.tsinghua.edu.cn/d/551dd9a62f604e8f9190/)
+[**Download Link for Docer images**](https://cloud.tsinghua.edu.cn/d/747db0edd36449289b6f/?p=/Docker&mode=list)
 
 * **PART I + II + PART III.1-3**
   * **docker image name**: bioinfo\_PartI-PartII-PartIII1-3.tar.gz
@@ -36,7 +36,4 @@
 | R | [@Youtube](https://youtu.be/A0YKZgxvpXM) |  [@Bilibili](https://player.bilibili.com/player.html?aid=30590474&cid=53392848&page=1) |
 | Genome Browser: IGV | [@Youtube](https://youtu.be/6_1ZcVw7ptU) | [@Bilibili](https://www.bilibili.com/video/av30448472/) |
 | Genome Browser: UCSC | [@Youtube](https://youtu.be/eTgEtfI65hA) | [@Bilibili](https://www.bilibili.com/video/av30448417) |
-
-
-> **Source Files** \(Private\) @ [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/#group/7836/lib/63522c16-a0b9-40c1-a601-ac310535756f/Bioinformatics%20Tutorial/Video/Basic%20Videos)
 
