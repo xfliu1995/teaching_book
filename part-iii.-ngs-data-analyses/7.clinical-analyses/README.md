@@ -37,6 +37,22 @@ cd /home/test/clinical_analysis
 > * 2\) 进行Linux系统的相关操作
 > * 3\) 退出容器：`exit`
 
+ 7.2 PCA
+ 
+```bash
+docker load -i ~/Desktop/bioinfo_pca_machine.tar.gz
+
+docker run --name=bioinfo_pca_machine -dt -h bioinfo_docker --restart unless-stopped -v ~/Downloads/data:/data gangxu/machine_learning:2.0
+
+docker exec -it bioinfo_pca_machine bash
+
+# 7.2 PCA
+
+cd /home/test/pca
+
+```
+
+
 ### 方法2: 直接下载
 
 * 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/blob/master/files/PART_III/7.clinical_analyses/README.md)
