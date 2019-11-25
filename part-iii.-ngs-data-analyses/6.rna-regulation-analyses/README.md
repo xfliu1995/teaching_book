@@ -7,7 +7,8 @@
 * [6.3.Ribo-seq](ribo_seq.md)
 * [6.4.Structure-seq](structure_seq.md)
 * [6.5.fusion gene](fusion_gene.md)
-* 6.5.Modification: not completed yet
+* [6.6.SNP_RNA-seq](SNP_RNA-seq.md)
+* 6.7.Modification: not completed yet
 
 ## Files Needed {#files}
 
