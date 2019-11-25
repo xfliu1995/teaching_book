@@ -6,6 +6,7 @@
 * [6.2.APA \(Alternative Polyadenylation\)](apa.md)
 * [6.3.Ribo-seq](ribo_seq.md)
 * [6.4.Structure-seq](structure_seq.md)
+* [6.5.fusion gene](fusion_gene.md)
 * 6.5.Modification: not completed yet
 
 ## Files Needed {#files}
