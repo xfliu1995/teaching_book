@@ -1,4 +1,4 @@
-# 6.6.SNV Detection from RNA-seq
+# 6.6.SNV Detection using RNA-seq
 
 ## 1) Background
 

@@ -1,4 +1,4 @@
-# 6.5.Gene Fusion Detection from RNA-seq
+# 6.5.Gene Fusion Detection using RNA-seq
 
 ## 1) Background
 
