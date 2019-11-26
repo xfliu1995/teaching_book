@@ -1,4 +1,4 @@
-# 6.1.RNA Editing
+# 6.1.RNA Editing detection using RNA-seq
 
 ## 1\) Background
 

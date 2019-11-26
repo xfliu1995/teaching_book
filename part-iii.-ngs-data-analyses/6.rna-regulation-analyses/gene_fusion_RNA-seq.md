@@ -1,4 +1,6 @@
-# 6.5.Gene Fusion Detection using RNA-seq
+# 6.5.Gene Fusion detection using RNA-seq
+
+本章介绍如何通过RNA-seq找到可能的融合基因（Gene Fusion），包括两种可能的融合，1）两段DNA的Fusion； 2） 两条RNA剪接成的Chimeric RNA。
 
 ## 1) Background
 
@@ -26,9 +28,9 @@ docker pull trinityctat/starfusion
 
 其他可以用于分析融合基因的软件有：[Prada](http://bioinformatics.mdanderson.org/main/PRADA:Overview), [FusionCatcher](http://biorxiv.org/content/early/2014/11/19/011650), [SoapFuse](http://soap.genomics.org.cn/soapfuse.html), [TophatFusion](http://ccb.jhu.edu/software/tophat/fusion_index.html), [DISCASM/GMAP-Fusion](https://github.com/DISCASM/DISCASM/wiki)。
 
-## 2) Running steps
 
-### (1) 下载数据库
+
+## 2) 下载数据库
 
 我们需要从Broad Institute数据库网站下载STAR-Fusion所需要的参考基因组与注释文件，选择“plug-n-play”压缩文件进行下载。下载地址如下：
 
@@ -36,12 +38,13 @@ https://data.broadinstitute.org/Trinity/CTAT_RESOURCE_LIB/
 
 下载后将其命名为CTAT_resource_lib.tar.gz ，解压。
 
-### (2) 运行STAR-Fusion
+## 3) Running STAR-Fusion
 
 STAR-Fusion可以直接以Fastq为输入文件进行融合基因分析；也可以使用STAR的Chimeric.out.junction文件作为STAR-Fusion的输入文件。
+
 下面分别介绍使用这2种不同输入文件进行分析的方法。
 
-#### (2.1) 输入文件为Fastq
+### (1) 方法1-输入文件为Fastq
 
 由于STAR运行时会占用较大内存（RAM），约20～30G；如果STAR-Fusion加了`--FusionInspector validate `参数可能会使内存总占用达到～40G，因此当我们从fastq开始使用STAR-fusion分析时需要合理控制并行运行的STAR-Fusion任务数量。
 
@@ -57,7 +60,7 @@ docker run -v `pwd`:/data \ #将当前目录挂载为Docker的/data目录
 
 ```
 
-#### (2.2) 输入文件为Chimeric.out.junction
+### (2) 方法2-输入文件为Chimeric.out.junction
 
 使用STAR将Fastq比对到参考基因组上，输出Chimeric.out.junction文件
 

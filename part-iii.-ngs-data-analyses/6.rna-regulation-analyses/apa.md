@@ -1,4 +1,4 @@
-# 6.2.APA \(Alternative Polyadenylation\)
+# 6.2.APA \(Alternative Polyadenylation\) detection using RNA-seq
 
 ## 1\) Workflow
 
