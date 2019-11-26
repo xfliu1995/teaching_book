@@ -1,8 +1,10 @@
-### 1) Background
+# 6.6.SNV Detection from RNA-seq
 
-本示例使用STAR将RNA测序数据比对到参考基因组后，使用GATK(4.0以上版本)进行SNP/INDEL的检测，最后使用ANNOVAR对SNP/INDEL进行注释。
+## 1) Background
 
-#### (1) STAR
+本章介绍如何通过RNA-seq找到可能的DNA上的Single Nucleotide Variance (SNV)，我们将本示例使用STAR将RNA测序数据比对到参考基因组后，使用GATK(4.0以上版本)进行SNV （包括SNP和INDEL）的检测，最后使用ANNOVAR对这些SNV进行注释。
+
+### (1) STAR
 
 目前，可以用于将RNA测序数据（reads）比对到参考基因组的软件有：Bowtie、TopHat、HISAT、STAR等。
 
@@ -13,7 +15,7 @@ STAR在运行时候占用机器的内存较大，一般可达到20~30G，因此�
 
 > 参考文献： **Alexander Dobin**, et al. [STAR: ultrafast universal RNA-seq aligner](https://academic.oup.com/bioinformatics/article/29/1/15/272537) _Bioinformatics_. 2012. 29(1): 15-21.
 
-#### (2) GATK
+### (2) GATK
 
 GATK是Broad Institute开发的一款用于检测变异（SNP/INDEL）的软件，拥有较高的引用率（已有上万次引用）。
 
@@ -23,7 +25,7 @@ GATK是Broad Institute开发的一款用于检测变异（SNP/INDEL）的软件�
 
 > 参考文献：**Aaron McKenna**, et al. [The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data.](https://genome.cshlp.org/content/20/9/1297.long) _Genome Research_. 2010. 20: 1297-1303.
 
-#### (3) ANNOVAR
+### (3) ANNOVAR
 
 本示例中使用ANNOVAR进行变异位点信息注释。ANNOVAR是一款优秀的变异注释软件，注释速度快，且可以免费使用。用户可以选择下载公共数据库进行注释，也可以用自己制作的数据库文件（ANNOVAR接受BED/VCF格式）进行注释。
 
@@ -40,9 +42,11 @@ refGene \ #下载的数据库名称
 - [ANNOVAR的主页](http://annovar.openbioinformatics.org/en/latest/user-guide/download/)
 > 参考文献： **Wang K**, et al. [ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data](http://nar.oxfordjournals.org/content/38/16/e164) _Nucleic Acids Research_. 2010. 38:e164.
 
-### 2) Running steps
 
-#### (1) Alignment
+
+## 2) Running steps
+
+### (1) Alignment
 
 GATK要求输入的SAM/BAM文件中有Read Group信息，因此我们需要在`--outSAMattrRGline`中填写相应的Read Group信息，其中`ID`为必填项。Read Group格式详见[SAM格式](http://samtools.github.io/hts-specs/SAMv1.pdf)
 
@@ -60,7 +64,7 @@ STAR \
 echo alignment end `date`
 ```
 
-#### (2) MarkDuplicates
+### (2) MarkDuplicates
 
 在建库的PCR过程中会形成一些重复的DNA片段序列，这些重复序列被称为PCR duplicates。另外，在测序仪进行光学测量时候，也会形成一些光学重复，optical duplicates。如果变异位点位于这些重复的序列中，可能导致变异频率偏高，因此需要对重复序列进行标记，使得后续变异检测软件可以识别这些重复序列。
 
@@ -78,7 +82,7 @@ echo 2.MarkDuplicates start `date`
 echo 2.MarkDuplicates end `date`
 ```
 
-#### (3) SplitNCigarReads
+### (3) SplitNCigarReads
 
 SAM/BAM文件的第6列为CIGAR表达式，用来表示该序列各个位置的碱基的比对情况。
 
@@ -97,7 +101,7 @@ echo 3.SplitNCigarReads end `date`
 
 ```
 
-#### (4) HaplotypeCaller
+### (4) HaplotypeCaller
 
 该步骤是正式使用GATK进行变异检测的步骤。
 
@@ -118,7 +122,7 @@ echo 4.HaplotypeCaller end `date`
 
 
 
-#### (5) VariantFiltration
+### (5) VariantFiltration
 
 我们可以根据变异的聚集程度、变异的链偏好性、变异的平均质量水平、位点测序深度等指标进行过滤。
 
@@ -158,9 +162,8 @@ echo 5.VariantFiltration end `date`
 
 值得指出的是，满足用户所设置的过滤表达式（如平均质量QD低于2: `--filter 'QD < 2.0'`）的变异才是我们需要过滤的变异。这些需要被过滤的“不合格”变异仍然会被保留在VCF文件中，但是在VCF第6列 `QUAL`中会被标注过滤的原因（平均质量QD太低，则标记为`QD`），通过筛选的、合格的变异位点会被标记`PASS`。
 我们可以用`awk`等命令去除VCF中不合格变异，保留合格变异。
- 
 
-#### (6) Annotation
+### (6) Annotation
 
 我们可以使用软件以及数据库对得到的变异进行注释，可以获得注释信息包括：变异的位置（位于哪个基因？ 位于exon/intron/UTR ?）、在人群（例如东亚人群）中的频率，临床意义（Pathogenic/Benign）等等。这些注释信息可以帮助研究人员对变异的重要性作出判断。
 

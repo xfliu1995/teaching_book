@@ -1,6 +1,8 @@
-### 1) Background
+# 6.5.Gene Fusion Detection from RNA-seq
 
-融合基因（Fusion gene）是指两个单独的基因全部或部分序列融合而形成的嵌合基因。 融合伴侣可能贡献5’UTR、编码区或3’多腺苷酸信号。形成融合基因的原因有：染色体间易位、缺失、倒位等。
+## 1) Background
+
+融合基因（Gene Fusion）是指两个单独的基因全部或部分序列融合而形成的嵌合基因。 融合伴侣可能贡献5’UTR、编码区或3’多腺苷酸信号。形成融合基因的原因有：染色体间易位、缺失、倒位等。
 
 最为经典的案例是**慢性粒细胞白血病**中**BCR-ABL1**的基因融合，治疗慢性粒细胞白血病的药物，**伊马替尼/格列卫**，其作用靶点就是该融合基因。
 
@@ -24,10 +26,9 @@ docker pull trinityctat/starfusion
 
 其他可以用于分析融合基因的软件有：[Prada](http://bioinformatics.mdanderson.org/main/PRADA:Overview), [FusionCatcher](http://biorxiv.org/content/early/2014/11/19/011650), [SoapFuse](http://soap.genomics.org.cn/soapfuse.html), [TophatFusion](http://ccb.jhu.edu/software/tophat/fusion_index.html), [DISCASM/GMAP-Fusion](https://github.com/DISCASM/DISCASM/wiki)。
 
+## 2) Running steps
 
-### 2) Running steps
-
-#### (1) 下载数据库
+### (1) 下载数据库
 
 我们需要从Broad Institute数据库网站下载STAR-Fusion所需要的参考基因组与注释文件，选择“plug-n-play”压缩文件进行下载。下载地址如下：
 
@@ -35,12 +36,12 @@ https://data.broadinstitute.org/Trinity/CTAT_RESOURCE_LIB/
 
 下载后将其命名为CTAT_resource_lib.tar.gz ，解压。
 
-#### (2) 运行STAR-Fusion
+### (2) 运行STAR-Fusion
 
 STAR-Fusion可以直接以Fastq为输入文件进行融合基因分析；也可以使用STAR的Chimeric.out.junction文件作为STAR-Fusion的输入文件。
 下面分别介绍使用这2种不同输入文件进行分析的方法。
 
-##### 2.1 输入文件为Fastq
+#### (2.1) 输入文件为Fastq
 
 由于STAR运行时会占用较大内存（RAM），约20～30G；如果STAR-Fusion加了`--FusionInspector validate `参数可能会使内存总占用达到～40G，因此当我们从fastq开始使用STAR-fusion分析时需要合理控制并行运行的STAR-Fusion任务数量。
 
@@ -56,7 +57,7 @@ docker run -v `pwd`:/data \ #将当前目录挂载为Docker的/data目录
 
 ```
 
-##### 2.2 输入文件为Chimeric.out.junction
+#### (2.2) 输入文件为Chimeric.out.junction
 
 使用STAR将Fastq比对到参考基因组上，输出Chimeric.out.junction文件
 
@@ -105,3 +106,4 @@ docker run -v /BioII:/BioII -v /Share2:/Share2 --rm trinityctat/starfusion /usr/
 
 echo starfusion end `date`
 ```
+
