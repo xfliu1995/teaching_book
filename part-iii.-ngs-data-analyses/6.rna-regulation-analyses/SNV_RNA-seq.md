@@ -1,7 +1,6 @@
 # 6.6.SNV detection using RNA-seq
 
 
-
 本章介绍如何通过RNA-seq找到可能的DNA上的Single Nucleotide Variance (SNV)，我们将本示例使用STAR将RNA测序数据比对到参考基因组后，使用GATK(4.0以上版本)进行SNV （包括SNP和INDEL）的检测，最后使用ANNOVAR对这些SNV进行注释。
 
 
