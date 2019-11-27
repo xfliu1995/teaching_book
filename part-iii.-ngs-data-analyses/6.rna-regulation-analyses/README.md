@@ -7,7 +7,7 @@
 * [6.3.Ribo-seq](ribo_seq.md)
 * [6.4.Structure-seq](structure_seq.md)
 * [6.5.Gene Fusion dection using RNA-seq](gene_fusion_RNA-seq.md)
-* [6.6.SNV detection using RNA-seq](SNV_RNA-seq.md)
+* [6.6.SNV/INDEL detection using RNA-seq](SNV_RNA-seq.md)
 
   
 

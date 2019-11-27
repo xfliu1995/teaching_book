@@ -46,7 +46,7 @@
   * [6.3.Ribo-seq](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/ribo_seq.md)
   * [6.4.Structure-seq](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/structure_seq.md)
   * [6.5.Gene Fusion Detection](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/gene_fusion_RNA-seq.md)
-  * [6.6.SNV Detection](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/SNV_RNA-seq.md)
+  * [6.6.SNV/INDEL Detection](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/SNV_RNA-seq.md)
 * [7.Clinical Analyses](part-iii.-ngs-data-analyses/7.clinical-analyses/README.md)
   * [7.1.ROC Curve](part-iii.-ngs-data-analyses/7.clinical-analyses/roc_curve.md)
   * [7.2.PCA/tSNE](part-iii.-ngs-data-analyses/7.clinical-analyses/pca_tsne.md)

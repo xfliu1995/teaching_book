@@ -1,7 +1,7 @@
-# 6.6.SNV detection using RNA-seq
+# 6.6.SNV/INDEL detection using RNA-seq
 
 
-本章介绍如何通过RNA-seq找到可能的DNA上的Single Nucleotide Variance (SNV)，我们将本示例使用STAR将RNA测序数据比对到参考基因组后，使用GATK(4.0以上版本)进行SNV （包括SNP和INDEL）的检测，最后使用ANNOVAR对这些SNV进行注释。
+本章介绍如何通过RNA-seq找到可能的DNA上的Single Nucleotide Variance (SNV)和Insert/Deletion (INDEL)，我们将本示例使用STAR将RNA测序数据比对到参考基因组后，使用GATK(4.0以上版本)进行SNV/INDEL 的检测，最后使用ANNOVAR对这些SNV进行注释。
 
 
 
@@ -22,7 +22,7 @@ STAR在运行时候占用机器的内存较大，一般可达到20~30G，因此�
 
 ### (2) GATK
 
-GATK是Broad Institute开发的一款用于检测变异（SNP/INDEL）的软件，拥有较高的引用率（已有上万次引用）。
+GATK是Broad Institute开发的一款用于检测变异（SNV/INDEL）的软件，拥有较高的引用率（已有上万次引用）。
 
 - [GATK的主页](https://software.broadinstitute.org/gatk/)
 
