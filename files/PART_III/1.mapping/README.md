@@ -1,8 +1,3 @@
-# Files needed for the Tutorial of Mapping:
+## Files needed for this section:
 
-* **THA1.fa**: a fasta file to practice mapping command.  
-* **THA2.fa**: a fasta file to practice mapping homework.  
-* **e_coli_1000_1.fq**: a fastq file to practice mapping command.   
-* **e_coli_500.fq**: a fastq file to practice mapping homework.  
-
-[Pair-end file](https://cloud.tsinghua.edu.cn/d/9719bd1205f6477bbf75/)
+* Mapping: please download files from [here](https://cloud.tsinghua.edu.cn/#group/464/lib/9c6a227e-f0f9-48d1-9c00-608642d04b89/Teaching%20and%20Training/Bioinformatics%20Tutorial/Large%20Files/1.Mapping).
