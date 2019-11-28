@@ -1,26 +1,24 @@
-# 6.5.Gene Fusion detection using RNA-seq
+# 6.5.Chimeric RNA Detection
 
-本章介绍如何通过RNA-seq找到可能的融合基因（Gene Fusion），包括两种可能的融合，1）两段DNA的Fusion； 2） 两条RNA剪接成的Chimeric RNA。
-
+本章介绍如何通过RNA-seq找到可能的Chimeric RNAs。
 
 ## 1) Background
 
-融合基因（Gene Fusion）是指两个单独的基因全部或部分序列融合而形成的嵌合基因。 融合伴侣可能贡献5’UTR、编码区或3’多腺苷酸信号。形成融合基因的原因有：染色体间易位、缺失、倒位等。
+**Chimeric RNA**, sometimes referred to as a fusion transcript, is composed of exons from two or more different genes that have the potential to encode novel proteins. These RNAs are different from those produced by conventional splicing as they are produced by two or more gene loci.
 
-最为经典的案例是**慢性粒细胞白血病**中**BCR-ABL1**的基因融合，治疗慢性粒细胞白血病的药物，**伊马替尼/格列卫**，其作用靶点就是该融合基因。
+Chimeric RNA的产生来源包括两种可能的融合，1）两段DNA的融合(Gene Fusion)； 2）两条RNA剪接（trans-splicing) 而成。
 
-近期发现，**ZBTB16-ABL1**融合基因是导致形成急性T淋巴细胞白血病的关键基因。
+## 2) Software
 
-> **Bing Chen**, et al. [Identification of fusion genes and characterization of transcriptome features in T-cell acute lymphoblastic leukemia](https://www.pnas.org/content/115/2/373). **_PNAS_**,  Jan 2018, 115 (2) 373-378.
+### (1) Install STAR-Fusion
 
-STAR-Fusion是一款利用RNA-Seq数据检测人类融合基因的软件。
-
-STAR-Fusion提供了Docker镜像，以方便用户使用。
+在本示例中，我们使用STAR-Fusion进行分析, STAR-Fusion是一款利用RNA-Seq数据检测人类融合基因的软件，STAR-Fusion提供了Docker镜像，以方便用户使用。
 
 ```bash
 docker pull trinityctat/starfusion
 ```
-在本示例中，我们使用STAR-Fusion的Docker镜像进行分析。如果您不使用Docker镜像而是自行安装，请查看[STAR-Fusion的安装指南](https://github.com/STAR-Fusion/STAR-Fusion/wiki/installing-star-fusion)。
+
+如果您不使用Docker镜像而是自行安装，请查看[STAR-Fusion的安装指南](https://github.com/STAR-Fusion/STAR-Fusion/wiki/installing-star-fusion)。
 
 - [STAR-Fusion的GitHub主页](https://github.com/STAR-Fusion/STAR-Fusion/wiki) 有详细的软件使用方法说明
 
@@ -31,13 +29,15 @@ docker pull trinityctat/starfusion
 
 
 
-## 2) 下载数据库
+### (2) Download reference files for STAR-Fusion
 
-我们需要从Broad Institute数据库网站下载STAR-Fusion所需要的参考基因组与注释文件，选择“plug-n-play”压缩文件进行下载。下载地址如下：
+在寻找chimeric RNA时，我们还需要从Broad Institute数据库网站下载STAR-Fusion所需要的参考基因组与注释文件，选择“plug-n-play”压缩文件进行下载。下载地址如下：
 
 https://data.broadinstitute.org/Trinity/CTAT_RESOURCE_LIB/
 
 下载后将其命名为CTAT_resource_lib.tar.gz ，解压。
+
+
 
 ## 3) Running STAR-Fusion
 
@@ -63,7 +63,7 @@ docker run -v `pwd`:/data \ #将当前目录挂载为Docker的/data目录
 
 ### (2) 方法2-输入文件为Chimeric.out.junction
 
-使用STAR将Fastq比对到参考基因组上，输出Chimeric.out.junction文件
+* 使用STAR将Fastq比对到参考基因组上，输出Chimeric.out.junction文件:
 
 ```bash
 echo STAR start `date`
@@ -97,7 +97,7 @@ echo STAR end `date`
 
 ```
 
-以Chimeric.out.junction为输入文件，用STAR-Fusion进行融合基因分析
+* 以Chimeric.out.junction为输入文件，用STAR-Fusion进行分析:
 
 ```bash
 echo starfusion start `date`
