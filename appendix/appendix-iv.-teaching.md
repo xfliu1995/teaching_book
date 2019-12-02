@@ -24,7 +24,7 @@
   * **docker image name**: bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
   * **software installed**:  perl v5.26.1; DaPars; Ribowave; R 3.5.1; bedtools v2.25.0; shapemapper 
 * **PART III.7.Clinical Analysis 1** 
-  * **docker image name**: ioinfo_roc_survival.tar.gz
+  * **docker image name**: bioinfo_roc_survival.tar.gz
   * **software installed**: R 3.5.1; Python 2.7 
 * **PART III.8.Clinical Analysis 2** 
   * **docker image name**: bioinfo_pca_machine.tar.gz
