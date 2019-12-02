@@ -28,11 +28,11 @@
   * **software installed**: R 3.5.1; Python 2.7 
 * **PART III.8.Clinical Analysis 2** 
   * **docker image name**: bioinfo_pca_machine.tar.gz
-  * **software installed**: R 3.5.1; Python 2.7 ; Anocanda
+  * **software installed**: Anaconda 2019.10
   
  * **PART IV.9.Machine learning** 
   * **docker image name**: bioinfo_pca_machine.tar.gz
-  * **software installed**: R 3.5.1; Python 2.7 ; Anocanda
+  * **software installed**: Anaconda 2019.10
 
 ## 3\) Teaching Videos
 
