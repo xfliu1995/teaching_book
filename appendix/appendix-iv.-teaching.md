@@ -15,9 +15,12 @@
 * **PART III.4**
   * **docker image name**: bioinfo\_pairend.tar.gz
   * **software installed**: STAR：2.5.3a;
-* **PART III.5.network coexpression**
+* **PART III.5.network coexpression 1**
   * **docker image name**: bioinfo-coexp.tar.gz
-  * **software installed**: R 3.5.1; miRanda-aug2010; psRobot v1.2; bedtools v2.27.1 
+  * **software installed**: R 3.5.1 ; bedtools v2.27.1 
+* **PART III.5.network coexpression 2**  
+  * **docker image name**: bioinfo_mirna_target.tar.gz
+  * **software installed**: miRanda;psRobot: v1.2; miRanda: aug2010; 
 * **PART III.6.motif**
   * **docker image name**: bioinfo_motif.tar.gz
   * **software installed**: R 3.5.1; meme 4.11.4; RNAfold 2.4.8; BEAM; RNApromo 
