@@ -19,6 +19,7 @@
   * **docker image name**: bioinfo-coexp.tar.gz
   * **software installed**: R 3.5.1; miRanda-aug2010; psRobot v1.2; bedtools v2.27.1 
 * **PART III.6.motif**
+  * **docker image name**: bioinfo_motif.tar.gz
   * **software installed**: R 3.5.1; meme 4.11.4; RNAfold 2.4.8; BEAM; RNApromo 
 * **PART III.7.RNA Regulation Analysis 1** 
   * **docker image name**:  bioinfo_rnaeditor.tar.gz
@@ -32,8 +33,7 @@
 * **PART III.9.Clinical Analysis 2** 
   * **docker image name**: bioinfo_pca_machine.tar.gz
   * **software installed**: Anaconda 2019.10
-  
- * **PART IV.9.Machine learning** 
+* **PART IV.9.Machine learning** 
   * **docker image name**: bioinfo_pca_machine.tar.gz
   * **software installed**: Anaconda 2019.10
 
