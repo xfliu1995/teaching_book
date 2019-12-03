@@ -37,12 +37,13 @@ GATK是Broad Institute开发的一款用于检测变异（SNV/INDEL）的软件�
 可以使用ANNOVAR提供的Perl脚本下载数据库，如下：
 
 ```bash
-perl /BioII/lulab_b/chenyinghui/software/annovar/annovar/annotate_variation.pl \
+mkdir /home/test/annovar/Homo_sapiens
+perl /home/test/annovar/annotate_variation.pl \
 -buildver hg38 \
 -downdb \
 -webfrom annovar \
 refGene \ #下载的数据库名称
-/BioII/lulab_b/chenyinghui/database/Homo_sapiens/annovar  #下载数据库存放路径
+/home/test/annovar/Homo_sapiens/annova  #下载数据库存放路径
 ```
 - [ANNOVAR的主页](http://annovar.openbioinformatics.org/en/latest/user-guide/download/)
 > 参考文献： **Wang K**, et al. [ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data](http://nar.oxfordjournals.org/content/38/16/e164) _Nucleic Acids Research_. 2010. 38:e164.
