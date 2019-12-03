@@ -58,16 +58,25 @@ GATK要求输入的SAM/BAM文件中有Read Group信息，因此我们需要在`-
 
 ```bash
 echo alignment start `date`
-source /BioII/lulab_b/containers/singularity/wrappers/bashrc
-STAR \
---genomeDir /BioII/lulab_b/chenyinghui/project/Docker/SNP/reference/Homo_sapiens_GRCh38_ch1_STAR_Index \
---runThreadN 1 \
---readFilesIn /BioII/lulab_b/chenyinghui/project/Docker/SNP/chr1.fq \ 
---readFilesCommand "gunzip -c" \
---outSAMtype BAM SortedByCoordinate \
---outSAMattrRGline ID:1 LB:exoRBase PL:ILLUMINA PU:unit1 SM:SRR5714908 \
---outFileNamePrefix /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/1.STAR_alignment/SRR5714908.
+mkdir -p /home/test/output/1.STAR_alignment/SRR5714908
+
+/home/test/STAR-2.7.1a/bin/Linux_x86_64_static/STAR \
+--genomeDir /home/test/Homo_sapiens_GRCh38_ch1_STAR_Index \
+--runThreadN 1 --readFilesIn /home/test/chr1.fq --outSAMtype BAM SortedByCoordinate --outSAMattrRGline ID:1 LB:exoRBase PL:ILLUMINA PU:unit1 SM:SRR5714908 --outFileNamePrefix /home/test/output/1.STAR_alignment/SRR5714908
+
 echo alignment end `date`
+
+#echo alignment start `date`
+#source /BioII/lulab_b/containers/singularity/wrappers/bashrc
+#STAR \
+#--genomeDir /BioII/lulab_b/chenyinghui/project/Docker/SNP/reference/Homo_sapiens_GRCh38_ch1_STAR_Index \
+#--runThreadN 1 \
+#--readFilesIn /BioII/lulab_b/chenyinghui/project/Docker/SNP/chr1.fq \ 
+#--readFilesCommand "gunzip -c" \
+#--outSAMtype BAM SortedByCoordinate \
+#--outSAMattrRGline ID:1 LB:exoRBase PL:ILLUMINA PU:unit1 SM:SRR5714908 \
+#--outFileNamePrefix /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/1.STAR_alignment/SRR5714908.
+#echo alignment end `date`
 ```
 
 ### (2) MarkDuplicates
