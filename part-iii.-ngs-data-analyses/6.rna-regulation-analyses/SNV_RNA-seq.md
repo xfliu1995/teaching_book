@@ -62,7 +62,7 @@ mkdir -p /home/test/output/1.STAR_alignment/SRR5714908
 
 /home/test/STAR-2.7.1a/bin/Linux_x86_64_static/STAR \
 --genomeDir /home/test/Homo_sapiens_GRCh38_ch1_STAR_Index \
---runThreadN 1 --readFilesIn /home/test/chr1.fq --outSAMtype BAM SortedByCoordinate --outSAMattrRGline ID:1 LB:exoRBase PL:ILLUMINA PU:unit1 SM:SRR5714908 --outFileNamePrefix /home/test/output/1.STAR_alignment/SRR5714908
+--runThreadN 1 --readFilesIn /home/test/chr1.fq --outSAMtype BAM SortedByCoordinate --outSAMattrRGline ID:1 LB:exoRBase PL:ILLUMINA PU:unit1 SM:SRR5714908 --outFileNamePrefix /home/test/output/1.STAR_alignment/SRR5714908.
 
 echo alignment end `date`
 
