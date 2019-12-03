@@ -138,11 +138,12 @@ echo 4.HaplotypeCaller end `date`
 ```bash
 echo 5.VariantFiltration start `date`
 
-/BioII/lulab_b/chenyinghui/software/GATK/gatk-4.1.3.0/gatk VariantFiltration \
+mkdir /home/test/output/5.VariantFiltration
+/gatk/gatk VariantFiltration \
 --java-options '-Xmx1G' \
---variant /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/4.HaplotypeCaller/SRR5714908.raw.vcf.gz \
---output /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/5.VariantFiltration/SRR5714908.filtered.vcf.gz \
---reference /BioII/lulab_b/chenyinghui/project/Docker/SNP/reference/Homo_sapiens.GRCh38.ch1.fa \
+--variant /home/test/output/4.HaplotypeCaller/SRR5714908.raw.vcf.gz \
+--output /home/test/output/5.VariantFiltration/SRR5714908.filtered.vcf.gz \
+--reference /home/test/reference/Homo_sapiens.GRCh38.ch1.fa \
 --window 35 \
 --cluster 3 \
 --filter-name 'FS' \
@@ -151,9 +152,29 @@ echo 5.VariantFiltration start `date`
 --filter 'QD < 2.0' \
 --filter-name 'DP' \
 --filter 'DP < 5'
-zcat /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/5.VariantFiltration/SRR5714908.filtered.vcf.gz  | awk -F '\t' '{if ($0 ~ "#" || $7 == "PASS") print $0 }' - >/BioII/lulab_b/chenyinghui/project/Docker/SNP/output/5.VariantFiltration/SRR5714908.filtered.clean.vcf
+zcat /home/test/output/5.VariantFiltration/SRR5714908.filtered.vcf.gz  | awk -F '\t' '{if ($0 ~ "#" || $7 == "PASS") print $0 }' - >/home/test/output/5.VariantFiltration/SRR5714908.filtered.clean.vcf
 
 echo 5.VariantFiltration end `date`
+
+
+#echo 5.VariantFiltration start `date`
+
+#/BioII/lulab_b/chenyinghui/software/GATK/gatk-4.1.3.0/gatk VariantFiltration \
+#--java-options '-Xmx1G' \
+#--variant /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/4.HaplotypeCaller/SRR5714908.raw.vcf.gz \
+#--output /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/5.VariantFiltration/SRR5714908.filtered.vcf.gz \
+#--reference /BioII/lulab_b/chenyinghui/project/Docker/SNP/reference/Homo_sapiens.GRCh38.ch1.fa \
+#--window 35 \
+#--cluster 3 \
+#--filter-name 'FS' \
+#--filter 'FS > 30.0' \
+#--filter-name 'QD' \
+#--filter 'QD < 2.0' \
+#--filter-name 'DP' \
+#--filter 'DP < 5'
+#zcat /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/5.VariantFiltration/SRR5714908.filtered.vcf.gz  | awk -F '\t' '{if ($0 ~ "#" || $7 == "PASS") print $0 }' - #>/BioII/lulab_b/chenyinghui/project/Docker/SNP/output/5.VariantFiltration/SRR5714908.filtered.clean.vcf
+
+#echo 5.VariantFiltration end `date`
 
 ```
 
