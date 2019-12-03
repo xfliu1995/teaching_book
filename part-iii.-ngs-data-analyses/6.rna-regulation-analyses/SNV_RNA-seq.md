@@ -30,23 +30,7 @@ GATK是Broad Institute开发的一款用于检测变异（SNV/INDEL）的软件�
 
 > 参考文献：**Aaron McKenna**, et al. [The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data.](https://genome.cshlp.org/content/20/9/1297.long) _Genome Research_. 2010. 20: 1297-1303.
 
-### (3) ANNOVAR
 
-本示例中使用ANNOVAR进行变异位点信息注释。ANNOVAR是一款优秀的变异注释软件，注释速度快，且可以免费使用。用户可以选择下载公共数据库进行注释，也可以用自己制作的数据库文件（ANNOVAR接受BED/VCF格式）进行注释。
-
-可以使用ANNOVAR提供的Perl脚本下载数据库，如下：
-
-```bash
-mkdir /home/test/annovar/Homo_sapiens
-perl /home/test/annovar/annotate_variation.pl \
--buildver hg38 \
--downdb \
--webfrom annovar \
-refGene \ #下载的数据库名称
-/home/test/annovar/Homo_sapiens/annova  #下载数据库存放路径
-```
-- [ANNOVAR的主页](http://annovar.openbioinformatics.org/en/latest/user-guide/download/)
-> 参考文献： **Wang K**, et al. [ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data](http://nar.oxfordjournals.org/content/38/16/e164) _Nucleic Acids Research_. 2010. 38:e164.
 
 
 
@@ -187,6 +171,27 @@ echo 5.VariantFiltration end `date`
 
 值得指出的是，满足用户所设置的过滤表达式（如平均质量QD低于2: `--filter 'QD < 2.0'`）的变异才是我们需要过滤的变异。这些需要被过滤的“不合格”变异仍然会被保留在VCF文件中，但是在VCF第6列 `QUAL`中会被标注过滤的原因（平均质量QD太低，则标记为`QD`），通过筛选的、合格的变异位点会被标记`PASS`。
 我们可以用`awk`等命令去除VCF中不合格变异，保留合格变异。
+
+## Utilities
+
+### (3) ANNOVAR
+
+本示例中使用ANNOVAR进行变异位点信息注释。ANNOVAR是一款优秀的变异注释软件，注释速度快，且可以免费使用。用户可以选择下载公共数据库进行注释，也可以用自己制作的数据库文件（ANNOVAR接受BED/VCF格式）进行注释。
+
+可以使用ANNOVAR提供的Perl脚本下载数据库，如下：
+**这边会下载30G的数据，请提前做好心理准备。网络不好容易失败。**
+
+```bash
+mkdir /home/test/annovar/Homo_sapiens
+perl /home/test/annovar/annotate_variation.pl \
+-buildver hg38 \
+-downdb \
+-webfrom annovar \
+refGene \ #下载的数据库名称
+/home/test/annovar/Homo_sapiens/annova  #下载数据库存放路径
+```
+- [ANNOVAR的主页](http://annovar.openbioinformatics.org/en/latest/user-guide/download/)
+> 参考文献： **Wang K**, et al. [ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data](http://nar.oxfordjournals.org/content/38/16/e164) _Nucleic Acids Research_. 2010. 38:e164.
 
 ### (6) Annotation
 
