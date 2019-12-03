@@ -106,13 +106,23 @@ SAM/BAM文件的第6列为CIGAR表达式，用来表示该序列各个位置的�
 ```bash
 echo 3.SplitNCigarReads start `date`
 
-/BioII/lulab_b/chenyinghui/software/GATK/gatk-4.1.3.0/gatk  SplitNCigarReads \
---java-options '-Xmx2G'
--R /BioII/lulab_b/chenyinghui/project/Docker/SNP/reference/Homo_sapiens.GRCh38.ch1.faa \
--I /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/2.MarkDuplicates/SRR5714908.sorted.MarkDup.bam \
--O /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/3.SplitNCigarReads/SRR5714908.sorted.MarkDup.SplitNCigar.bam
+/gatk/gatk  SplitNCigarReads \
+--java-options '-Xmx2G' \
+-R /home/test/reference/Homo_sapiens.GRCh38.ch1.fa \
+-I /home/test/output/2.MarkDuplicates/SRR5714908.sorted.MarkDup.bam \
+-O /home/test/output/3.SplitNCigarReads/SRR5714908.sorted.MarkDup.SplitNCigar.bam
 
 echo 3.SplitNCigarReads end `date`
+
+#echo 3.SplitNCigarReads start `date`
+
+#/BioII/lulab_b/chenyinghui/software/GATK/gatk-4.1.3.0/gatk  SplitNCigarReads \
+#--java-options '-Xmx2G'
+#-R /BioII/lulab_b/chenyinghui/project/Docker/SNP/reference/Homo_sapiens.GRCh38.ch1.faa \
+#-I /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/2.MarkDuplicates/SRR5714908.sorted.MarkDup.bam \
+#-O /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/3.SplitNCigarReads/SRR5714908.sorted.MarkDup.SplitNCigar.bam
+
+#echo 3.SplitNCigarReads end `date`
 
 ```
 
