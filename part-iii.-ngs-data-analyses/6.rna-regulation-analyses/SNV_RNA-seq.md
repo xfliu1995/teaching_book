@@ -71,14 +71,26 @@ echo alignment end `date`
 
 ```bash
 echo 2.MarkDuplicates start `date`
-/BioII/lulab_b/chenyinghui/software/GATK/gatk-4.1.3.0/gatk  MarkDuplicates \
---java-options '-Xmx2G'
---INPUT  /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/1.STAR_alignment/SRR5714908.Aligned.sortedByCoord.out.bam \
---OUTPUT /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/2.MarkDuplicates/SRR5714908.sorted.MarkDup.bam \
+mkdir -p /home/test/output/2.MarkDuplicates/
+
+/gatk/gatk  MarkDuplicates \
+--java-options '-Xmx2G' \
+--INPUT  /home/test/output/1.STAR_alignment/SRR5714908.Aligned.sortedByCoord.out.bam \
+--OUTPUT /home/test/output/2.MarkDuplicates/SRR5714908.sorted.MarkDup.bam \
 --CREATE_INDEX true \
---METRICS_FILE /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/2.MarkDuplicates/SRR5714908.sorted.MarkDup.bam.metrix \
+--METRICS_FILE /home/test/output/2.MarkDuplicates/SRR5714908.sorted.MarkDup.bam.metrix \
 --VALIDATION_STRINGENCY SILENT
 echo 2.MarkDuplicates end `date`
+
+#echo 2.MarkDuplicates start `date`
+#/BioII/lulab_b/chenyinghui/software/GATK/gatk-4.1.3.0/gatk  MarkDuplicates \
+#--java-options '-Xmx2G'
+#--INPUT  /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/1.STAR_alignment/SRR5714908.Aligned.sortedByCoord.out.bam \
+#--OUTPUT /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/2.MarkDuplicates/SRR5714908.sorted.MarkDup.bam \
+#--CREATE_INDEX true \
+#--METRICS_FILE /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/2.MarkDuplicates/SRR5714908.sorted.MarkDup.bam.metrix \
+#--VALIDATION_STRINGENCY SILENT
+#echo 2.MarkDuplicates end `date`
 ```
 
 ### (3) SplitNCigarReads
@@ -117,15 +129,30 @@ echo 3.SplitNCigarReads end `date`
 ```bash
 echo 4.HaplotypeCaller start `date`
 
-/BioII/lulab_b/chenyinghui/software/GATK/gatk-4.1.3.0/gatk HaplotypeCaller \
+mkdir /home/test/output/4.HaplotypeCaller
+
+/gatk/gatk HaplotypeCaller \
 --java-options '-Xmx2G' \
---input  /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/3.SplitNCigarReads/SRR5714908.sorted.MarkDup.SplitNCigar.bam \
---output /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/4.HaplotypeCaller/SRR5714908.raw.vcf.gz \
---reference /BioII/lulab_b/chenyinghui/project/Docker/SNP/reference/Homo_sapiens.GRCh38.ch1.fa \
+--input  /home/test/output/3.SplitNCigarReads/SRR5714908.sorted.MarkDup.SplitNCigar.bam \
+--output /home/test/output/4.HaplotypeCaller/SRR5714908.raw.vcf.gz \
+--reference /home/test/reference/Homo_sapiens.GRCh38.ch1.fa \
 -dont-use-soft-clipped-bases \
 --standard-min-confidence-threshold-for-calling 20
 
 echo 4.HaplotypeCaller end `date`
+
+
+#echo 4.HaplotypeCaller start `date`
+
+#/BioII/lulab_b/chenyinghui/software/GATK/gatk-4.1.3.0/gatk HaplotypeCaller \
+#--java-options '-Xmx2G' \
+#--input  /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/3.SplitNCigarReads/SRR5714908.sorted.MarkDup.SplitNCigar.bam \
+#--output /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/4.HaplotypeCaller/SRR5714908.raw.vcf.gz \
+#--reference /BioII/lulab_b/chenyinghui/project/Docker/SNP/reference/Homo_sapiens.GRCh38.ch1.fa \
+#-dont-use-soft-clipped-bases \
+#--standard-min-confidence-threshold-for-calling 20
+
+#echo 4.HaplotypeCaller end `date`
 
 ```
 
@@ -209,7 +236,7 @@ perl /home/test/annovar/annotate_variation.pl \
 -downdb \
 -webfrom annovar \
 refGene \ #下载的数据库名称
-/home/test/annovar/Homo_sapiens/annova  #下载数据库存放路径
+/data  #下载数据库存放路径
 ```
 - [ANNOVAR的主页](http://annovar.openbioinformatics.org/en/latest/user-guide/download/)
 > 参考文献： **Wang K**, et al. [ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data](http://nar.oxfordjournals.org/content/38/16/e164) _Nucleic Acids Research_. 2010. 38:e164.
@@ -224,17 +251,35 @@ ANNOVAR将注释分为gene-based annotation、filter-based annotation、Region-b
 
 ```bash
 echo 6.Annotation start `date`
-perl /BioII/lulab_b/chenyinghui/software/annovar/annovar/table_annovar.pl \
-/BioII/lulab_b/chenyinghui/project/Docker/SNP/output/5.VariantFiltration/SRR5714908.filtered.clean.vcf  \ #需要注释的VCF文件
-/BioII/lulab_b/chenyinghui/database/Homo_sapiens/annovar/ \ #注释使用的数据库所处的文件夹路径
---buildver hg38 \ #比对所用的人类参考基因组的版本，决定了变异坐标是基于何种版本参考基因组
---outfile /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/6.Annotation/SRR5714908.annotated.variants \  #输出文件路径与文件名前缀
---remove \  #自动删除中间文件
---nastring . \  #注释空缺值用.代替
---vcfinput \  #输入文件为VCF格式
+mkdir /home/test/output/6.Annotation
+
+perl /home/test/annovar/table_annovar.pl \
+/home/test/output/5.VariantFiltration/SRR5714908.filtered.clean.vcf  \
+/data \
+--buildver hg38 \
+--outfile /home/test/output/6.Annotation/SRR5714908.annotated.variants \
+--remove \
+--nastring . \
+--vcfinput \
 --thread 2 \
---protocol ensGene,cosmic70,gnomad211_genome,exac03,clinvar_20190305,avsnp150 \ #使用的数据库
---operation g,f,f,f,f,f \  #数据库对应的注释类型
+--protocol ensGene,cosmic70,gnomad211_genome,exac03,clinvar_20190305,avsnp150 \
+--operation g,f,f,f,f,f
 
 echo 6.Annotation end `date`
+
+
+#echo 6.Annotation start `date`
+#perl /BioII/lulab_b/chenyinghui/software/annovar/annovar/table_annovar.pl \
+#/BioII/lulab_b/chenyinghui/project/Docker/SNP/output/5.VariantFiltration/SRR5714908.filtered.clean.vcf  \ #需要注释的VCF文件
+#/BioII/lulab_b/chenyinghui/database/Homo_sapiens/annovar/ \ #注释使用的数据库所处的文件夹路径
+#--buildver hg38 \ #比对所用的人类参考基因组的版本，决定了变异坐标是基于何种版本参考基因组
+#--outfile /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/6.Annotation/SRR5714908.annotated.variants \  #输出文件路径与文件名前缀
+#--remove \  #自动删除中间文件
+#--nastring . \  #注释空缺值用.代替
+#--vcfinput \  #输入文件为VCF格式
+#--thread 2 \
+#--protocol ensGene,cosmic70,gnomad211_genome,exac03,clinvar_20190305,avsnp150 \ #使用的数据库
+#--operation g,f,f,f,f,f \  #数据库对应的注释类型
+#
+#echo 6.Annotation end `date`
 ```
