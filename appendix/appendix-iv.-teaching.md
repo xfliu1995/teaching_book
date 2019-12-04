@@ -30,6 +30,12 @@
 * **PART III.6. RNA Regulation Analysis 2**
   * **docker image name**: bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
   * **software installed**:  perl v5.26.1; DaPars; Ribowave; R 3.5.1; bedtools v2.25.0; shapemapper 
+* **PART III.6. RNA Regulation Analysis 3**
+  * **docker image name**: bioinfo.chimeric.tar.gz
+  * **software installed**:  STAR-Fusion: 1.8.1;
+* **PART III.6. RNA Regulation Analysis 4**
+  * **docker image name**: bioinfo_snv.tar.gz
+  * **software installed**:  STAR: 2.7.1a; annovar:2018-04-16; GATK:4.1.3.0;
 * **PART III.7. Clinical Analysis 1** 
   * **docker image name**: bioinfo_roc_survival.tar.gz
   * **software installed**: R 3.5.1; Python 2.7 
