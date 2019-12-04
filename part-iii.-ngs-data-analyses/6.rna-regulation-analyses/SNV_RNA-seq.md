@@ -35,6 +35,12 @@ GATK是Broad Institute开发的一款用于检测变异（SNV/INDEL）的软件�
 
 
 ## 2) Running steps
+```sh
+docker load -i ~/Downloads/bioinfo_snv.tar.gz
+docker run -dt --name=snv -v ~/Downloads/data:/data gangxu/snv:1.0
+docker exec -it snv bash
+```
+
 
 ### (1) Alignment
 
