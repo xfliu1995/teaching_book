@@ -290,7 +290,7 @@ echo 6.Annotation end `date`
 
 可以使用ANNOVAR提供的Perl脚本下载数据库，如下：
 
-文件已经准备提前下载好了。
+文件已经下载好了。
 
 ```bash
 mkdir /home/test/annovar/Annovar_database
