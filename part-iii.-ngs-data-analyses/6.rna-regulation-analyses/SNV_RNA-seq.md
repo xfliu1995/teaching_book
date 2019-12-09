@@ -235,6 +235,8 @@ ANNOVAR将注释分为gene-based annotation、filter-based annotation、Region-b
 
 可以用于ANNOVAR注释的公共数据库以及对应的注释类型可以参考[ANNOVAR的官网](http://annovar.openbioinformatics.org/en/latest/user-guide/download/)中的解释。
 
+下面脚本展示的是使用COSMIC、ExAC、ClinVAR数据库对变异进行注释的过程。另外，gnomAD与dbSNP也是常用的注释数据库，推荐大家今后可以自行尝试使用。
+
 ```bash
 echo 6.Annotation start `date`
 mkdir /home/test/output/6.Annotation
