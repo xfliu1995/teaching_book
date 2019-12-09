@@ -289,7 +289,10 @@ echo 6.Annotation end `date`
 本示例中使用ANNOVAR进行变异位点信息注释。ANNOVAR是一款优秀的变异注释软件，注释速度快，且可以免费使用。用户可以选择下载公共数据库进行注释，也可以用自己制作的数据库文件（ANNOVAR接受BED/VCF格式）进行注释。
 
 可以使用ANNOVAR提供的Perl脚本下载数据库，如下：
-**这边会下载30G的数据，请提前做好心理准备。网络不好容易失败。**
+
+文件已经准备提前下载好了。
+
+**重新执行会下载1-2G的数据，请提前做好心理准备。网络不好容易失败。**
 
 ```bash
 mkdir /home/test/annovar/Annovar_database
