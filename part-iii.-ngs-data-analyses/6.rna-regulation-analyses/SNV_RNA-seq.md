@@ -292,8 +292,6 @@ echo 6.Annotation end `date`
 
 文件已经准备提前下载好了。
 
-**重新执行会下载1-2G的数据，请提前做好心理准备。网络不好容易失败。**
-
 ```bash
 mkdir /home/test/annovar/Annovar_database
 
