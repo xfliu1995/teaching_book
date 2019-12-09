@@ -37,7 +37,7 @@ GATK是Broad Institute开发的一款用于检测变异（SNV/INDEL）的软件�
 ## 2) Running steps
 ```sh
 docker load -i ~/Downloads/bioinfo_snv.tar.gz
-docker run -dt --name=snv -v ~/Downloads/data:/data gangxu/snv:1.0
+docker run -dt --name=snv -v ~/Downloads/data:/data gangxu/snv:2.0
 docker exec -it snv bash
 ```
 
@@ -52,9 +52,9 @@ mkdir -p /home/test/output/1.STAR_alignment/SRR5714908
 
 /home/test/STAR-2.7.1a/bin/Linux_x86_64_static/STAR \
 --genomeDir /home/test/Homo_sapiens_GRCh38_ch1_STAR_Index \
---runThreadN 1 --readFilesIn /home/test/chr1.fq --outSAMtype BAM SortedByCoordinate --outSAMattrRGline ID:1 LB:exoRBase PL:ILLUMINA PU:unit1 SM:SRR5714908 --outFileNamePrefix /home/test/output/1.STAR_alignment/SRR5714908.
+--runThreadN 1 --readFilesCommand "gunzip -c"  --readFilesIn /home/test/chr1.fq.gz --outSAMtype BAM SortedByCoordinate --outSAMattrRGline ID:1 LB:exoRBase PL:ILLUMINA PU:unit1 SM:SRR5714908 --outFileNamePrefix /home/test/output/1.STAR_alignment/SRR5714908.
 
-echo alignment end `date`
+echo alignment end `date
 
 #echo alignment start `date`
 #source /BioII/lulab_b/containers/singularity/wrappers/bashrc
@@ -236,13 +236,14 @@ echo 5.VariantFiltration end `date`
 **这边会下载30G的数据，请提前做好心理准备。网络不好容易失败。**
 
 ```bash
-mkdir /home/test/annovar/Homo_sapiens
+mkdir /home/test/annovar/Annovar_database
+
 perl /home/test/annovar/annotate_variation.pl \
 -buildver hg38 \
 -downdb \
 -webfrom annovar \
-refGene \ #下载的数据库名称
-/data  #下载数据库存放路径
+refGene \
+/home/test/annovar/Annovar_database
 ```
 - [ANNOVAR的主页](http://annovar.openbioinformatics.org/en/latest/user-guide/download/)
 > 参考文献： **Wang K**, et al. [ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data](http://nar.oxfordjournals.org/content/38/16/e164) _Nucleic Acids Research_. 2010. 38:e164.
@@ -261,18 +262,17 @@ mkdir /home/test/output/6.Annotation
 
 perl /home/test/annovar/table_annovar.pl \
 /home/test/output/5.VariantFiltration/SRR5714908.filtered.clean.vcf  \
-/data \
+/home/test/annovar/Annovar_database \
 --buildver hg38 \
 --outfile /home/test/output/6.Annotation/SRR5714908.annotated.variants \
 --remove \
 --nastring . \
 --vcfinput \
 --thread 2 \
---protocol ensGene,cosmic70,gnomad211_genome,exac03,clinvar_20190305,avsnp150 \
---operation g,f,f,f,f,f
+--protocol ensGene,cosmic70,exac03,clinvar_20190305 \
+--operation g,f,f,f
 
 echo 6.Annotation end `date`
-
 
 #echo 6.Annotation start `date`
 #perl /BioII/lulab_b/chenyinghui/software/annovar/annovar/table_annovar.pl \
