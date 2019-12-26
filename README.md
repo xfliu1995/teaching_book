@@ -43,11 +43,70 @@ We teach professional skills in bioinformatics. These skills are not just runnin
 >
 > -- &lt;&lt;Bioinformatics Data Skills&gt;&gt;
 
-## Contributors
+## Major Authors
 
-Yumin Zhu1, Gang Xu1, Xiaocheng Xi, Xupeng Chen, Zhuoer Dong, Xi Hu, Jingyi Cao, Siqi Wang and Zhi J. Lu\*
+Yumin Zhu, Gang Xu, Zhuoer Dong, Yinghui Chen, Meifeng Zhou, Xupeng Chen, Xiaocheng Xi,  Xi Hu, Jingyi Cao, Xiaofan Liu, Weihao Zhao, Siqi Wang and Zhi J. Lu
 
-> 1Contributed Equally \*Corresponding to Zhi J. Lu
+| Section                               | Major Authors           |
+| ------------------------------------- | ----------------------- |
+| **Part I. Basic Skills**              |                         |
+| 1.Setup                               | Zhi John Lu             |
+| 1.1 Docker                            | Gang Xu                 |
+| 1.2 Cluster                           | Gang Xu                 |
+| 2.Linux                               | Zhi John Lu             |
+| 2.1 Basic Command                     | Zhuoer Dong/Xi Hu       |
+| 2.2 Practice Guide                    | Zhuoer Dong/Xi Hu       |
+| 2.3 Linux Bash                        | Gang Xu                 |
+| 3.R                                   |                         |
+| 3.1 R Basics                          | Zhuoer Dong             |
+| 3.2 Plot with R                       | Zhuoer Dong/Xiaochen Xi |
+| 4.Python                              |                         |
+|                                       |                         |
+| **PART II. BASIC ANALYSES**           |                         |
+| 1.Blast                               | Gang Xu                 |
+| 2.Conservation Analysis               | Xi Hu                   |
+| 3.Function Analysis                   |                         |
+| 3.1 GO                                | Gang Xu                 |
+| 3.2 KEGG                              | Gang Xu                 |
+| 3.3 GSEA                              | Zhuoer Dong             |
+|                                       |                         |
+| **Part III. NGS DATA ANALYSES**       |                         |
+| 1.Mapping                             | Meifeng Zhou/Yumin Zhu  |
+| 2.RNA-seq                             |                         |
+| 2.1 Differential Expression           | Meifeng Zhou            |
+| 2.2 Alternative Splicing              | Zhuoer Dong             |
+| 3.ChIP-seq                            | Jingyi Cao              |
+| 4.Network                             |                         |
+| 4.1.Co-expression Network             | Xiaochen Xi             |
+| 4.2.miRNA Targets                     | Yumin Zhu               |
+| 4.3.RBP-RNA Interactions              | Yumin Zhu               |
+| 5.Motif                               |                         |
+| 5.1.Sequence Motif                    | Yumin Zhu               |
+| 5.2.Structure Motif                   | Yumin Zhu               |
+| 6.RNA Regulation Analyses             |                         |
+| 6.1.RNA Editing                       | Yumin Zhu               |
+| 6.2.APA (Alternative Polyadenylation) | Yumin Zhu               |
+| 6.3.Ribo-seq                          | Yumin Zhu               |
+| 6.4.Structure-seq                     | Yumin Zhu               |
+| 6.5.Chimeric RNA                      | Yinghui Chen            |
+| 6.6.SNV Calling                       | Yinghui Chen            |
+| 7.Clinical Analyses                   |                         |
+| 7.1.ROC Curve                         | Weihao Zhao/Yumin Zhu   |
+| 7.2.PCA/tSNE                          | Xupeng Chen/Xiaofan Liu |
+| 7.3.Survival Analysis                 | Xiaochen Xi/Yumin Zhu   |
+|                                       |                         |
+| **Part IV. MACHINE LEARNING**         |                         |
+| 1.Machine Learning Basics             | Xupeng Chen/Zhi John Lu |
+| 2. Machine Learning with R            | Xupeng Chen/Xiaofan Liu |
+| 3. Machine Learning with Python       | Xupeng Chen/Xiaofan Liu |
+|                                       |                         |
+| **Appendix**                          |                         |
+| Appendix I. Keep Learning             | Zhi John Lu             |
+| Appendix II. Databases & Servers      | Yumin Zhu               |
+| Appendix III. How to Backup           | Gang Xu/Zhi John Lu     |
+| Appendix IV. Teaching Materials       | Gang Xu/Zhi John Lu     |
+
+
 
 ## Contact Us
 
