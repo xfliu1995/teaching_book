@@ -18,8 +18,7 @@ docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data --name=bioinf
 docker exec -it bioinfo_starfusion bash
 ```
 
-
-
+需要挂载文件**ctat_genome_lib_build_X_docker**，请从清华云下载。
 
 
 ## 3) Running STAR-Fusion
