@@ -15,7 +15,9 @@ Chimeric RNA的产生来源包括两种可能的融合，1）两段DNA的融合(
 在本示例中，我们使用STAR-Fusion进行分析, STAR-Fusion是一款利用RNA-Seq数据检测人类融合基因的软件，STAR-Fusion提供了Docker镜像，以方便用户使用。
 
 ```bash
-docker pull trinityctat/starfusion
+docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data --name=bioinfo_starfusion gangxu/starfusion:latest
+
+docker exec -it bioinfo_starfusion bash
 ```
 
 如果您不使用Docker镜像而是自行安装，请查看[STAR-Fusion的安装指南](https://github.com/STAR-Fusion/STAR-Fusion/wiki/installing-star-fusion)。
@@ -45,23 +47,8 @@ STAR-Fusion可以直接以Fastq为输入文件进行融合基因分析；也可�
 
 下面分别介绍使用这2种不同输入文件进行分析的方法。
 
-### (1) 方法1-输入文件为Fastq
 
-由于STAR运行时会占用较大内存（RAM），约20～30G；如果STAR-Fusion加了`--FusionInspector validate `参数可能会使内存总占用达到～40G，因此当我们从fastq开始使用STAR-fusion分析时需要合理控制并行运行的STAR-Fusion任务数量。
-
-```bash
-#假设CTAT_resource_lib文件夹与reads_1.fq.gz、reads_2.fq.gz都在当前目录
-docker run -v `pwd`:/data \ #将当前目录挂载为Docker的/data目录
---rm trinityctat/starfusion \ #当分析任务结束后，立即删除容器
-/usr/local/src/STAR-Fusion/STAR-Fusion \
-    --left_fq /data/reads_1.fq.gz \
-    --right_fq /data/reads_2.fq.gz \
-    --genome_lib_dir /data/ctat_genome_lib/ \
-    -O /data/StarFusionOut \
-
-```
-
-### (2) 方法2-输入文件为Chimeric.out.junction
+### (1) 方法1-输入文件为Chimeric.out.junction
 
 * 使用STAR将Fastq比对到参考基因组上，输出Chimeric.out.junction文件:
 
@@ -97,17 +84,30 @@ echo STAR end `date`
 
 ```
 
-* 以Chimeric.out.junction为输入文件，用STAR-Fusion进行分析:
+```sh
+/usr/local/src/STAR-Fusion/STAR-Fusion --CPU 2 \
+--genome_lib_dir /data \
+-J /data/SRR5712523.Chimeric.out.junction \
+--output_dir /data/SRR5712523_fusion_X_docker
+```
+
+
+### (2) 方法2-输入文件为Fastq
+
+由于STAR运行时会占用较大内存（RAM），约20～30G；如果STAR-Fusion加了`--FusionInspector validate `参数可能会使内存总占用达到～40G，因此当我们从fastq开始使用STAR-fusion分析时需要合理控制并行运行的STAR-Fusion任务数量。
 
 ```bash
-echo starfusion start `date`
+#假设CTAT_resource_lib文件夹与reads_1.fq.gz、reads_2.fq.gz都在当前目录
+docker run -v `pwd`:/data \ #将当前目录挂载为Docker的/data目录
+--rm trinityctat/starfusion \ #当分析任务结束后，立即删除容器
+/usr/local/src/STAR-Fusion/STAR-Fusion \
+    --left_fq /data/reads_1.fq.gz \
+    --right_fq /data/reads_2.fq.gz \
+    --genome_lib_dir /data/ctat_genome_lib/ \
+    -O /data/StarFusionOut \
 
-docker run -v /BioII:/BioII -v /Share2:/Share2 --rm trinityctat/starfusion /usr/local/src/STAR-Fusion/STAR-Fusion \
---CPU 2 \
---genome_lib_dir /Share2/home/lulab/zhuyumin/share/zhuyumin/test/docker/StarFusionOut/ctat_genome_lib_build_dir \
--J /BioII/lulab_b/chenyinghui/project/Docker/STAR-Fusion/SRR5712523/SRR5712523.Chimeric.out.junction \
---output_dir /BioII/lulab_b/chenyinghui/project/Docker/STAR-Fusion/SRR5712523_fusion
-
-echo starfusion end `date`
 ```
+
+
+
 
