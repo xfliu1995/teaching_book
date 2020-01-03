@@ -31,6 +31,7 @@ STAR-Fusion可以直接以Fastq为输入文件进行融合基因分析；也可�
 ### (1) 方法1-输入文件为Chimeric.out.junction
 
 * 使用STAR将Fastq比对到参考基因组上，输出Chimeric.out.junction文件:
+这步需要大量的内存，建议直接跳过。可以在集群中运行这步。
 
 ```bash
 echo STAR start `date`
