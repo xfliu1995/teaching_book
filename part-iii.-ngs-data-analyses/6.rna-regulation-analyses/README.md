@@ -61,8 +61,16 @@ cd /home/test/rna_regulation/structure_seq
 docker load -i ~/Desktop/bioinfo_chimeric.tar.gz
 
 docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data --name=bioinfo_starfusion gangxu/starfusion:latest
-
 ```
+
+(4) **6.6.SNV/INDEL Detection**: bioinfo_snv.tar.gz
+```sh
+docker load -i ~/Downloads/bioinfo_snv.tar.gz
+docker run -dt --name=snv -v ~/Downloads/data:/data gangxu/snv:2.0
+docker exec -it snv bash
+```
+
+
 ### 方法2: 直接下载
 
 * 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_III/6.RNA_Regulation)
