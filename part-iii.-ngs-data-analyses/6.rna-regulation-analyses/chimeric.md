@@ -54,12 +54,11 @@ STAR-Fusion可以直接以Fastq为输入文件进行融合基因分析；也可�
 
 ```bash
 echo STAR start `date`
-source /BioII/lulab_b/containers/singularity/wrappers/bashrc
-/BioII/lulab_b/chenyinghui/software/STAR/STAR-2.7.3a/bin/Linux_x86_64/STAR \
+/usr/local/src/STAR-2.7.2b/bin/Linux_x86_64 \
  --runThreadN 2 \
  --genomeDir /BioII/lulab_b/chenyinghui/database/Homo_sapiens/GRCh38_STAR_index \
- --readFilesIn /Share2/home/lulab/zhuyumin/share/zhuyumin/test/docker/StarFusionOut/cutadapt/SRR5712523_1.fastq.gz  /Share2/home/lulab/zhuyumin/share/zhuyumin/test/docker/StarFusionOut/cutadapt/SRR5712523_2.fastq.gz \
- --outFileNamePrefix /BioII/lulab_b/chenyinghui/project/Docker/STAR-Fusion/SRR5712523/SRR5712523. \
+ --readFilesIn /data/SRR5712523_1.fastq.gz  /data/SRR5712523_2.fastq.gz \
+ --outFileNamePrefix /data/SRR5712523. \
  --outReadsUnmapped None \
  --readFilesCommand "gunzip -c" \
  --outSAMstrandField intronMotif \
@@ -77,7 +76,6 @@ source /BioII/lulab_b/containers/singularity/wrappers/bashrc
  --chimMultimapNmax 20 \
  --chimNonchimScoreDropMin 10 \
  --peOverlapNbasesMin 12 \
- #--twopassMode Basic 在cnode上运行，该参数加上以后内存会溢出，建议注释掉
  --peOverlapMMp 0.1 
 
 echo STAR end `date`
