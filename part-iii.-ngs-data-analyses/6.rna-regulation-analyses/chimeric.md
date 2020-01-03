@@ -56,29 +56,6 @@ STAR-Fusion可以直接以Fastq为输入文件进行融合基因分析；也可�
 echo STAR start `date`
 /usr/local/src/STAR-2.7.2b/bin/Linux_x86_64 \
  --runThreadN 2 \
- --genomeDir /BioII/lulab_b/chenyinghui/database/Homo_sapiens/GRCh38_STAR_index \
- --readFilesIn /data/SRR5712523_1.fastq.gz  /data/SRR5712523_2.fastq.gz \
- --outFileNamePrefix /data/SRR5712523. \
- --outReadsUnmapped None \
- --readFilesCommand "gunzip -c" \
- --outSAMstrandField intronMotif \
- --outSAMunmapped Within \
- --chimSegmentMin 12 \
- --chimJunctionOverhangMin 12 \
- --chimOutJunctionFormat 1 \
- --alignSJDBoverhangMin 10 \
- --alignMatesGapMax 100000 \
- --alignIntronMax 100000 \
- --alignSJstitchMismatchNmax 5 -1 5 5 \
- --outSAMattrRGline ID:SRR5712523 \
- --chimMultimapScoreRange 3 \
- --chimScoreJunctionNonGTAG -4 \
- --chimMultimapNmax 20 \
- --chimNonchimScoreDropMin 10 \
- --peOverlapNbasesMin 12 \
- --peOverlapMMp 0.1 
- 
-  --runThreadN 4 \
  --genomeDir /data/ref_genome.fa.star.idx \
  --readFilesIn /data/SRR5712523_1.fastq.gz  /data/SRR5712523_2.fastq.gz \
  --outFileNamePrefix /data/SRR5712523. \
