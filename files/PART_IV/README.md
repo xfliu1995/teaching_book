@@ -2,4 +2,5 @@
 ## Files needed for this section:
 
 
-* 7.2 PCA/tSNE: please download files from [here](PCA_tSNE).
+* 1 Machine learning with python: please download files from [here](machine learning with python).
+* 2 Machine learning with python: please download files from [here](machine learning with r).
