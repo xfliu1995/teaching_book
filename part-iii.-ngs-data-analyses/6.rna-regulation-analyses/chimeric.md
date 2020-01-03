@@ -82,6 +82,8 @@ echo STAR end `date`
 
 ```
 
+以Chimeric.out.junction为输入文件，用STAR-Fusion进行融合基因分析
+
 ```sh
 /usr/local/src/STAR-Fusion/STAR-Fusion --CPU 2 \
 --genome_lib_dir /data \
@@ -99,9 +101,9 @@ echo STAR end `date`
 docker run -v `pwd`:/data \ #将当前目录挂载为Docker的/data目录
 --rm trinityctat/starfusion \ #当分析任务结束后，立即删除容器
 /usr/local/src/STAR-Fusion/STAR-Fusion \
-    --left_fq /data/reads_1.fq.gz \
-    --right_fq /data/reads_2.fq.gz \
-    --genome_lib_dir /data/ctat_genome_lib/ \
+    --left_fq /data/SRR5712523_1.fastq.gz   \
+    --right_fq /data/SRR5712523_2.fastq.gz \
+    --genome_lib_dir /data/ \
     -O /data/StarFusionOut \
 
 ```
