@@ -97,9 +97,6 @@ echo STAR end `date`
 由于STAR运行时会占用较大内存（RAM），约20～30G；如果STAR-Fusion加了`--FusionInspector validate `参数可能会使内存总占用达到～40G，因此当我们从fastq开始使用STAR-fusion分析时需要合理控制并行运行的STAR-Fusion任务数量。
 
 ```bash
-#假设CTAT_resource_lib文件夹与reads_1.fq.gz、reads_2.fq.gz都在当前目录
-docker run -v `pwd`:/data \ #将当前目录挂载为Docker的/data目录
---rm trinityctat/starfusion \ #当分析任务结束后，立即删除容器
 /usr/local/src/STAR-Fusion/STAR-Fusion \
     --left_fq /data/SRR5712523_1.fastq.gz   \
     --right_fq /data/SRR5712523_2.fastq.gz \
