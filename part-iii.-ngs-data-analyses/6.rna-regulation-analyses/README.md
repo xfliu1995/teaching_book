@@ -51,9 +51,18 @@ cd /home/test/rna_regulation/ribo-wave
 
 # Structure-seq
 cd /home/test/rna_regulation/structure_seq
+
 ```
 
+(3) **6.5.Chimeric RNA Detection**: bioinfo_chimeric.tar.gz 
 
+需要下载原始数据和基因组文件，下载后需要挂载。
+```sh
+docker load -i ~/Desktop/bioinfo_chimeric.tar.gz
+
+docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data --name=bioinfo_starfusion gangxu/starfusion:latest
+
+```
 ### 方法2: 直接下载
 
 * 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_III/6.RNA_Regulation)
