@@ -18,7 +18,7 @@ Chimeric RNA的产生来源包括两种可能的融合，1）两段DNA的融合(
 docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data -v ~/Downloads/ref_genome.fa.star.idx:/data2 --name=bioinfo_starfusion gangxu/starfusion:latest
 ```
 
-需要挂载文件**ctat_genome_lib_build_X_docker,ctat_genome_lib_build_X_docker.zip,ref_genome.fa.star.idx.zip**，请从清华云下载,[具体地址请看这里。](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)。
+需要挂载文件**ctat_genome_lib_build_X_docker.zip,ref_genome.fa.star.idx.zip**，请从清华云下载,[具体地址请看这里。](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)。
 
 
 ## 3) Running STAR-Fusion
