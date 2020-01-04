@@ -54,7 +54,7 @@ mkdir -p /home/test/output/1.STAR_alignment/SRR5714908
 --genomeDir /home/test/Homo_sapiens_GRCh38_ch1_STAR_Index \
 --runThreadN 1 --readFilesCommand "gunzip -c"  --readFilesIn /home/test/chr1.fq.gz --outSAMtype BAM SortedByCoordinate --outSAMattrRGline ID:1 LB:exoRBase PL:ILLUMINA PU:unit1 SM:SRR5714908 --outFileNamePrefix /home/test/output/1.STAR_alignment/SRR5714908.
 
-echo alignment end `date
+echo alignment end `date`
 
 #echo alignment start `date`
 #source /BioII/lulab_b/containers/singularity/wrappers/bashrc
