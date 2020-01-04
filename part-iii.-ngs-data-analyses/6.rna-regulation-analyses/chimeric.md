@@ -13,12 +13,12 @@ Chimeric RNA的产生来源包括两种可能的融合，1）两段DNA的融合(
 ### (1) Install STAR-Fusion
 
 ```bash
-docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data --name=bioinfo_starfusion gangxu/starfusion:latest
 
-docker exec -it bioinfo_starfusion bash
+
+docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data -v ~/Downloads/ref_genome.fa.star.idx:/data2 --name=bioinfo_starfusion gangxu/starfusion:latest
 ```
 
-需要挂载文件**ctat_genome_lib_build_X_docker**，请从清华云下载。
+需要挂载文件**ctat_genome_lib_build_X_docker,ctat_genome_lib_build_X_docker.zip,ref_genome.fa.star.idx.zip**，请从清华云下载,【具体地址请看这里。](https://lulab2.gitbook.io/teaching/part-iii.-ngs-data-analyses/6.rna-regulation-analyses)。
 
 
 ## 3) Running STAR-Fusion
@@ -37,7 +37,7 @@ STAR-Fusion可以直接以Fastq为输入文件进行融合基因分析；也可�
 echo STAR start `date`
 /usr/local/src/STAR-2.7.2b/bin/Linux_x86_64 \
  --runThreadN 2 \
- --genomeDir /data/ref_genome.fa.star.idx \
+ --genomeDir /data2 \
  --readFilesIn /data/SRR5712523_1.fastq.gz  /data/SRR5712523_2.fastq.gz \
  --outFileNamePrefix /data/SRR5712523. \
  --outReadsUnmapped None \
