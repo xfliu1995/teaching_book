@@ -60,7 +60,7 @@ cd /home/test/rna_regulation/structure_seq
 ```sh
 docker load -i ~/Desktop/bioinfo_chimeric.tar.gz
 
-docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data ~/Downloads/ref_genome.fa.star.idx:/data2 --name=bioinfo_starfusion gangxu/starfusion:latest
+docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data -v ~/Downloads/ref_genome.fa.star.idx:/data2 --name=bioinfo_starfusion gangxu/starfusion:latest
 ```
 
 (4) **6.6.SNV/INDEL Detection**: bioinfo_snv.tar.gz
