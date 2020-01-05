@@ -56,11 +56,11 @@ cd /home/test/rna_regulation/structure_seq
 
 (3) **6.5.Chimeric RNA Detection**: bioinfo_chimeric.tar.gz 
 
-需要下载原始数据和基因组文件[ctat_genome_lib_build_X_docker.zip,ref_genome.fa.star.idx.zip](https://cloud.tsinghua.edu.cn/d/72c1ffd831ce4fce9cd1/)，下载解压后需要挂载。
+需要下载原始数据和基因组文件[ctat_genome_lib_build_X_docker.zip,ref_genome.fa.star.idx.zip](https://cloud.tsinghua.edu.cn/d/72c1ffd831ce4fce9cd1/)，请把 ref_genome.fa.star.idx 移到 ctat_genome_lib_build_X_docker文件中。下载解压后需要挂载。
 ```sh
 docker load -i ~/Desktop/bioinfo_chimeric.tar.gz
-
-docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data -v ~/Downloads/ref_genome.fa.star.idx:/data2 --name=bioinfo_starfusion gangxu/starfusion:latest
+mv ~/Downloads/ref_genome.fa.star.idx ~/Downloads/ctat_genome_lib_build_X_docker
+docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data --name=bioinfo_starfusion gangxu/starfusion:latest
 ```
 
 (4) **6.6.SNV/INDEL Detection**: bioinfo_snv.tar.gz
