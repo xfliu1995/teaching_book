@@ -14,7 +14,7 @@
 [Hinton理解的PCA](https://www.jianshu.com/p/76c64cd0b5ad)  
 [PCA和SVD的区别与联系](https://blog.csdn.net/wangjian1204/article/details/50642732)
 
-### \(1\) principle
+### 1a\) principle
 
 PCA的主要思想是将n维特征映射到k维上，这k维是新的彼此正交的特征，也被称为主成分。PCA的工作就是从原始的空间中顺序地找一组相互正交的坐标轴，新的坐标轴的选择与数据本身密切相关。其中，第一个新坐标轴选择是原始数据中方差最大的方向，第二个新坐标轴选取是与第一个坐标轴正交的平面中使得方差最大的，第三个轴是与第1,2个轴正交的平面中方差最大的。依次类推，可以得到n个这样的坐标轴。通过这种方式获得的新的坐标轴。
 
@@ -30,7 +30,7 @@ PCA的主要思想是将n维特征映射到k维上，这k维是新的彼此正�
 
 最直观的思路就是将协方差矩阵只保留对角线上的元素，将其他元素变成零，在矩阵变换中这种操作被称为矩阵的对角化，方法包括特征值分解和奇异值分解。
 
-###\( 2\) PCA算法推导
+### 1b\) PCA算法推导
 
 $$
 X = \left( \begin{array} { c c c c c } { - 1 } & { - 1 } & { 0 } & { 2 } & { 0 } \\ { - 2 } & { 0 } & { 0 } & { 1 } & { 1 } \end{array} \right)
@@ -78,7 +78,7 @@ $$
 $$
 Y = \left( \begin{array} { c c } { \frac { 1 } { \sqrt { 2 } } } & { \frac { 1 } { \sqrt { 2 } } } \end{array} \right) \left( \begin{array} { c c c c c } { - 1 } & { - 1 } & { 0 } & { 2 } & { 0 } \\ { - 2 } & { 0 } & { 0 } & { 1 } & { 1 } \end{array} \right) = \left( \begin{array} { c c c c } { - \frac { 3 } { \sqrt { 2 } } } & { - \frac { 1 } { \sqrt { 2 } } } & { 0 } & { \frac { 3 } { \sqrt { 2 } } } & { - \frac { 1 } { \sqrt { 2 } } } \end{array} \right)
 $$
-### \(3\) PCA的Python实现
+### 1c\) PCA的Python实现
 ```python
 from sklearn.decomposition import PCA
 import numpy as np
@@ -97,7 +97,7 @@ print(pca.transform(X))
 
 
 ## 2\) t-SNE
-### \(1\) principle
+### 2a\) principle
 T 分布随机近邻嵌入（T-Distribution Stochastic Neighbour Embedding）是一种用于降维的机器学习方法，它能帮我们识别相关联的模式。t-SNE 主要的优势就是保持局部结构的能力。这意味着高维数据空间中距离相近的点投影到低维中仍然相近。
 这里不过多介绍tSNE的详细推导，可参考以下文章：
 
@@ -105,7 +105,7 @@ T 分布随机近邻嵌入（T-Distribution Stochastic Neighbour Embedding）是
 [http://www.datakit.cn/blog/2017/02/05/t\_sne\_full.html](http://www.datakit.cn/blog/2017/02/05/t_sne_full.html)  
 [http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/](http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/)  
 [t-SNE使用中的问题](http://bindog.github.io/blog/2018/07/31/t-sne-tips/)
-### \(2\) t-SNE的Python实现
+### 2b\) t-SNE的Python实现
 ```python
 from sklearn.manifold import TSNE
 import numpy as np
@@ -125,7 +125,7 @@ print(X_new)
 ## 3\) PCA and t-SNE analysis in Matrix Processing
 本节讲解如何利用PCA和t-SNE对数据矩阵进行降维，并进行可视化。
 
-### \(1\) Input data
+### 3a\) Input data
 | SampleID | Expression\_of\_miR_1 | Expression\_of\_miR_2 | Expression\_of\_miR_3 | Type |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | 12 | 55 | 74 | cancer |
@@ -155,7 +155,7 @@ print(X_new)
 | 25 | 81 | 13 | 24 | normal |
 
 Here, the first column stands for the ID number for each sample. The second to the fourth column stands for the expression value of a certain kind of miRNA \(1 to 3\). The last column represents whether this sample comes from a normal person or a cancer patient. In random forest machine learning, we train the neuron network with 80% of the above data and use the other 20% to test this model and draw ROC curve.
-### \(2\) Visualization  by Python
+### 3b\) Visualization  by Python
 **加载模块**
 ```python
 import pandas as pd
