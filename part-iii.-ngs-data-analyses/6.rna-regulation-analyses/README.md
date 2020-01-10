@@ -1,6 +1,6 @@
 # 6.RNA Regulation Analyses
 
-## Table of Contents
+## 0\)Table of Contents
 
 * [6.1.RNA Editing detection using RNA-seq](rna_editing.md)
 * [6.2.APA \(Alternative Polyadenylation\) detection using RNA-seq](apa.md)
@@ -11,9 +11,9 @@
 
   
 
-## Files Needed {#files}
+## 1\)Files Needed {#files}
 
-### 方法1: 使用docker
+### 1a\) 方法1: 使用docker
 
 docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-docker)所示，本大章包括2个images：
 
@@ -71,7 +71,7 @@ docker exec -it snv bash
 ```
 
 
-### 方法2: 直接下载
+### 1b\) 方法2: 直接下载
 
 * 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/tree/master/files/PART_III/6.RNA_Regulation)
 
