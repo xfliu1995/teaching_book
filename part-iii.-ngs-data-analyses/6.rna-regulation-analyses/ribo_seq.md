@@ -1,9 +1,9 @@
 # 6.3.Ribo-seq
 
-### 1) Workflow
+## 1\) Workflow
 ![](../../.gitbook/assets/ribo_seq.pipeline.png)
 
-### 2) Background
+## 2\) Background
 
 Ribo-seq是2009年Weissman课题组首次发表的研究细胞内蛋白翻译图谱的新型二代测序技术，用来描述全基因组水平蛋白质的翻译情况。主要是**选择性捕捉80S核糖体及其结合的RNA片段而定位核糖体所位于的RNA的位置**。
 
@@ -20,9 +20,9 @@ Ribo-seq数据测得的RNA片段长短与small RNA-seq相似，大约分布在25
 
 图1
 
-### 3) Running steps (RiboWave)
+## 3) Running steps (RiboWave)
 
-#### (1) Pre-processing
+### 3a\) Pre-processing
 
 启动ribo-seq所用的 [Docker](README.md#files)，进入工作目录
 
@@ -31,7 +31,7 @@ cd /home/test/rna_regulation
 cd /home/test/rna_regulation/ribo-wave
 ```
 
-#### (2) Create annotation
+### 3b) Create annotation
 
 ```
 # bedtools2没有添加到环境变量中，需要临时添加
@@ -44,18 +44,18 @@ script/create_annotation.sh \
 -s script
 ```
 
-##### (2.1) input files
+#### input files
 * annotation.gtf: the annotation gtf should contain start_codon and stop_codon information, eg: dmel-all-r6.18.gtf
 * genome.fasta: genome fasta, eg: dmel-all-chromosome-r6.18.fasta
 * annotation_dir: the directory for all the annotation output
 * scripts_dir: the directory of all the scripts in the package
 
-##### (2.2) output files
+#### output files
 annotation directory, including :
 * start_codon.bed: the bed file annotating start codon
 * final.ORFs: all identified ORFs, eg: FBtr0300105_0_31_546 where FBtr0300105 refers to the transcript, 0 refers to the reading frame relative to the start of transcript, 31 refers to the start site, 546 refers to the stop codon.
 
-#### (3) P-site determination
+### 3c\) P-site determination
 核糖体上具有一系列与蛋白质合成有关的结合位点与催化位点，分别为A位点(aminoacyl-site，A-site)，P位点(peptidyl-site，P-site)和E位点(exit-site，E-site)先后与tRNA发生结合。P位点是肽段翻译延长的主要场所，在该位点上tRNA将携带的氨基酸移交给旁边的肽段从而使得肽段序列发生延长。为了能够更加明显的观察到3-nt的周期性，在处理Ribo-seq数据时我们参考之前已发表的方法，对每一条Ribo-seq比对上的测序片段转换为其对应的P-site位点。
 
 This step determines the P-site position for each Ribo-seq reads length by overlapping with the annotated start codons from previous step
@@ -68,7 +68,7 @@ script/P-site_determination.sh \
 -n SRR1039770 \
 -s script;
 ```
-##### (3.1) input files
+#### input files
 * Ribo_bam: secondary alignment removed to ensure one genomic position per aligned read and sorted
 * start_codon.bed: annotated start site start_codon.bed. It is generated in the create_annotation.sh step
 * out_dir: the directory of the output result, eg: GSE52799
@@ -85,7 +85,7 @@ $ cp *pdf /home/test/share/
 # 拷贝pdf文件到容器与计算机互通的文件夹，可以用pdf阅读工具打开查看pdf
 ```
 
-##### (3.2) output files
+#### output files
 
 P-site directory, including :
 * name.psite1nt.txt: the Ribo-seq reads length and its corresponding P-sites position(= offset + 1). It may look this this :
@@ -99,7 +99,7 @@ P-site directory, including :
 
 每一行代表不同长度的 Ribo-seq 测序片段的直方图。该数据中，30nt的reads数目最多，在30nt长度的Ribo-seq片段中，我们可以明显的看到在距离为13nt的位点含有一个峰值(peak)。鉴于大部分核糖体会在翻译起始位点停滞较多的时间，因此对于30nt长的Ribo-seq片段，其P-site位点的定义应该代表直方图中绝大多数的核糖体，因此我们将P-site位点应该定义为峰值最高的第13个碱基(13nt)的位置。
 
-#### (4) Generating P-site track
+### 3d) Generating P-site track
 基于Ribo-seq序列及其确定的P-site位点，将规律推广到所有Ribo-seq的片段中，直接根据Ribo-seq序列的长度推断其对应的P-site位点。根据这种方法，我们可以将每一条转录本上所有的Ribo-seq片段转化为对应的P-site位点的信号点并获得转录组水平的Ribo-seq信号轨迹（signal track）。由于是由P-site位点定义出的信号轨迹，通常也被叫做P-site信号轨迹（P-sites track）。转录本上每一个位点的信号丰度代表了有多少Ribo-seq片段对应的P-site位点落在该位置上。
 
 This step creats the P-site track for transcripts of interests using determined P-sites position from previous step.
@@ -116,7 +116,7 @@ script/create_track_Ribo.sh \
 -n SRR1039770 \
 -s script
 ```
-##### (4.1) input files
+#### input files
 * Ribo_bam
 * exons.gtf: a gtf file for only the exons from transcripts of interest, eg: X.exons.gtf
 * chromosome_size: the file including all the chromosomes and its genome size. Noted: genome can be obtained by using samtools faidx function with the input of fasta file. genome may look like this:
@@ -140,7 +140,7 @@ final.psite
 $ less final.psite
 ```
 
-##### (4.2) output files
+#### output files
 * bedgraph/name directory, including :
 final.psite : P-site track at transcriptome wide. It may look like this :
 ```
@@ -150,7 +150,7 @@ FBtr0070604	0,0,0,0,0,0,0,0,0,0,0,0,59,6,0,1,0,0,2,6,1,0,1,0,0,0,0,0,0,0,0,0,0,0
 FBtr0070603	0,0,0,0,0,0,0,0,0,0,0,0,75,2,7,10,7,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,3,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ```
 
-#### (5) RiboWave main function
+### 3e) RiboWave main function
 This step can achieve multiple functions :
 
 * denoising [denoise]
@@ -176,7 +176,7 @@ TE = 翻译水平的abundance/转录水平的abundance，反映翻译效率。
 It might take hours to perform the analysis if the input is large. It is recommended to specify the number of CPU cores through the -p option.
 
 Run Ribowave on example:
-##### (5.1) Denoise the P-site track
+#### Denoise the P-site track
 ```
 # 在/home/test/rna_regulation/ribo-wave目录下
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -188,7 +188,7 @@ script/Ribowave  \
 -s script \
 -p 8
 ```
-##### (5.2) Identifying translated ORF
+#### Identifying translated ORF
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -200,7 +200,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-##### (5.3) Estimating abundance
+#### Estimating abundance
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -212,7 +212,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-##### (5.4) Estimating TE
+#### Estimating TE
 IMPORTANT : when estimating TE, user should input the sequenced depth of Ribo-seq and the FPKM value from paired RNA-seq
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -225,7 +225,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-##### (5.5) Calculating frameshift potential
+#### Calculating frameshift potential
 on annotated ORFs
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
@@ -239,7 +239,7 @@ script/Ribowave \
 -s script \
 -p 8
 ```
-##### (5.6) Multiple functions
+#### Multiple functions
 ```
 mkdir -p /home/test/rna_regulation/ribo-wave/GSE52799/Ribowave
 script/Ribowave \
@@ -253,7 +253,7 @@ script/Ribowave \
 -p 8
 ```
 
-##### (5.7) input files
+#### input files
 * bedgraph/name:
 P-site track: output from the previous step, containing the P-site track of transcripts of interest, eg: final.psite
 * ORF_list: ORFs of interest ,eg : final.ORFs. It is generated in the step of create_annotation.sh
@@ -268,7 +268,7 @@ P-site track: output from the previous step, containing the P-site track of tran
  FBtr0100864	11475.6
 ```
 
-##### (5.8) output files
+#### output files
 * name.PF_psite: the denoised signal track(PF P-sites signal track) at transcriptome wide. It looks similar as the input final psite.
 * including chi-square P-value information. It may look like this :
 ```
@@ -309,10 +309,10 @@ column5: Relative position of PF P-sites after the shift ,eg : 1413,1440;1789 wh
 column6: CRF score describing the potential of frameshift
 ```
 
-### 4) Database
+## 4) Database
 http://lulab.life.tsinghua.edu.cn/postar/
 
-### 5) Homework
+## 5) Homework
 
 解释TE的含义，用教程中的示例文件算出TE，并画出TE的分布。
 
