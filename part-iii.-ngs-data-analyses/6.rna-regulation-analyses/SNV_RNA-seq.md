@@ -9,7 +9,7 @@
 
 
 
-### (1) STAR
+### 1a\) STAR
 
 目前，可以用于将RNA测序数据（reads）比对到参考基因组的软件有：Bowtie、TopHat、HISAT、STAR等。
 
@@ -20,7 +20,7 @@ STAR在运行时候占用机器的内存较大，一般可达到20~30G，因此�
 
 > 参考文献： **Alexander Dobin**, et al. [STAR: ultrafast universal RNA-seq aligner](https://academic.oup.com/bioinformatics/article/29/1/15/272537) _Bioinformatics_. 2012. 29(1): 15-21.
 
-### (2) GATK
+### 1b\) GATK
 
 GATK是Broad Institute开发的一款用于检测变异（SNV/INDEL）的软件，拥有较高的引用率（已有上万次引用）。
 
@@ -42,7 +42,7 @@ docker exec -it snv bash
 ```
 
 
-### (1) Alignment
+### 2a\) Alignment
 
 GATK要求输入的SAM/BAM文件中有Read Group信息，因此我们需要在`--outSAMattrRGline`中填写相应的Read Group信息，其中`ID`为必填项。Read Group格式详见[SAM格式](http://samtools.github.io/hts-specs/SAMv1.pdf)
 
@@ -69,7 +69,7 @@ echo alignment end `date`
 #echo alignment end `date`
 ```
 
-### (2) MarkDuplicates
+### 2b\) MarkDuplicates
 
 在建库的PCR过程中会形成一些重复的DNA片段序列，这些重复序列被称为PCR duplicates。另外，在测序仪进行光学测量时候，也会形成一些光学重复，optical duplicates。如果变异位点位于这些重复的序列中，可能导致变异频率偏高，因此需要对重复序列进行标记，使得后续变异检测软件可以识别这些重复序列。
 
@@ -99,7 +99,7 @@ echo 2.MarkDuplicates end `date`
 #echo 2.MarkDuplicates end `date`
 ```
 
-### (3) SplitNCigarReads
+### 2c\) SplitNCigarReads
 
 SAM/BAM文件的第6列为CIGAR表达式，用来表示该序列各个位置的碱基的比对情况。
 
@@ -128,7 +128,7 @@ echo 3.SplitNCigarReads end `date`
 
 ```
 
-### (4) HaplotypeCaller
+### 2d\) HaplotypeCaller
 
 该步骤是正式使用GATK进行变异检测的步骤。
 
@@ -164,7 +164,7 @@ echo 4.HaplotypeCaller end `date`
 
 
 
-### (5) VariantFiltration
+### 2e\) VariantFiltration
 
 我们可以根据变异的聚集程度、变异的链偏好性、变异的平均质量水平、位点测序深度等指标进行过滤。
 
@@ -227,7 +227,7 @@ echo 5.VariantFiltration end `date`
 我们可以用`awk`等命令去除VCF中不合格变异，保留合格变异。
 
 
-### (6) Annotation
+### 2f\) Annotation
 
 我们可以使用软件以及数据库对得到的变异进行注释，可以获得注释信息包括：变异的位置（位于哪个基因？ 位于exon/intron/UTR ?）、在人群（例如东亚人群）中的频率，临床意义（Pathogenic/Benign）等等。这些注释信息可以帮助研究人员对变异的重要性作出判断。
 
@@ -282,9 +282,9 @@ echo 6.Annotation end `date`
 “_multianno.vcf”则是以vcf格式保存变异以及注释信息。
 
 
-## Utilities
+## 3\) Utilities
 
-### (1) ANNOVAR
+### 3a\) ANNOVAR
 
 本示例中使用ANNOVAR进行变异位点信息注释。ANNOVAR是一款优秀的变异注释软件，注释速度快，且可以免费使用。用户可以选择下载公共数据库进行注释，也可以用自己制作的数据库文件（ANNOVAR接受BED/VCF格式）进行注释。
 
