@@ -4,7 +4,7 @@
 ### **Precision Medicine: A novel exRNA panel for cancer diagnosis**
 {% endhint %}
 
-## 背景介绍
+## 1\)背景介绍
 
 在多种体液中，如血清、唾液以及尿液等，可以检测到一类非侵入性细胞外 RNA \(extracellular RNA, exRNA\)。诸如环状RNA \(circular RNA\)等这类具有空间结构的 RNA 分子，能够在血浆中稳定存在。这些从细胞分泌出的 exRNA 通常由微囊泡 \(microvesicles\)、外泌体\(exosome\) 包裹，或者与 RBP 密切结合形成 RNP 复合体。因为这些分子由于具备类细胞膜结构和蛋白质的保护，加上某些 RNA 具有特定的结构，exRNA 在多种体液 \(血清、唾液、尿液等\) 中可以抵抗体液中 RNase 的降解，从而稳定存在。exRNA 包括的类型很多，例如 miRNA，Y RNA, circRNA，lncRNA 等，每种又有不同的加工、剪切和修饰产物，这种多样性为更好的临床检验带来了新的期望。这些 exRNA 可以成为一类有效的生物标志物，服务于人体健康状况检测和疾病的诊断，如癌症的早期诊断、肿瘤生长状况监测、以及预后辅助诊断。
 
@@ -12,11 +12,11 @@
 
 ![Goal: Develop a RNA panel, paired with a machine learning model \(exSeek\) to classify cancer from control \(healthy person\) ](../../.gitbook/assets/exseek_task.png)
 
-### 1\) 总体流程图
+### 1a\) 总体流程图
 
 ![](../../.gitbook/assets/wholepipe.png)
 
-### 2\) 主要目标
+### 1b\) 主要目标
 
 利用构建出的expression matrix，分别对Colorectal Cancer vs Healthy Control和Prostate Cancer vs Healthy Control建立分类模型，找出稳健的可以区分癌症和正常样本的Feature，并进行相关分析。
 
