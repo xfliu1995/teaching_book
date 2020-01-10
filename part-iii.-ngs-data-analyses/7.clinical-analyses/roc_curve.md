@@ -6,7 +6,7 @@
 
 ROC分析的是二元分类模型，也就是输出结果只有两种类别的模型，例如：（阳性/阴性）（有病/没病）等。
 
-### \(1\) terminology
+### 1a\) terminology
 
 |  |  | 真实值 | 真实值 | 总数 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -45,7 +45,7 @@ ACC = \(TP + TN\) / \(P + N\), 即：\(真阳性+真阴性\) / 总样本数
 
 假发现率 \(FDR\)：FDR = FP / \(FP + TP\)
 
-### \(2\) ROC curve
+### 1b\) ROC curve
 
 x轴：伪阳性率（FPR）; Y轴：真阳性率（TPR）
 
@@ -79,7 +79,7 @@ TPR = TP/\(TP+FN\) = 77/\(77+323\) = 0.77，FPR = FP/\(FP+TN\) = 45/\(45+55\) = 
 
 ## 2\) running steps
 
-### \(1\) Draw ROC curve using single feature
+### 2a\) Draw ROC curve using single feature
 
 When we use single feature to draw ROC curve, we need to install and include `pROC` and `ggplot2` package. The data we will be using is displayed below:
 
@@ -138,7 +138,7 @@ The curve should look like the following. Notice that false positive rate \(0 to
 
 ![](../../.gitbook/assets/7.1.ROCplot_single_feature.jpeg)
 
-### \(2\) Draw ROC curve using multiple features
+### 2b\) Draw ROC curve using multiple features
 
 The following part discusses how to draw ROC curve using R with multiple features. To accomplish this, we should make sure that the `ROCR` package has been installed and included in the program. We use random forest to construct a model to predict the type. The data we will be using is displayed below:
 
