@@ -10,7 +10,7 @@ Chimeric RNA的产生来源包括两种可能的融合，1）两段DNA的融合(
 
 ## 2) Software
 
-### (1) Install STAR-Fusion
+### 2a\) Install STAR-Fusion
 
 ```bash
 docker load -i ~/Desktop/bioinfo_chimeric.tar.gz
@@ -32,7 +32,7 @@ STAR-Fusion可以直接以Fastq为输入文件进行融合基因分析；也可�
 下面分别介绍使用这2种不同输入文件进行分析的方法。
 
 
-### (1) 方法1-输入文件为Chimeric.out.junction
+### 3a\) 方法1-输入文件为Chimeric.out.junction
 
 * 使用STAR将Fastq比对到参考基因组上，输出Chimeric.out.junction文件:
 这步需要大量的内存，建议直接跳过。可以在集群中运行这步。
@@ -77,7 +77,7 @@ echo STAR end `date`
 ```
 
 
-### (2) 方法2-输入文件为Fastq
+### 3b\) 方法2-输入文件为Fastq
 
 由于STAR运行时会占用较大内存（RAM），约20～30G；如果STAR-Fusion加了`--FusionInspector validate `参数可能会使内存总占用达到～40G，因此当我们从fastq开始使用STAR-fusion分析时需要合理控制并行运行的STAR-Fusion任务数量。
 
@@ -104,7 +104,7 @@ echo STAR end `date`
 其他可以用于分析融合基因的软件有：[Prada](http://bioinformatics.mdanderson.org/main/PRADA:Overview), [FusionCatcher](http://biorxiv.org/content/early/2014/11/19/011650), [SoapFuse](http://soap.genomics.org.cn/soapfuse.html), [TophatFusion](http://ccb.jhu.edu/software/tophat/fusion_index.html), [DISCASM/GMAP-Fusion](https://github.com/DISCASM/DISCASM/wiki)。
 
 
-### (2) Download reference files for STAR-Fusion
+#### Download reference files for STAR-Fusion
 
 在寻找chimeric RNA时，我们还需要从Broad Institute数据库网站下载STAR-Fusion所需要的参考基因组与注释文件，选择“plug-n-play”压缩文件进行下载。下载地址如下：
 
