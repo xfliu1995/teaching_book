@@ -1,10 +1,8 @@
 # 4.1.Co-expression Network
 
-## Co-expression
-
 ## 0\) Background
 
-### WGCNA分析
+### 0a\)WGCNA分析
 
 #### 基本概念
 
@@ -30,11 +28,11 @@ WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同
 
 ## 2\) Data structure
 
-### \(1\) Getting software & data
+### 2a\) Getting software & data
 
 [文件和软件获取方式](README.md#files)
 
-### \(2\) Input data
+### 2b\) Input data
 
 输入数据的准备：这里主要是表达矩阵，如果是转录组数据，最好是RPKM值或者其它归一化好的表达量。然后就是临床信息或者其它表型，总之就是样本的属性。
 
@@ -47,7 +45,7 @@ WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同
 | input\_fpkm\_matrix.rds | GSE48213 breast cancer gene expression matrix \(top 5,000\) |
 | data\_traits.rds | 56 cell lines information for the GSM data in GSE48213 |
 
-### \(3\) Output data
+### 2c\) Output data
 
 | File name | Description |
 | :--- | :--- |
@@ -58,7 +56,7 @@ WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同
 
 ## 3\) Running steps
 
-### \(0\) Install packages
+### 3a\) Install packages
 
 ```r
 #In R:
@@ -68,13 +66,13 @@ biocLite(c("AnnotationDbi", "impute","GO.db", "preprocessCore", "multtest"))
 install.packages(c("WGCNA", "stringr", "reshape2"))
 ```
 
-### \(1\) Library the WGCNA package
+### 3b\) Library the WGCNA package
 
 ```r
 library(WGCNA)
 ```
 
-### \(2\) Import data
+### 3c\) Import data
 
 ```r
 #In R:
@@ -127,7 +125,7 @@ A brief look of the datTraits:
 #### The rownames of datExpr and datTraits are matched.
 ```
 
-### \(3\) Pick the soft thresholding power
+### 3d\) Pick the soft thresholding power
 
 ```r
 #In R:
@@ -197,7 +195,7 @@ sft$powerEstimate
 #best_beta = sft$powerEstimate
 ```
 
-### \(4\) One-step network construction and module detection
+### 3e\) One-step network construction and module detection
 
 把输入的表达矩阵的**几千个基因归类成了几十个模块。**大体思路：计算基因间的邻接性，根据邻接性计算基因间的相似性，然后推出基因间的相异性系数，并据此得到基因间的系统聚类树。
 
@@ -225,7 +223,7 @@ table(net$colors)
 #### table(net$colors) show the total modules and genes in each modules. The '0' means genes do not belong to any module.
 ```
 
-### \(5\) Module visualization
+### 3f\) Module visualization
 
 这里用不同的颜色来代表那些所有的模块，其中灰色默认是无法归类于任何模块的那些基因，如果灰色模块里面的基因太多，那么前期对表达矩阵挑选基因的步骤可能就不太合适。
 
@@ -260,7 +258,7 @@ dev.off()
 
 ![](../../.gitbook/assets/module_visualization.png)
 
-### \(6\) Quantify module similarity by eigengene correlation
+### 3g\) Quantify module similarity by eigengene correlation
 
 ```r
 #In R:
@@ -284,7 +282,7 @@ dev.off()
 
 The top part of this plot represents the eigengene dendrogram and the lower part of this plot represents the eigengene adjacency heatmap.
 
-### \(7\) Find the relationships between modules and traits
+### 3h\) Find the relationships between modules and traits
 
 模块与性状之间的关系
 
@@ -329,11 +327,11 @@ dev.off()
 
 从上图已经可以看到跟乳腺癌分类相关的基因模块了，包括"Basal" "Claudin-low" "Luminal" "Non-malignant" "unknown" 这5类所对应的不同模块的基因列表。可以看到每一种乳腺癌都有跟它强烈相关的模块，可以作为它的表达signature，模块里面的基因可以拿去做下游分析。我们看到Luminal表型跟棕色的模块相关性高达0.86，而且极其显著的相关，所以值得我们挖掘，这个模块里面的基因是什么，为什么如此的相关呢？
 
-### \(8\) Select specific module
+### 3i\) Select specific module
 
 We choose the "brown" module in trait “Luminal” for further analyses.
 
-#### \(8.1\) Intramodular connectivity, module membership, and screening for intramodular hub genes
+#### 3i.1\) Intramodular connectivity, module membership, and screening for intramodular hub genes
 
 ```r
 #In R:
@@ -367,7 +365,7 @@ hubgenes
 #[1] "ENSG00000124664" "ENSG00000129514" "ENSG00000143578"
 ```
 
-#### \(8.2\) Export the network
+#### 3i.2\) Export the network
 
 ```r
 #In R:
@@ -433,7 +431,7 @@ head CytoscapeInput-nodes-filter-brown.txt
 #ENSG00000129514    NA    brown
 ```
 
-#### \(8.3\) Extract gene IDs in specific module
+#### 3i.3\) Extract gene IDs in specific module
 
 ```r
 #In R:
