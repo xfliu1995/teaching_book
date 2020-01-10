@@ -15,17 +15,17 @@ Alternative polyadenylation \(APA\) leading to the production of two mRNA isofor
 cd /home/test/rna_regulation/apa
 ```
 
-### \(1\) Generate region annotation
+### 3a\) Generate region annotation
 
 DaPars will use the extracted distal polyadenylation sites to infer the proximal polyadenylation sites based on the alignment wiggle files of two samples. The output in this step will be used by the next step.
 
-#### \(1.1\) starting analysis
+#### starting analysis
 
 ```text
 DaPars_Extract_Anno.py -b hg19_refseq_whole_gene.bed -s hg19_4_19_2012_Refseq_id_from_UCSC.txt -o hg19_refseq_extracted_3UTR.bed
 ```
 
-#### \(1.2\) input
+#### input
 
 hg19\_refseq\_whole\_gene.bed \(bed12 format\)
 
@@ -43,7 +43,7 @@ hg19\_4\_19\_2012\_Refseq\_id\_from\_UCSC.txt
    NM_052998    ADC
    ```
 
-#### \(1.3\)  output
+#### output
 
 hg19\_refseq\_extracted\_3UTR.bed
 
@@ -53,9 +53,9 @@ hg19\_refseq\_extracted\_3UTR.bed
    chr11    92623657    92629635    NM_001008781|FAT3|chr11|+    0    +
 ```
 
-### \(2\) Main function to get final result
+### 3b\) Main function to get final result
 
-#### \(2.1\) starting analysis
+#### starting analysis
 
 ```text
 DaPars_main.py configure_file
@@ -63,7 +63,7 @@ DaPars_main.py configure_file
 
 Run this function to get the final result. The configure file is the only parameter for DaPars\_main.py, which stores all the parameters.
 
-#### \(2.2\) input
+#### input
 
 configure\_file
 
@@ -104,15 +104,15 @@ PDUI_cutoff=0.5
 Fold_change_cutoff=0.59
 ```
 
-#### \(2.3\) output
+#### output
 
 ![](../../.gitbook/assets/apa.f3.jpg)
 
-### \(3\)  Filter diff-APA events
+### 3c\)  Filter diff-APA events
 
 FDR\_cutoff, PDUI\_cutoff, Fold\_change\_cutoff → Pass filer \(Y nor N\)
 
-## 3\) Homework
+## 4\) Homework
 
 运行示例文件，理解输出文件“DaPars\_Test\_data\_All\_Prediction\_Results.txt”中每一列的含义。
 \(1\)解释PDUI的含义；
