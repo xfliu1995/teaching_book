@@ -11,7 +11,7 @@ microRNA\(miRNA\)是一类能够调节基因表达的短单链内源非编码RNA
 
 直接从公共数据库中输入miRNA，即可得到miRNA的靶标gene;或者从数据库中下载所有的miRNA和target的对应关系文件。
 
-### \(1\) miRTarBase: the experimentally validated microRNA-target interactions database
+### 2a\) miRTarBase: the experimentally validated microRNA-target interactions database
 
 [http://mirtarbase.mbc.nctu.edu.tw/php/index.php](http://mirtarbase.mbc.nctu.edu.tw/php/index.php)
 
@@ -23,7 +23,7 @@ microRNA\(miRNA\)是一类能够调节基因表达的短单链内源非编码RNA
 
 >Chou et al. miRTarBase update 2018: a resource for experimentally validated microRNA-target interactions. Nucleic Acids Research, 2018
 
-### \(2\) miRWalk2.0: a comphrehensive atlas of microRNA-target interactions
+### 2b\) miRWalk2.0: a comphrehensive atlas of microRNA-target interactions
 [http://zmf.umm.uni-heidelberg.de/apps/zmf/mirwalk2/index.html](http://zmf.umm.uni-heidelberg.de/apps/zmf/mirwalk2/index.html)
 
 >introduction of miRWalk2.0
@@ -36,7 +36,7 @@ microRNA\(miRNA\)是一类能够调节基因表达的短单链内源非编码RNA
 
 ## 3\) Prediction using bioinformatics tools
 
-### \(1\) Getting software & data
+### 3a\) Getting software & data
 
 [文件和软件获取方式](README.md#files)
 
@@ -54,7 +54,7 @@ microRNA\(miRNA\)是一类能够调节基因表达的短单链内源非编码RNA
 
 > 除了这些基本原则外，不同的预测方法还会根据各自总结的规律对算法进行限制和优化。
 
-### \(2\) miRanda
+### 3b\) miRanda
 
 miRanda是将miRNA-mRNA之间的序列匹配，保守性和热稳定性作为计算参数。
 
@@ -69,7 +69,7 @@ miranda miRanda.miRNA.fa miRanda.target_sequence.fa > miRanda.output.txt
 
 > miRanda is an algorithm for the detection of potential microRNA target sites in genomic sequences. miRanda reads RNA sequences \(such as microRNAs\) from file1 and genomic DNA/RNA sequences from file2. Both of these files should be in FASTA format. This is an example:
 
-#### \(2.1\) input file1: miRanda.miRNA.fa
+#### input file1: miRanda.miRNA.fa
 
 ```text
 # 此为miRanda.miRNA.fa文件预览，无需输入命令行
@@ -77,7 +77,7 @@ miranda miRanda.miRNA.fa miRanda.target_sequence.fa > miRanda.output.txt
 GTGAGATCATTTTGAAAGCTG
 ```
 
-#### \(2.2\) input file2: miRanda.target\_sequence.fa
+#### input file2: miRanda.target\_sequence.fa
 
 ```text
 # 此为miRanda.target_sequence.fa文件预览，无需输入命令行
@@ -144,7 +144,7 @@ CATAAGACAACAAAAATTATATATATGAATACATCTATGTGTATGTGTAAAG
 ```
 cat miRanda.output.txt
 ```
-#### \(2.3\) miRanda.output.txt \(example\)
+#### miRanda.output.txt \(example\)
 
 ```text
    Forward:    Score: 167.000000  Q:2 to 20  R:3340 to 3360 Align Len (18) (83.33%) (94.44%)
@@ -161,7 +161,7 @@ Scores for this hit:
 
 mirna Target Score Energy-Kcal/Mol Query-Aln\(start-end\) Subjetct-Al\(Start-End\) Al-Len Subject-Identity Query-Identity
 
-### \(3\) psRobot
+### 3c\) psRobot
 
 使用计算机预测植物miRNA靶基因比较简单，因为在植物中miRNA与靶基因几乎是以完全互补配对的方式结合，预测不需要复杂的算法。
 
@@ -173,7 +173,7 @@ psRobot\_tar is designed to find potential small RNA targets
 psRobot_tar -s psRobot.miRNA.fa -t psRobot.target_sequence.fa -o psRobot.output.txt
 ```
 
-#### \(3.1\) input file1: psRobot.miRNA.fa
+#### input file1: psRobot.miRNA.fa
 
 ```text
 # 此为psRobot.miRNA.fa文件预览，无需输入命令行
@@ -183,7 +183,7 @@ TGACAGAAGAGAGTGAGCAC
 TGCCAAAGGAGATTTGCCCTG
 ```
 
-#### \(3.2\) input file2: psRobot.target\_sequence.fa
+#### input file2: psRobot.target\_sequence.fa
 
 ```text
 # 此为psRobot.target_sequence.fa文件预览，无需输入命令行
