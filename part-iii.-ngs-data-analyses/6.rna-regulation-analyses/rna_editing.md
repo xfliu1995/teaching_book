@@ -34,7 +34,7 @@ RNAEditor: easy detection of RNA editing events and the introduction of editing 
 
 请首先启动相应 [Docker](README.md#files)，进入工作目录。
 
-### \(1\) input files
+### 5a\) input files
 
 We need a configuration file to assign the input files to the `RNAeditor`, here is a brief look of configuration file
 
@@ -64,7 +64,7 @@ overwrite = False
 threads = 1
 ```
 
-### \(2\) starting analysis
+### 5b\) starting analysis
 
 ```text
 rm -rf /apps/RNAEditor/output
