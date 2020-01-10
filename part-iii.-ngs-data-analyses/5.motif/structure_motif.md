@@ -9,13 +9,13 @@
 ---
 ## 2) running steps
 
-### (1) get interested sequences and background sequences
+### 2a\) get interested sequences and background sequences
 
 [文件和软件获取方式](README.md#files) 
 
 
 
-### (2) BEAM
+### 2b\) BEAM
 
 http://beam.uniroma2.it/home
 
@@ -27,7 +27,7 @@ docker exec -it -u root motif bash
 cd /home/test/motif/structure_motif/BEAM
 ```
 
-#### (2.1) use RNAfold to get dot-bracket
+#### use RNAfold to get dot-bracket
 
 Compute the best (MFE) structure for this sequence (primary sequence with dot-bracket)
 ```bash
@@ -36,7 +36,7 @@ less dot.fa
 # 查看生成的序列及点括号文件dot.fa
 ```
 
-#### (2.2) get file with BEAR notation ---> fastB (fastBEAR).
+#### get file with BEAR notation ---> fastB (fastBEAR).
 
 
 ```
@@ -44,14 +44,14 @@ awk '/^>/ {print; getline; print; getline; print $1}' dot.fa >dot_to_encode.fa
 java -jar /home/test/software/BEAM/beam-2.0/BearEncoder.new.jar dot_to_encode.fa BEAMready.fa
 ```
 
-#### (2.3) get structure motifs
+#### get structure motifs
 ```
 java -jar /home/test/software/beam-2.0/BEAM_release_1.5.1.jar -f BEAMready.fa -w 10 -W 40 -M 3
 ```
 
 ![](https://tva1.sinaimg.cn/large/006y8mN6ly1g85tflwz2qj30pw0citaq.jpg)
 
-#### (2.4) visualize motifs with weblogo
+#### visualize motifs with weblogo
 
 ```bash
 cd /home/test/motif/structure_motif/BEAM/risultati/BEAMready/webLogoOut/motifs
