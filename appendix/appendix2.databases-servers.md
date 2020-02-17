@@ -7,23 +7,53 @@
 
 ## 1\) Projects
 
-1. ENCODE
+- **ENCODE**
 
    **Encyclopedia of DNA Elements**: a comprehensive parts list of functional elements in the human genome. [https://www.encodeproject.org/](https://www.encodeproject.org/)
 
-2. 1000 Genomes
+- **1000 Genomes**
 
    most genetic variants with frequencies of at least 1% in the populations studied. [http://www.internationalgenome.org/](http://www.internationalgenome.org/)
 
-3. TCGA
+- **TCGA**
 
-   **The Cancer Genome Atlas:** From the analysis of over 11,000 tumors from 33 of the most prevalent forms of cancer, the Pan-Cancer Atlas provides a uniquely comprehensive, in-depth, and interconnected understanding of how, where, and why tumors arise in humans. As a singular and unified point of reference, the Pan-Cancer Atlas is an essential resource for the development of new treatments in the pursuit of precision medicine. ​[https://portal.gdc.cancer.gov/](https://portal.gdc.cancer.gov/)​
+   **The Cancer Genome Atlas:** From the analysis of over 11,000 tumors from 33 of the most prevalent forms of cancer, the Pan-Cancer Atlas provides a uniquely comprehensive, in-depth, and interconnected understanding of how, where, and why tumors arise in humans. As a singular and unified point of reference, the Pan-Cancer Atlas is an essential resource for the development of new treatments in the pursuit of precision medicine. 
+  
+  -  [portal](https://portal.gdc.cancer.gov/) 
+  -  [Cell papers](http://www.cell.com/pb-assets/consortium/pancanceratlas/pancani3/index.html)
+  - [TCGA Research Network](http://cancergenome.nih.gov/)
+  - [TCGA data portal](https://portal.gdc.cancer.gov/)
+  - [Pan-TCGA](https://www.cell.com/pb-assets/consortium/pancanceratlas/pancani3/index.html)
+  - [Broad GDAC Firehose](http://gdac.broadinstitute.org/)
+  - [Broad GDAC FireBrowse](http://firebrowse.org/)
+  - [TCGA/GTEx: Schultz Lab](https://www.nature.com/articles/sdata201861)
+  -  [Normalized data](https://figshare.com/articles/Data_record_3/5330593)
+  - [TCGA/GTEx: GEPIA 2](http://gepia2.cancer-pku.cn/#dataset) 
 
-   ​[http://www.cell.com/pb-assets/consortium/pancanceratlas/pancani3/index.html](http://www.cell.com/pb-assets/consortium/pancanceratlas/pancani3/index.html)​
+- **CCLE** \(cancer cell lines\)
 
-4. CCLE \(cancer cell lines\)
+   **Cancer Cell Line Encyclopedia** 
+  
+  - [CCLE](https://portals.broadinstitute.org/ccle)
+  - [CCLE RNA-seq BAM files](https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.program.name","value":["CCLE"]}}]})
+  - [CCLE Raw data](https://www.ncbi.nlm.nih.gov/sra?term=PRJNA523380)
+  - [CCLE Seven Bridges](https://www.sevenbridges.com/ccle/)
 
-   **Cancer Cell Line Encyclopedia**: [https://portals.broadinstitute.org/ccle](https://portals.broadinstitute.org/ccle)
+* **ICGC**
+  * [ICGC](https://dcc.icgc.org/)
+  * [PCAWG](https://docs.icgc.org/pcawg/data/)
+
+* **Other Integrative Projects**
+
+  * [COSMIC](https://cancer.sanger.ac.uk/cosmic)
+  * [UCSC Xena](http://xena.ucsc.edu/)
+  * [cBioPortal](http://www.cbioportal.org/)
+  * [MSK-IMPACT](https://www.cbioportal.org/study/summary?id=msk_impact_2017)
+  * [OncoKB](http://oncokb.org/)
+
+  
+
+
 
 ## 2\) Databases
 
@@ -61,7 +91,7 @@
 
 5. TCGA ncRNA
 
-   ​[http://ibl.mdanderson.org/tanric/\_design/basic/index.html](http://ibl.mdanderson.org/tanric/_design/basic/index.html)​
+   [http://ibl.mdanderson.org/tanric/\_design/basic/index.html](http://ibl.mdanderson.org/tanric/_design/basic/index.html)​
 
 ### \(3\) Exosomal database
 
