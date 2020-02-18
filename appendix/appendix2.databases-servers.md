@@ -7,53 +7,47 @@
 
 ## 1\) Projects
 
-- **ENCODE**
+* **ENCODE**
 
-   **Encyclopedia of DNA Elements**: a comprehensive parts list of functional elements in the human genome. [https://www.encodeproject.org/](https://www.encodeproject.org/)
+  **Encyclopedia of DNA Elements**: a comprehensive parts list of functional elements in the human genome. [https://www.encodeproject.org/](https://www.encodeproject.org/)
 
-- **1000 Genomes**
+* **1000 Genomes**
 
-   most genetic variants with frequencies of at least 1% in the populations studied. [http://www.internationalgenome.org/](http://www.internationalgenome.org/)
+  most genetic variants with frequencies of at least 1% in the populations studied. [http://www.internationalgenome.org/](http://www.internationalgenome.org/)
 
-- **TCGA**
+* **TCGA**
 
-   **The Cancer Genome Atlas:** From the analysis of over 11,000 tumors from 33 of the most prevalent forms of cancer, the Pan-Cancer Atlas provides a uniquely comprehensive, in-depth, and interconnected understanding of how, where, and why tumors arise in humans. As a singular and unified point of reference, the Pan-Cancer Atlas is an essential resource for the development of new treatments in the pursuit of precision medicine. 
-  
-  -  [portal](https://portal.gdc.cancer.gov/) 
-  -  [Cell papers](http://www.cell.com/pb-assets/consortium/pancanceratlas/pancani3/index.html)
-  - [TCGA Research Network](http://cancergenome.nih.gov/)
-  - [TCGA data portal](https://portal.gdc.cancer.gov/)
-  - [Pan-TCGA](https://www.cell.com/pb-assets/consortium/pancanceratlas/pancani3/index.html)
-  - [Broad GDAC Firehose](http://gdac.broadinstitute.org/)
-  - [Broad GDAC FireBrowse](http://firebrowse.org/)
-  - [TCGA/GTEx: Schultz Lab](https://www.nature.com/articles/sdata201861)
-  -  [Normalized data](https://figshare.com/articles/Data_record_3/5330593)
-  - [TCGA/GTEx: GEPIA 2](http://gepia2.cancer-pku.cn/#dataset) 
+  **The Cancer Genome Atlas:** From the analysis of over 11,000 tumors from 33 of the most prevalent forms of cancer, the Pan-Cancer Atlas provides a uniquely comprehensive, in-depth, and interconnected understanding of how, where, and why tumors arise in humans. As a singular and unified point of reference, the Pan-Cancer Atlas is an essential resource for the development of new treatments in the pursuit of precision medicine.
 
-- **CCLE** \(cancer cell lines\)
+  * [portal](https://portal.gdc.cancer.gov/) 
+  * [Cell papers](http://www.cell.com/pb-assets/consortium/pancanceratlas/pancani3/index.html)
+  * [TCGA Research Network](http://cancergenome.nih.gov/)
+  * [TCGA data portal](https://portal.gdc.cancer.gov/)
+  * [Pan-TCGA](https://www.cell.com/pb-assets/consortium/pancanceratlas/pancani3/index.html)
+  * [Broad GDAC Firehose](http://gdac.broadinstitute.org/)
+  * [Broad GDAC FireBrowse](http://firebrowse.org/)
+  * [TCGA/GTEx: Schultz Lab](https://www.nature.com/articles/sdata201861)
+  * [Normalized data](https://figshare.com/articles/Data_record_3/5330593)
+  * [TCGA/GTEx: GEPIA 2](http://gepia2.cancer-pku.cn/#dataset) 
 
-   **Cancer Cell Line Encyclopedia** 
-  
-  - [CCLE](https://portals.broadinstitute.org/ccle)
-  - [CCLE RNA-seq BAM files](https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.program.name","value":["CCLE"]}}]})
-  - [CCLE Raw data](https://www.ncbi.nlm.nih.gov/sra?term=PRJNA523380)
-  - [CCLE Seven Bridges](https://www.sevenbridges.com/ccle/)
+* **CCLE** \(cancer cell lines\)
+
+  **Cancer Cell Line Encyclopedia**
+
+  * [CCLE](https://portals.broadinstitute.org/ccle)
+  * CCLE RNA-seq BAM files：[https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":\[{"op":"in","content":{"field":"cases.project.program.name","value":\["CCLE"\]}}\]}](https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.program.name","value":["CCLE"]}}]})
+  * [CCLE Raw data](https://www.ncbi.nlm.nih.gov/sra?term=PRJNA523380)
+  * [CCLE Seven Bridges](https://www.sevenbridges.com/ccle/)
 
 * **ICGC**
   * [ICGC](https://dcc.icgc.org/)
   * [PCAWG](https://docs.icgc.org/pcawg/data/)
-
 * **Other Integrative Projects**
-
   * [COSMIC](https://cancer.sanger.ac.uk/cosmic)
   * [UCSC Xena](http://xena.ucsc.edu/)
   * [cBioPortal](http://www.cbioportal.org/)
   * [MSK-IMPACT](https://www.cbioportal.org/study/summary?id=msk_impact_2017)
   * [OncoKB](http://oncokb.org/)
-
-  
-
-
 
 ## 2\) Databases
 
