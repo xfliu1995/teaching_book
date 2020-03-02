@@ -1,4 +1,4 @@
-# 6.2.APA \(Alternative Polyadenylation\) detection using RNA-seq
+# 6.2.APA \(Alternative Polyadenylation\) Detection
 
 ## 1\) Workflow
 
@@ -6,12 +6,13 @@
 
 ## 2\) Background
 
-Alternative polyadenylation \(APA\) leading to the production of two mRNA isoforms with different 3ʹ untranslated regions \(3ʹ UTRs\)The dynamic usage of the 3’untranslated region \(3’UTR\) resulting from alternative polyadenylation \(APA\) is emerging as a pervasive mechanism for regulating mRNA diversity, stability and translation.
-![](../../.gitbook/assets/apa.f2.jpg)
+Alternative polyadenylation \(APA\) leading to the production of two mRNA isoforms with different 3ʹ untranslated regions \(3ʹ UTRs\)The dynamic usage of the 3’untranslated region \(3’UTR\) resulting from alternative polyadenylation \(APA\) is emerging as a pervasive mechanism for regulating mRNA diversity, stability and translation. ![](../../.gitbook/assets/apa.f2.jpg)
 
-## 3\) Running steps (DaPars)
-启动 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq的 [Docker](README.md#files)，然后进入工作目录
-```sh
+## 3\) Running steps \(DaPars\)
+
+启动 6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq的 [Docker](./#files)，然后进入工作目录
+
+```bash
 cd /home/test/rna_regulation/apa
 ```
 
@@ -29,19 +30,19 @@ DaPars_Extract_Anno.py -b hg19_refseq_whole_gene.bed -s hg19_4_19_2012_Refseq_id
 
 hg19\_refseq\_whole\_gene.bed \(bed12 format\)
 
-   ```text
+```text
    chr1    66999824    67210768    NM_032291    0    +    67000041    67208778    25    227,64,25,72,57,55,176,12,12,25,52,86,93,75,501,128,127,60,112,156,133,203,65,165,2013,    0,91705,98928,101802,105635,108668,109402,126371,133388,136853,137802,139139,142862,145536,147727,155006,156048,161292,185152,195122,199606,205193,206516,207130,208931,
    chr1    33546713    33585995    NM_052998    0    +    33547850    33585783    12    182,121,212,177,174,173,135,166,163,113,215,351,    0,275,488,1065,2841,10937,12169,13435,15594,16954,36789,38931,
    chr1    16767166    16786584    NM_001145278    0    +    16767256    16785385    104,101,105,82,109,178,76,1248,    0,2960,7198,7388,8421,11166,15146,18170,
-   ```
+```
 
 hg19\_4\_19\_2012\_Refseq\_id\_from\_UCSC.txt
 
-   ```text
+```text
    #name    name2
    NM_032291    SGIP1
    NM_052998    ADC
-   ```
+```
 
 #### output
 
@@ -114,7 +115,5 @@ FDR\_cutoff, PDUI\_cutoff, Fold\_change\_cutoff → Pass filer \(Y nor N\)
 
 ## 4\) Homework
 
-运行示例文件，理解输出文件“DaPars\_Test\_data\_All\_Prediction\_Results.txt”中每一列的含义。
-\(1\)解释PDUI的含义；
-\(2\)写脚本过滤adjusted.P\_val&lt;=0.05,PDUI\_Group\_diff&gt;=0.5, PDUI\_fold\_change&gt;=0.59的作为diff-APA events，和Pass\_filter为“Y“筛选出来的diff-APA events做比较。
+运行示例文件，理解输出文件“DaPars\_Test\_data\_All\_Prediction\_Results.txt”中每一列的含义。 \(1\)解释PDUI的含义； \(2\)写脚本过滤adjusted.P\_val&lt;=0.05,PDUI\_Group\_diff&gt;=0.5, PDUI\_fold\_change&gt;=0.59的作为diff-APA events，和Pass\_filter为“Y“筛选出来的diff-APA events做比较。
 

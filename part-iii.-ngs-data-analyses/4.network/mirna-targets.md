@@ -2,8 +2,7 @@
 
 ## 1\) Background
 
-microRNA\(miRNA\)是一类能够调节基因表达的短单链内源非编码RNA\(约22nt\)，通过与互补的mRNA选择性结合抑制蛋白的产生，广泛存在于动物、植物、病毒等多种有机体中。miRNA在许多生物过程中起关键作用，包括发育、细胞分化、增值、凋亡、肿瘤转移等。
-得到miRNA的靶标gene主要由两种方法：直接从数据库中下载，或是用生物信息学工具预测。
+microRNA\(miRNA\)是一类能够调节基因表达的短单链内源非编码RNA\(约22nt\)，通过与互补的mRNA选择性结合抑制蛋白的产生，广泛存在于动物、植物、病毒等多种有机体中。miRNA在许多生物过程中起关键作用，包括发育、细胞分化、增值、凋亡、肿瘤转移等。 得到miRNA的靶标gene主要由两种方法：直接从数据库中下载，或是用生物信息学工具预测。
 
 ![](../../.gitbook/assets/mirna.pipeline.png)
 
@@ -15,43 +14,40 @@ microRNA\(miRNA\)是一类能够调节基因表达的短单链内源非编码RNA
 
 [http://mirtarbase.mbc.nctu.edu.tw/php/index.php](http://mirtarbase.mbc.nctu.edu.tw/php/index.php)
 
->introduction of miRTarBase
-
->As a database, miRTarBase has accumulated more than three hundred and sixty thousand miRNA-target interactions \(MTIs\), which are collected by manually surveying pertinent literature after NLP of the text systematically to filter research articles related to functional studies of miRNAs. Generally, the collected MTIs are validated experimentally by reporter assay, western blot, microarray and next-generation sequencing experiments. While containing the largest amount of validated MTIs, the miRTarBase provides the most updated collection by comparing with other similar, previously developed databases.
-
->related paper
-
->Chou et al. miRTarBase update 2018: a resource for experimentally validated microRNA-target interactions. Nucleic Acids Research, 2018
+> introduction of miRTarBase
+>
+> As a database, miRTarBase has accumulated more than three hundred and sixty thousand miRNA-target interactions \(MTIs\), which are collected by manually surveying pertinent literature after NLP of the text systematically to filter research articles related to functional studies of miRNAs. Generally, the collected MTIs are validated experimentally by reporter assay, western blot, microarray and next-generation sequencing experiments. While containing the largest amount of validated MTIs, the miRTarBase provides the most updated collection by comparing with other similar, previously developed databases.
+>
+> related paper
+>
+> Chou et al. miRTarBase update 2018: a resource for experimentally validated microRNA-target interactions. Nucleic Acids Research, 2018
 
 ### 2b\) miRWalk2.0: a comphrehensive atlas of microRNA-target interactions
+
 [http://zmf.umm.uni-heidelberg.de/apps/zmf/mirwalk2/index.html](http://zmf.umm.uni-heidelberg.de/apps/zmf/mirwalk2/index.html)
 
->introduction of miRWalk2.0
-
->miRWalk2.0 is a comprehensive archive, supplying the largest available collection of predicted and experimentally verified microRNA\(miRNA\)-target interactions\(~949 million\).
-
->related paper
-
->Dweep, H et al. miRWalk2.0: a comprehensive atlas of microRNA-target interactions, Nature Methods, 2015.
+> introduction of miRWalk2.0
+>
+> miRWalk2.0 is a comprehensive archive, supplying the largest available collection of predicted and experimentally verified microRNA\(miRNA\)-target interactions\(~949 million\).
+>
+> related paper
+>
+> Dweep, H et al. miRWalk2.0: a comprehensive atlas of microRNA-target interactions, Nature Methods, 2015.
 
 ## 3\) Prediction using bioinformatics tools
 
 ### 3a\) Getting software & data
 
-[文件和软件获取方式](README.md#files)
+[文件和软件获取方式](./#files)
 
->目前常规的算法主要遵循以下几个常用原则：
-
+> 目前常规的算法主要遵循以下几个常用原则：
+>
 > * miRNA与靶基因的互补性；
-
 > * miRNA靶位点在不同物种之间的保守性；
-
 > * miRNA-mRNA双链之间的热稳定性；
-
 > * miRNA靶位点不会有复杂的二级结构；
-
 > * miRNA的5'端于靶基因的结合能力强于3’端。
-
+>
 > 除了这些基本原则外，不同的预测方法还会根据各自总结的规律对算法进行限制和优化。
 
 ### 3b\) miRanda
@@ -64,8 +60,8 @@ download miRanda from this page: [http://www.microrna.org/microrna/getDownloads.
 cd /home/test/mirna
 miranda miRanda.miRNA.fa miRanda.target_sequence.fa > miRanda.output.txt
 ```
-**没有特别提示，本小节所有程序运行均在home/test/mirna目录下运行。**
 
+**没有特别提示，本小节所有程序运行均在home/test/mirna目录下运行。**
 
 > miRanda is an algorithm for the detection of potential microRNA target sites in genomic sequences. miRanda reads RNA sequences \(such as microRNAs\) from file1 and genomic DNA/RNA sequences from file2. Both of these files should be in FASTA format. This is an example:
 
@@ -141,9 +137,11 @@ CATAAGACAACAAAAATTATATATATGAATACATCTATGTGTATGTGTAAAG
 ```
 
 随后，我们可以查看运行结果。
-```
+
+```text
 cat miRanda.output.txt
 ```
+
 #### miRanda.output.txt \(example\)
 
 ```text
@@ -279,7 +277,8 @@ GAGATTA
 ```
 
 随后，我们可以查看运行结果。
-```
+
+```text
 cat psRobot.output.txt
 ```
 

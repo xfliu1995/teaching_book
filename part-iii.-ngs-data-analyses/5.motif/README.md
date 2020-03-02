@@ -5,7 +5,7 @@
 * [5.1.Sequence Motif](sequence_motif.md)
 * [5.2.Structure Motif](structure_motif.md)
 
-## 2\)Files Needed {#files}
+## 2\)Files Needed <a id="files"></a>
 
 ### 2a\)方法1: 使用docker
 
@@ -15,7 +15,6 @@ docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#
 docker load -i bioinfo_motif.tar.gz
 
 docker run -dt --name motif --restart unless-stopped -v ~/Downloads/data:/data gangxu/motif:1.0
-
 ```
 
 > 本教程docker使用方式：

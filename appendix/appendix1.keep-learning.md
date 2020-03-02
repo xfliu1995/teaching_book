@@ -5,7 +5,7 @@
 
 1. google
 2. wikipedia
-3. 知乎
+3. 论坛（知乎，[Seqanswers](http://seqanswers.com/forums/index.php)，[Biostars](%20https://www.biostars.org/), etc\)
 {% endhint %}
 
 > ⭐: **必读**  
@@ -17,7 +17,7 @@
 
 > **选择性阅读的案头书**
 
-* ✨《[Computational Biology](https://ocw.mit.edu/ans7870/6/6.047/f15/MIT6_047F15_Compiled.pdf)》by [_Manolis Kellis_](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-047-computational-biology-fall-2015/) _@ MIT_ 
+* ✨《Computational Biology》by [_Manolis Kellis_](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-047-computational-biology-fall-2015/) _@ MIT_  \([PDF](https://ocw.mit.edu/ans7870/6/6.047/f15/MIT6_047F15_Compiled.pdf)\)
 * 《生物信息学》樊龙江  主编
 * 《生物信息学》李霞，雷健波，李亦学 等 编
 
@@ -74,7 +74,8 @@
 
 ## 🔍 4\) Recommended Tools and Scripts <a id="share-script"></a>
 
-* ✨[Recommended Bioinformatics Tools](https://lulab.gitbook.io/training/appendix/appendix-iv.useful-tools-for-bioinformatics)
-* Scripts:  [Lu Lab](https://github.com/lulab/shared_scripts) \|\| [Zhi J. Lu](https://github.com/urluzhi/scripts) 
-* Plots: [Lu Lab](https://github.com/lulab/teaching_book/tree/646f1fc5c470095a7a1ed143f9d851d574f0372d/lulab/shared_scripts/tree/master/plots/README.md) \|\| [Zhi J. Lu](https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot)
+* Scripts:  [Lu Lab](https://github.com/lulab/shared_scripts) \| [Zhi J. Lu](https://github.com/urluzhi/scripts) 
+* Plots: [Lu Lab](../part-i.-basic-skills/3.r/3.2.plots-with-r.md) \| [Zhi J. Lu](https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot)
+
+
 

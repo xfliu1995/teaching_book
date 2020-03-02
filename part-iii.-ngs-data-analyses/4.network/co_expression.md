@@ -30,15 +30,15 @@ WGCNA译为加权基因共表达网络分析。该分析方法旨在寻找协同
 
 ### 2a\) Getting software & data
 
-[文件和软件获取方式](README.md#files)
+[文件和软件获取方式](./#files)
 
 ### 2b\) Input data
 
 输入数据的准备：这里主要是表达矩阵，如果是转录组数据，最好是RPKM值或者其它归一化好的表达量。然后就是临床信息或者其它表型，总之就是样本的属性。
 
 > 什么是RPKM？
-
-> RPKM是Reads Per Kilobase per Million mapped reads的缩写，代表每百万reads中来自于某基因每千碱基长度的reads数。RPKM是将map到基因的read数除以map到基因组上的所有read数(以million为单位)与RNA的长度(以KB为单位)。这是一个衡量基因表达丰度的单位。
+>
+> RPKM是Reads Per Kilobase per Million mapped reads的缩写，代表每百万reads中来自于某基因每千碱基长度的reads数。RPKM是将map到基因的read数除以map到基因组上的所有read数\(以million为单位\)与RNA的长度\(以KB为单位\)。这是一个衡量基因表达丰度的单位。
 
 | File name | Description |
 | :--- | :--- |
@@ -462,14 +462,10 @@ We could use the gene ID list for GO/KEGG analysis.
 ## 4\) Homework
 
 * Input data:
-* /home/bioc/homework_FemaleLiver-01-dataInput.RData
+* /home/bioc/homework\_FemaleLiver-01-dataInput.RData
 * 134 samples, 3600 genes; each row represents a sample, each column represents a gene.
-
-* Please try to construct an automatic network and detect module \(Choosing the soft-thresholding power, One-step network construction and module detection\) from the homework\_FemaleLiver-01-dataInput.RData. 
-
-* Please plot two figures: 
-  1. Analysis of network topology\(Scale independence, Mean connectivity\) for various soft-thresholding powers. 
-  2. The dendrogram and the module colors underneath.
+* Please try to construct an automatic network and detect module \(Choosing the soft-thresholding power, One-step network construction and module detection\) from the homework\_FemaleLiver-01-dataInput.RData.
+* Please plot two figures: 1. Analysis of network topology\(Scale independence, Mean connectivity\) for various soft-thresholding powers. 2. The dendrogram and the module colors underneath.
 
 ## 5\) Reference
 

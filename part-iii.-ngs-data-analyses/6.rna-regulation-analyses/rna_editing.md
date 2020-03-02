@@ -1,4 +1,4 @@
-# 6.1.RNA Editing detection using RNA-seq
+# 6.1.RNA Editing Detection
 
 ## 1\) Background
 
@@ -30,9 +30,9 @@ RNAEditor: easy detection of RNA editing events and the introduction of editing 
 
 [http://rnaeditor.uni-frankfurt.de/index.php](http://rnaeditor.uni-frankfurt.de/index.php)
 
-## 5\) Running steps (RNAEditor)
+## 5\) Running steps \(RNAEditor\)
 
-请首先启动相应 [Docker](README.md#files)，进入工作目录。
+请首先启动相应 [Docker](./#files)，进入工作目录。
 
 ### 5a\) input files
 

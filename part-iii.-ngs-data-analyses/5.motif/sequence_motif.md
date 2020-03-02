@@ -1,14 +1,14 @@
 # 5.1.Sequence Motif
 
-## 1) workflow
+## 1\) workflow
 
 ![](../../.gitbook/assets/seq_motif.pipeline.png)
 
-## 2) running steps
+## 2\) running steps
 
 ### 2a\) Get files
 
-[文件和软件获取方式](README.md#files): fa文件、fa.fai文件、gtf文件、chrom.sizes文件和所需tar.gz文件从这里下载
+[文件和软件获取方式](./#files): fa文件、fa.fai文件、gtf文件、chrom.sizes文件和所需tar.gz文件从这里下载
 
 ### 2b\) fetch UTR or promoter sequences
 
@@ -16,7 +16,7 @@
 
 There are many functions for us to get genome annotation file/基因组注释文件功能很多:
 
-```sh
+```bash
 docker exec -it -u root motif bash
 
 cd /home/test/motif/sequence_motif/practice
@@ -31,7 +31,9 @@ library("GenomicFeatures")
 gtf_file="/home/test/motif/sequence_motif/genome/gencode.v27.annotation.gtf"
 txdb <- makeTxDbFromGFF(gtf_file, format="gtf")
 ```
+
 运行结果
+
 ```r
 Import genomic features from the file as a GRanges object ... OK
 Prepare the 'metadata' data frame ... OK
@@ -61,12 +63,12 @@ q()
 $ ls
 utr3p.info  utr5p.info
 ```
+
 这样就获取了5’UTR or 3’UTR的位置信息，如下图
 
 ![](https://tva1.sinaimg.cn/large/006y8mN6ly1g85qz19ilzj319e0eaq6i.jpg)
 
-get promoter site range
-同样的操作获得promoter的位置信息
+get promoter site range 同样的操作获得promoter的位置信息
 
 ```r
 # 再次进入R环境
@@ -82,7 +84,9 @@ promoter.df=as.data.frame(promoter)
 write.table(promoter.df, "promoter.info", row.names=FALSE, sep='\t' ,quote=FALSE)
 q()
 ```
+
 这样我们就获得了非常有用的三个文件
+
 ```bash
 > q()
 Save workspace image? [y/n/c]: n
@@ -104,13 +108,15 @@ sort -t $'\t' -k 2 utr3p.info|join -o 1.3 2.1 1.2 1.9 1.4 1.5 1.6 1.7 1.8 1.10 -
   sort -t $'\t' -k 1 >interested_three_prime_UTR.info
 ```
 
-```
+```text
 # 可以用less查看一下刚刚生成的文件
 less interested_three_prime_UTR.info
 # 按q退出
 q
 ```
-explanation for interested_three_prime_UTR.info:
+
+explanation for interested\_three\_prime\_UTR.info:
+
 ```bash
 column1: chr
 column2: gene
@@ -125,7 +131,9 @@ column10: exon_rank
 ```
 
 #### interested promoter
+
 同理再试一次，这次获取感兴趣的promoter信息，尝试思考每个命令的含义
+
 ```bash
 sort -t $'\t' -k 7 promoter.info|join -o 1.1 2.1 1.7 1.2  1.3 1.4 1.5 1.6 -t $'\t' -1 7 -2 2 - \
   <(cut -f 1 ../SC2_SF2.ct.dn.1_0.01.protein_coding |sort |join -t $'\t' -1 1 -2 1 - \
@@ -134,7 +142,7 @@ sort -t $'\t' -k 7 promoter.info|join -o 1.1 2.1 1.7 1.2  1.3 1.4 1.5 1.6 -t $'\
   sort -t $'\t' -k 1 >interested_promoter.info
 ```
 
-explanation for interested_promoter.info:
+explanation for interested\_promoter.info:
 
 ```bash
 column1: chr
@@ -157,7 +165,7 @@ cat interested_three_prime_UTR.info | \
   sort -u  > interested_three_prime_UTR.bed
 ```
 
-explanation for interested_three_prime_UTR.bed:
+explanation for interested\_three\_prime\_UTR.bed:
 
 ```bash
 column1: chr
@@ -176,7 +184,7 @@ cat interested_promoter.info | \
   sort -u  > interested_promoter.bed
 ```
 
-explanation for interested_promoter.bed:
+explanation for interested\_promoter.bed:
 
 ```bash
 column1: chr
@@ -191,9 +199,7 @@ column6: strand
 
 #### get 3'UTR related genome sequence
 
-
 ```bash
-
 bedtools getfasta -s -name -fi ../genome/GRCh38.p10.genome.fa \
   -bed interested_three_prime_UTR.bed -fo interested_three_prime_UTR.fa
 
@@ -295,6 +301,7 @@ repeat get promoter and get 3'UTR section
 ### 2g\) motif enrichment
 
 #### de novo motif discovery
+
 ```bash
 cd /home/test/motif/sequence_motif/practice/
 meme -dna -maxsize 2000000 \
@@ -316,7 +323,7 @@ output
 * download known motif from meme
 * add de novo motif file by meme
 
-   for 3'UTR
+  for 3'UTR
 
 ```bash
 mkdir UTR_output
@@ -328,7 +335,7 @@ interested_three_prime_UTR.fa \
 ../Ray2013_rbp_Homo_sapiens.meme
 ```
 
-   for promoter
+for promoter
 
 ```bash
 mkdir promoter_output
@@ -340,14 +347,12 @@ interested_promoter.fa \
 ../HOCOMOCOv11_core_HUMAN_mono_meme_format.meme
 ```
 
-   example output
+example output
 
 ![](../../.gitbook/assets/sequence_ame.png)
 
-
-
-## 3) Homework
+## 3\) Homework
 
 * 理解“concatenate sequences of the same 3'UTR”的含义，并找出一个具体的gene的3’UTR当做例子，解释这一步实现的效果。
-
 * 自己写一个脚本实现“concatenate sequences of the same 3'UTR”这一步，并以上面找到的具体gene的3'UTR当做示例，展示输入文件，输出文件，及运行脚本。
+

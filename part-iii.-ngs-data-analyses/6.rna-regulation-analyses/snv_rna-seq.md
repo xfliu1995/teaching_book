@@ -1,13 +1,8 @@
-# 6.6.SNV/INDEL detection using RNA-seq
+# 6.6.SNV/INDEL Detection
 
+本章介绍如何通过RNA-seq找到可能的DNA上的Single Nucleotide Variance \(SNV\)和Insert/Deletion \(INDEL\)，我们将本示例使用STAR将RNA测序数据比对到参考基因组后，使用GATK\(4.0以上版本\)进行SNV/INDEL 的检测，最后使用ANNOVAR对这些SNV进行注释。
 
-本章介绍如何通过RNA-seq找到可能的DNA上的Single Nucleotide Variance (SNV)和Insert/Deletion (INDEL)，我们将本示例使用STAR将RNA测序数据比对到参考基因组后，使用GATK(4.0以上版本)进行SNV/INDEL 的检测，最后使用ANNOVAR对这些SNV进行注释。
-
-
-
-## 1) Software introduction
-
-
+## 1\) Software introduction
 
 ### 1a\) STAR
 
@@ -15,32 +10,26 @@
 
 STAR在运行时候占用机器的内存较大，一般可达到20~30G，因此需要根据可用内存控制同时运行的STAR任务数量。
 
+* [STAR的Github主页](https://github.com/alexdobin/STAR)
 
-- [STAR的Github主页](https://github.com/alexdobin/STAR)
-
-> 参考文献： **Alexander Dobin**, et al. [STAR: ultrafast universal RNA-seq aligner](https://academic.oup.com/bioinformatics/article/29/1/15/272537) _Bioinformatics_. 2012. 29(1): 15-21.
+> 参考文献： **Alexander Dobin**, et al. [STAR: ultrafast universal RNA-seq aligner](https://academic.oup.com/bioinformatics/article/29/1/15/272537) _Bioinformatics_. 2012. 29\(1\): 15-21.
 
 ### 1b\) GATK
 
 GATK是Broad Institute开发的一款用于检测变异（SNV/INDEL）的软件，拥有较高的引用率（已有上万次引用）。
 
-- [GATK的主页](https://software.broadinstitute.org/gatk/)
-
-- [GATK Forum](https://gatkforums.broadinstitute.org/gatk/) （GATK开发人员与在该论坛回答用户疑问）
+* [GATK的主页](https://software.broadinstitute.org/gatk/)
+* [GATK Forum](https://gatkforums.broadinstitute.org/gatk/) （GATK开发人员与在该论坛回答用户疑问）
 
 > 参考文献：**Aaron McKenna**, et al. [The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data.](https://genome.cshlp.org/content/20/9/1297.long) _Genome Research_. 2010. 20: 1297-1303.
 
+## 2\) Running steps
 
-
-
-
-## 2) Running steps
-```sh
+```bash
 docker load -i ~/Downloads/bioinfo_snv.tar.gz
 docker run -dt --name=snv -v ~/Downloads/data:/data gangxu/snv:2.0
 docker exec -it snv bash
 ```
-
 
 ### 2a\) Alignment
 
@@ -125,7 +114,6 @@ echo 3.SplitNCigarReads end `date`
 #-O /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/3.SplitNCigarReads/SRR5714908.sorted.MarkDup.SplitNCigar.bam
 
 #echo 3.SplitNCigarReads end `date`
-
 ```
 
 ### 2d\) HaplotypeCaller
@@ -159,10 +147,7 @@ echo 4.HaplotypeCaller end `date`
 #--standard-min-confidence-threshold-for-calling 20
 
 #echo 4.HaplotypeCaller end `date`
-
 ```
-
-
 
 ### 2e\) VariantFiltration
 
@@ -208,24 +193,19 @@ echo 5.VariantFiltration end `date`
 #zcat /BioII/lulab_b/chenyinghui/project/Docker/SNP/output/5.VariantFiltration/SRR5714908.filtered.vcf.gz  | awk -F '\t' '{if ($0 ~ "#" || $7 == "PASS") print $0 }' - #>/BioII/lulab_b/chenyinghui/project/Docker/SNP/output/5.VariantFiltration/SRR5714908.filtered.clean.vcf
 
 #echo 5.VariantFiltration end `date`
-
 ```
 
-`--window 35 \ --cluster3` :  （变异的聚集程度）if there are more than 3 variants cluster in 35 bp window, these variants will be filtered.
+`--window 35 \ --cluster3` : （变异的聚集程度）if there are more than 3 variants cluster in 35 bp window, these variants will be filtered.
 
-`--filter-name 'FS' \ --filter 'FS > 30.0' `:  （[变异的链偏好性（strand bias）](https://gatkforums.broadinstitute.org/gatk/discussion/8056/fisher-s-exact-test)）Phred-scaled p-value （-log10(p-value) ） using Fisher's exact test to detect strand bias. Phred-score closer to 0 means there is a lower chance of there being bias. Higher FS values therefore indicate more bias.
+`--filter-name 'FS' \ --filter 'FS > 30.0'`: （[变异的链偏好性（strand bias）](https://gatkforums.broadinstitute.org/gatk/discussion/8056/fisher-s-exact-test)）Phred-scaled p-value （-log10\(p-value\) ） using Fisher's exact test to detect strand bias. Phred-score closer to 0 means there is a lower chance of there being bias. Higher FS values therefore indicate more bias.
 
-`--filter-name 'QD'`: （变异的平均质量水平）Variant Confidence/Quality by Depth.   
+`--filter-name 'QD'`: （变异的平均质量水平）Variant Confidence/Quality by Depth.
 
 `--filter-name 'DP'`：（位点的测序深度）read depth that cover this site.
 
-
-
 `--filter-name`中的过滤参数的具体含义可以参考GATK生成的VCF文件中开头的注释部分。用户可以根据VCF文件中出现的其他指标对变异进行更多样的过滤筛选。
 
-值得指出的是，满足用户所设置的过滤表达式（如平均质量QD低于2: `--filter 'QD < 2.0'`）的变异才是我们需要过滤的变异。这些需要被过滤的“不合格”变异仍然会被保留在VCF文件中，但是在VCF第6列 `QUAL`中会被标注过滤的原因（平均质量QD太低，则标记为`QD`），通过筛选的、合格的变异位点会被标记`PASS`。
-我们可以用`awk`等命令去除VCF中不合格变异，保留合格变异。
-
+值得指出的是，满足用户所设置的过滤表达式（如平均质量QD低于2: `--filter 'QD < 2.0'`）的变异才是我们需要过滤的变异。这些需要被过滤的“不合格”变异仍然会被保留在VCF文件中，但是在VCF第6列 `QUAL`中会被标注过滤的原因（平均质量QD太低，则标记为`QD`），通过筛选的、合格的变异位点会被标记`PASS`。 我们可以用`awk`等命令去除VCF中不合格变异，保留合格变异。
 
 ### 2f\) Annotation
 
@@ -271,16 +251,15 @@ echo 6.Annotation end `date`
 #echo 6.Annotation end `date`
 ```
 
-运行上述脚本之后，最后在输出目录下会有三个文件，后缀名分别是：“.avinput”、“_multianno.txt”、“_multianno.vcf”。
+运行上述脚本之后，最后在输出目录下会有三个文件，后缀名分别是：“.avinput”、“\_multianno.txt”、“\_multianno.vcf”。
 
 程序先将输入文件从vcf格式转换为“.avinput”格式，然后再对“.avinput”格式保存的变异进行注释。
 
-最后，程序将注释之后的结果的以2种不同格式保存为“_multianno.txt”与“_multianno.vcf”。
+最后，程序将注释之后的结果的以2种不同格式保存为“\_multianno.txt”与“\_multianno.vcf”。
 
-“_multianno.txt”中各列以“tab”键分隔，将“_multianno.txt”后缀改为“_multianno.xls”即可在Windows系统中打开。
+“\_multianno.txt”中各列以“tab”键分隔，将“\_multianno.txt”后缀改为“\_multianno.xls”即可在Windows系统中打开。
 
-“_multianno.vcf”则是以vcf格式保存变异以及注释信息。
-
+“\_multianno.vcf”则是以vcf格式保存变异以及注释信息。
 
 ## 3\) Utilities
 
@@ -302,6 +281,8 @@ perl /home/test/annovar/annotate_variation.pl \
 refGene \
 /home/test/annovar/Annovar_database
 ```
-- [ANNOVAR的主页](http://annovar.openbioinformatics.org/en/latest/user-guide/download/)
-> 参考文献： **Wang K**, et al. [ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data](http://nar.oxfordjournals.org/content/38/16/e164) _Nucleic Acids Research_. 2010. 38:e164.
+
+* [ANNOVAR的主页](http://annovar.openbioinformatics.org/en/latest/user-guide/download/)
+
+  > 参考文献： **Wang K**, et al. [ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data](http://nar.oxfordjournals.org/content/38/16/e164) _Nucleic Acids Research_. 2010. 38:e164.
 

@@ -11,9 +11,9 @@
 ### 2a\) 方法1: 使用docker
 
 docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-docker)所示，加载完我们提供的image后，文件都已经准备好了，可以这样查看：
- 
- 7.1 ROC Curve, 7.3 Survival Analysis
- 
+
+7.1 ROC Curve, 7.3 Survival Analysis
+
 ```bash
 docker load -i ~/Desktop/bioinfo_roc_survival.tar.gz
 
@@ -28,7 +28,6 @@ cd /home/test/roc
 # 7.3 Survival Analysis
 
 cd /home/test/clinical_analysis
-
 ```
 
 > 本教程docker使用方式：
@@ -37,8 +36,8 @@ cd /home/test/clinical_analysis
 > * 2\) 进行Linux系统的相关操作
 > * 3\) 退出容器：`exit`
 
- 7.2 PCA
- 
+7.2 PCA
+
 ```bash
 docker load -i ~/Desktop/bioinfo_pca_machine.tar.gz
 
@@ -49,9 +48,7 @@ docker exec -it bioinfo_pca_machine bash
 # 7.2 PCA
 
 cd /home/test/pca
-
 ```
-
 
 ### 2b\)方法2: 直接下载
 

@@ -7,18 +7,15 @@
 * [6.3.Ribo-seq](ribo_seq.md)
 * [6.4.Structure-seq](structure_seq.md)
 * [6.5.Chimeric RNA detection using RNA-seq](chimeric.md)
-* [6.6.SNV/INDEL detection using RNA-seq](SNV_RNA-seq.md)
+* [6.6.SNV/INDEL detection using RNA-seq](snv_rna-seq.md)
 
-  
-
-## 1\)Files Needed {#files}
+## 1\)Files Needed <a id="files"></a>
 
 ### 1a\) 方法1: 使用docker
 
 docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-docker)所示，本大章包括2个images：
 
-(1) **6.1 RNA Editing**: bioinfo_rnaeditor.1.8.tar.gz
-
+\(1\) **6.1 RNA Editing**: bioinfo\_rnaeditor.1.8.tar.gz
 
 ```bash
 docker load -i ~/Desktop/bioinfo_rnaeditor.tar.gz
@@ -31,8 +28,7 @@ docker exec -it rnaeditor bash
 cd /home/test
 ```
 
-
-(2) **6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq**：bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
+\(2\) **6.2 APA, 6.3 Ribo-seq, 6.4 Structure-seq**：bioinfo\_tsinghua\_6.2\_apa\_6.3\_ribo\_6.4\_structure.tar.gz
 
 ```bash
 docker load -i ~/Desktop/bioinfo_tsinghua_6.2_apa_6.3_ribo_6.4_structure.tar.gz
@@ -51,25 +47,25 @@ cd /home/test/rna_regulation/ribo-wave
 
 # Structure-seq
 cd /home/test/rna_regulation/structure_seq
-
 ```
 
-(3) **6.5.Chimeric RNA Detection**: bioinfo_chimeric.tar.gz 
+\(3\) **6.5.Chimeric RNA Detection**: bioinfo\_chimeric.tar.gz
 
-需要下载原始数据和基因组文件[ctat_genome_lib_build_X_docker.zip,ref_genome.fa.star.idx.zip](https://cloud.tsinghua.edu.cn/d/72c1ffd831ce4fce9cd1/)，请把 ref_genome.fa.star.idx 移到 ctat_genome_lib_build_X_docker文件中。下载解压后需要挂载。
-```sh
+需要下载原始数据和基因组文件[ctat\_genome\_lib\_build\_X\_docker.zip,ref\_genome.fa.star.idx.zip](https://cloud.tsinghua.edu.cn/d/72c1ffd831ce4fce9cd1/)，请把 ref\_genome.fa.star.idx 移到 ctat\_genome\_lib\_build\_X\_docker文件中。下载解压后需要挂载。
+
+```bash
 docker load -i ~/Desktop/bioinfo_chimeric.tar.gz
 mv ~/Downloads/ref_genome.fa.star.idx ~/Downloads/ctat_genome_lib_build_X_docker
 docker run -dt -v ~/Downloads/ctat_genome_lib_build_X_docker:/data --name=bioinfo_starfusion gangxu/starfusion:latest
 ```
 
-(4) **6.6.SNV/INDEL Detection**: bioinfo_snv.tar.gz
-```sh
+\(4\) **6.6.SNV/INDEL Detection**: bioinfo\_snv.tar.gz
+
+```bash
 docker load -i ~/Downloads/bioinfo_snv.tar.gz
 docker run -dt --name=snv -v ~/Downloads/data:/data gangxu/snv:2.0
 docker exec -it snv bash
 ```
-
 
 ### 1b\) 方法2: 直接下载
 

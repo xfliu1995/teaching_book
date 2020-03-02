@@ -83,7 +83,7 @@ TPR = TP/\(TP+FN\) = 77/\(77+323\) = 0.77，FPR = FP/\(FP+TN\) = 45/\(45+55\) = 
 
 When we use single feature to draw ROC curve, we need to install and include `pROC` and `ggplot2` package. The data we will be using is displayed below:
 
-| SampleID | Expression\_of\_miR_1 | Type |
+| SampleID | Expression\_of\_miR\_1 | Type |
 | :--- | :--- | :--- |
 | 1 | 66 | cancer |
 | 2 | 32 | normal |
@@ -110,9 +110,10 @@ Here, we present a single feature model. In the data, the first column stands fo
 
 First we are going to input the data using `data.frame`. The code is as follows:
 
-```
+```text
 cd /home/test/roc
 ```
+
 ```r
 #In R:
 library(ROCR)
@@ -136,13 +137,13 @@ dev.off()
 
 The curve should look like the following. Notice that false positive rate \(0 to 1\) equals specificity \(1 to 0\), and true positive rate \(0 to 1\) equals sensitivity \(0 to 1\).
 
-![](../../.gitbook/assets/7.1.ROCplot_single_feature.jpeg)
+![](../../.gitbook/assets/7.1.rocplot_single_feature.jpeg)
 
 ### 2b\) Draw ROC curve using multiple features
 
 The following part discusses how to draw ROC curve using R with multiple features. To accomplish this, we should make sure that the `ROCR` package has been installed and included in the program. We use random forest to construct a model to predict the type. The data we will be using is displayed below:
 
-| SampleID | Expression\_of\_miR_1 | Expression\_of\_miR_2 | Expression\_of\_miR_3 | Type |
+| SampleID | Expression\_of\_miR\_1 | Expression\_of\_miR\_2 | Expression\_of\_miR\_3 | Type |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | 12 | 55 | 74 | cancer |
 | 2 | 87 | 44 | 46 | normal |
@@ -247,7 +248,7 @@ dev.off()
 
 The curve should look like this:
 
-![](../../.gitbook/assets/7.2.ROCplot_multiple_features.jpeg)
+![](../../.gitbook/assets/7.2.rocplot_multiple_features.jpeg)
 
 ## 3\) Reference
 
@@ -260,5 +261,6 @@ The curve should look like this:
 \[4\] [https://lulab2.gitbook.io/teaching/part-iii.-machine-learning-basics/8.1-machine-learning-with-r](https://lulab2.gitbook.io/teaching/part-iii.-machine-learning-basics/8.1-machine-learning-with-r)
 
 ## 4\) Homework
+
 用python语言实现ROC curve的绘制，需要提交python代码，应用于上文的单个feature和多个feature的示例文件，并提交输出的图。
 
