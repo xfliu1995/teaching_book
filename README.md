@@ -7,7 +7,7 @@ description: 生物信息学实践教程 - 基础篇 (2019版)
 
 
 {% hint style="warning" %}
-Notes for readers in mainland China:
+Note for readers in mainland China:
 
 **You may need VPN/V2Ray to view the full function of gitbook.**
 {% endhint %}
