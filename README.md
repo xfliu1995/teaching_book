@@ -113,8 +113,8 @@ Yumin Zhu, Gang Xu, Zhuoer Dong, Yinghui Chen, Meifeng Zhou, Xupeng Chen, Xiaoch
 * e-mai: lulab1 AT tsinghua.edu.cn
 * Hompage: [http://lulab.life.tsinghua.edu.cn](http://lulab.life.tsinghua.edu.cn)
 * GitHub: [https://lulab.github.io](https://lulab.github.io)
-* Books: [https://lulab.gitbook.io](https://lulab.gitbook.io)
-* Software: [http://software.ncrnalab.org](http://software.ncrnalab.org)
+* Docs/Books: [https://lulab.gitbook.io](https://lulab.gitbook.io)
+* Software: [http://www.ncrnalab.org/software](http://www.ncrnalab.org/software)
 
 ## Copyright
 
