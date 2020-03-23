@@ -4,8 +4,6 @@ description: 生物信息学实践教程 - 基础篇 (2019版)
 
 # Bioinformatics Tutorial - Basic
 
-
-
 ![](.gitbook/assets/intro.png)
 
 ## Teaching Philosophy
@@ -113,10 +111,10 @@ Yumin Zhu, Gang Xu, Zhuoer Dong, Yinghui Chen, Meifeng Zhou, Xupeng Chen, Xiaoch
 * Lu Lab 鲁 志 实验室
 * School of Life Sciences, Tsinghua University, Beijing, China
 * e-mai: lulab1 AT tsinghua.edu.cn
-* Hompage: [http://lulab.life.tsinghua.edu.cn](http://lulab.life.tsinghua.edu.cn)
+* Hompage: [http://lulab.life.tsinghua.edu.cn](http://lulab.life.tsinghua.edu.cn) \| [https://www.ncrnalab.org](https://www.ncrnalab.org)
 * GitHub: [https://lulab.github.io](https://lulab.github.io)
 * Docs/Books: [https://lulab.gitbook.io](https://lulab.gitbook.io)
-* Software: [http://www.ncrnalab.org/software](http://www.ncrnalab.org/software)
+* Software: [https://software.ncrnalab.org](https://software.ncrnalab.org)
 
 ## Copyright
 
