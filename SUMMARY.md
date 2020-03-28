@@ -71,4 +71,5 @@
 * [Appendix II. Databases & Servers](appendix/appendix2.databases-servers.md)
 * [Appendix III. How to Backup](appendix/appendix-iii.-how-to-backup.md)
 * [Appendix IV. Teaching Materials](appendix/appendix-iv.-teaching.md)
+* [Appendix V. Software and Tools](appendix/appendix-v.-software-and-tools.md)
 
