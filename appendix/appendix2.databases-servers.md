@@ -163,5 +163,8 @@ This database of urinary exosome proteins is based on published protein mass spe
 
    plant small RNA target analysis [https://plantgrn.noble.org/psRNATarget/](https://plantgrn.noble.org/psRNATarget/)
 
-### 
+### **\(5\) Sequence motif analysis**
+
+1. MEME motif based sequence analysis tools [http://meme-suite.org/](http://meme-suite.org/)
+2. HOMER Software for motif discovery and next-gen sequencing analysis [http://homer.ucsd.edu/homer/motif/](http://homer.ucsd.edu/homer/motif/)
 
