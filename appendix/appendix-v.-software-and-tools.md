@@ -79,3 +79,5 @@
 * **DNAase-seq**: 
 * **ATAC-seq**:
 
+## 6\) Chromatin and Hi-C
+
