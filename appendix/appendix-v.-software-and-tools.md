@@ -2,16 +2,31 @@
 
 ## 1\) Genome Browser
 
-* IGV
-* UCSC Genome Browser
+* [IGV](http://software.broadinstitute.org/software/igv/)
+* [UCSC Genome Browser](https://genome.ucsc.edu/)
 
 ## 2\) DNA-seq
 
+### \(2.1\) Mapping and QC
 
+* **Mapping**: Bowtie, STAR
+* **QC**: fastqc 
+
+### \(2.2\) Mutation
+
+* **Software Package**: [GATK](https://gatk.broadinstitute.org/hc/en-us)
+
+### \(2.3\) Assembly
 
 ## 3\) RNA-seq
 
 ### \(3.1\) RNA-seq
+
+* **Expression Matrix:** 
+* **Differential Expression**: DESEQ2, EdgeR
+* **Alternative Splicing**: 
+* **RNA Editing**: 
+* ...
 
 ### 
 
@@ -38,5 +53,16 @@
 
 > QC, quality control; ATAC-seq, assay for transposase-accessible chromatin using sequencing.
 
+## 4\) ChIP-seq
 
+* **Software Package**: HOMMER
+* **motif finder**: MEME
+
+## 5\) Epigenetic Data
+
+* **DNA Methylation** 
+  * **Bi-sulfate data**:
+  * **IP data**:
+* **DNAase-seq**: 
+* **ATAC-seq**:
 
