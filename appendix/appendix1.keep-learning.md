@@ -72,10 +72,385 @@
 
 * ✨[One Tip Per Day](http://onetipperday.sterding.com/) \(e.g. [How to tell which library type to use ](http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html)\)
 
-## 🔍 4\) Recommended Tools and Scripts <a id="share-script"></a>
-
-* Scripts:  [Lu Lab](https://github.com/lulab/shared_scripts) \| [Zhi J. Lu](https://github.com/urluzhi/scripts) 
-* Plots: [Lu Lab](../part-i.-basic-skills/3.r/3.2.plots-with-r.md) \| [Zhi J. Lu](https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot)
 
 
+## 📑 4) Computational Biology Primers
 
+> This is a list of explanatory papers that have appeared as primer in the Computational Biology section of the journal Nature Biotechnology, in reverse chronological order. (Last addition November 2013 / checked March 2016).
+>
+> — *Nature Biotechnology*
+
+
+
+### Basics
+
+**The anatomy of successful computational biology software **
+
+(Stephen Altschul, Barry Demchak, Richard Durbin, Robert Gentleman, Martin Krzywinski, Heng Li, Anton Nekrutenko, James Robinson, Wayne Rasband, James Taylor & Cole Trapnell)
+
+October 2013, Vol 31, No 10; pp 894 - 897
+
+doi: [10.1038/nbt.2721](http://dx.doi.org/10.1038/nbt.2721) ([google](http://www.google.com/search?as_q=+The+anatomy+of+successful+computational+biology+software+())）
+
+
+
+**Understanding genome browsing**
+
+(Melissa S Cline & W James Kent)
+
+February 2009, Vol 27, No 2; pp 153 - 155
+
+doi: [10.1038/nbt0209-153](http://dx.doi.org/10.1038/nbt0209-153) ([google](http://www.google.com/search?as_q=Understanding+genome+browsing&as_filetype=pdf))
+
+
+
+### Basic Statistics
+
+**How does multiple testing correction work?**
+
+(William S Noble)
+
+December 2009, Vol 27, No 12 ; pp 1135 - 1137
+
+doi: [10.1038/nbt1209-1135](http://dx.doi.org/10.1038/nbt1209-1135) ([google](http://www.google.com/search?as_q=How+does+multiple+testing+correction+work?&as_filetype=pdf))
+
+
+
+**What is Bayesian statistics?**
+
+(Sean R Eddy)
+
+September 2004, Volume 22, No 9; pp 1177 - 1178
+
+doi: [10.1038/nbt0904-1177](http://dx.doi.org/10.1038/nbt0904-1177) ([google](http://www.google.com/search?as_q=What+is+Bayesian+statistics?+&as_filetype=pdf))
+
+
+
+### Basic Algorithms
+
+
+
+**How to map billions of short reads onto genomes**
+
+(Cole Trapnell & Steven L Salzberg)
+
+May 2009, Vol 27, No 5; pp 455 - 457
+
+doi: [10.1038/nbt0509-455](http://dx.doi.org/10.1038/nbt0509-455) ([google](http://www.google.com/search?as_q=How+to+map+billions+of+short+reads+onto+genomes&as_filetype=pdf))
+
+
+
+**Where did the BLOSUM62 alignment score matrix come from?**
+
+(Sean R Eddy)
+
+August 2004, Volume 22, No 8; pp 1035 - 1036
+
+doi: [10.1038/nbt0804-1035](http://dx.doi.org/10.1038/nbt0804-1035) ([google](http://www.google.com/search?as_q=Where+did+the+BLOSUM62+alignment+score+matrix+come+from?+&as_filetype=pdf))
+
+
+
+**What is dynamic programming?**
+
+(Sean R Eddy)
+
+July 2004, Volume 22, No 7; pp 909 - 910
+
+doi: [10.1038/nbt0704-909](http://dx.doi.org/10.1038/nbt0704-909) ([google](http://www.google.com/search?as_q=What+is+dynamic+programming?+&as_filetype=pdf))
+
+
+
+**How do RNA folding algorithms work?**
+
+(Sean R Eddy)
+
+November 2004, Volume 22, No 11; pp 1457 - 1458
+
+doi: [10.1038/nbt1104-1457](http://dx.doi.org/10.1038/nbt1104-1457) ([google](http://www.google.com/search?as_q=How+do+RNA+folding+algorithms+work?+&as_filetype=pdf))
+
+
+
+
+
+### Machine Learning
+
+**What is a hidden Markov model?**
+
+(Sean R Eddy)
+
+October 2004, Volume 22, No 10; pp 1315 - 1316
+
+doi: [10.1038/nbt1004-1315](http://dx.doi.org/10.1038/nbt1004-1315) ([google](http://www.google.com/search?as_q=What+is+a+hidden+Markov+model?+&as_filetype=pdf))
+
+
+
+**What is the expectation maximization algorithm?**
+
+(Chuong B Do & Serafim Batzoglou)
+
+August 2008, Volume 26 No 8; pp 897 - 899
+
+doi: [10.1038/nbt1406](http://dx.doi.org/10.1038/nbt1406) ([google](http://www.google.com/search?as_q=What+is+the+expectation+maximization+algorithm?&as_filetype=pdf))
+
+
+
+**What are decision trees?**
+
+(Carl Kingsford & Steven L Salzberg)
+
+September 2008, Volume 26, No 9; pp 1011 - 1013
+
+doi: [10.1038/nbt0908-1011](http://dx.doi.org/10.1038/nbt0908-1011) ([google](http://www.google.com/search?as_q=What+are+decision+trees?&as_filetype=pdf))
+
+
+
+**What is a support vector machine?**
+
+(William S Noble)
+
+December 2006, Volume 24, No 12; pp 1565 - 1567
+
+doi: [10.1038/nbt1206-1565](http://dx.doi.org/10.1038/nbt1206-1565) ([google](http://www.google.com/search?as_q=What+is+a+support+vector+machine?&as_filetype=pdf))
+
+
+
+**Inference in Bayesian networks**
+
+(Chris J Needham, James R Bradford, Andrew J Bulpitt & David R Westhead)
+
+January 2006, Volume 24, No 1; pp 51 - 53
+
+doi: [10.1038/nbt0106-51](http://dx.doi.org/10.1038/nbt0106-51) ([google](http://www.google.com/search?as_q=Inference+in+Bayesian+networks&as_filetype=pdf))
+
+
+
+**What are artificial neural networks?**
+
+(Anders Krogh)
+
+February 2008, Volume 26, No 2; pp 195 - 197
+
+doi: [10.1038/nbt1386](http://dx.doi.org/10.1038/nbt1386) ([google](http://www.google.com/search?as_q=What+are+artificial+neural+networks?&as_filetype=pdf))
+
+
+
+**How does gene expression clustering work?**
+
+(Patrik D'haeseleer)
+
+December 2005, Volume 23, No 12; pp 1499 - 1501
+
+doi: [10.1038/nbt1205-1499](http://dx.doi.org/10.1038/nbt1205-1499) ([google](http://www.google.com/search?as_q=How+does+gene+expression+clustering+work?+&as_filetype=pdf))
+
+
+
+**What is principal component analysis?**
+
+(Markus Ringnér)
+
+March 2008, Volume 26, No 3; pp 303 - 304
+
+doi: [10.1038/nbt0308-303](http://dx.doi.org/10.1038/nbt0308-303) ([google](http://www.google.com/search?as_q=What+is+principal+component+analysis?+&as_filetype=pdf))
+
+
+
+### Motifs
+
+**What are DNA sequence motifs?**
+
+(Patrik D'haeseleer)
+
+April 2006, Volume 24, No 4; pp 423 - 425
+
+doi: [10.1038/nbt0406-423](http://dx.doi.org/10.1038/nbt0406-423) ([google](http://www.google.com/search?as_q=What+are+DNA+sequence+motifs?&as_filetype=pdf))
+
+**How does DNA sequence motif discovery work?**
+
+(Patrik D'haeseleer)
+
+August 2006, Volume 24, No 8; pp 959 - 961
+
+doi: [10.1038/nbt0806-959](http://dx.doi.org/10.1038/nbt0806-959) ([google](http://www.google.com/search?as_q=How+does+DNA+sequence+motif+discovery+work?&as_filetype=pdf))
+
+
+
+### Others
+
+**How to apply de Bruijn graphs to genome assembly**
+
+(Phillip E C Compeau, Pavel A Pevzner & Glenn Tesler)
+
+November 2011, Vol 29, No 11; pp 987 - 991
+
+doi: [10.1038/nbt.2023](http://dx.doi.org/10.1038/nbt.2023) ([google](http://www.google.com/search?as_q=How+to+apply+de+Bruijn+graphs+to+genome+assembly&as_filetype=pdf))
+
+**How does eukaryotic gene prediction work?**
+
+(Michael R Brent)
+
+August 2007, Volume 25, No 8; pp 883 - 885
+
+doi: [10.1038/nbt0807-883](http://dx.doi.org/10.1038/nbt0807-883) ([google](http://www.google.com/search?as_q=How+does+eukaryotic+gene+prediction+work?+&as_filetype=pdf))
+
+**Analyzing 'omics data using hierarchical models**
+
+(Hongkai Ji & X Shirley Liu)
+
+April 2010, Vol 28, No 4; pp 337 - 340
+
+doi: [10.1038/nbt.1619](http://dx.doi.org/10.1038/nbt.1619) ([google](http://www.google.com/search?as_q=Analyzing+'omics+data+using+hierarchical+models&as_filetype=pdf))
+
+**What is flux balance analysis?**
+
+(Jeffrey D Orth, Ines Thiele & Bernhard Ø Palsson)
+
+March 2010, Vol 28, No 3; pp 245 - 248
+
+doi: [10.1038/nbt.1614](http://dx.doi.org/10.1038/nbt.1614) ([google](http://www.google.com/search?as_q=What+is+flux+balance+analysis?&as_filetype=pdf))
+
+**How to visually interpret biological data using networks**
+
+(Daniele Merico, David Gfeller & Gary D Bader)
+
+October 2009, Vol 27 No 10 ; pp 921 - 924
+
+doi: [10.1038/nbt.1567](http://dx.doi.org/10.1038/nbt.1567) ([google](http://www.google.com/search?as_q=How+to+visually+interpret+biological+data+using+networks&as_filetype=pdf))
+
+**SNP imputation in association studies**
+
+(Eran Halperin & Dietrich A Stephan)
+
+April 2009, Vol 27, No 4; pp 349 - 351
+
+doi: [10.1038/nbt0409-349](http://dx.doi.org/10.1038/nbt0409-349) ([google](http://www.google.com/search?as_q=SNP+imputation+in+association+studies&as_filetype=pdf))
+
+**Maximizing power in association studies**
+
+(Eran Halperin & Dietrich A Stephan)
+
+March 2009, Vol 27, No 3; pp 255 - 256
+
+doi: [10.1038/nbt0309-255](http://dx.doi.org/10.1038/nbt0309-255) ([google](http://www.google.com/search?as_q=Maximizing+power+in+association+studies&as_filetype=pdf))
+
+
+
+**How do shotgun proteomics algorithms identify proteins?**
+
+(Edward M Marcotte)
+
+July 2007, Volume 25, No 7; pp 755 - 757
+
+doi: [10.1038/nbt0707-755](http://dx.doi.org/10.1038/nbt0707-755) ([google](http://www.google.com/search?as_q=How+do+shotgun+proteomics+algorithms+identify+proteins?&as_filetype=pdf))
+
+
+
+
+
+
+
+
+## 📑 5) Getting Started in ... 
+
+> Several Captions have been used to indicate educationally relevant papers in Plos CompBio.  Here we have collected some other papers.
+> — *PloS Computational Biology*
+
+
+
+**Getting Started in Computational Immunology.**
+
+(Kleinstein SH )
+
+PLoS Comput Biol (2008) 4(8): e1000128;
+
+doi: [10.1371/journal.pcbi.1000128](http://dx.doi.org/10.1371/journal.pcbi.1000128) ([google](http://www.google.com/search?as_q=Getting+Started+in+Computational+Immunology.+&as_filetype=pdf))
+
+
+
+### Basics
+
+
+
+
+**Getting Started in Gene Orthology and Functional Analysis**
+
+(Fang G, Bhardwaj N, Robilotto R, Gerstein MB)
+
+PLoS Comput Biol (2010) 6(3): e1000703;
+
+doi: [10.1371/journal.pcbi.1000703](http://dx.doi.org/10.1371/journal.pcbi.1000703) ([google](http://www.google.com/search?as_q=Getting+Started+in+Gene+Orthology+and+Functional+Analysis&as_filetype=pdf))
+
+
+
+**Getting Started in Biological Pathway Construction and Analysis.**
+
+(Viswanathan GA, Seto J, Patil S, Nudelman G, Sealfon SC )
+
+PLoS Comput Biol (2008) 4(2): e16;
+
+doi: [10.1371/journal.pcbi.0040016](http://dx.doi.org/10.1371/journal.pcbi.0040016) ([google](http://www.google.com/search?as_q=Getting+Started+in+Biological+Pathway+Construction+and+Analysis.+&as_filetype=pdf))
+
+
+
+**Getting Started in Structural Phylogenomics**
+
+(Sjölander K )
+
+PLoS Comput Biol (2010) 6(1): e1000621 ;
+
+doi: [10.1371/journal.pcbi.1000621](http://dx.doi.org/10.1371/journal.pcbi.1000621) ([google](http://www.google.com/search?as_q=Getting+Started+in+Structural+Phylogenomics&as_filetype=pdf))
+
+
+
+### Advanced
+
+**Getting Started in Text Mining**
+
+(Cohen KB, Hunter L)
+
+PLoS Comput Biol (2008) 4(1): e20;
+
+doi: [10.1371/journal.pcbi.0040020](http://dx.doi.org/10.1371/journal.pcbi.0040020) ([google](http://www.google.com/search?as_q=Getting+Started+in+Text+Mining&as_filetype=pdf))
+
+**Getting Started in Text Mining: Part Two.**
+
+(Rzhetsky A, Seringhaus M, Gerstein MB)
+
+PLoS Comput Biol (2009) 5(7): e1000411. ;
+
+doi: [10.1371/journal.pcbi.1000411](http://dx.doi.org/10.1371/journal.pcbi.1000411) ([google](http://www.google.com/search?as_q=Getting+Started+in+Text+Mining:+Part+Two.+&as_filetype=pdf))
+
+**Getting Started in Probabilistic Graphical Models.**
+
+(Airoldi EM )
+
+PLoS Comput Biol (2007) 3(12): e252. ;
+
+doi: [10.1371/journal.pcbi.0030252](http://dx.doi.org/10.1371/journal.pcbi.0030252) ([google](http://www.google.com/search?as_q=Getting+Started+in+Probabilistic+Graphical+Models.+&as_filetype=pdf))
+
+
+
+### MS and Array
+
+**Getting Started in Computational Mass Spectrometry-Based Proteomics.**
+
+(Vitek O)
+
+PLoS Comput Biol (2009) 5(5): e1000366. ;
+
+doi: [10.1371/journal.pcbi.1000366](http://dx.doi.org/10.1371/journal.pcbi.1000366) ([google](http://www.google.com/search?as_q=Getting+Started+in+Computational+Mass+Spectrometry-Based+Proteomics.+&as_filetype=pdf))
+
+**Getting Started in Gene Expression Microarray Analysis**
+
+(Slonim DK, Yanai I)
+
+PLoS Comput Biol (2009) 5(10): e1000543;
+
+doi: [10.1371/journal.pcbi.1000543](http://dx.doi.org/10.1371/journal.pcbi.1000543) ([google](http://www.google.com/search?as_q=Getting+Started+in+Gene+Expression+Microarray+Analysis&as_filetype=pdf))
+
+**Getting Started in Tiling Microarray Analysis**
+
+(Liu XS)
+
+PLoS Comput Biol (2007) 3(10): e183;
+
+doi: [10.1371/journal.pcbi.0030183](http://dx.doi.org/10.1371/journal.pcbi.0030183) ([google](http://www.google.com/search?as_q=Getting+Started+in+Tiling+Microarray+Analysis&as_filetype=pdf))
