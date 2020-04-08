@@ -2,23 +2,23 @@
 
 ## Software for the ages
 
-| Software                                    | Purpose                              | Creators                                                     | Key capabilities                                             | Year released | Citationsa |
-| :------------------------------------------ | :----------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :-----------: | :--------: |
-| BLAST                                       | Sequence alignment                   | Stephen Altschul, Warren Gish, Gene Myers, Webb Miller, David Lipman | First program to provide statistics for sequence alignment, combination of sensitivity and speed |     1990      |   35,617   |
-| R                                           | Statistical analyses                 | Robert Gentleman, Ross Ihaka                                 | Interactive statistical analysis, extendable by packages     |     1996      |    N/A     |
-| ImageJ                                      | Image analysis                       | Wayne Rasband                                                | Flexibility and extensibility                                |     1997      |    N/A     |
-| Cytoscape                                   | Network visualization and analysis   | Trey Ideker *et al*.                                         | Extendable by plugins                                        |     2003      |   2,374    |
-| Bioconductor                                | Analysis of genomic data             | Robert Gentleman *et al*.                                    | Built on R, provides tools to enhance reproducibility of research |     2004      |   3,517    |
-| Galaxy                                      | Web-based analysis platform          | Anton Nekrutenko, James Taylor                               | Provides easy access to high-performance computing           |     2005      |    309b    |
-| MAQ                                         | Short-read mapping                   | Heng Li, Richard Durbin                                      | Integrated read mapping and SNP calling, introduced mapping quality scores |     2008      |   1,027    |
-| Bowtie                                      | Short-read mapping                   | Ben Langmead, Cole Trapnell, Mihai Pop, Steven Salzberg      | Fast alignment allowing gaps and mismatches based on Burrows-Wheeler Transform |     2009      |   1,871    |
-| Tophat                                      | RNA-seq read mapping                 | Cole Trapnell, Lior Pachter, Steven Salzberg                 | Discovery of novel splice sites                              |     2009      |    817     |
-| BWA                                         | Short-read mapping                   | Heng Li, Richard Durbin                                      | Fast alignment allowing gaps and mismatches based on Burrows-Wheeler Transform |     2009      |   1,556    |
-| Circos                                      | Data visualization                   | Martin Krzywinski *et al*.                                   | Compact representation of similarities and differences arising from comparison between genomes |     2009      |    431     |
-| SAMtools                                    | Short-read data format and utilities | Heng Li, Richard Durbin                                      | Storage of large nucleotide sequence alignments              |     2009      |   1,551    |
-| Cufflinks                                   | RNA-seq analysis                     | Cole Trapnell, Steven Salzberg, Barbara Wold, Lior Pachter   | Transcript assembly and quantification                       |     2010      |    710     |
-| IGV                                         | Short-read data visualization        | James Robinson *et al*.                                      | Scalability, real-time data exploration                      |     2011      |    335     |
-| N/A, paper not available in Web of Science. |                                      |                                                              |                                                              |               |            |
+| Software | Purpose | Creators | Key capabilities | Year released | Citationsa |
+| :--- | :--- | :--- | :--- | :---: | :---: |
+| BLAST | Sequence alignment | Stephen Altschul, Warren Gish, Gene Myers, Webb Miller, David Lipman | First program to provide statistics for sequence alignment, combination of sensitivity and speed | 1990 | 35,617 |
+| R | Statistical analyses | Robert Gentleman, Ross Ihaka | Interactive statistical analysis, extendable by packages | 1996 | N/A |
+| ImageJ | Image analysis | Wayne Rasband | Flexibility and extensibility | 1997 | N/A |
+| Cytoscape | Network visualization and analysis | Trey Ideker _et al_. | Extendable by plugins | 2003 | 2,374 |
+| Bioconductor | Analysis of genomic data | Robert Gentleman _et al_. | Built on R, provides tools to enhance reproducibility of research | 2004 | 3,517 |
+| Galaxy | Web-based analysis platform | Anton Nekrutenko, James Taylor | Provides easy access to high-performance computing | 2005 | 309b |
+| MAQ | Short-read mapping | Heng Li, Richard Durbin | Integrated read mapping and SNP calling, introduced mapping quality scores | 2008 | 1,027 |
+| Bowtie | Short-read mapping | Ben Langmead, Cole Trapnell, Mihai Pop, Steven Salzberg | Fast alignment allowing gaps and mismatches based on Burrows-Wheeler Transform | 2009 | 1,871 |
+| Tophat | RNA-seq read mapping | Cole Trapnell, Lior Pachter, Steven Salzberg | Discovery of novel splice sites | 2009 | 817 |
+| BWA | Short-read mapping | Heng Li, Richard Durbin | Fast alignment allowing gaps and mismatches based on Burrows-Wheeler Transform | 2009 | 1,556 |
+| Circos | Data visualization | Martin Krzywinski _et al_. | Compact representation of similarities and differences arising from comparison between genomes | 2009 | 431 |
+| SAMtools | Short-read data format and utilities | Heng Li, Richard Durbin | Storage of large nucleotide sequence alignments | 2009 | 1,551 |
+| Cufflinks | RNA-seq analysis | Cole Trapnell, Steven Salzberg, Barbara Wold, Lior Pachter | Transcript assembly and quantification | 2010 | 710 |
+| IGV | Short-read data visualization | James Robinson _et al_. | Scalability, real-time data exploration | 2011 | 335 |
+| N/A, paper not available in Web of Science. |  |  |  |  |  |
 
 > From: [The anatomy of successful computational biology software](https://www.nature.com/articles/nbt.2721)
 
@@ -49,8 +49,6 @@
 * **Alternative Splicing**: 
 * **RNA Editing**: 
 * ...
-
-### 
 
 ### \(3.2\) Single Cell RNA-seq \(scRNA-seq\)
 
@@ -102,10 +100,6 @@
 * **ATAC-seq**:
 
 ## 6\) Chromatin and Hi-C
-
-
-
-
 
 ## More: Lu Lab shared tools and scripts
 
