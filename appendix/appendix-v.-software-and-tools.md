@@ -44,10 +44,10 @@
 
 ### \(3.1\) RNA-seq
 
-* **Expression Matrix:** 
-* **Differential Expression**: DESEQ2, EdgeR
-* **Alternative Splicing**: 
-* **RNA Editing**: 
+* **Expression Matrix**: featureCounts, HTseq
+* **Differential Expression**: Deseq2, EdgeR
+* **Alternative Splicing**: rMATS
+* **RNA Editing**: RNAEditor, REDItools
 * ...
 
 ### \(3.2\) Single Cell RNA-seq \(scRNA-seq\)
