@@ -139,9 +139,6 @@ This database of urinary exosome proteins is based on published protein mass spe
 
    KEGG Automatic Annotation Server. [https://www.genome.jp/kegg/kaas/](https://www.genome.jp/kegg/kaas/)
 
-3. agriGO
-
-   gene ontology \(GO\) enrichment analyses of plant and agricultural species. [http://systemsbiology.cau.edu.cn/agriGOv2/](http://systemsbiology.cau.edu.cn/agriGOv2/)
 
 ### \(3\) RNA secondary structure
 
@@ -166,5 +163,5 @@ This database of urinary exosome proteins is based on published protein mass spe
 ### **\(5\) Sequence motif analysis**
 
 1. MEME motif based sequence analysis tools [http://meme-suite.org/](http://meme-suite.org/)
-2. HOMER Software for motif discovery and next-gen sequencing analysis [http://homer.ucsd.edu/homer/motif/](http://homer.ucsd.edu/homer/motif/)
+
 
