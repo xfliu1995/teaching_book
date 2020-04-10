@@ -31,14 +31,27 @@
 
 ### \(2.1\) Mapping and QC
 
+* **Remove adaptor**: cutadapt, Trimmomatic
 * **Mapping**: Bowtie, STAR
 * **QC**: fastqc 
 
 ### \(2.2\) Mutation
 
-* **Software Package**: [GATK](https://gatk.broadinstitute.org/hc/en-us)
+* **Mutation discovery**: [GATK](https://gatk.broadinstitute.org/hc/en-us), Varscan
+* **Mutation annotation**: ANNOVAR
 
 ### \(2.3\) Assembly
+
+* **denovo assembly software**: Trinity
+
+### \(2.4\) CNV
+
+* **Whole Genome Seq**: Control-FREEC
+* **Whole exome Seq**: CONTRA, ExomeCNV
+
+### \(2.5\) SV (structural variation)
+
+* **structural variation**: Breakdancer
 
 ## 3\) RNA-seq
 
