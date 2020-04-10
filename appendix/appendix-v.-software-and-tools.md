@@ -94,7 +94,7 @@
 
 * **Pre-process**: [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 * **Mapping**: [bowtie](http://bowtie-bio.sourceforge.net/index.shtml), [novoalign](http://www.novocraft.com/products/novoalign/)
-* **Peak calling**: Piranha, PARalyzer, CIMS
+* **Peak calling**: [Piranha](http://smithlabresearch.org/software/piranha/), [PARalyzer](https://ohlerlab.mdc-berlin.de/software/PARalyzer_85/), [CIMS](https://zhanglab.c2b2.columbia.edu/index.php/CTK_Documentation)
 
 ### **\(4.3\) Motif analysis**
 
