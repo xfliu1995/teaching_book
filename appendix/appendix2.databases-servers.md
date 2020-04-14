@@ -35,7 +35,7 @@
   **Cancer Cell Line Encyclopedia**
 
   * [CCLE](https://portals.broadinstitute.org/ccle)
-  * CCLE RNA-seq BAM files：[https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":\[{"op":"in","content":{"field":"cases.project.program.name","value":\["CCLE"\]}}\]}](https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.program.name","value":["CCLE"]}}]})
+  * CCLE RNA-seq BAM files：\[[https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":\[{"op":"in","content":{"field":"cases.project.program.name","value":\["CCLE"\]}}\]}\]\(https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":\[{"op":"in","content":{"field":"cases.project.program.name","value":\["CCLE"\]}}\]}](https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.program.name","value":["CCLE"]}}]}]%28https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.program.name","value":["CCLE"]}}]})\)
   * [CCLE Raw data](https://www.ncbi.nlm.nih.gov/sra?term=PRJNA523380)
   * [CCLE Seven Bridges](https://www.sevenbridges.com/ccle/)
 
@@ -139,7 +139,6 @@ This database of urinary exosome proteins is based on published protein mass spe
 
    KEGG Automatic Annotation Server. [https://www.genome.jp/kegg/kaas/](https://www.genome.jp/kegg/kaas/)
 
-
 ### \(3\) RNA secondary structure
 
 1. RNAfold
@@ -163,5 +162,4 @@ This database of urinary exosome proteins is based on published protein mass spe
 ### **\(5\) Sequence motif analysis**
 
 1. MEME motif based sequence analysis tools [http://meme-suite.org/](http://meme-suite.org/)
-
 

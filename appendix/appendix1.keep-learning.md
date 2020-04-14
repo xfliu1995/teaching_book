@@ -77,6 +77,8 @@
 > This is a list of explanatory papers that have appeared as primer in the Computational Biology section of the journal Nature Biotechnology, in reverse chronological order. \(Last addition November 2013 / checked March 2016\).
 >
 > — _Nature Biotechnology_
+>
+> \*\*\*\*[**PDFs**](https://cloud.tsinghua.edu.cn/d/eeb9bbc66e5d4786b008/)\*\*\*\*
 
 ### \(1\) Basics
 
@@ -299,6 +301,8 @@ doi: [10.1038/nbt0707-755](http://dx.doi.org/10.1038/nbt0707-755) \([google](htt
 ## 5\) Getting Started in ...
 
 > Several Captions have been used to indicate educationally relevant papers in Plos CompBio. Here we have collected some other papers. — _PloS Computational Biology_
+>
+> \*\*\*\*[**PDFs**](https://cloud.tsinghua.edu.cn/d/eeb9bbc66e5d4786b008/)\*\*\*\*
 
 **Getting Started in Computational Immunology.**
 
