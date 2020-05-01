@@ -5,6 +5,8 @@
 * [UCSD Genome Browser](https://genome.ucsc.edu/)   \([@youtube](https://youtu.be/eTgEtfI65hA) [@bilibili](https://player.bilibili.com/player.html?aid=30448417&cid=53132461&page=1)\)
 * [IGV](http://software.broadinstitute.org/software/igv/)   \([@youtube](https://youtu.be/6_1ZcVw7ptU) [@bilibili](https://player.bilibili.com/player.html?aid=30448472&cid=53133093&page=1)\)
 
+> see more in [our Tutorial](../part-iii.-ngs-data-analyses/1.mapping.md#4-genome-browser)
+
 ## 2\) DNA-seq
 
 ### \(2.1\) Mapping and QC
