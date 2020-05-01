@@ -1,10 +1,5 @@
 # Appendix II. Databases & Servers
 
-## 0\) Genome Browsers
-
-* UCSD Genome Browser [@youtube](https://youtu.be/eTgEtfI65hA) [@bilibili](https://player.bilibili.com/player.html?aid=30448417&cid=53132461&page=1)
-* IGV [@youtube](https://youtu.be/6_1ZcVw7ptU) [@bilibili](https://player.bilibili.com/player.html?aid=30448472&cid=53133093&page=1)
-
 ## 1\) Projects
 
 * **ENCODE**
