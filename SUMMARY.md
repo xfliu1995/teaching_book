@@ -28,7 +28,8 @@
 
 ## Part III. NGS DATA ANALYSES
 
-* [1.Mapping](part-iii.-ngs-data-analyses/1.mapping.md)
+* [1.Mapping](part-iii.-ngs-data-analyses/1.mapping/README.md)
+  * [1.1 Genome Browser](part-iii.-ngs-data-analyses/1.mapping/1.1-genome-browser.md)
 * [2.RNA-seq](part-iii.-ngs-data-analyses/2.rna-seq/README.md)
   * [2.1.Differential Expression](part-iii.-ngs-data-analyses/2.rna-seq/2.1.differential-expression.md)
   * [2.2.Alternative Splicing](part-iii.-ngs-data-analyses/2.rna-seq/2.2.alternative-splicing.md)
