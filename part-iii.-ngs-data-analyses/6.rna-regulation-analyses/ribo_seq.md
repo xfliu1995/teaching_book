@@ -359,11 +359,27 @@ script/Ribowave \
   column6: CRF score describing the potential of frameshift
   ```
 
-## 4\) Database
+## 4\) More Software
 
-[http://lulab.life.tsinghua.edu.cn/postar/](http://lulab.life.tsinghua.edu.cn/postar/)
+| Preprocessing | ORF Iden. | Quantification TE | Translation elongation | Integrative & visualization |
+| :--- | :--- | :--- | :--- | :--- |
+| Rfoot | DeepRibo | scikit-ribo | diricore | Plastid |
+| RiboWaltz | FLOSS | **RiboDiff** | Iχnos | Rfeet |
+| **RiboWave** | ORF-RATER | riborex | PausePred | RiboGalaxy |
+|  | PRICE | **Xtail** | ROSE | RiboProfiling |
+|  | RiboCode |  | RiboMiner | riboSeqR |
+|  | RiboHMM |  |  | RiboTools |
+|  | RibORF |  |  | RIVIT |
+|  | **RiboTaper** |  |  | Shoelaces |
+|  | RP-BP |  |  | tRanslatome |
+|  | SPECtre |  |  | \*\*\*\*[**POSTAR**](http://lulab.life.tsinghua.edu.cn/postar/)\*\*\*\* |
+|  | TITER |  |  |  |
+
+
 
 ## 5\) Homework
 
 解释TE的含义，用教程中的示例文件算出TE，并画出TE的分布。
+
+
 
