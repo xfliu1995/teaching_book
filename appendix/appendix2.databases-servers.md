@@ -1,14 +1,21 @@
 # Appendix II. Databases & Servers
 
-## 1\) Projects
+## 1\) Consortium Projects
 
 * **ENCODE**
 
   **Encyclopedia of DNA Elements**: a comprehensive parts list of functional elements in the human genome. [https://www.encodeproject.org/](https://www.encodeproject.org/)
 
+* **Roadmap Epigenomics**
+
+  A public resource of human epigenomic data. [https://egg2.wustl.edu/roadmap/web_portal/](https://egg2.wustl.edu/roadmap/web_portal/)
+  
+  More recently, Kellis Lab developed EpiMap, a more comprehensive data resource of human epigenomic data by integrating ChIP-seq datasets from ENCODE, Roadmap and other public data resource. [http://compbio.mit.edu/epimap/](http://compbio.mit.edu/epimap/)
+
+
 * **1000 Genomes**
 
-  most genetic variants with frequencies of at least 1% in the populations studied. [http://www.internationalgenome.org/](http://www.internationalgenome.org/)
+  Most genetic variants with frequencies of at least 1% in the populations studied. [http://www.internationalgenome.org/](http://www.internationalgenome.org/)
 
 * **TCGA**
 
@@ -37,6 +44,7 @@
 * **ICGC**
   * [ICGC](https://dcc.icgc.org/)
   * [PCAWG](https://docs.icgc.org/pcawg/data/)
+
 * **Other Integrative Projects**
   * [COSMIC](https://cancer.sanger.ac.uk/cosmic)
   * [UCSC Xena](http://xena.ucsc.edu/)
