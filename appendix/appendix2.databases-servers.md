@@ -4,7 +4,8 @@
 
 * **ENCODE**
 
-  **Encyclopedia of DNA Elements**: a comprehensive parts list of functional elements in the human genome. [ENCODE](https://www.encodeproject.org/)
+  **Encyclopedia of DNA Elements**: a comprehensive parts list of functional elements in the human genome.
+  [ENCODE](https://www.encodeproject.org/)
 
 * **Roadmap Epigenomics**
 
