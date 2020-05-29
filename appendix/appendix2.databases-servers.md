@@ -5,22 +5,31 @@
 * **ENCODE**
 
   **Encyclopedia of DNA Elements**: a comprehensive parts list of functional elements in the human genome.
+  
   [ENCODE](https://www.encodeproject.org/)
 
 * **Roadmap Epigenomics**
 
-  A public resource of human epigenomic data. [Roadmap Epigenomics](https://egg2.wustl.edu/roadmap/web_portal/)
+  A public resource of human epigenomic data.
   
-  More recently, Kellis Lab developed EpiMap, a more comprehensive data resource of human epigenomic data by integrating ChIP-seq datasets from ENCODE, Roadmap and other public data resource. [EpiMap](http://compbio.mit.edu/epimap/)
+  [Roadmap Epigenomics](https://egg2.wustl.edu/roadmap/web_portal/)
+  
+  More recently, Kellis Lab developed EpiMap, a more comprehensive data resource of human epigenomic data by integrating ChIP-seq datasets from ENCODE, Roadmap and other public data resource.
+  
+  [EpiMap](http://compbio.mit.edu/epimap/)
 
 
 * **1000 Genomes**
 
-  Most genetic variants with frequencies of at least 1% in the populations studied. [1000 Genomes](http://www.internationalgenome.org/)
+  Most genetic variants with frequencies of at least 1% in the populations studied.
+  
+  [1000 Genomes](http://www.internationalgenome.org/)
 
 * **gnomAD**
 
-  gnomAD is a resource developed by an international coalition of investigators, with the goal of aggregating and harmonizing both exome and genome sequencing data from a wide variety of large-scale sequencing projects. [gnomAD](https://gnomad.broadinstitute.org/)
+  gnomAD is a resource developed by an international coalition of investigators, with the goal of aggregating and harmonizing both exome and genome sequencing data from a wide variety of large-scale sequencing projects.
+  
+  [gnomAD](https://gnomad.broadinstitute.org/)
 
 
 * **TCGA**
