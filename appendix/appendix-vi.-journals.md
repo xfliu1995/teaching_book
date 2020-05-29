@@ -1,6 +1,30 @@
 # Appendix V. Software and Tools
 
-### Nature++
+## 1\) Genomics & Genetics
+
+[Genome Research](https://genome.cshlp.org/)
+
+[Genome Biology](https://genomebiology.biomedcentral.com/)
+
+[Genome Medicine](https://genomemedicine.biomedcentral.com/)
+
+[Molecular Systems Biology](https://www.embopress.org/journal/17444292)
+
+[Nucleic Acids Research](https://academic.oup.com/nar)
+
+[PLOS Genetics](https://journals.plos.org/plosgenetics/)
+
+-----
+
+## 2\) Bioinformatics
+
+[Bioinformatics](https://academic.oup.com/bioinformatics)
+
+[PLOS Computational Biology](https://journals.plos.org/ploscompbiol/)
+
+-----
+
+## 3\) Nature++
 
 [Nature](https://www.nature.com/)
 
@@ -26,7 +50,7 @@
 
 -----
 
-### Science++
+## 4\) Science++
 
 [Science](https://science.sciencemag.org/)
 
@@ -40,7 +64,7 @@
 
 -----
 
-### Cell++
+## 5\) Cell++
 
 [Cell](https://www.cell.com/cell/home)
 
@@ -56,31 +80,7 @@
 
 -----
 
-### Genomics & Bioinformatics
-
-[Genome Research](https://genome.cshlp.org/)
-
-[Genome Biology](https://genomebiology.biomedcentral.com/)
-
-[Genome Medicine](https://genomemedicine.biomedcentral.com/)
-
-[Molecular Systems Biology](https://www.embopress.org/journal/17444292)
-
-[Nucleic Acids Research](https://academic.oup.com/nar)
-
-[PLOS Genetics](https://journals.plos.org/plosgenetics/)
-
------
-
-### Bioinformatics
-
-[Bioinformatics](https://academic.oup.com/bioinformatics)
-
-[PLOS Computational Biology](https://journals.plos.org/ploscompbiol/)
-
------
-
-### Misc
+## 6\) Misc
 
 [bioRxiv](https://www.biorxiv.org/)
 
@@ -88,7 +88,7 @@
 
 -----
 
-### Reviews
+## 7\) Reviews
 
 [Nature Reviews Genetics](https://www.nature.com/nrg/)
 
