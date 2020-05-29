@@ -87,26 +87,39 @@
 
 1. GTEx
 
-   gene expression in different tissues. [https://www.gtexportal.org/home/](https://www.gtexportal.org/home/)
+   gene expression in different tissues.
+   
+   [https://www.gtexportal.org/home/](https://www.gtexportal.org/home/)
 
 2. Expression Atlas
 
-   exploring gene expression results across species under different biological conditions. [https://www.ebi.ac.uk/gxa/home](https://www.ebi.ac.uk/gxa/home)
+   exploring gene expression results across species under different biological conditions.
+   
+   [https://www.ebi.ac.uk/gxa/home](https://www.ebi.ac.uk/gxa/home)
 
 3. FANTOM
-    generate maps of functional regulatory elements (i.e. promoters and emhancers) using CAGE (Cap Analysis of Gene Expression) sequencing on RNA samples from every major human organ, multiple primary cell types, over 200 cancer cell lines, 30 time courses of cellular differentiation, and mouse developmental time courses. [FANTOM](http://fantom.gsc.riken.jp/5/data/)
+
+    generate maps of functional regulatory elements (i.e. promoters and emhancers) using CAGE (Cap Analysis of Gene Expression) sequencing on RNA samples from every major human organ, multiple primary cell types, over 200 cancer cell lines, 30 time courses of cellular differentiation, and mouse developmental time courses.
+    
+    [FANTOM5 data portal](http://fantom.gsc.riken.jp/5/data/)
 
 4. Human Protein Atlas
 
-    aim to map all the human proteins in cells, tissues and organs using integration of various omics technologies, including antibody-based imaging, mass spectrometry-based proteomics, transcriptomics and systems biology. [Human Protein Atlas](https://www.proteinatlas.org/)
+    aim to map all the human proteins in cells, tissues and organs using integration of various omics technologies, including antibody-based imaging, mass spectrometry-based proteomics, transcriptomics and systems biology.
+    
+    [Human Protein Atlas](https://www.proteinatlas.org/)
 
 5. GEPIA
 
-   gene expression in different TCGA tumor types. [http://gepia.cancer-pku.cn/index.html](http://gepia.cancer-pku.cn/index.html)
+   gene expression in different TCGA tumor types.
+   
+   [http://gepia.cancer-pku.cn/index.html](http://gepia.cancer-pku.cn/index.html)
 
 6. cBioPortal
 
-   visualization, analysis and download of large-scale cancer genomics data sets. [http://www.cbioportal.org/index.do](http://www.cbioportal.org/index.do)
+   visualization, analysis and download of large-scale cancer genomics data sets.
+   
+   [http://www.cbioportal.org/index.do](http://www.cbioportal.org/index.do)
 
 7. TCGA ncRNA
 
