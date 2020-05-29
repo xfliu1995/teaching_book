@@ -4,32 +4,22 @@
 
 * **ENCODE**
 
-  **Encyclopedia of DNA Elements**: a comprehensive parts list of functional elements in the human genome.
-  
-  [ENCODE](https://www.encodeproject.org/)
+  **Encyclopedia of DNA Elements**: a comprehensive parts list of functional elements in the human genome. [https://www.encodeproject.org/](https://www.encodeproject.org/)
 
 * **Roadmap Epigenomics**
 
-  A public resource of human epigenomic data.
+  A public resource of human epigenomic data. [https://egg2.wustl.edu/roadmap/web_portal/](https://egg2.wustl.edu/roadmap/web_portal/)
   
-  [Roadmap Epigenomics](https://egg2.wustl.edu/roadmap/web_portal/)
-  
-  More recently, Kellis Lab developed EpiMap, a more comprehensive data resource of human epigenomic data by integrating ChIP-seq datasets from ENCODE, Roadmap and other public data resource.
-  
-  [EpiMap](http://compbio.mit.edu/epimap/)
+  More recently, Kellis Lab developed EpiMap, a more comprehensive data resource of human epigenomic data by integrating ChIP-seq datasets from ENCODE, Roadmap and other public data resource. [http://compbio.mit.edu/epimap/](http://compbio.mit.edu/epimap/)
 
 
 * **1000 Genomes**
 
-  Most genetic variants with frequencies of at least 1% in the populations studied.
-  
-  [1000 Genomes](http://www.internationalgenome.org/)
+  Most genetic variants with frequencies of at least 1% in the populations studied. [http://www.internationalgenome.org/](http://www.internationalgenome.org/)
 
 * **gnomAD**
 
-  gnomAD is a resource developed by an international coalition of investigators, with the goal of aggregating and harmonizing both exome and genome sequencing data from a wide variety of large-scale sequencing projects.
-  
-  [gnomAD](https://gnomad.broadinstitute.org/)
+  gnomAD is a resource developed by an international coalition of investigators, with the goal of aggregating and harmonizing both exome and genome sequencing data from a wide variety of large-scale sequencing projects. [https://gnomad.broadinstitute.org/](https://gnomad.broadinstitute.org/)
 
 
 * **TCGA**
@@ -47,9 +37,7 @@
   * [Normalized data](https://figshare.com/articles/Data_record_3/5330593)
   * [TCGA/GTEx: GEPIA 2](http://gepia2.cancer-pku.cn/#dataset) 
 
-* **CCLE** \(cancer cell lines\)
-
-  **Cancer Cell Line Encyclopedia**
+* **CCLE** \(Cancer Cell Line Encyclopedia\)
 
   * [CCLE](https://portals.broadinstitute.org/ccle)
   * CCLE RNA-seq BAM files：\[[https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":\[{"op":"in","content":{"field":"cases.project.program.name","value":\["CCLE"\]}}\]}\]\(https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":\[{"op":"in","content":{"field":"cases.project.program.name","value":\["CCLE"\]}}\]}](https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.program.name","value":["CCLE"]}}]}]%28https://portal.gdc.cancer.gov/legacy-archive/search/f?filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.program.name","value":["CCLE"]}}]})\)
@@ -87,39 +75,27 @@
 
 1. GTEx
 
-   gene expression in different tissues.
-   
-   [https://www.gtexportal.org/home/](https://www.gtexportal.org/home/)
+   gene expression in different tissues. [https://www.gtexportal.org/home/](https://www.gtexportal.org/home/)
 
 2. Expression Atlas
 
-   exploring gene expression results across species under different biological conditions.
-   
-   [https://www.ebi.ac.uk/gxa/home](https://www.ebi.ac.uk/gxa/home)
+   exploring gene expression results across species under different biological conditions. [https://www.ebi.ac.uk/gxa/home](https://www.ebi.ac.uk/gxa/home)
 
 3. FANTOM
 
-    generate maps of functional regulatory elements (i.e. promoters and emhancers) using CAGE (Cap Analysis of Gene Expression) sequencing on RNA samples from every major human organ, multiple primary cell types, over 200 cancer cell lines, 30 time courses of cellular differentiation, and mouse developmental time courses.
-    
-    [FANTOM5 data portal](http://fantom.gsc.riken.jp/5/data/)
+    generate maps of functional regulatory elements (i.e. promoters and emhancers) using CAGE (Cap Analysis of Gene Expression) sequencing on RNA samples from human cell and tissue types. [http://fantom.gsc.riken.jp/5/data/](http://fantom.gsc.riken.jp/5/data/)
 
 4. Human Protein Atlas
 
-    aim to map all the human proteins in cells, tissues and organs using integration of various omics technologies, including antibody-based imaging, mass spectrometry-based proteomics, transcriptomics and systems biology.
-    
-    [Human Protein Atlas](https://www.proteinatlas.org/)
+    aim to map all the human proteins in cells, tissues and organs using integration of various omics technologies, including antibody-based imaging, mass spectrometry-based proteomics, transcriptomics and systems biology. [https://www.proteinatlas.org/](https://www.proteinatlas.org/)
 
 5. GEPIA
 
-   gene expression in different TCGA tumor types.
-   
-   [http://gepia.cancer-pku.cn/index.html](http://gepia.cancer-pku.cn/index.html)
+   gene expression in different TCGA tumor types. [http://gepia.cancer-pku.cn/index.html](http://gepia.cancer-pku.cn/index.html)
 
 6. cBioPortal
 
-   visualization, analysis and download of large-scale cancer genomics data sets.
-   
-   [http://www.cbioportal.org/index.do](http://www.cbioportal.org/index.do)
+   visualization, analysis and download of large-scale cancer genomics data sets. [http://www.cbioportal.org/index.do](http://www.cbioportal.org/index.do)
 
 7. TCGA ncRNA
 
