@@ -14,7 +14,6 @@
 
 [PLOS Genetics](https://journals.plos.org/plosgenetics/)
 
------
 
 ## 2\) Bioinformatics
 
@@ -22,7 +21,6 @@
 
 [PLOS Computational Biology](https://journals.plos.org/ploscompbiol/)
 
------
 
 ## 3\) Nature++
 
@@ -48,7 +46,6 @@
 
 [Nature Machine Intelligence](https://www.nature.com/natmachintell/)
 
------
 
 ## 4\) Science++
 
@@ -62,7 +59,6 @@
 
 [Science Immunology](https://immunology.sciencemag.org/)
 
------
 
 ## 5\) Cell++
 
@@ -78,7 +74,6 @@
 
 [Neuron](https://www.cell.com/neuron/home)
 
------
 
 ## 6\) Misc
 
@@ -86,7 +81,6 @@
 
 [PNAS](https://www.pnas.org/)
 
------
 
 ## 7\) Reviews
 
