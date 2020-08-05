@@ -1,4 +1,4 @@
-# 5.2.Structure Motif
+# 4.2.Structure Motif
 
 ## 1\) workflow
 

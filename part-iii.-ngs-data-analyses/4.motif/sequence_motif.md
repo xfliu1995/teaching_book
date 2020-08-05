@@ -1,4 +1,4 @@
-# 5.1.Sequence Motif
+# 4.1.Sequence Motif
 
 ## 1\) workflow
 
