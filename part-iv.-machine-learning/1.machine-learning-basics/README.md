@@ -103,7 +103,7 @@ $$\text{MCC} = \frac{TP \times TN - FP \times FN} {(TP + FN)(TP + FP)(TN + FP)(T
 
 ROC曲线下面积（AUROC）或average precision \(AP\)是一个单值，它总结了不同截止值下的模型平均表现，常常用于报告模型的分类表现。
 
-![png](../.gitbook/assets/1.simple-machine-learning-basics_64_1.png)
+![png](../../.gitbook/assets/1.simple-machine-learning-basics_64_1.png)
 
 可以看到AUROC和AP都接近于1，可以认为模型的分类效果很好。
 
@@ -119,7 +119,7 @@ ROC曲线下面积（AUROC）或average precision \(AP\)是一个单值，它总
 
 K折交叉验证确保训练样本和测试样本之间没有重叠，K轮结束后，每个样本会被设置为测试样品一次。最后，模型平均表现是在 $$k$$轮次中计算指标的平均值得到的。
 
-![k-fold cross-validation](../.gitbook/assets/cross_validation.png)
+![k-fold cross-validation](../../.gitbook/assets/cross_validation.png)
 
 * **Leave-one-out Cross-validation**
 
@@ -135,13 +135,13 @@ Leave-one-out cross-validation \(**LOOCV**\) is a particular case of leave-_p_-o
     * repeat the training/testing process for all combinations of train-test splits.
   * Evaluate the algorithms based on both **training/test set** and **validation set**.
 
-![Datasets in Machine Learning](../.gitbook/assets/ml_dataset.png)
+![Datasets in Machine Learning](../../.gitbook/assets/ml_dataset.png)
 
 ## 2\) 休息一会
 
 **Bayes 贝叶斯**
 
-![Bayes](../.gitbook/assets/bayes.png)
+![Bayes](../../.gitbook/assets/bayes.png)
 
 不论是学习概率统计还是机器学习的过程中，**贝叶斯 \(Bayes\)** 总是是绕不过去的一道坎。
 

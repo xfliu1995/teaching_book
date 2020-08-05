@@ -1,4 +1,4 @@
-# 7.3.Survival Analysis
+# 7.1.Survival Analysis
 
 ## 1\) Background
 

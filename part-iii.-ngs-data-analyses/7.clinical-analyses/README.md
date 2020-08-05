@@ -2,8 +2,8 @@
 
 ## 1\)Table of Contents
 
-* [7.1.ROC Curve](roc_curve.md)
-* [7.2.PCA/tSNE](pca_tsne.md)
+* [7.1.ROC Curve](../../part-iv.-machine-learning/1.machine-learning-basics/roc_curve.md)
+* [7.2.PCA/tSNE](../../part-iv.-machine-learning/1.machine-learning-basics/pca_tsne.md)
 * [7.3.Survival Analysis](survival_analysis.md)
 
 ## 2\) Files Needed

@@ -49,13 +49,13 @@
   * [6.5.Chimeric RNA Detection](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/chimeric.md)
   * [6.6.SNV/INDEL Detection](part-iii.-ngs-data-analyses/6.rna-regulation-analyses/snv_rna-seq.md)
 * [7.Clinical Analyses](part-iii.-ngs-data-analyses/7.clinical-analyses/README.md)
-  * [7.1.ROC Curve](part-iii.-ngs-data-analyses/7.clinical-analyses/roc_curve.md)
-  * [7.2.PCA/tSNE](part-iii.-ngs-data-analyses/7.clinical-analyses/pca_tsne.md)
-  * [7.3.Survival Analysis](part-iii.-ngs-data-analyses/7.clinical-analyses/survival_analysis.md)
+  * [7.1.Survival Analysis](part-iii.-ngs-data-analyses/7.clinical-analyses/survival_analysis.md)
 
 ## Part IV. MACHINE LEARNING
 
-* [1.Machine Learning Basics](part-iv.-machine-learning/1.machine-learning-basics.md)
+* [1.Machine Learning Basics](part-iv.-machine-learning/1.machine-learning-basics/README.md)
+  * [1.1.ROC Curve](part-iv.-machine-learning/1.machine-learning-basics/roc_curve.md)
+  * [1.2.PCA/tSNE](part-iv.-machine-learning/1.machine-learning-basics/pca_tsne.md)
 * [2.Machine Learning with R](part-iv.-machine-learning/2.machine-learning-with-r.md)
 * [3.Machine Learning with Python](part-iv.-machine-learning/3.machine-learning-with-python.md)
 
