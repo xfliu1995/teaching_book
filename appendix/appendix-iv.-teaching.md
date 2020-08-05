@@ -36,10 +36,14 @@
 * **PART III.6. RNA Regulation Analysis 4**
   * **docker image name**: bioinfo\_snv.tar.gz
   * **software installed**:  STAR: 2.7.1a; annovar:2018-04-16; GATK:4.1.3.0;
-* **PART III.7. Clinical Analysis 1** 
+* **PART III.7. Clinical Analysis - Survival Curve** 
   * **docker image name**: bioinfo\_roc\_survival.tar.gz
   * **software installed**: R 3.5.1; Python 2.7 
-* **PART III.7. Clinical Analysis 2** 
+* **PART IV.1. Machine Leanring  - ROC** 
+  * **docker image name**: bioinfo\_roc\_survival.tar.gz
+
+    **software installed**: R 3.5.1; Python 2.7 
+* **PART IV.1. Machine Leanring  - PCA and tSNE**
   * **docker image name**: bioinfo\_pca\_machine.tar.gz
   * **software installed**: Anaconda 2019.10
 * **PART IV.2-3. Machine learning** 

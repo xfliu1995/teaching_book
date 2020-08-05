@@ -1,5 +1,23 @@
 # 1.1.ROC Curve
 
+## 0\) Files needed
+
+```bash
+docker load -i ~/Desktop/bioinfo_roc_survival.tar.gz
+
+docker run --name=bioinfo_roc_survival  -dt -h bioinfo_docker --restart unless-stopped -v ~/Downloads/data:/data gangxu/bioinfo_roc_survival:1.0
+
+docker exec -it bioinfo_roc_survival bash
+
+# ROC Curve
+
+cd /home/test/roc
+```
+
+> 上述docker images的下载链接如[附表](../../appendix/appendix-iv.-teaching.md#teaching-docker)所示，加载完我们提供的image后，文件都已经准备好了。
+>
+> 如果不使用docker，也可以直接下载教程所需文件：[Download Link](https://github.com/lulab/teaching_book/blob/master/files/PART_III/7.clinical_analyses/README.md)
+
 ## 1\) introduction
 
 在信号检测理论中，接收者操作特征曲线（receiver operating characteristic curve）是一种坐标图式的分析工具，用于选择最佳的信号侦测模型，舍弃次佳的模型; 或者在同一模型中设定最佳阈值。
