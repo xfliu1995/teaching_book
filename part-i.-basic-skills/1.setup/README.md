@@ -31,7 +31,7 @@ Learn how to do our jobs efficiently and reproducibly.
 
 ### B. [Atom](https://github.com/atom)
 
-> A hackable text editor for the 21st century. See [how to use Atom](https://www.evernote.com/l/ABJeb9FdBc1BC6AZSgWh4Ujc_StdcFYl-kw).
+> A hackable text editor for the 21st century. See [how to use Atom](https://www.yinxiang.com/everhub/note/0cdbce24-984b-4235-8f48-6bcba15d65e3).
 
 ## 2\) README
 
