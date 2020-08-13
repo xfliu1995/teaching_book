@@ -55,29 +55,30 @@
 
 ### 3.1\) In-house Teaching Videos
 
-| Content | Youtube | Bilibili | TsinghuaCloud Location\* |
+| Content | Youtube | Bilibili | Tsinghua Cloud Location\* |
 | :--- | :--- | :--- | :--- |
-| How to use docker | [@Youtube](https://youtu.be/vp0t2T1KFG4) | [GX@Bilibili](https://www.bilibili.com/video/av66604789?pop_share=1) | Linux and Programming/ |
-| Linux \([docs](https://lulab1.gitbook.io/training/part-i.-programming-skills/2.linux)\) | [@Youtube](https://youtu.be/cOmJvMjn5CU) | [ZJL@Bilibili](https://player.bilibili.com/player.html?aid=30590225&cid=53392482&page=1) | Linux and Programming/ |
-| Vim | [@Youtube](https://youtu.be/isKMZMlSWa0) | [GX@Bilibili](https://www.bilibili.com/video/av66604626?pop_share=1) | Linux and Programming/ |
-| R | [@Youtube](https://youtu.be/A0YKZgxvpXM) | [ZJL@Bilibili](https://player.bilibili.com/player.html?aid=30590474&cid=53392848&page=1) | Linux and Programming/ |
-| Genome Browser: IGV | [@Youtube](https://youtu.be/6_1ZcVw7ptU) | [ZYX@Bilibili](https://www.bilibili.com/video/av30448472/) | NGS Analysis/ |
-| Genome Browser: UCSC | [@Youtube](https://youtu.be/eTgEtfI65hA) | [ZYX@Bilibili](https://www.bilibili.com/video/av30448417) | NGS Analysis/ |
+| **How to use docker** | \*\*\*\*[@Youtube](https://youtu.be/vp0t2T1KFG4) | [GX@Bilibili](https://www.bilibili.com/video/av66604789?pop_share=1) | Linux and Programming/ |
+| **How to use cluster \(P\)** |  |  | Linux and Programming/ |
+| **Linux** \([docs](https://lulab1.gitbook.io/training/part-i.-programming-skills/2.linux)\) | [@Youtube](https://youtu.be/cOmJvMjn5CU) | [ZJL@Bilibili](https://player.bilibili.com/player.html?aid=30590225&cid=53392482&page=1) | Linux and Programming/ |
+| **Vim** | \*\*\*\*[@Youtube](https://youtu.be/isKMZMlSWa0) | [GX@Bilibili](https://www.bilibili.com/video/av66604626?pop_share=1) | Linux and Programming/ |
+| **R** | [@Youtube](https://youtu.be/A0YKZgxvpXM) | [ZJL@Bilibili](https://player.bilibili.com/player.html?aid=30590474&cid=53392848&page=1) | Linux and Programming/ |
+| **Genome Browser: IGV** | \*\*\*\*[@Youtube](https://youtu.be/6_1ZcVw7ptU) | [ZYX@Bilibili](https://www.bilibili.com/video/av30448472/) | NGS Analysis/ |
+| **Genome Browser: UCSC** | \*\*\*\*[@Youtube](https://youtu.be/eTgEtfI65hA) | [ZYX@Bilibili](https://www.bilibili.com/video/av30448417) | NGS Analysis/ |
 
-> \* **Dir**: lulab1\_shared/Teaching and Training/Bioinformatics Tutorial/Video/
+> \* **Dir@Tsinghua Cloud**: lulab1\_shared/Teaching and Training/Bioinformatics Tutorial/Video/
 
 ### 3.2\) Curated Teaching Videos
 
 | Content | Video link | Note |
 | :--- | :--- | :--- |
-| git&github | [GitHub小白入门教程](https://www.bilibili.com/video/BV1i5411471j/);  [Git 代码管理](https://www.bilibili.com/video/BV1Jx411L7VE/) |  |
-| markdown | XFL@bilibili |  |
-| docker | XFL@bilibili |  |
-| cluster | XFL@bilibili |  |
-| linux | XFL@bilibili |  |
-| bash | XFL@bilibili |  |
-| R | XFL@bilibili |  |
-| python | XFL@bilibili |  |
+| **git&github** | \*\*\*\*[GitHub小白入门教程](https://www.bilibili.com/video/BV1i5411471j/);  [Git 代码管理](https://www.bilibili.com/video/BV1Jx411L7VE/) |  |
+| **markdown** | XFL@bilibili |  |
+| **docker** | XFL@bilibili |  |
+| **cluster** | XFL@bilibili |  |
+| **linux** | XFL@bilibili |  |
+| **bash** | XFL@bilibili |  |
+| **R** | XFL@bilibili |  |
+| **python** | XFL@bilibili |  |
 
 
 
