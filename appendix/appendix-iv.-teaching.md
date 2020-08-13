@@ -2,6 +2,7 @@
 
 ## 1\) Teaching Lecture PPTs
 
+* [Bioinfo 2020](https://cloud.tsinghua.edu.cn/d/b707e65b559549069938/?p=%2Fbioinfo2020%2FLectures&mode=list)
 * [Bioinfo 2019](https://cloud.tsinghua.edu.cn/d/b707e65b559549069938/?p=/bioinfo2019&mode=list)
 * [Bioinfo 2018](https://cloud.tsinghua.edu.cn/d/b707e65b559549069938/?p=/bioinfo2018&mode=list)
 
