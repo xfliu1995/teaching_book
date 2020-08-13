@@ -52,12 +52,29 @@
 
 ## 3\) Teaching Videos
 
+### 3.1\) In-house Teaching Videos
+
 | Content | Youtube | Bilibili |
 | :--- | :--- | :--- |
-| How to use docker | [@Youtube](https://youtu.be/vp0t2T1KFG4) | [@Bilibili](https://www.bilibili.com/video/av66604789?pop_share=1) |
-| Linux \([视频配套文档](https://lulab1.gitbook.io/training/part-i.-programming-skills/2.linux)\) | [@Youtube](https://youtu.be/cOmJvMjn5CU) | [@Bilibili](https://player.bilibili.com/player.html?aid=30590225&cid=53392482&page=1) |
-| Vim | [@Youtube](https://youtu.be/isKMZMlSWa0) | [@Bilibili](https://www.bilibili.com/video/av66604626?pop_share=1) |
-| R | [@Youtube](https://youtu.be/A0YKZgxvpXM) | [@Bilibili](https://player.bilibili.com/player.html?aid=30590474&cid=53392848&page=1) |
-| Genome Browser: IGV | [@Youtube](https://youtu.be/6_1ZcVw7ptU) | [@Bilibili](https://www.bilibili.com/video/av30448472/) |
-| Genome Browser: UCSC | [@Youtube](https://youtu.be/eTgEtfI65hA) | [@Bilibili](https://www.bilibili.com/video/av30448417) |
+| How to use docker | [@Youtube](https://youtu.be/vp0t2T1KFG4) | [GX@Bilibili](https://www.bilibili.com/video/av66604789?pop_share=1) |
+| Linux \([视频配套文档](https://lulab1.gitbook.io/training/part-i.-programming-skills/2.linux)\) | [@Youtube](https://youtu.be/cOmJvMjn5CU) | [ZJL@Bilibili](https://player.bilibili.com/player.html?aid=30590225&cid=53392482&page=1) |
+| Vim | [@Youtube](https://youtu.be/isKMZMlSWa0) | [GX@Bilibili](https://www.bilibili.com/video/av66604626?pop_share=1) |
+| R | [@Youtube](https://youtu.be/A0YKZgxvpXM) | [ZJL@Bilibili](https://player.bilibili.com/player.html?aid=30590474&cid=53392848&page=1) |
+| Genome Browser: IGV | [@Youtube](https://youtu.be/6_1ZcVw7ptU) | [ZYX@Bilibili](https://www.bilibili.com/video/av30448472/) |
+| Genome Browser: UCSC | [@Youtube](https://youtu.be/eTgEtfI65hA) | [ZYX@Bilibili](https://www.bilibili.com/video/av30448417) |
+
+### 3.2\) Curated Teaching Videos
+
+| Content | Video link | Note |
+| :--- | :--- | :--- |
+| git&github | [GitHub小白入门教程](https://www.bilibili.com/video/BV1i5411471j/);  [Git 代码管理](https://www.bilibili.com/video/BV1Jx411L7VE/) |  |
+| markdown | XFL@bilibili |  |
+| docker | XFL@bilibili |  |
+| cluster | XFL@bilibili |  |
+| linux | XFL@bilibili |  |
+| bash | XFL@bilibili |  |
+| R | XFL@bilibili |  |
+| python | XFL@bilibili |  |
+
+
 
