@@ -58,7 +58,7 @@
 | Content | Youtube | Bilibili | Tsinghua Cloud Location\* |
 | :--- | :--- | :--- | :--- |
 | **How to use docker** | \*\*\*\*[@Youtube](https://youtu.be/vp0t2T1KFG4) | [GX@Bilibili](https://www.bilibili.com/video/av66604789?pop_share=1) | Linux and Programming/ |
-| **How to use cluster \(P\)** |  |  | Linux and Programming/ |
+| **How to use cluster \(P\)** |  |[LXF@Bilibili](https://www.bilibili.com/video/BV1JV411U7P4)  | Linux and Programming/ |
 | **Linux** \([docs](https://lulab1.gitbook.io/training/part-i.-programming-skills/2.linux)\) | [@Youtube](https://youtu.be/cOmJvMjn5CU) | [ZJL@Bilibili](https://player.bilibili.com/player.html?aid=30590225&cid=53392482&page=1) | Linux and Programming/ |
 | **Vim** | \*\*\*\*[@Youtube](https://youtu.be/isKMZMlSWa0) | [GX@Bilibili](https://www.bilibili.com/video/av66604626?pop_share=1) | Linux and Programming/ |
 | **R** | [@Youtube](https://youtu.be/A0YKZgxvpXM) | [ZJL@Bilibili](https://player.bilibili.com/player.html?aid=30590474&cid=53392848&page=1) | Linux and Programming/ |
@@ -72,13 +72,10 @@
 | Content | Video link | Note |
 | :--- | :--- | :--- |
 | **git&github** | \*\*\*\*[GitHub小白入门教程](https://www.bilibili.com/video/BV1i5411471j/);  [Git 代码管理](https://www.bilibili.com/video/BV1Jx411L7VE/) |  |
-| **markdown** | XFL@bilibili |  |
-| **docker** | XFL@bilibili |  |
-| **cluster** | XFL@bilibili |  |
-| **linux** | XFL@bilibili |  |
-| **bash** | XFL@bilibili |  |
-| **R** | XFL@bilibili |  |
-| **python** | XFL@bilibili |  |
-
+| **markdown** | \*\*\*\*[15分钟掌握markdown](https://www.bilibili.com/video/BV1sz411z7qd?from=search&seid=11483264095765612977)|  |
+| **linux** | \*\*\*\*[Linux小白Shell入门](https://www.bilibili.com/video/BV1sK4y1b7NP?from=search&seid=16923776342297218215)|  |
+| **bash** | \*\*\*\*[Shell脚本编程基础](https://www.bilibili.com/video/BV1H7411s7xH?from=search&seid=500577279179157451)|  |
+| **R** | \*\*\*\*[生信人应该这样学R语言](https://www.bilibili.com/video/BV1cs411j75B?p=1);  [R语言入门](https://www.bilibili.com/video/BV19x411X7C6?from=search&seid=3917724419072630406)|  |
+| **python** | \*\*\*\*[Python 基础](https://www.bilibili.com/video/BV1wW411Y7ai?from=search&seid=500577279179157451);  [Numpy & Pandas](https://www.bilibili.com/video/BV1Ex411L7oT?from=search&seid=500577279179157451)|  |
 
 
